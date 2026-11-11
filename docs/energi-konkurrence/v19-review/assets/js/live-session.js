@@ -7,7 +7,24 @@
   const originalFetch=window.fetch.bind(window);
   document.documentElement.classList.add('ndi-live-loading');
   const names=['data.json','highs.json','insights.json','nav-evidence.json','geography.json','fund-documents.json','annual-evidence.json'];
-  async function json(url,timeout=15000){const c=new AbortController(),t=setTimeout(()=>c.abort(),timeout);try{const r=await originalFetch(url,{cache:url.includes('/releases/')||url.includes('/holdings-history/')?'default':'no-store',signal:c.signal});if(!r.ok)throw Error('Data kunne ikke hentes');return await r.json()}finally{clearTimeout(t)}}
+  async function json(url,timeout=15000,expectedHash){
+    const c=new AbortController(),t=setTimeout(()=>c.abort(),timeout);
+    try{
+      const r=await originalFetch(url,{cache:url.includes('/releases/')||url.includes('/holdings-history/')?'default':'no-store',signal:c.signal});
+      if(!r.ok)throw Error('Data kunne ikke hentes');
+      const raw=await r.arrayBuffer();
+      if(expectedHash){
+        const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',raw)),b=>b.toString(16).padStart(2,'0')).join('');
+        if(digest!==expectedHash)throw Error('Data svarer ikke til den validerede udgave');
+      }
+      return JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(raw));
+    }finally{clearTimeout(t)}
+  }
+  async function verifiedJson(url,expectedHash,timeout=15000){
+    if(!/^[a-f0-9]{64}$/.test(expectedHash||''))throw Error('Filens kontrolsum mangler');
+    return json(url,timeout,expectedHash);
+  }
+  window.NDI_READ_VERIFIED_JSON=verifiedJson;
   const ready=(async()=>{
     const pointer=await json(BASE+'latest.json');
     if(pointer.complete!==true||pointer.validated!==true||!/^[a-f0-9]{64}$/.test(pointer.release)||!/^\d{4}-\d{2}-\d{2}$/.test(pointer.asOf))throw Error('Datagrundlaget er ikke valideret');
@@ -15,9 +32,9 @@
     const required=fundPage?names:['data.json','highs.json','insights.json'];
     const identityTask=json(ROOT+'data/company-identities.json');
     const nasdaqTask=fundPage?json(GRAPH+'nasdaq/latest.json',4000).catch(()=>null):Promise.resolve(null);
-    const historyTask=/\/selskaber\/spacex\.html$/.test(location.pathname)?json(BASE+'releases/'+pointer.release+'/holdings-history.json',4000).catch(()=>null):Promise.resolve(null);
-    const fundamentalsTask=/\/selskaber\/(spacex|applovin|babcock-wilcox|carvana|cerebras-systems|sea|soundhound-ai|t1-energy|tesla|tower-semiconductor)\.html$/.test(location.pathname)?(async()=>{const p=await json(GRAPH+'company-fundamentals-v1/latest.json',4000);if(p.validated!==true||!/^[a-f0-9]{64}$/.test(p.release))return null;const d=await json(GRAPH+'company-fundamentals-v1/releases/'+p.release+'.json',4000);return d.schema_version===1&&d.validated===true?d:null})().catch(()=>null):Promise.resolve(null);
-    const [values,identities,nasdaqCandidate,historyCandidate,fundamentals]=await Promise.all([Promise.all(required.map(n=>json(BASE+'releases/'+pointer.release+'/'+n))),identityTask,nasdaqTask,historyTask,fundamentalsTask]);
+    const historyTask=/\/selskaber\/spacex\.html$/.test(location.pathname)?verifiedJson(BASE+'releases/'+pointer.release+'/holdings-history.json',pointer.files?.['holdings-history.json'],4000).catch(()=>null):Promise.resolve(null);
+    const fundamentalsTask=/\/selskaber\/(spacex|applovin|babcock-wilcox|carvana|cerebras-systems|sea|soundhound-ai|t1-energy|tesla|tower-semiconductor)\.html$/.test(location.pathname)?(async()=>{const p=await json(GRAPH+'company-fundamentals-v1/latest.json',4000);if(p.validated!==true||!/^[a-f0-9]{64}$/.test(p.release))return null;const d=await verifiedJson(GRAPH+'company-fundamentals-v1/releases/'+p.release+'.json',p.release,4000);return d.schema_version===1&&d.validated===true?d:null})().catch(()=>null):Promise.resolve(null);
+    const [values,identities,nasdaqCandidate,historyCandidate,fundamentals]=await Promise.all([Promise.all(required.map(n=>verifiedJson(BASE+'releases/'+pointer.release+'/'+n,pointer.files?.[n]))),identityTask,nasdaqTask,historyTask,fundamentalsTask]);
     const files=Object.fromEntries(required.map((n,i)=>[n,values[i]]));
     if(['data.json','highs.json','insights.json'].some(n=>files[n].asOf!==pointer.asOf))throw Error('Data har forskellige datoer');
 

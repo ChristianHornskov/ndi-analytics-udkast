@@ -32,10 +32,8 @@
  daily.append(el('p','lille','Henter daglige lukkekurser …'));
  const historyURL=s.dataBase+'releases/'+s.pointer.release+'/prices/'+encodeURIComponent(isin)+'.json';
  async function showDaily(){
-  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
   try{
-   const response=await fetch(historyURL,{signal:controller.signal,cache:'default'});if(!response.ok)throw Error('unavailable');
-   const pack=await response.json(),c=pack.companies?.[isin];
+   const pack=await window.NDI_READ_VERIFIED_JSON(historyURL,s.pointer.files?.['prices/'+isin+'.json'],20000),c=pack.companies?.[isin];
    if(pack.validated!==true||pack.schemaVersion!==1||pack.sourceRelease!==s.pointer.sourceRelease||pack.asOf!==s.pointer.asOf||c?.status!=='ok'||c.listingIdentitySha256!==p.listingIdentitySha256||c.currency!==currency||c.date!==priceDate||!Array.isArray(c.points)||c.points.length<2)throw Error('invalid');
    c.points.forEach((v,i)=>{if(!Array.isArray(v)||!/^\d{4}-\d{2}-\d{2}$/.test(v[0])||!Number.isFinite(v[1])||v[1]<=0||v[0]>priceDate||(i&&c.points[i-1][0]>=v[0]))throw Error('invalid point')});
    if(c.points.at(-1)[0]!==priceDate||Math.abs(c.points.at(-1)[1]-close)>Math.max(1e-6,close*1e-7))throw Error('close mismatch');
@@ -62,7 +60,7 @@
    [['m1','1 måned',1],['m3','3 måneder',3],['all','Tilgængelig historik',null]].forEach(([id,label,months])=>{const button=el('button','knap knap--rolig',label);button.type='button';button.style.minHeight='44px';button.setAttribute('aria-pressed',String(id==='all'));buttons.push(button);button.addEventListener('click',()=>{const cutoff=new Date(priceDate+'T12:00:00Z');if(months){const day=cutoff.getUTCDate();cutoff.setUTCDate(1);cutoff.setUTCMonth(cutoff.getUTCMonth()-months);const end=new Date(cutoff);end.setUTCMonth(end.getUTCMonth()+1);end.setUTCDate(0);cutoff.setUTCDate(Math.min(day,end.getUTCDate()))}const day=r.returnBaseDates?.[id]||cutoff.toISOString().slice(0,10);const base=c.points.filter(v=>v[0]<=day).at(-1);const filtered=months?c.points.filter(v=>v[0]>=(base?.[0]||day)):c.points;if(filtered.length<2)return;points=filtered;selected=points.length-1;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));draw()});controls.append(button)});
    controls.style.cssText='display:flex;flex-wrap:wrap;gap:8px;margin:12px 0';daily.append(controls,canvas,caption,el('p','lille','Daglige lukkekurser i '+currencyLabel+' fra samme validerede Azure-udgave som nøgletallene. Grafen forbinder de registrerede handelsdages lukkekurser.'));draw();
    if(window.ResizeObserver){let width=canvas.clientWidth,frame;const resize=new ResizeObserver(()=>{const next=canvas.clientWidth;if(Math.abs(next-width)<1)return;width=next;cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{if(canvas.isConnected)draw();else resize.disconnect()})});resize.observe(canvas)}
-  }catch{daily.replaceChildren(el('p','lille','Den daglige kurshistorik kan ikke vises for denne dataudgave lige nu. De validerede nøgletal ovenfor er fortsat tilgængelige.'));const retry=el('button','knap','Prøv igen');retry.type='button';retry.addEventListener('click',()=>{retry.disabled=true;showDaily()},{once:true});daily.append(retry)}finally{clearTimeout(timer)}
+  }catch{daily.replaceChildren(el('p','lille','Den daglige kurshistorik kan ikke vises for denne dataudgave lige nu. De validerede nøgletal ovenfor er fortsat tilgængelige.'));const retry=el('button','knap','Prøv igen');retry.type='button';retry.addEventListener('click',()=>{retry.disabled=true;showDaily()},{once:true});daily.append(retry)}
  }
  showDaily();
  const note=el('p','lille');note.textContent='Kursændringer i aktiens noteringsvaluta, uden geninvesteret udbytte. Det er ikke fondens afkast på positionen. Kurser kan være forsinkede. Kursdato: '+date(priceDate)+'. ';
