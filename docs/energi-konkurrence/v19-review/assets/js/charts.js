@@ -27,7 +27,7 @@
   function heltal(n) { return nf.format(n).replace("-", "\u2212"); }
    
   function mia(n, dec) { return (n / 1000).toFixed(dec).replace(".", ",").replace("-", "\u2212"); }
-  function pct(n) { return n.toFixed(2).replace(".", ",") + "\u00a0%"; }
+  function pct(n) { return n.toFixed(1).replace(".", ",") + "\u00a0%"; }
   function datoKort(iso) { var p = iso.split("-"); return p[2] + "." + p[1]; }
   function datoLang(iso) { var p = iso.split("-"); return p[2] + "." + p[1] + "." + p[0]; }
    

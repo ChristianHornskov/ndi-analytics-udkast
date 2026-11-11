@@ -33,6 +33,7 @@
   var ORD = ["nul", "ét", "to", "tre", "fire", "fem", "seks", "syv", "otte", "ni", "ti", "elleve", "tolv"];
   var RANG = { 1: "det største", 2: "det næststørste", 3: "det tredjestørste" };
   var FMT = {
+    andel: function (v) { return (v > 0 && v < 0.05 ? "under 0,1" : decimal(v, 1)) + NB + "%"; },
     pct: function (v, el) { return percent(v, el) + NB + "%"; },
     tal: function (v, el) { return isWeight(el) ? percent(v, el) : decimal(v, 2); },
     heltal: function (v) { return heltal(v); },

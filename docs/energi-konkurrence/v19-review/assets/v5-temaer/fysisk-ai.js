@@ -58,7 +58,7 @@ var flade=T.querySelector('.fa-tm__flade'),tip=T.querySelector('.fa-tm__tip');
 var G=[].slice.call(flade.querySelectorAll('.fa-tm__g'));
 var fine=window.matchMedia&&matchMedia('(hover: hover) and (pointer: fine)').matches;
 var SMAL=640,HOVED=64,MIN_FLISE=2400;
-function dk(v){return v.toFixed(2).replace('.',',')+' %'}
+function dk(v,position){return window.NDI_DATALAG.format(v,position?'andel':'pct')}
 function andel(slug){var d=window.NDI_TAL;var s=d&&d.selskaber&&d.selskaber[slug];return s&&typeof s.andel==='number'?s.andel:null}
 function squarify(vals,x,y,w,h){var out=[],tot=vals.reduce(function(a,b){return a+b},0)||1,sc=w*h/tot,r=vals.map(function(v){return v*sc}),i=0;
  function worst(row,side){var s=row.reduce(function(a,b){return a+b},0),m=0;row.forEach(function(v){m=Math.max(m,side*side*v/(s*s),(s*s)/(side*side*v))});return m}
@@ -87,7 +87,7 @@ function layout(){
   /* selskaber, der bliver for små at læse, samles ikke, men vises uden tekst */
   squarify(d.cs.map(function(c){return c.a}),0,0,r[2],csH).forEach(function(cr,k){var c=d.cs[k].el;
    c.style.left=pc(cr[0]/r[2]*100);c.style.top=pc(cr[1]/csH*100);c.style.width=pc(cr[2]/r[2]*100);c.style.height=pc(cr[3]/csH*100);
-   var cp=c.querySelector('.fa-tm__cp'),cn=c.querySelector('.fa-tm__cn'),a=andel(c.dataset.slug);if(cp&&a!=null)cp.textContent=dk(a);
+   var cp=c.querySelector('.fa-tm__cp'),cn=c.querySelector('.fa-tm__cn'),a=andel(c.dataset.slug);if(cp&&a!=null)cp.textContent=dk(a,true);
    var navn=cn?cn.textContent:'',lbl=navn+', '+(cp?cp.textContent.replace('\u00a0',' '):'');c.title=lbl;c.setAttribute('aria-label',lbl);
    c.classList.remove('fa-tm__c--mini','fa-tm__c--pct');
    if(cr[2]*cr[3]<MIN_FLISE||cr[2]<40||cr[3]<26){c.classList.add('fa-tm__c--mini');return}
@@ -105,7 +105,7 @@ function layout(){
 function panelKnap(slug){return R.querySelector('.cq-fa__panel .cq-fa__co[data-slug="'+slug+'"]')}
 function visTip(c){if(!tip)return;var pk=panelKnap(c.dataset.slug),a=andel(c.dataset.slug);
  tip.textContent='';var h=document.createElement('p');h.className='fa-tm__th';h.textContent=c.querySelector('.fa-tm__cn').textContent;
- var v=document.createElement('span');v.textContent=a!=null?dk(a):c.querySelector('.fa-tm__cp').textContent;h.appendChild(v);tip.appendChild(h);
+ var v=document.createElement('span');v.textContent=a!=null?dk(a,true):c.querySelector('.fa-tm__cp').textContent;h.appendChild(v);tip.appendChild(h);
  if(pk&&pk.dataset.d){var p=document.createElement('p');p.className='fa-tm__td';p.textContent=pk.dataset.d;tip.appendChild(p)}
  var q=document.createElement('p');q.className='fa-tm__tq';q.textContent='Klik for at se hele delen';tip.appendChild(q);
  tip.hidden=false;var fr=T.getBoundingClientRect(),cr=c.getBoundingClientRect(),tw=tip.offsetWidth,th=tip.offsetHeight;
