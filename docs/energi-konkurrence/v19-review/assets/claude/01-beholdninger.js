@@ -1,6 +1,11 @@
 /* Graf-review punkt 1: kompakte beholdningskort på mobil. */
 (function () {
   'use strict';
+  function esc(value) {
+    return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
   var MD = ['jan.', 'feb.', 'mar.', 'apr.', 'maj', 'jun.', 'jul.', 'aug.', 'sep.', 'okt.', 'nov.', 'dec.'];
   function dato(t) {
     return String(t || '').replace(/(\d{4})-(\d{2})-(\d{2})/g, function (_, y, m, d) { return (+d) + '. ' + MD[+m - 1] + ' ' + y; });
@@ -20,10 +25,10 @@
     kopi.querySelectorAll('small').forEach(function (s) { s.remove(); });
     var t = kopi.textContent.trim();
     if (!t || t === '—' || t === '-') return '<b>Ingen data</b>';
-    return '<b class="' + (kunTal ? '' : dd.className) + '">' + t + '</b>';
+    return '<b class="' + esc(kunTal ? '' : dd.className) + '">' + esc(t) + '</b>';
   }
   function tal(label, dd, kunTal) {
-    return '<div><span>' + label + '</span>' + vaerdi(dd, kunTal) + '</div>';
+    return '<div><span>' + esc(label) + '</span>' + vaerdi(dd, kunTal) + '</div>';
   }
   function omform(kort, idx) {
     if (kort.hasAttribute('data-cr1')) return;
@@ -55,7 +60,7 @@
       var ks = k.querySelector('small');
       var hd = ks ? dato(ks.textContent.trim()) : '';
       if (ks) ks.remove();
-      kursTekst = k.textContent.trim() + (hd ? ' <small>' + hd + '</small>' : '');
+      kursTekst = esc(k.textContent.trim()) + (hd ? ' <small>' + esc(hd) + '</small>' : '');
     }
     var id = 'cr1-flere-' + idx + '-' + Math.random().toString(36).slice(2, 7);
     var navnTekst = navn ? navn.textContent.trim() : 'positionen';
@@ -63,13 +68,13 @@
     kort.classList.add('cr1-kort');
     kort.innerHTML =
       '<div class="cr1-hoved"><span class="cr1-nr" aria-hidden="true"></span>' +
-      '<div class="cr1-navn">' + (navn ? navn.outerHTML : '') + '<small>' + info.join(' · ') + '</small></div>' +
-      '<div class="cr1-vaegt"><strong>' + vKopi.textContent.trim() + '</strong><i style="width:' + (bar ? bar.style.width : '0') + '"></i></div></div>' +
+      '<div class="cr1-navn">' + (navn ? navn.outerHTML : '') + '<small>' + esc(info.join(' · ')) + '</small></div>' +
+      '<div class="cr1-vaegt"><strong>' + esc(vKopi.textContent.trim()) + '</strong><i style="width:' + esc(bar ? bar.style.width : '0') + '"></i></div></div>' +
       '<div class="cr1-tal">' + tal('1 md.', felt(dl, '1 md.')) + tal('1 år', felt(dl, '1 år')) + tal('Under toppen', top, true) +
-      '<button type="button" class="cr1-mere" aria-expanded="false" aria-controls="' + id + '"><span class="cr1-sr">Flere tal for ' + navnTekst.replace(/[<>&"]/g, '') + '</span></button></div>' +
+      '<button type="button" class="cr1-mere" aria-expanded="false" aria-controls="' + id + '"><span class="cr1-sr">Flere tal for ' + esc(navnTekst) + '</span></button></div>' +
       '<div class="cr1-flere" id="' + id + '" hidden>' + tal('1 dag', felt(dl, '1 dag')) + tal('1 uge', felt(dl, '1 uge')) +
       tal('3 mdr.', felt(dl, '3 mdr.')) + tal('År til dato', felt(dl, 'ÅTD')) +
-      (topDato ? '<div><span>Top</span><b>' + topDato + '</b></div>' : '') +
+      (topDato ? '<div><span>Top</span><b>' + esc(topDato) + '</b></div>' : '') +
       (kursTekst ? '<div><span>Kurs</span><b>' + kursTekst + '</b></div>' : '') + '</div>';
   }
   function skift(kort) {
