@@ -33,3 +33,12 @@ main select{max-width:100%;min-height:42px;padding:8px 30px 8px 12px;border:1px 
 .review-tech #sidemenu .sm-overskrift{padding-block:5px;margin-block:0 4px}
 .review-tech #sidemenu .sm-link{min-height:28px;padding-block:4px!important}
 }
+
+/* These official assets contain white lettering. Keep their original colours
+   on a dark inset in both themes instead of losing them on the white plate. */
+html body img[src*="/logoer-v2/first-majestic-silver-"],
+html body img[src*="/logoer-v2/hecla-mining-"],
+html body img[src*="/logoer-v2/freeport-mcmoran-"],
+html body img[src*="/logoer-v2/lattice-semiconductor-"]{
+  background:#10212a!important;border-radius:3px;object-fit:contain
+}
