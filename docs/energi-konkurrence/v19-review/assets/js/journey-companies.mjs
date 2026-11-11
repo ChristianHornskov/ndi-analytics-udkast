@@ -9,6 +9,7 @@ const roles={...COMPANY_ROLES,'ai-use':{
   US30303M1027:'Meta AI gør AI-assistenter tilgængelige i selskabets tjenester.'
 }};
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const weightText=n=>n>0&&n<0.05?'under 0,1':n.toLocaleString('da-DK',{minimumFractionDigits:1,maximumFractionDigits:1});
 export function companiesForLayer(layer,positions,companies){
   const grouped=new Map();
   for(const p of positions||[]){
@@ -40,7 +41,7 @@ export function bindJourneyCompanies(host){
       }else{
         const c=chosen,logo=d.selskaber[c.slug]?.logo||d.alleSelskaber?.liste?.find(x=>x.slug===c.slug)?.logo;
         const url='selskaber/'+encodeURIComponent(c.slug)+'.html';
-        aside.innerHTML=`<div class="journey-company-top"><span class="eyebrow">SELSKABER I FONDEN PÅ DETTE TRIN</span>${list.length>1?`<nav class="journey-company-controls" aria-label="Selskaber på dette trin"><button type="button" data-company-step="-1" aria-label="Forrige selskab">←</button><span aria-live="polite" aria-atomic="true">${index+1} / ${list.length}</span><button type="button" data-company-step="1" aria-label="Næste selskab">→</button></nav>`:''}</div><a class="phase-company" href="${url}"><span class="phase-logo">${logo?`<img src="${esc(logo)}" alt="" width="64" height="64" loading="lazy">`:esc(c.navn.slice(0,1))}</span><span class="phase-identity"><strong>${esc(c.navn)}</strong><small>${c.andel.toLocaleString('da-DK',{minimumFractionDigits:2,maximumFractionDigits:2})} % af ${esc(d.fond?.id||'fonden')}</small></span><span class="phase-company-arrow" aria-hidden="true">↗</span></a><p>${esc(c.description)}</p><a class="tekstlink" href="${url}">Udforsk ${esc(c.navn)} →</a><small class="journey-company-basis">Sorteret efter andel af fonden, ikke selskabernes størrelse. Beholdning pr. ${esc(d.andelsdatoTekst||p.andelsdato)}.</small>`;
+        aside.innerHTML=`<div class="journey-company-top"><span class="eyebrow">SELSKABER I FONDEN PÅ DETTE TRIN</span>${list.length>1?`<nav class="journey-company-controls" aria-label="Selskaber på dette trin"><button type="button" data-company-step="-1" aria-label="Forrige selskab">←</button><span aria-live="polite" aria-atomic="true">${index+1} / ${list.length}</span><button type="button" data-company-step="1" aria-label="Næste selskab">→</button></nav>`:''}</div><a class="phase-company" href="${url}"><span class="phase-logo">${logo?`<img src="${esc(logo)}" alt="" width="64" height="64" loading="lazy">`:esc(c.navn.slice(0,1))}</span><span class="phase-identity"><strong>${esc(c.navn)}</strong><small>${weightText(c.andel)} % af ${esc(d.fond?.id||'fonden')}</small></span><span class="phase-company-arrow" aria-hidden="true">↗</span></a><p>${esc(c.description)}</p><a class="tekstlink" href="${url}">Udforsk ${esc(c.navn)} →</a><small class="journey-company-basis">Sorteret efter andel af fonden, ikke selskabernes størrelse. Beholdning pr. ${esc(d.andelsdatoTekst||p.andelsdato)}.</small>`;
       }
       card.append(aside);
     }
