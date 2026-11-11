@@ -9,7 +9,7 @@
     return isNaN(v) ? null : v * MULT[enhed];
   }
   function fmt(v, dec) {
-    return v.toLocaleString('da-DK', { minimumFractionDigits: dec, maximumFractionDigits: dec }).replace('-', '−');
+    return v.toLocaleString('da-DK', { minimumFractionDigits: 0, maximumFractionDigits: dec }).replace('-', '−');
   }
   // Skala vælges pr. valuta i tabellen, så alle rækker med samme valuta har samme enhed.
   function skala(vaerdier) {
@@ -18,9 +18,9 @@
     return 'mio.';
   }
   function beloeb(mio, valuta, sk) {
-    if (sk === 'bio.') return fmt(mio / 1e6, 1) + ' bio. ' + valuta;
-    if (sk === 'mia.') return fmt(mio / 1e3, 1) + ' mia. ' + valuta;
-    return fmt(mio, Math.abs(mio) >= 1000 ? 0 : 1) + ' mio. ' + valuta;
+    if (sk === 'bio.') return fmt(mio / 1e6, 12) + ' bio. ' + valuta;
+    if (sk === 'mia.') return fmt(mio / 1e3, 12) + ' mia. ' + valuta;
+    return fmt(mio, 12) + ' mio. ' + valuta;
   }
   function noegle(r) {
     var m = /(\d)\. kvt\. (\d{4})/.exec(r.p) || /(\d)\. halvår (\d{4})/.exec(r.p);
