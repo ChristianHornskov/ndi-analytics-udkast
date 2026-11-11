@@ -154,7 +154,7 @@ main:focus { box-shadow: none; }
     visibility: hidden;
     box-shadow: var(--sh-3);
   }
-  .sidemenu.aaben { transform: none; visibility: visible; transition: transform var(--dur-3) var(--ease), visibility 0s; }
+  .sidemenu.aaben { transform: none; visibility: visible; transition: transform var(--dur-3) var(--ease); }
 }
 .sm-top { display: flex; align-items: center; justify-content: space-between; gap: var(--sp-3); padding: var(--sp-5) var(--sp-5) var(--sp-4); }
 .maerke { display: inline-flex; align-items: center; gap: var(--sp-3); text-decoration: none; min-width: 0; border-radius: var(--r-sm); }
@@ -846,3 +846,8 @@ main { display: block; max-width: calc(var(--content-max) + 2 * var(--page-pad))
 .topbar-brand { font-size: var(--fs-12); line-height: 1.2; color: var(--c-text-2); font-weight: var(--fw-medium); white-space: nowrap; }
 .topbar-mobil .maerke-navn { line-height: 1.15; }
 .topbar-mobil .maerke-sub { line-height: 1.2; }
+
+/* Reduced motion must not stagger inherited visibility through menu descendants. */
+@media (prefers-reduced-motion: reduce) {
+  .sidemenu, .sidemenu * { transition: none !important; }
+}

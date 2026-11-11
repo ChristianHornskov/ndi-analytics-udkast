@@ -12,7 +12,7 @@
   var sidsteFokus = null;
   function fokusbare() {
     return $$('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])', menu)
-      .filter(function (n) { return n.offsetParent !== null; });
+      .filter(function (n) { return n.offsetParent !== null && getComputedStyle(n).visibility === "visible"; });
   }
   function saetSkuffeTilstand() {
     if (mq.matches) {
@@ -34,8 +34,14 @@
     aabn.setAttribute("aria-expanded", "true");
     hoved.setAttribute("inert", ""); topbar.setAttribute("inert", "");
     document.body.classList.add("laast");
-    var aktivLink = $('.sm-link[aria-current="location"], [aria-current="page"]', menu);
-    (aktivLink || luk).focus({ preventScroll: true });
+    // Move focus after the drawer has become visible and the opener is inert.
+    // Focusing during the same hidden-to-visible transition can leave it on body.
+    requestAnimationFrame(function () { requestAnimationFrame(function () {
+      if (!menu.classList.contains("aaben")) return;
+      var aktivLink = $('.sm-link[aria-current="location"], [aria-current="page"]', menu);
+      var target = aktivLink && fokusbare().indexOf(aktivLink) !== -1 ? aktivLink : luk;
+      target.focus({ preventScroll: true });
+    }); });
   }
   function lukMenu(stille) {
     if (!menu.classList.contains("aaben")) return;
@@ -59,7 +65,8 @@
     if (e.key === "Tab") {
       var f = fokusbare(); if (!f.length) return;
       var forste = f[0], sidste = f[f.length - 1];
-      if (e.shiftKey && document.activeElement === forste) { e.preventDefault(); sidste.focus(); }
+      if (!menu.contains(document.activeElement)) { e.preventDefault(); (e.shiftKey ? sidste : forste).focus(); }
+      else if (e.shiftKey && document.activeElement === forste) { e.preventDefault(); sidste.focus(); }
       else if (!e.shiftKey && document.activeElement === sidste) { e.preventDefault(); forste.focus(); }
     }
   });
