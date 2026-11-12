@@ -112,9 +112,23 @@ html body .ndi-menu-note a{font:inherit;color:inherit;text-decoration:underline;
 .ndi-market-point strong{display:block}.ndi-market-dot{display:block;color:var(--accent,#77b2b8);font-size:1.5rem;margin-top:calc(15px + (1 - var(--level))*115px)}
 .ndi-market-point small{position:absolute;bottom:.7rem;left:0;right:0}
 
-/* Current fund allocation is a primary reading point on the discovery cards. */
-.v5 .photo-theme-grid .ndi-tile .theme-allocation{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;padding:12px 0 0;margin-top:auto}
-.v5 .photo-theme-grid .theme-allocation strong{font-size:34px;line-height:1.1;font-weight:650;letter-spacing:-.035em;font-variant-numeric:tabular-nums;color:var(--c-text)}
-.v5 .photo-theme-grid .theme-allocation>span{font-size:13px;color:var(--c-text-2)}
-.v5 .photo-theme-grid .ndi-tile .theme-allocation+small{margin-top:8px;padding-top:0}
-@media(max-width:600px){.v5 .photo-theme-grid .theme-allocation strong{font-size:28px}.v5 .photo-theme-grid .ndi-tile .theme-allocation{gap:4px}}
+/* One composed reading area: theme, question, then an aligned allocation footer. */
+.v5 .photo-theme-grid .ndi-tile>div{padding:20px;gap:0}
+.v5 .photo-theme-grid .ndi-tile h3{font-size:21px;line-height:1.28;letter-spacing:-.025em;margin:0 0 9px}
+.v5 .photo-theme-grid .ndi-tile p{font-size:14px;line-height:1.55;color:var(--c-text-3);margin:0 0 22px}
+.v5 .photo-theme-grid .theme-allocation{display:block;margin-top:auto;padding-top:17px;border-top:1px solid var(--c-line)}
+.v5 .photo-theme-grid .theme-allocation-value{display:flex;flex-direction:row;align-items:baseline;gap:9px;white-space:nowrap}
+.v5 .photo-theme-grid .theme-allocation-value strong{font-size:34px;font-weight:600;line-height:1;letter-spacing:-.045em;font-variant-numeric:tabular-nums;color:var(--c-text)}
+.v5 .photo-theme-grid .theme-allocation-value>span{font-size:12px;font-weight:400;letter-spacing:0;color:var(--c-text-3)}
+.v5 .photo-theme-grid .theme-allocation-track{display:block;height:3px;background:var(--c-line);border-radius:3px;margin-top:14px;overflow:hidden}
+.v5 .photo-theme-grid .theme-allocation-track>span{display:block;width:var(--theme-share,0%);height:100%;background:var(--c-accent);border-radius:inherit}
+.v5 .photo-theme-grid .ndi-tile:hover .theme-allocation-track>span,.v5 .photo-theme-grid .ndi-tile:focus-visible .theme-allocation-track>span{filter:brightness(1.2)}
+@media(max-width:600px){
+ .v5 .photo-theme-grid .ndi-tile>div{padding:14px 12px}
+ .v5 .photo-theme-grid .ndi-tile h3{font-size:17px;line-height:1.3;min-height:2.6em;margin-bottom:16px}
+ .v5 .photo-theme-grid .theme-allocation{padding-top:13px}
+ .v5 .photo-theme-grid .theme-allocation-value{gap:6px}
+ .v5 .photo-theme-grid .theme-allocation-value strong{font-size:28px}
+ .v5 .photo-theme-grid .theme-allocation-value>span{font-size:11px}
+ .v5 .photo-theme-grid .theme-allocation-track{margin-top:12px}
+}

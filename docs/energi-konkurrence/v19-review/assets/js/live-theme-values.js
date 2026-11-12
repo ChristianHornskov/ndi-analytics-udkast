@@ -29,7 +29,7 @@
    return typeof value==='number'&&Number.isFinite(value)?value:-Infinity;
   };
   cards.sort((a,b)=>weightOf(b)-weightOf(a));
-  cards.forEach(card=>grid.append(card));
+  cards.forEach(card=>{const value=weightOf(card);card.style.setProperty('--theme-share',(Number.isFinite(value)?Math.max(0,Math.min(100,value)):0)+'%');grid.append(card)});
  });
  const history=document.getElementById('andel-historie');
  if(history&&!(d.spacex?.historik?.length>1)){
