@@ -4,6 +4,7 @@
   const BASE='https://ndigrafdatab5174313.blob.core.windows.net/graph/review-data-v1/';
   const GRAPH='https://ndigrafdatab5174313.blob.core.windows.net/graph/';
   const ROOT=new URL('../../',document.currentScript.src).href;
+  const navigation=document.createElement('script');navigation.src=ROOT+'assets/js/review-navigation.js';document.head.append(navigation);
   const originalFetch=window.fetch.bind(window);
   document.documentElement.classList.add('ndi-live-loading');
   const names=['data.json','highs.json','insights.json','nav-evidence.json','geography.json','fund-documents.json','annual-evidence.json'];
