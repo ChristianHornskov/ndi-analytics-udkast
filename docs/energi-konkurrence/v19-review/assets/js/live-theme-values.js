@@ -19,6 +19,18 @@
  const weight=slug=>d.selskaber[slug]?.andel||0;
  const theme=location.pathname.split('/').pop().replace('.html','');
  const current=d.temaer.find(t=>t.id===theme);
+ // Reorder the actual links, so visual and keyboard order follow current Azure weights.
+ document.querySelectorAll('.photo-theme-grid').forEach(grid=>{
+  const cards=[...grid.querySelectorAll(':scope > .ndi-tile')];
+  const weightOf=card=>{
+   const key=card.querySelector('[data-tal^="temaer#"]')?.dataset.tal;
+   const id=key?.split('#')[1]?.split('.')[0];
+   const value=d.temaer.find(t=>t.id===id)?.andel;
+   return typeof value==='number'&&Number.isFinite(value)?value:-Infinity;
+  };
+  cards.sort((a,b)=>weightOf(b)-weightOf(a));
+  cards.forEach(card=>grid.append(card));
+ });
  const history=document.getElementById('andel-historie');
  if(history&&!(d.spacex?.historik?.length>1)){
   history.querySelectorAll('#graf-andel,.tabel-fold,.kildelinje').forEach(e=>e.hidden=true);
