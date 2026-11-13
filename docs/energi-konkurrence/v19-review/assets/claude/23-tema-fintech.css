@@ -685,3 +685,50 @@
 .lp-panel--slut{border-left-color:#83acfa}
 @media(max-width:860px){.lp-g{grid-template-columns:1fr;gap:14px}.lp-fig{padding:8px}}
 @media(prefers-reduced-motion:reduce){.lp-prik{animation:none}}
+/* ===== Fysisk AI: figurer og skift sans (.sa) ===== */
+.sv-biler{width:170px;height:auto}.sv-bil path,.sv-bil circle{fill:#2a3542}.sv-bil.sv-on path,.sv-bil.sv-on circle{fill:var(--c)}
+.sv-robot{width:60px;height:auto;fill:none;stroke:var(--c);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.sa-styr{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:20px}
+.sa-faner{display:inline-flex;gap:4px;padding:4px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03)}
+.sa-fane{font:inherit;font-size:.92rem;min-height:42px;padding:8px 18px;border-radius:999px;border:0;background:transparent;color:#a9b3bf;cursor:pointer}
+.sa-fane[aria-selected="true"]{background:#83acfa;color:#0b1220;font-weight:600}
+.sa-natknap{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;cursor:pointer;min-height:42px;user-select:none}
+.sa-natcheck{position:absolute;opacity:0;width:1px;height:1px}
+.sa-skinne{width:46px;height:26px;border-radius:999px;background:#2a3542;position:relative;transition:background .25s}
+.sa-skinne::after{content:"";position:absolute;left:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#e6e8ed;transition:transform .25s}
+.sa-natcheck:checked+.sa-skinne{background:#9085e9}.sa-natcheck:checked+.sa-skinne::after{transform:translateX(20px)}
+.sa-natcheck:focus-visible+.sa-skinne{outline:2px solid #83acfa;outline-offset:3px}
+.sa-g{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:22px;margin-top:16px;align-items:start}
+.sa-fig{margin:0;padding:10px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#0b1220}
+.sa-svg{display:block;width:100%;height:auto;border-radius:10px}
+.sa-himmel{fill:#9cc3e8;transition:fill .5s}.sa-hus{fill:#c9d2dc;stroke:#8a99a8;stroke-width:2;transition:fill .5s}.sa-vinduer rect{fill:#5b6878;transition:fill .5s}
+.sa-vej{fill:#4a5260;transition:fill .5s}.sa-stribe{stroke:#e6e8ed;stroke-width:5}.sa-fodgang rect{fill:#e6e8ed;opacity:.85}
+.sa-o-bil rect{fill:#3a6fc4}.sa-o-bil circle{fill:#1b1f27}
+.sa-o-fod circle{fill:#e8b48a}.sa-o-fod path{stroke:#d95926;stroke-width:6;stroke-linecap:round;fill:none}
+.sa-o-cykel circle{fill:none;stroke:#1b1f27;stroke-width:4}.sa-o-cykel path{stroke:#c98500;stroke-width:4;fill:none;stroke-linecap:round}.sa-o-cykel circle:last-child{fill:#e8b48a;stroke:none}
+.sa-o-lys rect{fill:#1b1f27}.sa-o-lys circle{fill:#3a4757}.sa-o-lys .sa-roedt{fill:#ff4d4d}.sa-o-lys path{stroke:#1b1f27;stroke-width:5}
+.sa-nat{fill:#050a18;opacity:0;transition:opacity .5s;pointer-events:none}
+.sa-lygter{fill:rgba(255,236,170,.0);transition:fill .5s;pointer-events:none}
+.sa--nat .sa-nat{opacity:.78}.sa--nat .sa-lygter{fill:rgba(255,236,170,.12)}.sa--nat .sa-vinduer rect{fill:#f2c96b}
+.sa-kamera,.sa-lidar,.sa-hjerne{opacity:0;transition:opacity .4s;pointer-events:none}
+[data-sans-aktiv="kamera"] .sa-kamera,[data-sans-aktiv="lidar"] .sa-lidar,[data-sans-aktiv="hjerne"] .sa-hjerne,[data-sans-aktiv="hjerne"] .sa-kamera{opacity:1}
+.sa-boks rect{fill:none;stroke:#4fc79c;stroke-width:3}.sa-boks text{fill:#4fc79c;font-size:22px;font-weight:700;paint-order:stroke;stroke:#0b1220;stroke-width:4px}
+.sa-nat-usikker{display:none}
+.sa--nat .sa-dag{display:none}.sa--nat .sa-nat-usikker{display:inline}
+.sa-nat-usikker rect{stroke:#ef8a5e;stroke-dasharray:6 5}.sa-nat-usikker text{fill:#ef8a5e}
+.sa-lidar-bg{fill:#03060d}.sa-lidar-p circle{fill:#4fc79c}.sa-lidar-t{fill:#8a99a8;font-size:20px}.sa-lidar-a{fill:#e6e8ed;font-size:24px;font-weight:700;paint-order:stroke;stroke:#03060d;stroke-width:4px}
+.sa-spor{fill:none;stroke:#ef8a5e;stroke-width:4;stroke-dasharray:8 7;marker-end:none}
+.sa-spor--egen{stroke:#83acfa}
+.sa-stop{fill:#ff4d4d}
+.sa-beslut rect{fill:rgba(11,18,32,.92);stroke:#ff4d4d;stroke-width:2}.sa-beslut text{fill:#c3cad3;font-size:20px}.sa-beslut .sa-b2{fill:#fff;font-size:28px;font-weight:700}
+.sa-cap{margin-top:8px;font-size:.82rem;color:#8a99a8}
+.sa-panel{padding:20px 22px;border-radius:14px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.025);border-left:3px solid #83acfa}
+.sa-panel h3{margin:0 0 8px;font-size:1.25rem}.sa-panel p{margin:0 0 10px;line-height:1.55}
+.sa-lab{font-size:.88rem;color:#a9b3bf}
+.sa-sel{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.sa-sel a{display:inline-flex;align-items:center;gap:7px;padding:5px 10px 5px 5px;border-radius:999px;background:rgba(255,255,255,.05);text-decoration:none;color:#e6e8ed;font-size:.86rem;min-height:34px}
+.sa-sel img{width:20px;height:20px;border-radius:4px;background:#fff;object-fit:contain}
+.sa-natnote{margin:12px 0 0;padding:12px 14px;border-radius:10px;background:rgba(144,133,233,.12);border-left:3px solid #9085e9;line-height:1.5}
+@media(max-width:860px){.sa-g{grid-template-columns:1fr;gap:14px}.sa-fig{padding:6px}.sa-fane{padding:8px 14px}}
+@media(prefers-reduced-motion:reduce){.sa-kamera,.sa-lidar,.sa-hjerne,.sa-nat,.sa-himmel{transition:none}}
+@media(max-width:600px){.sa-boks text{font-size:30px}.sa-lidar-a{font-size:32px}.sa-lidar-t{font-size:26px}.sa-beslut text:first-of-type{display:none}.sa-beslut .sa-b2{font-size:34px}}
