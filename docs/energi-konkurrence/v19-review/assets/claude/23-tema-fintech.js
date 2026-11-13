@@ -3,7 +3,7 @@
   function fmt(v){if(v==null)return'';if(v>0&&v<0.005)return'under 0,01 %';return v.toFixed(2).replace('.',',')+' %'}
   function tegn(){
     var R=document.getElementById('tjener'),D=window.DAGENS_TAL;if(!R||!D||!D.temaer)return;
-    var t=null;D.temaer.forEach(function(x){if(x.id==='fintech')t=x});if(!t||!t.selskaber)return;
+    var tid=R.getAttribute('data-tema')||'fintech';var t=null;D.temaer.forEach(function(x){if(x.id===tid)t=x});if(!t||!t.selskaber)return;
     var A={};t.selskaber.forEach(function(s){if(s.slug)A[s.slug]=s.andel});
     /* Selskaber i fondens data, som endnu ikke står i en gruppe, vises i en grå række til sidst. */
     var kendte={};R.querySelectorAll('.ft5-sel li').forEach(function(li){kendte[li.dataset.slug]=1});
@@ -31,12 +31,12 @@
   function fond(){
     var P=document.querySelector('.ftf'),D=window.DAGENS_TAL;if(!P||!D||!D.temaer)return;
     var T=D.temaer.filter(function(x){return x.andel!=null}).slice().sort(function(a,b){return b.andel-a.andel});if(!T.length)return;
-    var ft=null,max=T[0].andel;T.forEach(function(x,i){if(x.id==='fintech')ft=[x,i+1]});
+    var tid=P.getAttribute('data-tema')||'fintech';var ft=null,max=T[0].andel;T.forEach(function(x,i){if(x.id===tid)ft=[x,i+1]});
     function f1(v){return v.toFixed(2).replace('.',',')+'\u00a0%'}
     if(ft){P.querySelector('[data-ftf="andel"]').textContent=ft[0].andel.toFixed(2).replace('.',',')+'\u00a0%';P.querySelector('[data-ftf="plads"]').textContent=ft[1];P.querySelector('[data-ftf="antal"]').textContent=ft[0].antal||(ft[0].selskaber||[]).length}
     P.querySelector('[data-ftf="antalT"]').textContent=T.length;
     var ol=P.querySelector('.ftf-bars');ol.textContent='';
-    T.forEach(function(x){var li=document.createElement('li');if(x.id==='fintech')li.className='ftf-aktiv';
+    T.forEach(function(x){var li=document.createElement('li');if(x.id===tid)li.className='ftf-aktiv';
       var n=document.createElement('span');n.className='ftf-n';n.textContent=x.navn;
       var bar=document.createElement('span');bar.className='ftf-bar';var i=document.createElement('i');i.style.width=(x.andel/max*100)+'%';bar.appendChild(i);
       var v=document.createElement('span');v.className='ftf-tal';v.textContent=f1(x.andel);

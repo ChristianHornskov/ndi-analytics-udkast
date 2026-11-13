@@ -283,3 +283,44 @@
 .fx-statisk .fx-trin:not(.fx-on) p,.fx-statisk .fx-trin:not(.fx-on) .fx-sel,.fx-statisk .fx-trin:not(.fx-on) .fx-mere{display:none}
 .fx-statisk .fx-trin h3{font-size:21px;margin:4px 0 8px}
 .fx-statisk .fx-trinliste{align-self:center}
+/* ===== Torvet (platforme): netværket bygges op trin for trin ===== */
+.pl-scene{height:600px;top:calc(50vh - 300px)}
+.pl-net{position:relative;z-index:1;width:100%;max-width:420px}
+.pl-svg{width:100%;height:auto;display:block;overflow:visible}
+.pl-svg text{font-family:"DM Sans",sans-serif}
+.pl-t{font-size:13px;fill:#c7d3dc;text-anchor:middle}
+.pl-t--s{fill:#89aeb4}.pl-t--b{fill:#f0a57e}.pl-t--a{fill:#b9b0f0}
+.pl-n{stroke:#05090d;stroke-width:2}
+.pl-n--s{fill:#89aeb4}.pl-n--b{fill:#f0a57e}.pl-n--a{fill:#9085e9}
+.pl-ad{stroke:#fff;stroke-width:1.6;stroke-linecap:round}
+.pl-dir{stroke:#8a99a8;stroke-width:2;stroke-dasharray:4 6}
+.pl-l{fill:none;stroke-width:1.2;stroke:#3a4658}
+.pl-l--a{stroke:#5a5390}
+.pl-puls{fill:none;stroke:#cfe0ff;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:3 22;opacity:0}
+.pl-mont{fill:#e8d98a;opacity:0}.pl-mont--a{fill:#b9b0f0}
+.pl-c{fill:#0d1921;stroke:#83acfa;stroke-width:2.5}
+.pl-ct{font-size:12px;font-weight:700;fill:#e6e8ed;text-anchor:middle}
+.pl-ring{fill:none;stroke:#d55181;stroke-width:1.2;stroke-dasharray:3 5;opacity:.8}
+.pl-sat-c{fill:#1b0f16;stroke:#d55181;stroke-width:1.6}
+.pl-sat-ik{fill:none;stroke:#f3b4cf;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.pl-svg g[class^="pl-g"],.pl-mid,.pl-lab,.pl-glod{transition:opacity .6s}
+.pl-g1,.pl-g2,.pl-g2b,.pl-g3,.pl-g4,.pl-g5,.pl-mid,.pl-lab{opacity:0}
+.pl-net.t1 .pl-mid,.pl-net.t1 .pl-g1,.pl-net.t1 .pl-lab{opacity:1}
+.pl-net.t1 .pl-g0{opacity:0}
+.pl-net.t2 .pl-g2,.pl-net.t2 .pl-g2b{opacity:1}
+.pl-net.t3 .pl-g3{opacity:1}
+.pl-net.t4 .pl-g4{opacity:1}
+.pl-net.t5 .pl-g5{opacity:1}
+.pl-g2 .pl-n,.pl-g2 .pl-l{opacity:0;transition:opacity .4s calc(var(--i)*45ms)}
+.pl-net.t2 .pl-g2 .pl-n,.pl-net.t2 .pl-g2 .pl-l{opacity:1}
+.pl-net.t2 .pl-puls{opacity:.85;animation:plpuls 1.8s linear infinite;animation-delay:calc(var(--i)*-130ms)}
+.pl-net.t3 .pl-mont{opacity:1}
+.pl-glod{opacity:.4}.pl-net.k3 .pl-glod{opacity:1}.pl-net.t3 .pl-c{stroke:#e8d98a}
+.pl-net.t5 .pl-c{stroke:#d55181}
+.pl-sat{opacity:0;transition:opacity .4s calc(var(--k)*150ms)}.pl-net.t5 .pl-sat{opacity:1}
+.pl-net.t5 .pl-g5{animation:none}
+@keyframes plpuls{to{stroke-dashoffset:-50}}
+@media(max-width:860px){.pl-scene{height:340px;top:56px}.pl-net{max-width:300px}.pl-scene .fx-note{display:none}}
+@media(prefers-reduced-motion:reduce){.pl-net .pl-puls{animation:none}}
+.v18t-hero--v5 .v18t-hero-tekst{order:1}.v18t-hero--v5 .ftf{order:2}
+.v5f:has([data-fx-scrolly]){overflow:visible!important;overflow-x:clip!important}
