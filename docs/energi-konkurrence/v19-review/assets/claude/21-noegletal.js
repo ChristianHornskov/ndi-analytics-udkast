@@ -14,7 +14,7 @@
      Hver række har sin egen skala. De seneste 12 måneder står i en ramme for sig. */
   function samletDiagram(aar, t, v, smal) {
     var W = smal ? 360 : 900, venstre = smal ? 4 : 8, hoejre = smal ? 4 : 8;
-    var cols = aar.map(function (a) { return { lab: String(a.aar), o: a.omsaetning, r: a.resultat }; })
+    var cols = aar.map(function (a) { return { lab: a.etiket || String(a.aar), o: a.omsaetning, r: a.resultat }; })
       .concat([{ lab: smal ? '12 mdr.' : '12 mdr. til ' + kortDato(t.til), o: t.omsaetning, r: t.resultat, seneste: true }]);
     var n = cols.length, slot = (W - venstre - hoejre) / n, bw = Math.min(smal ? 34 : 92, slot * 0.56);
     var oTop = 44, oH = smal ? 110 : 150, rTop = oTop + oH + (smal ? 58 : 64);
@@ -91,7 +91,7 @@
     var kv = (k.omsaetning / k.sammeKvartalAaretFoer - 1) * 100;
 
     // Design "Midnatsblå" (valgt 13.11.2026): tre nøgletal øverst, to søjlediagrammer, fodnote med kilde.
-    var cols = aar.map(function (a) { return { lab: String(a.aar), o: a.omsaetning, r: a.resultat }; })
+    var cols = aar.map(function (a) { return { lab: a.etiket || String(a.aar), o: a.omsaetning, r: a.resultat }; })
       .concat([{ lab: 'LTM', o: t.omsaetning, r: t.resultat, seneste: true }]);
     var oMax = Math.max.apply(null, cols.map(function (c) { return c.o; }));
     var pMax = Math.max(0, Math.max.apply(null, cols.map(function (c) { return c.r; })));
