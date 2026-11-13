@@ -768,3 +768,41 @@
 @media(max-width:860px){.hl-g{grid-template-columns:1fr;gap:14px}}
 @media(max-width:420px){.hl-gulv{gap:3px}.hl-hal{padding:8px}.hl-pm{min-width:44px;padding:0 6px}.hl-antal{gap:5px}.hl-tal b{font-size:1.35rem}.hl-tal--stor b{font-size:2rem}.hl-tjek{grid-template-columns:14px 1fr}.hl-tjek-n{grid-column:2}}
 @media(prefers-reduced-motion:reduce){.hl-c,.hl-tjek{transition:none}.hl-tjek.er-ny{animation:none}}
+/* Energi: 15 felter, vækstsøjler, ventetider og "Den dag strømmen gik" */
+.sv-15{width:110px;height:auto}.sv-q{fill:var(--c)}.sv-q--dk{fill:#e6e8ed}
+.sv-vaekst{width:96px;height:auto}.sv-vaekst text{fill:#8a99a8;font-size:12px;text-anchor:middle;font-weight:600}
+.vt{margin:26px 0 0;padding:20px 22px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02)}
+.vt-liste{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}
+.vt-liste li{display:grid;grid-template-columns:230px minmax(0,1fr) 110px;gap:14px;align-items:center}
+.vt-navn{font-size:.95rem}.vt-tal{font-size:.92rem;font-weight:600;font-variant-numeric:tabular-nums}
+.vt-spor{position:relative;height:14px;border-radius:7px;background:rgba(255,255,255,.05)}
+.vt-op{position:absolute;left:0;top:0;bottom:0;border-radius:7px;background:rgba(239,138,94,.35)}
+.vt-fast{position:absolute;left:0;top:0;bottom:0;border-radius:7px;background:#ef8a5e}
+.vt-liste li:last-child .vt-op{background:rgba(57,135,229,.4)}.vt-liste li:last-child .vt-fast{background:#3987e5}
+.vt-akse{display:flex;justify-content:space-between;margin:6px 124px 0 244px;font-size:.78rem;color:#8a99a8}
+@media(max-width:700px){.vt-liste li{grid-template-columns:minmax(0,1fr) auto;gap:6px 10px}.vt-spor{grid-column:1/-1;grid-row:2}.vt-akse{margin:6px 0 0}.vt{padding:16px}}
+.mk-fig{margin:18px 0 0}
+.mk-scene{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);touch-action:pan-y}
+.mk-svg{display:block;width:100%;height:auto;cursor:ew-resize;user-select:none;-webkit-user-select:none}
+.mk-tid{position:absolute;top:10px;padding:4px 10px;border-radius:999px;background:rgba(11,18,32,.82);color:#fff;font-size:.85rem;font-weight:600;pointer-events:none}
+.mk-tid--v{left:10px}.mk-tid--h{right:10px;background:rgba(160,30,40,.88)}
+.mk-ledning{fill:none;stroke:#3a4757;stroke-width:2}.mk-mast path{stroke:#5b6878;stroke-width:3;fill:none}
+.mk-flow{fill:none;stroke:#ffd66b;stroke-width:3;stroke-dasharray:6 16;animation:mk-flyd 1.4s linear infinite}
+@keyframes mk-flyd{to{stroke-dashoffset:-44}}
+.mk-gnist{fill:#fff2a8;stroke:#ffd66b;stroke-width:1}.mk-fart path{stroke:#fff;stroke-width:3;stroke-linecap:round;opacity:.75}
+.mk-roeg circle{fill:#c9d2dc;opacity:.75}
+.mk-nr circle{fill:#0b1220;stroke:#fff;stroke-width:2.5}.mk-nr text{fill:#fff;font-size:20px;font-weight:700;text-anchor:middle;font-family:inherit}
+.mk-linje{stroke:#fff;stroke-width:4}.mk-greb circle{fill:#0b1220;stroke:#fff;stroke-width:3}.mk-greb path{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.mk-slider{display:block;margin:12px 0 0}.mk-slider input{width:100%;accent-color:#ef8a5e;min-height:32px}
+.mk-cap{margin-top:6px;font-size:.82rem;color:#8a99a8}
+.mk-g{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:22px;margin-top:18px;align-items:start}
+.mk-liste{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.mk-p{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:center;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025)}
+.mk-pn{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#0b1220;border:2px solid #e6e8ed;font-weight:700;font-size:.9rem}
+.mk-p b{display:block;font-size:.98rem}.mk-p div span{display:block;font-size:.88rem;color:#a9b3bf;line-height:1.45}
+.mk-p--reserve{border-color:rgba(79,199,156,.4);background:rgba(25,158,112,.08)}.mk-p--reserve .mk-pn{border-color:#4fc79c;color:#4fc79c}
+.mk-fakta{padding:18px 20px;border-radius:14px;border-left:3px solid #ef8a5e;background:rgba(239,138,94,.07)}
+.mk-fakta p{margin:0 0 10px;line-height:1.55}.mk-fakta b{color:#ef8a5e}
+@media(max-width:860px){.mk-g{grid-template-columns:1fr;gap:14px}}
+@media(max-width:600px){.mk-tid{font-size:.75rem;padding:3px 8px;top:6px}.mk-tid--v{left:6px}.mk-tid--h{right:6px}.mk-nr text{font-size:26px}.mk-nr circle{r:21px}}
+@media(prefers-reduced-motion:reduce){.mk-flow{animation:none}}
