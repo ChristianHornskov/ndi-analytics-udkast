@@ -645,3 +645,43 @@
 @media(max-width:860px){.zm-g{grid-template-columns:1fr;gap:14px}.zm-fig{padding:8px}}
 @media(prefers-reduced-motion:reduce){.zm-verden,.zm-bane,.zm-sat,.zm-maane circle{transition:none}}
 @media(max-width:480px){.zm-knap--ud span{display:none}.zm-prikker{gap:2px}.zm-prikker button{width:28px}}
+/* ===== Råstoffer: figurer og lup over en elbil (.lp) ===== */
+.ra-tag{font-style:normal;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:#c98500;border:1px solid rgba(201,133,0,.5);border-radius:4px;padding:1px 5px;margin-left:6px;white-space:nowrap}
+.sv-bat{width:80px;height:auto}.sv-bat-k{fill:none;stroke:#8a99a8;stroke-width:2.5}.sv-bat-p{fill:#8a99a8}.sv-bat-f{fill:var(--c)}
+.sv-gauge{width:100px;height:auto}.sv-g-bg{fill:none;stroke:#2a3542;stroke-width:10;stroke-linecap:round}.sv-g-f{fill:none;stroke:var(--c);stroke-width:10;stroke-linecap:round}.sv-g-l{stroke:#e6e8ed;stroke-width:3;stroke-linecap:round}
+.lp-g{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px;margin-top:22px;align-items:start}
+.lp-fig{margin:0;padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:radial-gradient(100% 90% at 50% 20%,rgba(131,172,250,.07),rgba(255,255,255,.015))}
+.lp-svg{display:block;width:100%;height:auto;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}
+.lp-svg:active{cursor:grabbing}
+.ud-krop{fill:#1d2b44;stroke:#4d6a96;stroke-width:2}.ud-rude{fill:#2c4266;opacity:.8}.ud-hjul{fill:#0b1220;stroke:#3a4757;stroke-width:6}.ud-nav{fill:#3a4757}
+.lp-inde-bg{fill:#0a1a17}
+.rx-krop{fill:none;stroke:#2f6b5c;stroke-width:1.5;stroke-dasharray:4 4}.rx-rude{fill:none;stroke:#2f6b5c;stroke-width:1}.rx-hjul{fill:none;stroke:#2f6b5c;stroke-width:2}.rx-nav{fill:none;stroke:#2f6b5c}
+.rx-batteri{fill:rgba(25,158,112,.25);stroke:#199e70;stroke-width:2}.rx-celle{fill:#199e70;opacity:.7}
+.rx-motor circle{fill:rgba(144,133,233,.2);stroke:#9085e9;stroke-width:2}.rx-magnet{fill:#9085e9}
+.rx-ledning{fill:none;stroke:#d95926;stroke-width:4;stroke-linecap:round}
+.rx-elek rect{fill:rgba(201,133,0,.18);stroke:#c98500;stroke-width:2}.rx-elek path{stroke:#c98500;stroke-width:2}
+.rx-lak path{stroke:#83acfa;stroke-width:6;stroke-linecap:round;fill:none}.rx-lak rect{fill:rgba(57,135,229,.2);stroke:#3987e5;stroke-width:2}
+.lp-ring{fill:none;stroke:#e6e8ed;stroke-width:4;filter:drop-shadow(0 4px 10px rgba(0,0,0,.6));pointer-events:none}
+.lp-skaft{stroke:#e6e8ed;stroke-width:12;stroke-linecap:round;pointer-events:none}
+.lp-prik{fill:var(--c);opacity:.95;pointer-events:none;animation:lp-puls 2s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.lp-prik.er-fundet{animation:none;opacity:.35}
+.lp-prik.er-aktiv{opacity:1}
+@keyframes lp-puls{0%,100%{transform:scale(1)}50%{transform:scale(1.5)}}
+.lp-cap{margin-top:10px;font-size:.82rem;color:#8a99a8}
+.lp-side{display:flex;flex-direction:column;gap:12px}
+.lp-tael{margin:0;color:#a9b3bf}.lp-tael b{color:#e6e8ed;font-size:1.2rem}
+.lp-knapper{display:flex;flex-wrap:wrap;gap:8px}
+.lp-knap{font:inherit;font-size:.86rem;min-height:40px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03);color:#d4d9e0;cursor:pointer}
+.lp-knap.er-fundet{border-color:var(--c)}
+.lp-knap.er-aktiv{background:color-mix(in srgb,var(--c) 18%,transparent);border-color:var(--c);color:#fff}
+.lp-panel{padding:18px 20px;border-radius:14px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.025);border-left:3px solid var(--c,#83acfa)}
+.lp-panel h3{margin:0 0 8px;font-size:1.2rem}.lp-panel p{margin:0 0 10px;line-height:1.55}
+.lp-k{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c)!important}
+.lp-lab{font-size:.88rem;color:#a9b3bf;margin-top:4px!important}
+.lp-sel{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.lp-sel a{display:inline-flex;align-items:center;gap:7px;padding:5px 10px 5px 5px;border-radius:999px;background:rgba(255,255,255,.05);text-decoration:none;color:#e6e8ed;font-size:.84rem;min-height:34px}
+.lp-sel img{width:20px;height:20px;border-radius:4px;background:#fff;object-fit:contain}
+.lp-sel .ra-tag{font-size:.64rem}
+.lp-panel--slut{border-left-color:#83acfa}
+@media(max-width:860px){.lp-g{grid-template-columns:1fr;gap:14px}.lp-fig{padding:8px}}
+@media(prefers-reduced-motion:reduce){.lp-prik{animation:none}}
