@@ -152,3 +152,32 @@
 .ftd-fin{color:var(--v5-ink,#e6e8ed);background:rgba(131,172,250,.06)}
 .ftd-fin a{color:inherit}
 @media(max-width:700px){.ftd-r{grid-template-columns:1fr}.ftd-r--h{display:none}.ftd-r>div{padding:6px 16px}.ftd-emne{padding-top:16px!important}.ftd-bank::before{content:"Almindelig bank: ";font-weight:600}.ftd-fin::before{content:"Fintech: ";font-weight:600;color:#83acfa}.ftd-fin{padding-bottom:16px!important}}
+/* v6: forskellen som modstilling */
+.ftv2-kort{margin-top:18px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(90deg,rgba(255,255,255,.015) 0,rgba(255,255,255,.015) 50%,rgba(131,172,250,.07) 50%,rgba(131,172,250,.07) 100%);overflow:hidden}
+.ftv2-top{display:grid;grid-template-columns:1fr 150px 1fr;align-items:center;padding:24px 28px 14px}
+.ftv2-side{display:flex;align-items:center;gap:14px;font-size:19px}
+.ftv2-side svg{width:44px;height:44px;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ftv2-side--b{color:var(--v5-ink-2,#aebbc7)}.ftv2-side--b svg{stroke:#7d8a97}
+.ftv2-side--f{justify-content:flex-end;color:#cfe0ff}.ftv2-side--f svg{stroke:#83acfa;order:2}
+.ftv2-mod{justify-self:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--v5-ink-2,#aebbc7)}
+.ftv2-liste{list-style:none;margin:0;padding:0 28px 18px}
+.ftv2-r{display:grid;grid-template-columns:1fr 150px 1fr;align-items:center;gap:0;padding:16px 0;border-top:1px solid rgba(255,255,255,.07)}
+.ftv2-r p{margin:0;font-size:15.5px;line-height:1.5}
+.ftv2-b{color:var(--v5-ink-2,#aebbc7);padding-right:24px}
+.ftv2-f{color:var(--v5-ink,#e6e8ed);padding-left:24px;text-align:right}
+.ftv2-f a{color:inherit}
+.ftv2-emne{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--v5-ink,#e6e8ed)}
+.ftv2-emne svg{width:34px;height:34px;padding:7px;border-radius:50%;border:1px solid rgba(255,255,255,.15);background:#0d1921;fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:760px){.ftv2-kort{background:rgba(255,255,255,.015)}.ftv2-top{display:none}.ftv2-liste{padding:6px 16px 10px}.ftv2-r{grid-template-columns:1fr;gap:8px}.ftv2-emne{flex-direction:row;order:-1}.ftv2-emne svg{width:28px;height:28px;padding:5px}.ftv2-b,.ftv2-f{padding:0;text-align:left}.ftv2-b::before{content:"Almindelig bank: ";font-weight:600}.ftv2-f{padding:10px 12px;border-radius:8px;background:rgba(131,172,250,.08)}.ftv2-f::before{content:"Fintech: ";font-weight:600;color:#83acfa}}
+/* v6: risici som kort */
+.ftr2-g{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.ftr2-g li{grid-column:span 2;padding:18px 18px 16px;border-radius:12px;border:1px solid rgba(201,148,157,.22);background:rgba(201,148,157,.05)}
+.ftr2-g li:nth-child(4){grid-column:2/span 2}.ftr2-g li:nth-child(5){grid-column:4/span 2}
+.ftr2-ik{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:10px;background:rgba(201,148,157,.14)}
+.ftr2-ik svg{width:22px;height:22px;fill:none;stroke:#e0aab3;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ftr2-g h3{margin:12px 0 6px;font-size:16.5px}
+.ftr2-g p{margin:0;font-size:14.5px;line-height:1.5;color:var(--v5-ink-2,#d0d8df)}
+.ftr2 .ftr-fod{margin-top:16px}
+@media(max-width:900px){.ftr2-g{grid-template-columns:1fr 1fr}.ftr2-g li,.ftr2-g li:nth-child(4),.ftr2-g li:nth-child(5){grid-column:auto}}
+@media(max-width:560px){.ftr2-g{grid-template-columns:1fr}}
+.ftv2-f{text-align:left!important}.ftv2-side--f{justify-content:flex-start!important;padding-left:24px}.ftv2-side--f svg{order:0!important}
