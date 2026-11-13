@@ -13,6 +13,7 @@
       var n=Math.min(LAG,Math.floor(t/TRIN)),s=Math.floor(t%TRIN),p=t%1,faerdig=t>=TOT;
       for(var i=0;i<n;i++){var y=Y0-(i+1)*H;g.appendChild(el('rect',{x:40,y:y,width:520,height:H-2,fill:i%2?'#33465f':'#2c3e55'}));
         segs(i).forEach(function(q){g.appendChild(el('rect',{x:q[0],y:y+7,width:q[1],height:H-14,rx:2,fill:i%2?'#e08a5a':'#d9a400'}));});}
+      for(var j=n;j<LAG;j++){var gy=Y0-(j+1)*H;g.appendChild(el('rect',{x:40,y:gy,width:520,height:H-2,rx:2,fill:'none',stroke:'rgba(255,255,255,.16)','stroke-dasharray':'6 6'}));}
       if(!faerdig){var y=Y0-(n+1)*H,S=segs(n);
         if(s===0){var hh=(H-2)*p;g.appendChild(el('rect',{x:40,y:y+(H-2)-hh,width:520,height:hh,fill:'#8fb3d9'}));}
         else{g.appendChild(el('rect',{x:40,y:y,width:520,height:H-2,fill:'#8fb3d9'}));}

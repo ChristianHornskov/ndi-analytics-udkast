@@ -835,3 +835,20 @@
 @media(max-width:860px){.lg-g{grid-template-columns:1fr;gap:14px}.lg-fig{padding:8px}}
 @media(max-width:420px){.lg-knap{font-size:.92rem;padding-right:14px}.lg-styr{flex-wrap:wrap}}
 .lg-nu{margin:10px 2px 0;font-size:.95rem;font-weight:600;color:#ef8a5e;min-height:1.4em}
+/* Ens overskrifter på alle temasider, uanset temaets egen stilfil */
+.v5f :is(#forandringen,#tjener,#risiko,#forskellen,#telefonen,#torvet,#virksomheden,#vejen,#qubitten,#blokken,#banerne,#bilen,#sanserne,#hallen,#moerklaegning,#lag) h2{font-size:clamp(28px,7vw,42px);line-height:1.12;margin:.2rem 0 1rem}
+/* Trykflader og små tekster på mobil */
+.up-trail a{display:inline-flex;align-items:center;min-height:28px}
+.fx-mere{padding:4px 0;min-height:28px}
+.bt-eks a{min-height:30px}
+.sv-tre text{font-size:13px}
+/* Forbindelser til andre temaer */
+.ft5-ogs{margin:16px 0 0;padding:14px 16px;border-radius:12px;border:1px dashed rgba(255,255,255,.16);font-size:.92rem;line-height:1.9;color:var(--v5-ink-2,#c7d3dc)}
+.ft5-ogs-sel{display:inline-flex;align-items:center;gap:6px;min-height:28px;color:#e6e8ed;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+.ft5-ogs-sel img{width:18px;height:18px;border-radius:4px;background:#fff;object-fit:contain}
+/* Chips: selskaberne med beskrivelse står i flere kolonner under teksten, så siden ikke bliver for lang */
+.ft5-g:has(.ft5-sel--besk){grid-template-columns:220px 1fr}
+.ft5-sel--besk{grid-column:1/-1;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:4px 18px;padding-top:12px;border-top:1px solid rgba(255,255,255,.06)}
+@media(max-width:640px){.ft5-g:has(.ft5-sel--besk){grid-template-columns:1fr}.ft5-sel--besk{grid-template-columns:1fr}}
+/* Chips: tomme lag vises stiplet, før man begynder at bygge */
+.lg-spoegelse rect{fill:none;stroke:rgba(255,255,255,.18);stroke-dasharray:6 6}

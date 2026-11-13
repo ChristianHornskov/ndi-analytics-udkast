@@ -22,7 +22,7 @@
       var ul=g.querySelector('.ft5-sel');Array.prototype.slice.call(ul.children).sort(function(a,b){return (A[b.dataset.slug]||-1)-(A[a.dataset.slug]||-1)}).forEach(function(li){ul.appendChild(li)});
       g.querySelector('[data-ft5-g]').textContent=fmt(gs);sum+=gs;grp.push([g,gs]);
     });
-    var L=R.querySelector('.ft5-liste');grp.sort(function(a,b){return b[1]-a[1]}).forEach(function(x){L.appendChild(x[0])});
+    var L=R.querySelector('.ft5-liste');grp.sort(function(a,b){var sa=a[0].classList.contains('ft5-g--sidst')||a[0].classList.contains('ft5-g--andre'),sb=b[0].classList.contains('ft5-g--sidst')||b[0].classList.contains('ft5-g--andre');if(sa!==sb)return sa?1:-1;return b[1]-a[1]}).forEach(function(x){L.appendChild(x[0])});
     var stak=R.querySelector('.ft5-stak');
     grp.forEach(function(x){var s=stak.querySelector('[data-g="'+x[0].dataset.g+'"]');s.style.width=(sum?x[1]/sum*100:20)+'%';stak.appendChild(s)});
     R.querySelector('[data-ft5="sum"]').textContent=fmt(sum);
@@ -42,7 +42,12 @@
       var v=document.createElement('span');v.className='ftf-tal';v.textContent=f1(x.andel);
       li.appendChild(n);li.appendChild(bar);li.appendChild(v);ol.appendChild(li)});
   }
-  function alt(){tegn();fond()}
+  /* Et selskabs vægt i temaet, regnet fra fondens data: <span data-tema-andel="tema:slug"> */
+  function vaegt(){var D=window.DAGENS_TAL;if(!D||!D.temaer)return;
+    document.querySelectorAll('[data-tema-andel]').forEach(function(e){var p=e.getAttribute('data-tema-andel').split(':'),t=null;D.temaer.forEach(function(x){if(x.id===p[0])t=x});
+      if(!t||!t.andel||!t.selskaber)return;var s=null;t.selskaber.forEach(function(x){if(x.slug===p[1])s=x});if(!s||s.andel==null)return;
+      e.textContent='omkring '+Math.round(s.andel/t.andel*100)+'\u00a0%'});}
+  function alt(){tegn();fond();vaegt()}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',alt);else alt();
   document.addEventListener('ndi:live',alt);window.addEventListener('load',alt);
 })();
