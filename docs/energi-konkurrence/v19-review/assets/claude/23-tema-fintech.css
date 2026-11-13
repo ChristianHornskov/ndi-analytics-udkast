@@ -510,3 +510,41 @@
 .hb-sel img{width:20px;height:20px;border-radius:4px;background:#fff;object-fit:contain}
 @media(max-width:860px){.hb-r{grid-template-columns:1fr;gap:10px}.hb-pil{display:none}.hb-sel{justify-content:flex-start}}
 .lv-svg--m .lv-st-t{font-size:16px}
+/* ===== Kvante: figurer, mål en qubit (.mq) og misforståelser (.mm) ===== */
+.sv-lqs{width:132px;height:auto}
+.sv-lq rect{fill:rgba(201,133,0,.16);stroke:var(--c);stroke-width:.8}
+.sv-lq circle{fill:var(--c)}
+.sv-tre{width:120px;height:auto}
+.sv-tre rect{fill:var(--c);opacity:.85}
+.sv-tre text{fill:#0b1220;font-size:11px;font-weight:700;text-anchor:middle}
+.mq-g{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:16px;margin-top:22px;align-items:stretch}
+.mq-kort{padding:22px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025)}
+.mq-kort--q{background:radial-gradient(120% 90% at 50% 0%,rgba(131,172,250,.08),rgba(255,255,255,.02))}
+.mq-k{margin:0 0 14px;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#83acfa}
+.mq-kontakt{display:inline-flex;border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:4px;gap:4px}
+.mq-bit{font:inherit;font-size:1.3rem;font-weight:700;width:56px;height:48px;border-radius:999px;border:0;background:transparent;color:#a9b3bf;cursor:pointer}
+.mq-bit[aria-pressed="true"]{background:#83acfa;color:#0b1220}
+.mq-tekst{margin:16px 0 0;line-height:1.55}
+.mq-tekst b{display:block;margin-top:6px}
+.mq-blandinger{display:flex;flex-wrap:wrap;gap:8px}
+.mq-bl,.mq-maal,.mq-nul{font:inherit;font-size:.9rem;min-height:42px;padding:8px 16px;border-radius:999px;cursor:pointer;color:#e6e8ed;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.16)}
+.mq-bl[aria-pressed="true"]{background:rgba(131,172,250,.16);border-color:#83acfa}
+.mq-maal{background:#83acfa;color:#0b1220;border-color:#83acfa;font-weight:600}
+.mq-nul{background:transparent}
+.mq-svg{display:block;width:100%;max-width:420px;height:auto;margin:14px auto 6px}
+.mq-akse{stroke:rgba(255,255,255,.25);stroke-width:2}
+.mq-akse-t{fill:#c3cad3;font-size:18px;font-weight:700;text-anchor:middle}
+.mq-p0{fill:#83acfa}.mq-p1{fill:#c98500}
+.mq-ny{animation:mq-fald .35s ease-out}
+@keyframes mq-fald{from{transform:translateY(-30px);opacity:0}to{transform:none;opacity:1}}
+.mq-knapper{display:flex;flex-wrap:wrap;gap:8px}
+.mq-res{margin:14px 0 0;min-height:1.5em;font-weight:600}
+.mq-note{margin:14px 0 0;font-size:.82rem;color:#8a99a8}
+@media(max-width:760px){.mq-g{grid-template-columns:1fr}.mq-kort{padding:16px}}
+.mm-g{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;counter-reset:mm}
+.mm-k{position:relative;padding:22px 22px 20px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025)}
+.mm-q{margin:0 0 12px;font-size:1.1rem;font-weight:600;line-height:1.35;text-decoration:line-through;text-decoration-color:rgba(217,89,38,.7);text-decoration-thickness:2px}
+.mm-svar{margin:0;line-height:1.55}
+.mm-svar b{color:#ef8a5e}
+.mm-kilde{margin:14px 0 0;font-size:.85rem;color:#8a99a8}
+@media(max-width:760px){.mm-g{grid-template-columns:1fr}}
