@@ -86,6 +86,9 @@
     /* Handles aktien i en anden valuta end regnskabet (fx ADR i USD og regnskab i NTD), kan markedsværdi og
        price/sales ikke regnes uden omregning. Så vises de ikke, og kursen vises i sin egen valuta. */
     var mvOk = isFinite(mv) && mv > 0;
+    /* Selskaber uden omsætning (fx mineselskaber før produktion): ingen price/sales og intet omsætningspanel. */
+    var udenOms = !(t.omsaetning > 0) && (n.aar || []).every(function (a) { return !(a.omsaetning > 0); });
+    var valutaForskel = L && L.valuta && L.valuta !== v;
     var kursVis = isFinite(kurs) ? kurs : (L ? L.kurs : null), kursValuta = isFinite(kurs) ? v : (L ? L.valuta : v);
     if (!isFinite(kurs) && L) kursDato = L.dato;
     var kv = (k.omsaetning / k.sammeKvartalAaretFoer - 1) * 100;
@@ -118,15 +121,15 @@
     boks.innerHTML =
       '<div class="cr-mb">' +
         '<div class="cr-mb-metrics">' +
-          maal('Omsætning · ' + kvartal(k.til), mio(k.omsaetning), 'mio. ' + v, pct(kv) + ' mod ' + fra) +
+          (udenOms ? maal('Omsætning', 'Ingen', '', 'Selskabet har endnu ingen omsætning') : maal('Omsætning · ' + kvartal(k.til), mio(k.omsaetning), 'mio. ' + v, pct(kv) + ' mod ' + fra)) +
           (mvOk ? maal('Markedsværdi', dk(mv / 1000, 1), 'mia. ' + v, 'Aktier × kurs · ' + dato(kursDato)) +
-          maal('Price/sales', dk(ps, 1), '×', 'Markedsværdi / LTM-omsætning') : '') +
+          (udenOms ? '' : maal('Price/sales', dk(ps, 1), '×', 'Markedsværdi / LTM-omsætning')) : '') +
         '</div>' +
-        '<div class="cr-mb-pair">' +
-          '<div class="cr-mb-panel"><h3>Omsætning</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleOms() + '</div>' +
+        '<div class="cr-mb-pair' + (udenOms ? ' cr-mb-pair--en' : '') + '">' +
+          (udenOms ? '' : '<div class="cr-mb-panel"><h3>Omsætning</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleOms() + '</div>') +
           '<div class="cr-mb-panel"><h3>Resultat efter skat</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleRes() + '</div>' +
         '</div>' +
-        '<p class="cr-mb-foot">Mio. ' + v + '. LTM er de 12 måneder til ' + dato(t.til) + '. Omsætning er ' + (n.navn ? n.navn + 's' : 'selskabets') + ' samlede indtægter. ' + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ') +
+        '<p class="cr-mb-foot">Mio. ' + v + '. LTM er de 12 måneder til ' + dato(t.til) + '. Omsætning er ' + (n.navn ? n.navn + 's' : 'selskabets') + ' samlede indtægter. ' + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : (valutaForskel ? 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ' : '')) +
           'Kilde: <a class="tekstlink" href="' + n.kildeUrl + '" target="_blank" rel="noopener">' + n.kilde + '</a>.</p>' +
       '</div>';
 
