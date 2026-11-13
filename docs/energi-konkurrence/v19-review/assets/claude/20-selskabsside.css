@@ -143,7 +143,7 @@ html body .v18s-hero .v18s-trin .v18s-trin-knap{width:100%;justify-content:space
 .v18s-hero .v18s-trin ol{grid-template-columns:1fr 1fr!important}
 @media(max-width:760px){
 .v18s-hero{grid-template-columns:1fr!important}
-.v18s-hero .v18s-hoved h1{font-size:44px!important;overflow-wrap:normal}
+.v18s-hero .v18s-hoved h1{font-size:clamp(30px,10vw,44px)!important;overflow-wrap:normal}
 .v18s-hero .v18s-hoved .sidehoved-ikon--logo{width:56px;height:56px}
 .cr-pitch{font-size:18px}
 }
