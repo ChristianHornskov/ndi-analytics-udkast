@@ -609,3 +609,39 @@
 .bb-note{margin:14px 0 0;font-size:.82rem;color:#8a99a8}
 @media(max-width:860px){.bb-g{grid-template-columns:1fr}.bb-trin{padding:16px}.bb-kaede{padding:14px;gap:18px 22px}.bb-blok{min-height:104px;padding:12px}}
 @media(prefers-reduced-motion:reduce){.bb-h,.bb-rolle,.bb-blok{transition:none}.bb-ind-ny,.er-ny-laast{animation:none}}
+/* ===== Rumfart: zoom ud (.zm) ===== */
+.sv-ti{width:96px;height:auto}
+.zm-g{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:22px;margin-top:22px;align-items:start}
+.zm-fig{padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:radial-gradient(90% 90% at 50% 50%,#0f1830,#070b14)}
+.zm-svg{display:block;width:100%;height:auto;border-radius:10px;overflow:hidden}
+.zm-verden{transform-origin:0 0;transition:transform 1.1s cubic-bezier(.45,0,.2,1)}
+.zm-bane{fill:none;stroke:rgba(255,255,255,.22);stroke-width:1.5;vector-effect:non-scaling-stroke;stroke-dasharray:4 5;opacity:0;transition:opacity .6s .4s}
+.zm-sat{fill:#e6e8ed;opacity:0;transition:opacity .6s .5s}
+.zm-leo{fill:#199e70}.zm-meo{fill:#c98500}.zm-geo{fill:#d55181}
+.zm-maane circle{fill:#c3cad3;opacity:0;transition:opacity .6s .5s}
+.zm-raket path{fill:#e6e8ed}
+.zm-raket .zm-flamme{fill:#d95926}
+.zm--1 .zm-b-leo,.zm--1 .zm-leo,.zm--2 .zm-b-meo,.zm--2 .zm-meo,.zm--3 .zm-b-geo,.zm--3 .zm-geo,.zm--4 .zm-b-maane,.zm--4 .zm-maane circle{opacity:1}
+.zm--1 .zm-b-leo{stroke:rgba(25,158,112,.6)}.zm--2 .zm-b-meo{stroke:rgba(201,133,0,.6)}.zm--3 .zm-b-geo{stroke:rgba(213,81,129,.6)}
+.zm-styr{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px}
+.zm-knap{font:inherit;min-width:48px;height:48px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:#e6e8ed;font-size:1.4rem;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 14px}
+.zm-knap--ud{background:#83acfa;color:#0b1220;border-color:#83acfa;font-weight:700}
+.zm-knap--ud span{font-size:.95rem}
+.zm-knap:disabled{opacity:.35;cursor:default}
+.zm-prikker{list-style:none;margin:0;padding:0;display:flex;gap:6px}
+.zm-prikker button{width:32px;height:32px;border:0;background:transparent;cursor:pointer;position:relative}
+.zm-prikker button::after{content:"";position:absolute;inset:11px;border-radius:50%;background:#2a3542;transition:background .3s,transform .3s}
+.zm-prikker button.er-set::after{background:#83acfa}
+.zm-prikker button.er-aktiv::after{transform:scale(1.5)}
+.zm-cap{margin:10px 0 0;font-size:.82rem;color:#8a99a8}
+.zm-panel{padding:20px 22px;border-radius:14px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.025);border-left:3px solid #83acfa}
+.zm-panel h3{margin:0 0 8px;font-size:1.25rem}
+.zm-panel p{margin:0 0 10px;line-height:1.55}
+.zm-k{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#83acfa!important}
+.zm-lab{font-size:.88rem;color:#a9b3bf;margin-top:6px!important}
+.zm-sel{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.zm-sel a{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:999px;background:rgba(255,255,255,.05);text-decoration:none;color:#e6e8ed;font-size:.88rem;min-height:36px}
+.zm-sel img{width:20px;height:20px;border-radius:4px;background:#fff;object-fit:contain}
+@media(max-width:860px){.zm-g{grid-template-columns:1fr;gap:14px}.zm-fig{padding:8px}}
+@media(prefers-reduced-motion:reduce){.zm-verden,.zm-bane,.zm-sat,.zm-maane circle{transition:none}}
+@media(max-width:480px){.zm-knap--ud span{display:none}.zm-prikker{gap:2px}.zm-prikker button{width:28px}}
