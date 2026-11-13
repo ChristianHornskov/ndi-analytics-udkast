@@ -83,6 +83,11 @@
     var kurs = L && L.valuta === v ? L.kurs : ak.kurs, kursDato = L && L.valuta === v ? L.dato : ak.dato;
     var mv = ak.aktier ? ak.aktier * kurs / 1e6 : ak.markedsvaerdi;
     var ps = mv / t.omsaetning;
+    /* Handles aktien i en anden valuta end regnskabet (fx ADR i USD og regnskab i NTD), kan markedsværdi og
+       price/sales ikke regnes uden omregning. Så vises de ikke, og kursen vises i sin egen valuta. */
+    var mvOk = isFinite(mv) && mv > 0;
+    var kursVis = isFinite(kurs) ? kurs : (L ? L.kurs : null), kursValuta = isFinite(kurs) ? v : (L ? L.valuta : v);
+    if (!isFinite(kurs) && L) kursDato = L.dato;
     var kv = (k.omsaetning / k.sammeKvartalAaretFoer - 1) * 100;
 
     // Design "Midnatsblå" (valgt 13.11.2026): tre nøgletal øverst, to søjlediagrammer, fodnote med kilde.
@@ -114,19 +119,19 @@
       '<div class="cr-mb">' +
         '<div class="cr-mb-metrics">' +
           maal('Omsætning · ' + kvartal(k.til), mio(k.omsaetning), 'mio. ' + v, pct(kv) + ' mod ' + fra) +
-          maal('Markedsværdi', dk(mv / 1000, 1), 'mia. ' + v, 'Aktier × kurs · ' + dato(kursDato)) +
-          maal('Price/sales', dk(ps, 1), '×', 'Markedsværdi / LTM-omsætning') +
+          (mvOk ? maal('Markedsværdi', dk(mv / 1000, 1), 'mia. ' + v, 'Aktier × kurs · ' + dato(kursDato)) +
+          maal('Price/sales', dk(ps, 1), '×', 'Markedsværdi / LTM-omsætning') : '') +
         '</div>' +
         '<div class="cr-mb-pair">' +
           '<div class="cr-mb-panel"><h3>Omsætning</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleOms() + '</div>' +
           '<div class="cr-mb-panel"><h3>Resultat efter skat</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleRes() + '</div>' +
         '</div>' +
-        '<p class="cr-mb-foot">Mio. ' + v + '. LTM er de 12 måneder til ' + dato(t.til) + '. Omsætning er ' + (n.navn ? n.navn + 's' : 'selskabets') + ' samlede indtægter. Markedsværdi pr. ' + dato(kursDato) + '. ' +
+        '<p class="cr-mb-foot">Mio. ' + v + '. LTM er de 12 måneder til ' + dato(t.til) + '. Omsætning er ' + (n.navn ? n.navn + 's' : 'selskabets') + ' samlede indtægter. ' + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ') +
           'Kilde: <a class="tekstlink" href="' + n.kildeUrl + '" target="_blank" rel="noopener">' + n.kilde + '</a>.</p>' +
       '</div>';
 
     // Aktiens tal hører til kurskortet og flyttes derind, når det findes.
-    var aktieRk = celle('Seneste lukkekurs', dk(kurs, 2), v, (L && L.ticker ? L.ticker + ' · ' : '') + dato(kursDato));
+    var aktieRk = isFinite(kursVis) && kursVis !== null ? celle('Seneste lukkekurs', dk(kursVis, 2), kursValuta, (L && L.ticker ? L.ticker + ' · ' : '') + dato(kursDato)) : '';
     if (L && isFinite(L.y1) && L.y1fra) aktieRk += celle('Kursændring, 12 måneder', (L.y1 > 0 ? '+' : '') + dk(L.y1, 1) + ' %', '', dato(L.y1fra.slice(0, 10)) + ' til ' + dato(kursDato));
     if (L && L.afstand !== null) aktieRk += celle(L.fuldtAar ? 'Under 52-ugers top' : 'Under toppen i perioden', dk(L.afstand, 1) + ' %', '', 'Afstand til højeste dagskurs');
     var rk = document.querySelector('.cr-nt-aktie') || document.createElement('div');
