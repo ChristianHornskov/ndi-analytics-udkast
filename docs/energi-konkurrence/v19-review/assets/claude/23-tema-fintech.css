@@ -136,3 +136,19 @@
 .ftd-g a{color:inherit}
 .ftd .ftd-kilde{margin-top:14px}
 @media(max-width:860px){.ftd-g{grid-template-columns:1fr}}
+/* v5: tættere afstand og sammenligningstabel */
+.ftf2.s{padding-bottom:20px!important}
+.ft5.s{padding-top:28px!important}
+.ftc-h span{display:block;margin-top:4px;font-size:13px;font-weight:400;color:var(--v5-ink-2,#aebbc7)}
+.ftd-tab{margin-top:18px;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden}
+.ftd-r{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1.4fr)}
+.ftd-r>div{padding:16px 20px;font-size:15px;line-height:1.5}
+.ftd-r+.ftd-r{border-top:1px solid rgba(255,255,255,.08)}
+.ftd-r--h>div{padding:12px 20px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--v5-ink-2,#aebbc7)}
+.ftd-r--h>div:last-child{color:#83acfa}
+.ftd-emne{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--v5-ink,#e6e8ed)}
+.ftd-emne svg{width:22px;height:22px;flex:none;fill:none;stroke:#89aeb4;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ftd-bank{color:var(--v5-ink-2,#aebbc7)}
+.ftd-fin{color:var(--v5-ink,#e6e8ed);background:rgba(131,172,250,.06)}
+.ftd-fin a{color:inherit}
+@media(max-width:700px){.ftd-r{grid-template-columns:1fr}.ftd-r--h{display:none}.ftd-r>div{padding:6px 16px}.ftd-emne{padding-top:16px!important}.ftd-bank::before{content:"Almindelig bank: ";font-weight:600}.ftd-fin::before{content:"Fintech: ";font-weight:600;color:#83acfa}.ftd-fin{padding-bottom:16px!important}}
