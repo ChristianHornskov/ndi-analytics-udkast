@@ -1,0 +1,35 @@
+/* Fintech: fem måder at tjene penge på */
+.ft5 .ft5-intro{max-width:62ch}
+.ft5-fig{margin:22px 0 18px}
+.ft5-stak{display:flex;gap:2px;height:22px;border-radius:5px;overflow:hidden;background:rgba(255,255,255,.04)}
+.ft5-seg{background:var(--c);flex:0 0 auto;width:20%;transition:width .3s}
+.ft5-sum{margin-top:8px;font-size:14px;color:var(--v5-ink-2,#aebbc7)}
+.ft5-sum b{color:var(--v5-ink,#e6e8ed);font-weight:600}
+.ft5-liste{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ft5-g{display:grid;grid-template-columns:230px 1fr 300px;gap:22px;align-items:start;padding:16px 18px;border:1px solid rgba(255,255,255,.08);border-left:4px solid var(--c);border-radius:10px;background:rgba(255,255,255,.02)}
+.ft5-hoved{display:grid;grid-template-columns:28px 1fr;column-gap:10px;align-items:center}
+.ft5-ik{width:24px;height:24px;fill:none;stroke:var(--c);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ft5-hoved h3{margin:0;font-size:17px;line-height:1.25}
+.ft5-andel{grid-column:2;margin:6px 0 0;font-size:13px;color:var(--v5-ink-2,#aebbc7)}
+.ft5-andel b{display:block;font-size:24px;font-weight:600;color:var(--v5-ink,#e6e8ed);font-variant-numeric:tabular-nums;line-height:1.1}
+.ft5-flow{margin:0;display:grid;gap:10px}
+.ft5-flow dt{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--v5-ink-2,#aebbc7);margin:0}
+.ft5-flow dd{margin:2px 0 0;font-size:15px;line-height:1.45}
+.ft5-flow div+div dd{color:var(--v5-ink,#e6e8ed)}
+.ft5-sel{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.ft5-sel a{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center;padding:5px 8px;border-radius:6px;text-decoration:none;color:inherit;font-size:14px}
+.ft5-sel a:hover,.ft5-sel a:focus-visible{background:rgba(255,255,255,.06)}
+.ft5-sel img{width:22px;height:22px;border-radius:5px;object-fit:contain;background:#fff}
+.ft5-n{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 8px}
+.ft5-ogsaa{font-size:11.5px;color:var(--v5-ink-2,#aebbc7)}
+.ft5-sel b{font-weight:500;font-variant-numeric:tabular-nums;font-size:13.5px;color:var(--v5-ink-2,#c7d3dc)}
+.ft5-sel li.ft5-uden b{display:none}
+.ft5 .ft5-kilde{margin-top:18px;max-width:80ch;color:var(--v5-ink-2,#aebbc7)}
+@media(max-width:980px){.ft5-g{grid-template-columns:1fr 1fr}.ft5-hoved{grid-column:1/-1}}
+@media(max-width:640px){.ft5-g{grid-template-columns:1fr;gap:14px;padding:14px}.ft5-andel b{display:inline;margin-right:6px;font-size:20px}}
+#videre .cta{list-style:none;margin:0;padding:0;display:grid;gap:.6rem}
+#videre .cta a{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px;padding:.8rem 1.1rem;border:1px solid var(--teal,#3d6b70);border-radius:12px;color:var(--ink,#e6e8ed);text-decoration:none;font-weight:600;background:var(--surf,#0f1b23)}
+#videre .cta a:hover{background:var(--dyb,#0a141b)}
+#videre .cta a span{color:var(--mute,#9aa8b4);font-weight:400;font-size:.88rem;text-align:right}
+@media(max-width:640px){#videre .cta a{flex-direction:column;align-items:flex-start;gap:.2rem}#videre .cta a span{text-align:left}}
+.ft5-g--andre{--c:#6b7785}
