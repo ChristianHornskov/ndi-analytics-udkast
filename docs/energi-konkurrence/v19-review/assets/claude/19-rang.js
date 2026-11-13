@@ -3,10 +3,26 @@
    bliver siden som den er. */
 (function () {
   function el(tag, cls, tekst) { var e = document.createElement(tag); if (cls) e.className = cls; if (tekst != null) e.textContent = tekst; return e; }
-  function pct(v) { if (v !== 0 && Math.abs(v) < 0.05) return 'under 0,1 %'; return v.toLocaleString('da-DK', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + ' %'; }
+  var DEC = 1; // to decimaler på sider med den nye andelsboks, så selskaber med næsten samme andel kan skelnes
+  function pct(v) {
+    var graense = DEC === 2 ? 0.005 : 0.05;
+    if (v !== 0 && Math.abs(v) < graense) return 'under ' + (DEC === 2 ? '0,01' : '0,1') + ' %';
+    return v.toLocaleString('da-DK', { minimumFractionDigits: DEC, maximumFractionDigits: DEC }) + ' %';
+  }
   function side(slug) { var s = (window.NDI_DATA || {}).sider; return !s || s[slug] === true; }
+  /* Opslag fra X vises kun hos fondens 20 største selskaber, indtil funktionen er moden.
+     Kan placeringen ikke afgøres, skjules opslagene. */
+  var X_GRAENSE = 20;
+  function xRegel(T) {
+    var slug = location.pathname.split('/').pop().replace(/\.html$/, '');
+    var d = T && T.selskaber && T.selskaber[slug];
+    if (d && d.fondsPlads && d.fondsPlads <= X_GRAENSE) return;
+    var xo = document.getElementById('x-opslag'); if (xo) xo.remove();
+    [].forEach.call(document.querySelectorAll('a[href="#x-opslag"]'), function (a) { var li = a.closest('li'); (li || a).remove(); });
+  }
   function start() {
     var T = window.DAGENS_TAL;
+    xRegel(T);
     var fig = document.querySelector('#aktien figure.rang[data-aktiv-slug]');
     if (!T || !T.selskaber || !T.temaer || !fig || fig.dataset.crRang) return;
     var slug = fig.getAttribute('data-aktiv-slug'), d = T.selskaber[slug];
@@ -22,10 +38,22 @@
 
     // Placeringer under det store tal
     var tal = document.querySelector('#aktien .v18-stortal-tal');
-    if (tal && !tal.querySelector('.cr-rang-chips')) {
+    if (tal && tal.classList.contains('v18-stortal-tal--ny')) DEC = 2;
+    if (tal && tal.classList.contains('v18-stortal-tal--ny') && !tal.querySelector('.cr-stat')) {
+      var dl = el('dl', 'cr-stat');
+      var ialt0 = T.fond && T.fond.antalSelskaber;
+      if (d.fondsPlads) {
+        var f = el('div'); f.appendChild(el('dt', null, 'Plads i fonden'));
+        var fd = el('dd'); fd.appendChild(el('b', null, String(d.fondsPlads))); if (ialt0) fd.appendChild(document.createTextNode(' af ' + ialt0)); f.appendChild(fd); dl.appendChild(f);
+      }
+      var g = el('div'), gt = el('dt', null, 'Plads i temaet ');
+      var gl = el('a', null, d.temaNavn || tema.navn); gl.href = '../temaer/' + tema.id + '.html'; gt.appendChild(gl); g.appendChild(gt);
+      var gd = el('dd'); gd.appendChild(el('b', null, String(plads))); gd.appendChild(document.createTextNode(' af ' + liste.length)); g.appendChild(gd); dl.appendChild(g);
+      tal.appendChild(dl);
+    } else if (tal && !tal.querySelector('.cr-rang-chips')) {
       var ul = el('ul', 'cr-rang-chips');
       if (d.fondsPlads) {
-        var a = el('li'); a.appendChild(el('b', null, 'Nr. ' + d.fondsPlads)); a.appendChild(document.createTextNode(' i fonden')); ul.appendChild(a);
+        var a = el('li'); var ialt = T.fond && T.fond.antalSelskaber; a.appendChild(el('b', null, 'Nr. ' + d.fondsPlads + (ialt ? ' af ' + ialt : ''))); a.appendChild(document.createTextNode(' i fonden')); ul.appendChild(a);
       }
       var b = el('li'); b.appendChild(el('b', null, 'Nr. ' + plads + ' af ' + liste.length)); b.appendChild(document.createTextNode(' i temaet '));
       var tl = el('a', null, d.temaNavn || tema.navn); tl.href = '../temaer/' + tema.id + '.html'; b.appendChild(tl);
@@ -44,7 +72,7 @@
     }
     var maks = liste[0].andel || 1;
     var boks = el('div', 'cr-rang v18-stortal-figur');
-    boks.appendChild(el('p', 'cr-rang-lab', 'Temaets selskaber efter andel'));
+    boks.appendChild(el('p', 'cr-rang-lab', (d.temaNavn || tema.navn) + '-temaets selskaber efter andel'));
     var ol = el('ol');
     vis.forEach(function (r) {
       if (!r) { var g = el('li', 'cr-hul'); g.setAttribute('aria-hidden', 'true'); g.textContent = '…'; ol.appendChild(g); return; }
