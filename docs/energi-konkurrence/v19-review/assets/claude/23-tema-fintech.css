@@ -105,3 +105,34 @@
 .ftv-sel img{width:20px;height:20px;border-radius:5px;background:#fff;object-fit:contain}
 @media(max-width:640px){.ftv-diagram{grid-template-columns:1fr;gap:14px}.ftv-liste{padding-left:18px}.ftv-k::before{left:-20px;width:18px}}
 @media(max-width:860px){.ftp-cal{display:none}}
+/* Forandringen */
+.ftf2 .ftf2-g{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:48px;align-items:start;margin-top:14px}
+.ftf2-tekst p{font-size:16.5px;line-height:1.6;margin:0 0 14px;max-width:none}
+.ftf2-tal{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0 10px}
+.ftf2-tal div{padding:16px 18px;border:1px solid rgba(255,255,255,.08);border-radius:10px;background:rgba(255,255,255,.02)}
+.ftf2-tal b{display:block;font-size:36px;font-weight:500;line-height:1.1;color:var(--v5-ink,#e6e8ed);font-variant-numeric:tabular-nums}
+.ftf2-tal span{display:block;margin-top:6px;font-size:14px;line-height:1.45;color:var(--v5-ink-2,#c7d3dc)}
+.ftf2 .ftf2-kilde,.ftc-note,.ftd .ftd-kilde{font-size:12.5px!important;line-height:1.5;color:var(--v5-ink-2,#aebbc7);max-width:none;margin:6px 0 0}
+.ftf2-tlf .ftp-tlf{max-width:220px}
+.ftf2-tlf-t{margin:10px 0 0;font-size:13px;color:var(--v5-ink-2,#aebbc7);text-align:center}
+.ftc{margin:34px 0 0;padding:20px 22px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.02)}
+.ftc-h{font-size:17px;font-weight:600;color:var(--v5-ink,#e6e8ed);margin:0 0 14px}
+.ftc-liste{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ftc-liste li{display:grid;grid-template-columns:130px minmax(0,1fr) 300px;gap:16px;align-items:center}
+.ftc-navn{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--v5-ink,#e6e8ed);font-weight:600}
+.ftc-navn img{width:22px;height:22px;border-radius:5px;background:#fff;object-fit:contain}
+.ftc-bar{height:14px;border-radius:4px;background:rgba(255,255,255,.05);overflow:hidden}
+.ftc-bar i{display:block;height:100%;border-radius:4px;background:#83acfa}
+.ftc-tal b{display:block;font-size:15px;font-weight:600;color:var(--v5-ink,#e6e8ed)}
+.ftc-tal span{font-size:12.5px;color:var(--v5-ink-2,#aebbc7)}
+.ftc-note{margin-top:14px!important}
+@media(max-width:860px){.ftf2 .ftf2-g{grid-template-columns:1fr;gap:20px}.ftf2-tlf{order:-1}.ftf2-tlf .ftp-tlf{max-width:180px;margin:0 auto}.ftc-liste li{grid-template-columns:110px minmax(0,1fr)}.ftc-tal{grid-column:1/-1;margin-top:-6px}}
+@media(max-width:560px){.ftf2-tal{grid-template-columns:1fr}.ftc{padding:16px 14px}}
+/* Forskellen */
+.ftd-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:16px}
+.ftd-g>div{padding:18px 20px;border:1px solid rgba(255,255,255,.08);border-radius:10px;background:rgba(255,255,255,.02)}
+.ftd-g h3{margin:0 0 8px;font-size:17px}
+.ftd-g p{margin:0;font-size:15px;line-height:1.55;color:var(--v5-ink-2,#d0d8df)}
+.ftd-g a{color:inherit}
+.ftd .ftd-kilde{margin-top:14px}
+@media(max-width:860px){.ftd-g{grid-template-columns:1fr}}
