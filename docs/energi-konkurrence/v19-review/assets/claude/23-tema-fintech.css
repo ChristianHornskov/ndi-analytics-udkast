@@ -806,3 +806,32 @@
 @media(max-width:860px){.mk-g{grid-template-columns:1fr;gap:14px}}
 @media(max-width:600px){.mk-tid{font-size:.75rem;padding:3px 8px;top:6px}.mk-tid--v{left:6px}.mk-tid--h{right:6px}.mk-nr text{font-size:26px}.mk-nr circle{r:21px}}
 @media(prefers-reduced-motion:reduce){.mk-flow{animation:none}}
+/* Chips: beskrivelser i grupperne, lagstak og "Byg en chip, lag for lag" */
+.ft5-sel--besk a{align-items:start;padding:7px 8px}.ft5-sel--besk img{margin-top:2px}
+.ft5-nd{display:flex;flex-direction:column;gap:2px;min-width:0}.ft5-d{font-size:12.5px;line-height:1.4;color:var(--v5-ink-3,#9aa7b4)}
+.sv-lagstak{width:96px;height:auto}
+.lg-g{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px;margin-top:18px;align-items:start}
+.lg-fig{margin:0;padding:12px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#0b1220}
+.lg-svg{display:block;width:100%;height:auto;border-radius:10px}
+.lg-styr{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:12px}
+.lg-knap{position:relative;display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:8px 20px 8px 8px;border-radius:999px;border:1px solid rgba(239,138,94,.5);background:rgba(239,138,94,.12);color:#fff;font:inherit;font-size:1rem;font-weight:600;cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;transition:transform .15s,background .15s}
+.lg-knap.er-holdt{transform:scale(.97);background:rgba(239,138,94,.28)}
+.lg-knap:focus-visible{outline:2px solid #83acfa;outline-offset:3px}
+.lg-ring{width:40px;height:40px;transform:rotate(-90deg)}.lg-ring-b{fill:none;stroke:rgba(255,255,255,.12);stroke-width:4}.lg-ring-p{fill:none;stroke:#ef8a5e;stroke-width:4;stroke-dasharray:100;stroke-dashoffset:100;stroke-linecap:round}
+.lg-n{margin:0;font-size:.9rem;color:#a9b3bf;white-space:nowrap}.lg-n b{color:#fff;font-variant-numeric:tabular-nums}
+.lg-cap{margin-top:10px;font-size:.82rem;color:#8a99a8}
+.lg-liste{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.lg-trin{position:relative;display:grid;grid-template-columns:28px 1fr;gap:12px;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.02);overflow:hidden;transition:border-color .2s,background .2s}
+.lg-trin-nr{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:2px solid #4a5868;font-weight:700;font-size:.9rem}
+.lg-trin-t b{display:block;font-size:1rem}.lg-trin-t>span{display:block;font-size:.88rem;color:#a9b3bf;line-height:1.45;margin-top:2px}
+.lg-trin-p{position:absolute;left:0;bottom:0;height:3px;width:calc(var(--p,0)*100%);background:#ef8a5e}
+.lg-trin.er-aktiv{border-color:rgba(239,138,94,.6);background:rgba(239,138,94,.09)}.lg-trin.er-aktiv .lg-trin-nr{border-color:#ef8a5e;color:#ef8a5e}
+.lg-sels{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.lg-sel{display:inline-flex;align-items:center;gap:6px;padding:4px 10px 4px 4px;border-radius:999px;background:rgba(255,255,255,.05);color:#e6e8ed;text-decoration:none;font-size:.82rem;min-height:30px}
+.lg-sel img{width:20px;height:20px;border-radius:4px;background:#fff;object-fit:contain}
+.lg-start,.lg-slut{padding:14px 16px;border-radius:12px;margin-bottom:8px;border-left:3px solid #6f7d8c;background:rgba(255,255,255,.03)}
+.lg-start b,.lg-slut b{display:block}.lg-start>span,.lg-slut>span{display:block;font-size:.9rem;color:#a9b3bf;margin:2px 0 6px;line-height:1.45}
+.lg-slut{border-left-color:#4fc79c;background:rgba(25,158,112,.1);margin:8px 0 0}
+@media(max-width:860px){.lg-g{grid-template-columns:1fr;gap:14px}.lg-fig{padding:8px}}
+@media(max-width:420px){.lg-knap{font-size:.92rem;padding-right:14px}.lg-styr{flex-wrap:wrap}}
+.lg-nu{margin:10px 2px 0;font-size:.95rem;font-weight:600;color:#ef8a5e;min-height:1.4em}

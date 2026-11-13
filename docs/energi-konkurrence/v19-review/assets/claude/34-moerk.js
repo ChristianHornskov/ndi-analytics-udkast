@@ -9,7 +9,7 @@
       if(+rng.value!==Math.round(p))rng.value=Math.round(p);
       sec.classList.toggle('mk--efter',p<50);}
     function pkt(e){var q=svg.createSVGPoint();q.x=e.clientX;q.y=e.clientY;return q.matrixTransform(svg.getScreenCTM().inverse()).x/8;}
-    svg.addEventListener('pointerdown',function(e){traek=true;rort=true;svg.setPointerCapture&&svg.setPointerCapture(e.pointerId);saet(pkt(e));});
+    svg.addEventListener('pointerdown',function(e){traek=true;rort=true;try{svg.setPointerCapture(e.pointerId);}catch(x){}saet(pkt(e));});
     svg.addEventListener('pointermove',function(e){if(traek)saet(pkt(e));});
     svg.addEventListener('pointerup',function(){traek=false;});svg.addEventListener('pointercancel',function(){traek=false;});
     rng.addEventListener('input',function(){rort=true;saet(+rng.value);});
