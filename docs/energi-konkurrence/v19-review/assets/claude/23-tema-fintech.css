@@ -836,7 +836,7 @@
 @media(max-width:420px){.lg-knap{font-size:.92rem;padding-right:14px}.lg-styr{flex-wrap:wrap}}
 .lg-nu{margin:10px 2px 0;font-size:.95rem;font-weight:600;color:#ef8a5e;min-height:1.4em}
 /* Ens overskrifter på alle temasider, uanset temaets egen stilfil */
-.v5f :is(#forandringen,#tjener,#risiko,#forskellen,#telefonen,#torvet,#virksomheden,#vejen,#qubitten,#blokken,#banerne,#bilen,#sanserne,#hallen,#moerklaegning,#lag) h2{font-size:clamp(28px,7vw,42px);line-height:1.12;margin:.2rem 0 1rem}
+.v5f :is(#forandringen,#tjener,#risiko,#forskellen,#telefonen,#torvet,#virksomheden,#vejen,#qubitten,#blokken,#banerne,#bilen,#sanserne,#hallen,#moerklaegning,#lag,#penge) h2{font-size:clamp(28px,7vw,42px);line-height:1.12;margin:.2rem 0 1rem}
 /* Trykflader og små tekster på mobil */
 .up-trail a{display:inline-flex;align-items:center;min-height:28px}
 .fx-mere{padding:4px 0;min-height:28px}
@@ -854,3 +854,36 @@
 .lg-spoegelse rect{fill:none;stroke:rgba(255,255,255,.18);stroke-dasharray:6 6}
 .wow-videre{margin:16px 0 0;font-size:.95rem}
 .hl-tjek b a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.3);text-underline-offset:3px}
+
+/* Hvem får pengene (Platformsøkonomi) */
+.pg-vaelg{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+.pg-valg{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 16px 6px 6px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.03);color:#e6e8ed;font:inherit;font-size:.95rem;font-weight:600;cursor:pointer;transition:background .15s,border-color .15s}
+.pg-valg img{width:30px;height:30px;border-radius:50%;background:#fff;object-fit:contain;padding:3px}
+.pg-valg[aria-pressed="true"]{border-color:#e8d98a;background:rgba(232,217,138,.14);color:#fff}
+.pg-valg:focus-visible,.pg-spil:focus-visible,.pg-aar:focus-visible{outline:2px solid #83acfa;outline-offset:3px}
+.pg-g{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px;margin-top:16px;align-items:start}
+.pg-fig{margin:0;padding:14px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#0b1220}
+.pg-hoved{min-height:5.2em}.pg-hoved p{margin:0}
+.pg-stort{font-size:clamp(26px,6vw,36px);font-weight:700;color:#e8d98a;font-variant-numeric:tabular-nums;line-height:1.1}
+.pg-under{font-size:.95rem;color:#c9d0d8;margin-top:2px!important}.pg-vaekst{font-size:.92rem;color:#a9b3bf;margin-top:4px!important}
+.pg-svg{display:block;width:100%;height:auto;margin-top:6px}
+.pg-bar{fill:#3a5170;transition:y .4s,height .4s}.pg-bar--nu{fill:#5c7fae}.pg-bar-p{fill:#e8d98a}
+.pg-vt{fill:#a9b3bf;font-size:15px;font-variant-numeric:tabular-nums}.pg-vt--nu{fill:#fff;font-weight:700;font-size:17px}
+.pg-at{fill:#8a99a8;font-size:15px}.pg-at--nu{fill:#fff;font-weight:700}.pg-akse{fill:#6f7d8c;font-size:14px}
+.pg-styr{display:flex;align-items:center;gap:14px;margin-top:10px}
+.pg-spil{flex:none;width:48px;height:48px;border-radius:50%;border:1px solid rgba(232,217,138,.5);background:rgba(232,217,138,.12);color:#e8d98a;cursor:pointer;display:grid;place-items:center}
+.pg-spil svg{width:22px;height:22px;fill:currentColor}.pg-spil.er-i-gang{opacity:.55}
+.pg-lab{flex:1;display:grid;gap:4px;font-size:.92rem;color:#a9b3bf}.pg-lab b{color:#fff}
+.pg-aar{width:100%;min-height:32px;accent-color:#e8d98a;cursor:pointer}
+.pg-side>p{margin:0}
+.pg-del-txt{font-size:1.05rem;line-height:1.5;color:#e6e8ed}
+.pg-hundred{display:flex;height:56px;margin:16px 0 8px;border-radius:12px;overflow:hidden;background:#33465f}
+.pg-del-p{width:0;background:#e8d98a;color:#0b1220;display:flex;align-items:center;justify-content:center;transition:width .9s cubic-bezier(.2,.8,.2,1);overflow:hidden;white-space:nowrap}
+.pg-rest{flex:1;display:flex;align-items:center;justify-content:center;color:#fff}
+.pg-del-tal,.pg-rest-tal{font-weight:700;font-size:.95rem;padding:0 6px}
+.pg-forkl{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.88rem;color:#a9b3bf}.pg-forkl p{margin:0;display:flex;align-items:center;gap:6px}
+.pg-prik{width:12px;height:12px;border-radius:3px;background:#33465f;flex:none}.pg-prik--p{background:#e8d98a}
+.pg-note{font-size:.86rem;color:#8a99a8;line-height:1.45;margin:12px 0 0!important}
+.pg-pas{margin-top:14px}
+@media(max-width:860px){.pg-g{grid-template-columns:1fr;gap:14px}.pg-fig{padding:10px}}
+@media(prefers-reduced-motion:reduce){.pg-del-p,.pg-bar{transition:none}}
