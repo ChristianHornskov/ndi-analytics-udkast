@@ -274,3 +274,12 @@
 @media(prefers-reduced-motion:reduce){.fx-skaerm,.fx-trin{transition:none}.fx-on *{animation-duration:.01s!important;animation-delay:0s!important}}
 .ftf2 .ftf2-g{grid-template-columns:1fr!important}
 @media(max-width:860px){.fx-trin{min-height:92vh;justify-content:flex-end;padding:0 0 10vh}.fx-trin:first-child,.fx-trin:last-child{min-height:92vh}.fx-scene{background:linear-gradient(180deg,#05090d 88%,rgba(5,9,13,0))}}
+.fx-trin{cursor:pointer;min-height:70vh}
+.fx-trin.fx-on{cursor:default}
+/* Statisk udgave, når vinduet er unormalt højt */
+.fx-statisk .fx-scene{position:relative;top:0}
+.fx-statisk .fx-trin{min-height:0!important;padding:14px 16px;margin-bottom:8px;border-radius:12px;border:1px solid rgba(255,255,255,.06)}
+.fx-statisk .fx-trin.fx-on{border-color:var(--c);background:color-mix(in srgb,var(--c) 7%,transparent)}
+.fx-statisk .fx-trin:not(.fx-on) p,.fx-statisk .fx-trin:not(.fx-on) .fx-sel,.fx-statisk .fx-trin:not(.fx-on) .fx-mere{display:none}
+.fx-statisk .fx-trin h3{font-size:21px;margin:4px 0 8px}
+.fx-statisk .fx-trinliste{align-self:center}
