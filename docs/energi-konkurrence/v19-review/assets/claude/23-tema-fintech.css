@@ -324,3 +324,62 @@
 @media(prefers-reduced-motion:reduce){.pl-net .pl-puls{animation:none}}
 .v18t-hero--v5 .v18t-hero-tekst{order:1}.v18t-hero--v5 .ftf{order:2}
 .v5f:has([data-fx-scrolly]){overflow:visible!important;overflow-x:clip!important}
+/* ===== Afspiller (platforme: torvet) ===== */
+.ps .ps-intro{max-width:none;color:var(--v5-ink-2,#aebbc7)}
+.ps-ramme{--c:#83acfa;position:relative;margin-top:18px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:0;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:radial-gradient(120% 90% at 25% 50%,color-mix(in srgb,var(--c) 16%,#070d12) 0,#070d12 62%);transition:background .8s}
+.ps-scene{display:flex;align-items:center;justify-content:center;padding:28px 10px}
+.ps-scene .pl-net{max-width:440px}
+.ps-side{display:flex;flex-direction:column;justify-content:center;padding:34px 36px 26px;border-left:1px solid rgba(255,255,255,.06);background:rgba(5,9,13,.45)}
+.ps-caps{display:grid;min-height:250px}
+.ps-cap{grid-area:1/1;align-self:center;opacity:0;transform:translateY(12px);transition:opacity .45s,transform .5s;pointer-events:none}
+.ps-cap.ps-on{opacity:1;transform:none;pointer-events:auto}
+.ps-nr{margin:0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--c);font-weight:700}
+.ps-cap h3{margin:8px 0 10px;font-size:27px;line-height:1.15}
+.ps-tx{margin:0;font-size:16px;line-height:1.6;color:var(--v5-ink-2,#d0d8df)}
+.ps-kontrol{display:flex;align-items:center;gap:14px;margin-top:22px}
+.ps-afspil{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:transparent;color:#e6e8ed;display:grid;place-items:center;cursor:pointer}
+.ps-afspil svg{width:18px;height:18px;fill:currentColor}
+.ps-pause{display:none}.ps-koerer .ps-pause{display:block}.ps-koerer .ps-play{display:none}
+.ps-trinliste{flex:1;display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.ps-trin{position:relative;height:34px;border:0;padding:0;background:transparent;cursor:pointer}
+.ps-trin::before{content:"";position:absolute;left:0;right:0;top:8px;height:4px;border-radius:2px;background:rgba(255,255,255,.12)}
+.ps-fyld{position:absolute;left:0;top:8px;height:4px;width:0;border-radius:2px;background:var(--c)}
+.ps-faerdig .ps-fyld{width:100%}
+.ps-on .ps-fyld{width:100%;transition:none}
+.ps-koerer .ps-trin.ps-on .ps-fyld{animation:psfyld var(--varighed,5200ms) linear forwards}
+.ps-lab{position:absolute;left:0;top:16px;font-size:11.5px;color:var(--v5-ink-2,#8a98a6)}
+.ps-on .ps-lab{color:var(--c);font-weight:700}
+.ps-note{margin:12px 0 0;font-size:12px;color:var(--v5-ink-2,#8a98a6)}
+@keyframes psfyld{from{width:0}to{width:100%}}
+@media(max-width:860px){.ps-ramme{grid-template-columns:1fr}.ps-scene{padding:16px 6px 0}.ps-scene .pl-net{max-width:330px}.ps-side{border-left:0;border-top:1px solid rgba(255,255,255,.06);padding:20px 18px 18px}.ps-caps{min-height:230px}.ps-cap h3{font-size:22px}.ps-tx{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.ps-cap{transition:none}}
+/* ===== Statistik med billede ===== */
+.sv-raekke{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0 10px}
+.sv-kort{display:flex;align-items:center;gap:20px;padding:20px 22px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025)}
+.sv{flex:none}
+.sv-pers{width:150px;height:auto}
+.sv-p{fill:#2a3542;transition:fill .4s var(--d)}.sv-p.sv-on{fill:var(--c)}
+.sv-grid{width:96px;height:96px}
+.sv-d{fill:#2a3542}.sv-d.sv-on{fill:var(--c)}
+.sv-donut{width:86px;height:86px;transform:rotate(-90deg)}
+.sv-bg{fill:none;stroke:#2a3542;stroke-width:12}
+.sv-arc{fill:none;stroke:var(--c);stroke-width:12;stroke-linecap:butt}
+.sv-t b{display:block;font-size:34px;font-weight:500;line-height:1.05;color:var(--v5-ink,#e6e8ed);font-variant-numeric:tabular-nums}
+.sv-t span{display:block;margin-top:6px;font-size:14px;line-height:1.45;color:var(--v5-ink-2,#c7d3dc)}
+@media(max-width:860px){.sv-raekke{grid-template-columns:1fr}}
+@media(max-width:420px){.sv-kort{flex-direction:column;align-items:flex-start;gap:12px}.sv-pers{width:180px}}
+/* ===== Perspektiv længere nede og roligere ===== */
+.v18-perspektiv.ps-persp{padding-top:10px}
+.ps-persp .v18-perspektiv-boks{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
+.ps-persp .v18-perspektiv-titel{font-size:clamp(24px,3vw,32px)}
+.ps-persp .v18-perspektiv-intro{font-size:14px;color:var(--v5-ink-2,#aebbc7)}
+.ps-persp .skrevet-citat{position:relative;margin:18px 0 10px;padding:22px 26px 20px 64px;border-radius:14px;border:1px solid rgba(255,255,255,.08);border-left:4px solid #e8d98a;background:rgba(232,217,138,.04)}
+.ps-persp .skrevet-citat::before{content:"\201C";position:absolute;left:18px;top:4px;font:400 64px/1 Georgia,serif;color:#e8d98a;opacity:.8}
+.ps-persp .skrevet-citat p{margin:0;font-size:18px;line-height:1.55;font-style:normal;color:var(--v5-ink,#e6e8ed)}
+.sv-raekke .sv-t{padding:0!important;border:0!important;background:none!important}
+.sv-raekke>.sv-kort{padding:20px 22px!important}
+.sv-pers{width:190px}
+.ps-persp .skrevet-meta,.ps-persp .skrevet-selsk{margin:4px 0}
+.ps-persp .skrevet-link{display:inline-flex;margin-top:8px!important}
+.ps-persp .v18-perspektiv-boks>*{max-width:none}
+.ps-persp .skrevet-link{height:auto!important;min-height:0!important;align-items:center;gap:6px}.ps-persp .skrevet-link svg{width:14px;height:14px}
