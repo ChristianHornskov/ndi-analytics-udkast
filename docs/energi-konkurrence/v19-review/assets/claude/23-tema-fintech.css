@@ -456,3 +456,57 @@
 @media(max-width:760px){.bt-g{grid-template-columns:1fr}}
 .ru-svg--d .ru-navn{font-size:19px}.ru-svg--d .ru-nr{font-size:16px}.ru-svg--d .ru-sky-t{font-size:18px}
 @media(min-width:861px){.ru-knapper{display:grid;grid-template-columns:1fr 1fr}}
+/* ===== Sundhed: piller og vejen gennem forsøgene (.lv) ===== */
+.sv-piller{width:130px;height:auto}
+.sv-pil{fill:#2a3542}.sv-pil.sv-on{fill:var(--c)}
+.lv-boks{margin-top:22px;padding:22px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:radial-gradient(120% 90% at 50% 0%,rgba(25,158,112,.07),rgba(255,255,255,.015))}
+.lv-tael{margin:0 0 6px;color:#a9b3bf;font-size:.95rem}
+.lv-tael b{font-size:2rem;color:#e6e8ed;font-variant-numeric:tabular-nums;margin-right:4px}
+.lv-svg{display:block;width:100%;height:auto}
+.lv-boks .lv-svg--m{display:none}
+.lv-p{fill:#83acfa;transition:fill .35s,opacity .35s,transform .45s;transform-box:fill-box;transform-origin:center}
+.lv-p.er-ude{fill:#2a3542;opacity:.55;transform:translateY(6px) scale(.7)}
+.lv-p.er-godkendt{fill:#199e70}
+.lv-spor{stroke:#2a3542;stroke-width:6;stroke-linecap:round;fill:none}
+.lv-fyld{stroke:#199e70;stroke-width:6;stroke-linecap:round;fill:none;stroke-dasharray:1;stroke-dashoffset:1}
+.lv-st{cursor:pointer}
+.lv-st circle{fill:#111a2b;stroke:#3a4757;stroke-width:3;transition:fill .3s,stroke .3s}
+.lv-st.er-naaet circle{stroke:#199e70}
+.lv-st.er-aktiv circle{fill:#199e70}
+.lv-st-n{fill:#c3cad3;font-size:14px;font-weight:700;text-anchor:middle}
+.lv-st.er-aktiv .lv-st-n{fill:#0b1220}
+.lv-st-t{fill:#a9b3bf;font-size:15px;font-weight:600;text-anchor:middle}
+.lv-st.er-aktiv .lv-st-t{fill:#e6e8ed}
+.lv-label{display:block;margin:14px 0 6px;font-size:.85rem;color:#a9b3bf}
+.lv-r{width:100%;margin:0;height:44px;background:transparent;-webkit-appearance:none;appearance:none;cursor:pointer;touch-action:pan-y}
+.lv-r::-webkit-slider-runnable-track{height:8px;border-radius:4px;background:#2a3542}
+.lv-r::-webkit-slider-thumb{-webkit-appearance:none;width:34px;height:34px;margin-top:-13px;border-radius:50%;background:#199e70;border:4px solid #e6e8ed;box-shadow:0 2px 10px rgba(0,0,0,.5)}
+.lv-r::-moz-range-track{height:8px;border-radius:4px;background:#2a3542}
+.lv-r::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:#199e70;border:4px solid #e6e8ed}
+.lv-r:focus-visible{outline:2px solid #83acfa;outline-offset:4px;border-radius:8px}
+.lv-panel{margin-top:14px;padding:18px 20px;border-radius:14px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.025);border-left:3px solid #199e70}
+.lv-panel h3{margin:0 0 8px;font-size:1.2rem}
+.lv-panel p{margin:0 0 10px;line-height:1.55}
+.lv-k{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#4fc79c!important}
+.lv-tal{font-weight:600}
+.lv-fond{font-size:.88rem;color:#a9b3bf;margin-bottom:6px!important}
+.lv-sel{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.lv-sel a{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.04);text-decoration:none;color:#c3cad3;font-size:.92rem;line-height:1.45}
+.lv-sel img{width:20px;height:20px;border-radius:4px;background:#fff;object-fit:contain;margin-top:2px;flex:none}
+.lv-sel b{display:block;color:#e6e8ed}
+.lv-note{margin:12px 0 0;font-size:.82rem;color:#8a99a8}
+@media(max-width:760px){.lv-boks{padding:14px}.lv-boks .lv-svg--d{display:none}.lv-boks .lv-svg--m{display:block}}
+@media(prefers-reduced-motion:reduce){.lv-p,.lv-st circle{transition:none}}
+/* ===== Hvem betaler (.hb) ===== */
+.hb-g{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.hb-r{display:grid;grid-template-columns:240px 40px minmax(0,1fr) minmax(0,auto);align-items:center;gap:16px;padding:16px 20px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025)}
+.hb-hvem{display:flex;align-items:center;gap:12px}
+.hb-hvem svg{width:40px;height:40px;padding:8px;border-radius:50%;background:rgba(131,172,250,.1);fill:none;stroke:#83acfa;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.hb-pil{height:2px;background:linear-gradient(90deg,#83acfa,transparent);position:relative}
+.hb-pil::after{content:"";position:absolute;right:0;top:-4px;border:5px solid transparent;border-left-color:#83acfa}
+.hb-r p{margin:0;line-height:1.55}
+.hb-sel{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.hb-sel a{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:999px;background:rgba(255,255,255,.05);text-decoration:none;color:#e6e8ed;font-size:.88rem;white-space:nowrap}
+.hb-sel img{width:20px;height:20px;border-radius:4px;background:#fff;object-fit:contain}
+@media(max-width:860px){.hb-r{grid-template-columns:1fr;gap:10px}.hb-pil{display:none}.hb-sel{justify-content:flex-start}}
+.lv-svg--m .lv-st-t{font-size:16px}
