@@ -168,7 +168,7 @@
 .ftv2-f a{color:inherit}
 .ftv2-emne{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12.5px;font-weight:600;letter-spacing:.04em;color:var(--v5-ink,#e6e8ed)}
 .ftv2-emne svg{width:34px;height:34px;padding:7px;border-radius:50%;border:1px solid rgba(255,255,255,.15);background:#0d1921;fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-@media(max-width:760px){.ftv2-kort{background:rgba(255,255,255,.015)}.ftv2-top{display:none}.ftv2-liste{padding:6px 16px 10px}.ftv2-r{grid-template-columns:1fr;gap:8px}.ftv2-emne{flex-direction:row;order:-1}.ftv2-emne svg{width:28px;height:28px;padding:5px}.ftv2-b,.ftv2-f{padding:0;text-align:left}.ftv2-b::before{content:"Almindelig bank: ";font-weight:600}.ftv2-f{padding:10px 12px;border-radius:8px;background:rgba(131,172,250,.08)}.ftv2-f::before{content:"Fintech: ";font-weight:600;color:#83acfa}}
+@media(max-width:760px){.ftv2-kort{background:rgba(255,255,255,.015)}.ftv2-top{display:none}.ftv2-liste{padding:6px 16px 10px}.ftv2-r{grid-template-columns:1fr;gap:8px}.ftv2-emne{flex-direction:row;order:-1}.ftv2-emne svg{width:28px;height:28px;padding:5px}.ftv2-b,.ftv2-f{padding:0;text-align:left}.ftv2-b::before{content:var(--ftv2-b,"Almindelig bank: ");font-weight:600}.ftv2-f{padding:10px 12px;border-radius:8px;background:rgba(131,172,250,.08)}.ftv2-f::before{content:var(--ftv2-f,"Fintech: ");font-weight:600;color:#83acfa}}
 /* v6: risici som kort */
 .ftr2-g{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
 .ftr2-g li{grid-column:span 2;padding:18px 18px 16px;border-radius:12px;border:1px solid rgba(201,148,157,.22);background:rgba(201,148,157,.05)}
@@ -383,3 +383,76 @@
 .ps-persp .skrevet-link{display:inline-flex;margin-top:8px!important}
 .ps-persp .v18-perspektiv-boks>*{max-width:none}
 .ps-persp .skrevet-link{height:auto!important;min-height:0!important;align-items:center;gap:6px}.ps-persp .skrevet-link svg{width:14px;height:14px}
+
+@media(max-width:440px){.ftc-liste li{grid-template-columns:minmax(0,1fr);gap:6px}.ftc-tal{margin-top:0}}
+
+/* ===== Software & AI: stat-figurer ===== */
+.sv-cols{width:130px;height:auto}
+.sv-col rect{fill:#2a3542;transition:fill .4s var(--d)}
+.sv-col.sv-on rect{fill:var(--c)}
+.sv-col text{fill:#8a99a8;font-size:12px;text-anchor:middle;font-family:inherit}
+.sv-skjold{width:80px;height:auto}
+.sk-bg{fill:#2a3542}.sk-fyld{fill:var(--c)}.sk-kant{fill:none;stroke:rgba(255,255,255,.18);stroke-width:1.5}
+/* ===== Tryk dig gennem en virksomhed (.ru) ===== */
+.ru .brod{max-width:62ch}
+.ru-g{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:28px;align-items:start;margin-top:24px}
+.ru-fig{margin:0;padding:18px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:radial-gradient(120% 90% at 50% 0%,rgba(131,172,250,.07),rgba(255,255,255,.015))}
+.ru-svg{display:block;width:100%;height:auto}
+.ru-fig .ru-svg--m{display:none}
+.ru-cap{margin-top:10px;font-size:.82rem;color:#8a99a8}
+.ru-hus{fill:none;stroke:rgba(255,255,255,.14);stroke-width:2}
+.ru-jord{stroke:rgba(255,255,255,.1);stroke-width:2}
+.ru-sky-p{fill:rgba(255,255,255,.04);stroke:rgba(255,255,255,.22);stroke-width:1.5;transition:fill .6s,stroke .6s}
+.ru--alle .ru-sky-p{fill:rgba(131,172,250,.12);stroke:#83acfa}
+.ru-sky-t{fill:#c3cad3;font-size:15px;font-weight:600;text-anchor:middle}
+.ru-prik{fill:#2a3542;transition:fill .4s}
+.ru-prik.er-taendt{fill:var(--c)}
+.ru-kabel{fill:none;stroke:var(--c);stroke-width:2.5;stroke-dasharray:1;stroke-dashoffset:1;opacity:.9;transition:stroke-dashoffset .9s ease}
+.ru-kabel.er-taendt{stroke-dashoffset:0}
+.ru-rum{cursor:pointer;outline:none}
+.ru-bund{fill:#111a2b;stroke:rgba(255,255,255,.12);stroke-width:1.5;transition:fill .4s,stroke .4s}
+.ru-rum:hover .ru-bund,.ru-rum:focus-visible .ru-bund{stroke:rgba(255,255,255,.4)}
+.ru-rum.er-taendt .ru-bund{fill:color-mix(in srgb,var(--c) 14%,#111a2b);stroke:color-mix(in srgb,var(--c) 55%,transparent)}
+.ru-rum.er-aktiv .ru-bund{stroke:var(--c);stroke-width:3}
+.ru-ik{fill:none;stroke:#4d5b6c;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;transition:stroke .4s}
+.ru-rum.er-taendt .ru-ik{stroke:var(--c)}
+.ru-nr-c{fill:#1d2738;stroke:var(--c);stroke-width:2}
+.ru-rum:not(.er-taendt) .ru-nr-c{animation:ru-puls 2.4s ease-in-out infinite}
+.ru-rum.er-taendt .ru-nr-c{fill:var(--c)}
+.ru-nr{fill:#e6e8ed;font-size:14px;font-weight:700;text-anchor:middle}
+.ru-rum.er-taendt .ru-nr{fill:#0b1220}
+.ru-navn{fill:#c3cad3;font-size:15px;font-weight:600}
+@keyframes ru-puls{0%,100%{stroke-width:2}50%{stroke-width:6}}
+.ru-side{display:flex;flex-direction:column;gap:14px}
+.ru-status{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.9rem;color:#a9b3bf}
+.ru-tael b{color:#e6e8ed;font-size:1.15rem}
+.ru-alle{font:inherit;font-size:.88rem;color:#e6e8ed;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:9px 16px;min-height:40px;cursor:pointer}
+.ru-alle:hover{background:rgba(255,255,255,.1)}
+.ru-knapper{display:flex;flex-wrap:wrap;gap:8px}
+.ru-knap{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:.88rem;color:#d4d9e0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:7px 14px 7px 7px;min-height:40px;cursor:pointer}
+.ru-knap-nr{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;border:2px solid var(--c);font-weight:700;font-size:.8rem}
+.ru-knap.er-taendt .ru-knap-nr{background:var(--c);color:#0b1220}
+.ru-knap.er-aktiv{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.ru-kort{padding:20px 22px;border-radius:14px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.025);border-left:3px solid var(--c,rgba(255,255,255,.2))}
+.ru-kort h3{margin:0 0 8px;font-size:1.2rem}
+.ru-kort p{margin:0 0 10px;line-height:1.55}
+.ru-kort-k{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c)!important}
+.ru-sel{list-style:none;margin:6px 0 12px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.ru-sel a{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:999px;background:rgba(255,255,255,.05);text-decoration:none;color:#e6e8ed;font-size:.88rem;min-height:36px}
+.ru-sel img{width:20px;height:20px;border-radius:4px;background:#fff;object-fit:contain}
+.ru-andel{font-size:.88rem;color:#a9b3bf}
+.ru-kort--slut{border-left-color:#83acfa}
+@media(max-width:860px){.ru-g{grid-template-columns:1fr;gap:16px}.ru-knapper{display:none}.ru-fig .ru-svg--d{display:none}.ru-fig .ru-svg--m{display:block}.ru-fig{padding:10px}}
+@media(prefers-reduced-motion:reduce){.ru-kabel,.ru-bund,.ru-ik,.sv-col rect{transition:none}.ru-nr-c{animation:none!important}}
+/* ===== Tre måder at betale (.bt) ===== */
+.bt-g{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.bt-k{padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025)}
+.bt-ik{width:44px;height:44px;padding:9px;border-radius:12px;background:rgba(131,172,250,.1);fill:none;stroke:#83acfa;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.bt-k h3{margin:14px 0 8px;font-size:1.1rem}
+.bt-k p{margin:0 0 10px;line-height:1.55}
+.bt-eks{font-size:.88rem;color:#a9b3bf;margin:0!important}
+.bt-eks a{display:inline-flex;align-items:center;gap:6px;color:#e6e8ed;margin-left:4px}
+.bt-eks img{width:18px;height:18px;border-radius:4px;background:#fff;object-fit:contain}
+@media(max-width:760px){.bt-g{grid-template-columns:1fr}}
+.ru-svg--d .ru-navn{font-size:19px}.ru-svg--d .ru-nr{font-size:16px}.ru-svg--d .ru-sky-t{font-size:18px}
+@media(min-width:861px){.ru-knapper{display:grid;grid-template-columns:1fr 1fr}}
