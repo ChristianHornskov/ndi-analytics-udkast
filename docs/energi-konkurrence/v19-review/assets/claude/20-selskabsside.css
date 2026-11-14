@@ -288,3 +288,6 @@ html body .v18s-hero .v18s-trin .v18s-trin-knap{width:100%;justify-content:space
 @media(max-width:760px){.cr-model-d{display:none!important}.cr-model-m{display:block!important;width:100%;height:auto;padding:12px 6px 4px}}
 .cr-gennemgaaet{font-size:13px;color:var(--v5-ink-2);margin:-6px 0 14px}
 .cr-mb-pair--en{grid-template-columns:1fr!important}
+/* Note under regnskabstallene (forklaring af spring og engangsposter) */
+.cr-regnote{max-width:68ch;margin:16px 0 4px;padding:0 18px;font-size:.95rem;line-height:1.55;color:var(--v5-ink-2)}
+.cr-regnote b{color:var(--v5-ink)}
