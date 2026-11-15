@@ -7,7 +7,7 @@
     var svg=sec.querySelector('.lg-svg'),g=svg.querySelector('.lg-dyn'),knap=sec.querySelector('.lg-knap'),ring=sec.querySelector('.lg-ring-p');
     var nu=sec.querySelector('.lg-nu'),trin=[].slice.call(sec.querySelectorAll('.lg-trin')),taeller=sec.querySelector('[data-lg-n]'),slut=sec.querySelector('.lg-slut'),start=sec.querySelector('.lg-start');
     var ro=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var t=0,holder=false,sidst=0,TOT=LAG*TRIN;
+    var t=0,holder=false,sidst=0,TOT=LAG*TRIN,naesteK=sec.querySelector('.lg-naeste');
     function tegn(){
       while(g.firstChild)g.removeChild(g.firstChild);
       var n=Math.min(LAG,Math.floor(t/TRIN)),s=Math.floor(t%TRIN),p=t%1,faerdig=t>=TOT;
@@ -30,10 +30,10 @@
       }
       taeller.textContent=Math.min(LAG,n+(faerdig?0:1));
       trin.forEach(function(li,k){var a=!faerdig&&k===s&&(t>0||holder);li.classList.toggle('er-aktiv',a);li.style.setProperty('--p',a?p.toFixed(3):0);});
-      var aktivt=trin[s];nu.textContent=faerdig?'Skiven er færdig.':(t>0||holder?'Trin '+(s+1)+' af 4: '+aktivt.querySelector('b').textContent:'Tryk og hold på knappen.');
+      var aktivt=trin[s];nu.textContent=faerdig?'Skiven er færdig.':(t>0||holder?'Trin '+(s+1)+' af 4: '+aktivt.querySelector('b').textContent:'Hold knappen nede, eller gå ét trin ad gangen.');
       ring.style.strokeDashoffset=(1-t/TOT)*100;
       slut.hidden=!faerdig;start.hidden=t>0;
-      knap.querySelector('.lg-knap-t').textContent=faerdig?'Byg igen':(ro?'Tryk for næste trin':(t>0?'Hold nede for at bygge videre':'Hold nede for at bygge'));
+      if(naesteK)naesteK.textContent=faerdig?'Forfra':'Ét trin ad gangen';knap.querySelector('.lg-knap-t').textContent=faerdig?'Byg igen':(ro?'Tryk for næste trin':(t>0?'Hold nede for at bygge videre':'Hold nede for at bygge'));
       sec.classList.toggle('lg--faerdig',faerdig);
     }
     function loop(ts){if(!holder)return;var dt=sidst?ts-sidst:0;sidst=ts;t=Math.min(TOT,t+dt/MS);tegn();if(t<TOT)requestAnimationFrame(loop);else holder=false;}
@@ -46,6 +46,13 @@
     knap.addEventListener('keydown',function(e){if((e.key===' '||e.key==='Enter')&&!e.repeat)ned(e);});
     knap.addEventListener('keyup',function(e){if(e.key===' '||e.key==='Enter')op();});
     knap.addEventListener('contextmenu',function(e){e.preventDefault();});
+    var naeste=sec.querySelector('.lg-naeste'),kører=false;
+    if(naeste)naeste.addEventListener('click',function(){
+      if(t>=TOT){t=0;tegn();return;}
+      if(kører||holder)return;var maal=Math.min(TOT,Math.floor(t+1e-6)+1);
+      if(ro){t=maal;tegn();return;}
+      kører=true;var t0=null,fra=t;requestAnimationFrame(function st(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/MS);t=fra+(maal-fra)*k;tegn();if(k<1)requestAnimationFrame(st);else{t=maal;kører=false;tegn();}});
+    });
     tegn();
   }
   function go(){document.querySelectorAll('[data-lag]').forEach(init);}

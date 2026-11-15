@@ -13,7 +13,7 @@
       var fra=famVist,t0=null;anim=requestAnimationFrame(function st(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/380),v=Math.round(fra+(til-fra)*(1-Math.pow(1-k,3)));famVist=v;ud.fam.textContent=fmt(v,0);if(k<1)anim=requestAnimationFrame(st);});}
     function tegn(){
       var kwh=n*kw*TIMER,mw=n*kw/1000,gwh=kwh/1e6;
-      ud.n.textContent=n;
+      ud.n.textContent=n;if(ud.n.nextElementSibling)ud.n.nextElementSibling.textContent=n===1?'rack':'racks';
       ud.mw.textContent=fmt(mw,mw<1?2:(mw<10?1:0));
       ud.gwh.textContent=fmt(gwh,gwh<10?1:0);
       taelOp(Math.round(kwh/FAM));
@@ -23,7 +23,7 @@
       pm.forEach(function(b){var d=+b.getAttribute('data-d');b.disabled=(d<0&&n<=1)||(d>0&&n>=MAKS);});
     }
     tp.forEach(function(b){b.addEventListener('click',function(){kw=+b.getAttribute('data-kw');tp.forEach(function(x){x.setAttribute('aria-checked',x===b?'true':'false');});tegn();});});
-    pm.forEach(function(b){b.addEventListener('click',function(){var d=+b.getAttribute('data-d');n=Math.max(1,Math.min(MAKS,(d===10&&n===1)?10:n+d));tegn();});});
+    pm.forEach(function(b){b.addEventListener('click',function(){var d=+b.getAttribute('data-d');n=Math.max(1,Math.min(MAKS,n+d));tegn();});});
     tegn();
   }
   function go(){document.querySelectorAll('[data-hal]').forEach(init);}

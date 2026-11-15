@@ -1,0 +1,25 @@
+/* Nye forklaringer på temasiderne, november 2026 */
+.cf-kort{padding:22px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);margin-top:22px}
+.cf-k{margin:0 0 10px;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#83acfa}
+.cf-note{margin:14px 0 0;font-size:.88rem;color:#a9b3bf;line-height:1.5}
+.cf-skyder{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:6px 0 18px}
+.cf-skyder input{flex:1 1 220px;accent-color:#83acfa;min-height:32px}
+.cf-skyder output{font-weight:700;font-size:1.15rem;min-width:7ch;white-space:nowrap}
+.cf-raekke{display:grid;grid-template-columns:minmax(0,10rem) minmax(0,1fr) minmax(0,8rem);gap:10px;align-items:center;margin:10px 0}
+.cf-raekke b{font-weight:600}
+.cf-bar{position:relative;height:14px;border-radius:7px;background:rgba(255,255,255,.06);overflow:hidden}
+.cf-bar i{position:absolute;top:0;bottom:0;left:50%;border-radius:7px;background:#5fc59a;transition:all .25s}
+.cf-bar i.neg{background:#e0796b}
+.cf-bar::after{content:"";position:absolute;left:50%;top:-2px;bottom:-2px;width:2px;background:rgba(255,255,255,.35)}
+.cf-v{text-align:right;font-variant-numeric:tabular-nums}
+.cf-v.neg{color:#f0a196}
+@media (max-width:560px){.cf-raekke{grid-template-columns:1fr auto}.cf-raekke .cf-bar{grid-column:1/-1;order:3}}
+.cf-trin{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
+.cf-trin button{font:inherit;font-size:.92rem;min-height:42px;padding:8px 14px;border-radius:999px;cursor:pointer;color:#e6e8ed;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.16)}
+.cf-trin button[aria-pressed="true"]{background:#83acfa;color:#0b1220;border-color:#83acfa;font-weight:600}
+.cf-tabel{width:100%;border-collapse:collapse;font-size:.95rem;margin-top:8px}
+.cf-tabel th,.cf-tabel td{text-align:left;padding:9px 8px;border-top:1px solid rgba(255,255,255,.08);vertical-align:top}
+.cf-tabel th{color:#a9b3bf;font-weight:600;font-size:.82rem}
+.cf-tabel td:first-child{width:24%;color:#c3cad3}.cf-tal td:last-child,.cf-tal th:last-child{text-align:right;white-space:nowrap}
+.cf-sum td{font-weight:700;border-top:2px solid rgba(255,255,255,.25)}
+@media (max-width:560px){.cf-tabel thead{display:none}.cf-tabel,.cf-tabel tbody,.cf-tabel tr,.cf-tabel td{display:block;width:100%}.cf-tabel tr{border-top:1px solid rgba(255,255,255,.12);padding:8px 0}.cf-tabel td{border:0;padding:3px 0;text-align:left!important;white-space:normal!important}.cf-tabel td:first-child{font-weight:700;color:#e6e8ed}.cf-tabel td[data-l]::before{content:attr(data-l) ": ";color:#a9b3bf;font-size:.85rem}}

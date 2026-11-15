@@ -46,5 +46,5 @@
   }
   function go(){document.querySelectorAll('[data-rum]').forEach(init);andele();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
-  window.addEventListener('ndi:live',andele);
+  document.addEventListener('ndi:live',andele);
 })();
