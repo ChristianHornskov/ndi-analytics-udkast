@@ -1,0 +1,62 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t-smtc cr-model-d-smtc" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t-smtc">Sådan tjener Semtech penge</title>
+<desc id="cr-model-d-smtc">1. Underleverandører fremstiller størstedelen af chipbene efter Semtechs design. Efter købet af HieFo har Semtech også egne fabrikker til visse datacenterkomponenter. 2. Semtech sælger chips og moduler videre, ofte gennem uafhængige distributører, til producenter og andre kunder. 3. Kunderne betaler for de varer, de køber. 4. Nogle kunder betaler desuden løbende for netværks- og skytjenester, enten som abonnement eller efter forbrug. Pengestrømmene til Semtech vises med gule pile. Hel streg er betaling pr. køb, stiplet streg er løbende betaling.</desc>
+<defs>
+<marker id="cr-pil-smtc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g-smtc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+<radialGradient id="cr-glod-smtc" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#89aeb4" stop-opacity=".28"/><stop offset="1" stop-color="#89aeb4" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+.cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-d .p{font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:start}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- vareflow-etiketter over pilene, ikke oven på stregen -->
+<text class="p" x="110" y="70">chips</text>
+<text class="p" x="219" y="70">varer</text>
+<text class="p" x="328" y="70">varer</text>
+<!-- knuder -->
+<circle cx="165" cy="114" r="58" fill="url(#cr-glod-smtc)"/>
+<rect class="k" x="12" y="86" width="88" height="56" rx="10"/>
+<rect class="k" x="121" y="86" width="88" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<rect class="k" x="230" y="86" width="88" height="56" rx="10"/>
+<rect class="k" x="339" y="86" width="88" height="56" rx="10"/>
+<!-- numre -->
+<g><circle class="nr" cx="90" cy="94" r="9"/><text class="nrt" x="90" y="97.5">1</text></g>
+<g><circle class="nr" cx="199" cy="94" r="9"/><text class="nrt" x="199" y="97.5">2</text></g>
+<g><circle class="nr" cx="308" cy="94" r="9"/><text class="nrt" x="308" y="97.5">3</text></g>
+<g><circle class="nr" cx="417" cy="94" r="9"/><text class="nrt" x="417" y="97.5">4</text></g>
+<!-- ikoner: fabrik, chip, kasse, bygning -->
+<path class="ik" d="M36,126 V108 L44,100 L52,108 L60,100 L68,108 V126 Z M48,116 h8 v10 h-8 z"/>
+<rect class="ik" x="149" y="100" width="32" height="22" rx="3"/><path class="ik" d="M155,108 h8 M155,114 h20 M167,108 h8"/>
+<rect class="ik" x="258" y="100" width="28" height="22" rx="2"/><path class="ik" d="M262,108 h20 M262,114 h14"/>
+<path class="ik" d="M363,126 V102 H401 V126 Z M369,108 h6 v5 h-6 z M379,108 h6 v5 h-6 z M389,108 h6 v5 h-6 z M377,118 h10 v8 h-10 z"/>
+<!-- vareflow -->
+<path class="l" d="M102,114 H119" marker-end="url(#cr-pil-smtc)"/>
+<path class="l" d="M211,114 H228" marker-end="url(#cr-pil-smtc)"/>
+<path class="l" d="M320,114 H337" marker-end="url(#cr-pil-smtc)"/>
+<!-- navne under bokse -->
+<text class="t" x="56" y="162">Fabrikker</text>
+<text class="s" x="56" y="178">laver chipbene</text>
+<text class="t" x="165" y="162">Semtech</text>
+<text class="s" x="165" y="178">sælger chips</text>
+<text class="t" x="274" y="162">Distributører</text>
+<text class="s" x="274" y="178">videresælger</text>
+<text class="t" x="383" y="162">Kunder</text>
+<text class="s" x="383" y="178">producenter</text>
+<!-- gule betalinger: buer under navnene, etiketter i forklaring forneden, ikke på pilene -->
+<path class="g1" d="M250,190 C230,230 190,230 172,190" marker-end="url(#cr-pil-g-smtc)"/>
+<path class="g2" d="M383,190 C360,250 190,250 175,190" marker-end="url(#cr-pil-g-smtc)"/>
+<line x1="20" x2="48" y1="272" y2="272" class="g1"/>
+<text class="pg" x="56" y="276">betaling for varer</text>
+<line x1="220" x2="248" y1="272" y2="272" class="g2"/>
+<text class="pg" x="256" y="276">abonnement eller forbrug</text>
+</svg>

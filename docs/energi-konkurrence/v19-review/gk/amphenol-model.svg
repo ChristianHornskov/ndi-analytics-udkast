@@ -1,0 +1,52 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 420" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Amphenol penge på stik, kabler, antenner og sensorer</title>
+<desc id="cr-model-d">1. Kunden og Amphenol arbejder sammen allerede i designfasen om den konkrete løsning. 2. Amphenol designer og fremstiller stik, kabler, antenner og sensorer, ofte tæt på kunden. 3. Udstyrsproducenter og kontraktfabrikker køber direkte og betaler Amphenol. 4. Distributører køber også produkterne og sælger dem videre. De gule pile viser Amphenols indtægter: betaling fra udstyrsproducenter og kontraktfabrikker, og betaling fra distributører.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-d .pr{text-anchor:middle;font:500 13px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-d .pg{text-anchor:middle;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="20" y="10" width="400" height="56" rx="10"/>
+<circle class="nr" cx="38" cy="24" r="8"/>
+<text class="nrt" x="38" y="27.5">1</text>
+<text class="t" x="58" y="32">Kunde</text>
+<text class="s" x="58" y="50">behov i design</text>
+<path class="l" d="M220,66 V88" marker-end="url(#cr-pil)"/>
+<text class="pr" x="330" y="80">behov i designfasen</text>
+<rect class="k" x="20" y="90" width="400" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="38" cy="104" r="8"/>
+<text class="nrt" x="38" y="107.5">2</text>
+<text class="t" x="58" y="112">Amphenol</text>
+<text class="s" x="58" y="130">designer og producerer</text>
+<text class="pr" x="120" y="164">produkter</text>
+<path class="l" d="M106,174 V258" marker-end="url(#cr-pil)"/>
+<path class="g1" d="M134,260 V176" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="120" y="282">betaling for</text>
+<text class="pg" x="120" y="298">produkter</text>
+<text class="pr" x="320" y="164">varer til</text>
+<text class="pr" x="320" y="180">videresalg</text>
+<path class="l" d="M306,190 V258" marker-end="url(#cr-pil)"/>
+<path class="g1" d="M334,260 V192" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="320" y="282">betaling fra</text>
+<text class="pg" x="320" y="298">distributører</text>
+<rect class="k" x="20" y="316" width="190" height="70" rx="10"/>
+<circle class="nr" cx="38" cy="330" r="8"/>
+<text class="nrt" x="38" y="333.5">3</text>
+<text class="t" x="56" y="352">Producenter</text>
+<text class="s" x="56" y="370">køber direkte</text>
+<rect class="k" x="230" y="316" width="190" height="70" rx="10"/>
+<circle class="nr" cx="248" cy="330" r="8"/>
+<text class="nrt" x="248" y="333.5">4</text>
+<text class="t" x="266" y="352">Distributører</text>
+<text class="s" x="266" y="370">sælger videre</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 560" role="img" aria-labelledby="cr-model-m-t cr-model-m-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan tjener CoreWeave penge på at leje AI-skykapacitet ud</title>
+<desc id="cr-model-m-desc">1. Kunderne booker kapacitet hos CoreWeave, enten som reserveret kapacitet eller efter forbrug. 2. CoreWeave stiller skyplatformen til rådighed og driver den i egne og partneres datacentre. 3. Datacentrene leverer plads og strøm til de tætte computeranlæg. 4. Leverandører leverer grafikkort og andet udstyr. 5. Långivere stiller kapital til rådighed, ofte med de faste kundekontrakter som grundlag. De gule pile er kundernes betaling: take-or-pay, også når kapaciteten ikke bruges, og betaling pr. time.</desc>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+<marker id="cr-pil-v-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 13px 'DM Sans',sans-serif;fill:#aebbc7}
+.cr-model-m .pr{text-anchor:start;font:500 12px 'DM Sans',sans-serif;fill:#c7d3dc}
+.cr-model-m .pg{text-anchor:start;font:600 12px 'DM Sans',sans-serif;fill:#e8d98a}
+.cr-model-m .pv{text-anchor:start;font:600 12px 'DM Sans',sans-serif;fill:#c7d3dc}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .g2{fill:none;stroke:#e8d98a;stroke-width:1.8;stroke-dasharray:5 4}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="50" y="16" width="200" height="56" rx="10"/>
+<circle class="nr" cx="64" cy="28" r="8"/>
+<text class="nrt" x="64" y="32.5">1</text>
+<text class="t" x="82" y="39">Kunder</text>
+<text class="s" x="82" y="57">booker kapacitet</text>
+<path class="l" d="M74,72 V106" marker-end="url(#cr-pil-m)"/>
+<text class="pr" x="90" y="96">booker kapacitet</text>
+<rect class="k" x="50" y="110" width="200" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="64" cy="122" r="8"/>
+<text class="nrt" x="64" y="126.5">2</text>
+<text class="t" x="82" y="133">CoreWeave</text>
+<text class="s" x="82" y="151">driver skyplatformen</text>
+<path class="l" d="M74,166 V200" marker-end="url(#cr-pil-m)"/>
+<text class="pr" x="90" y="190">driver anlæg</text>
+<rect class="k" x="50" y="204" width="200" height="56" rx="10"/>
+<circle class="nr" cx="64" cy="216" r="8"/>
+<text class="nrt" x="64" y="220.5">3</text>
+<text class="t" x="82" y="227">Datacentre</text>
+<text class="s" x="82" y="245">plads og strøm</text>
+<rect class="k" x="50" y="298" width="200" height="56" rx="10"/>
+<circle class="nr" cx="64" cy="310" r="8"/>
+<text class="nrt" x="64" y="314.5">4</text>
+<text class="t" x="82" y="321">Leverandører</text>
+<text class="s" x="82" y="339">leverer udstyr</text>
+<rect class="k" x="50" y="392" width="200" height="56" rx="10"/>
+<circle class="nr" cx="64" cy="404" r="8"/>
+<text class="nrt" x="64" y="408.5">5</text>
+<text class="t" x="82" y="415">Långivere</text>
+<text class="s" x="82" y="433">stiller kapital</text>
+<path class="g2" d="M250,44 C304,44 304,128 250,128" marker-end="url(#cr-pil-g-m)"/>
+<path class="g1" d="M250,56 C322,56 322,140 250,140" marker-end="url(#cr-pil-g-m)"/>
+<path class="l" d="M50,326 C16,326 16,138 50,138" marker-end="url(#cr-pil-v-m)"/>
+<path class="l" d="M50,420 C8,420 8,150 50,150" marker-end="url(#cr-pil-v-m)"/>
+<line x1="50" x2="80" y1="472" y2="472" class="l"/>
+<text class="pv" x="90" y="476">leverer udstyr</text>
+<line x1="50" x2="80" y1="494" y2="494" class="l"/>
+<text class="pv" x="90" y="498">lån til maskiner</text>
+<line x1="50" x2="80" y1="516" y2="516" class="g2"/>
+<text class="pg" x="90" y="520">take-or-pay, også ubrugt</text>
+<line x1="50" x2="80" y1="538" y2="538" class="g1"/>
+<text class="pg" x="90" y="542">betaling pr. time</text>
+</svg>

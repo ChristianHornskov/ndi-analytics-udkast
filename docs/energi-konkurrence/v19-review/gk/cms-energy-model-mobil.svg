@@ -1,0 +1,68 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan flyder el, gas og betaling hos CMS Energy</title>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 15px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 12px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .p{text-anchor:start;font:500 13px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="57" y="16" width="226" height="52" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="69" cy="28" r="8"/><text class="nrt" x="69" y="32">1</text>
+<rect class="ik" x="87" y="28" width="22" height="16" rx="2"/>
+<path class="ik" d="M87,28 L98,20 L109,28"/>
+<text class="t" x="118" y="38">CMS</text>
+<text class="s" x="118" y="54">holdingselskab</text>
+<path class="l" d="M140,68 V100 H90 V116" marker-end="url(#cr-pil-m)"/>
+<path class="l" d="M200,68 V100 H250 V116" marker-end="url(#cr-pil-m)"/>
+<rect class="k" x="16" y="116" width="148" height="62" rx="10"/>
+<circle class="nr" cx="28" cy="128" r="8"/><text class="nrt" x="28" y="132">2</text>
+<path class="ik" d="M46,136 L40,146 H44 L38,156"/>
+<path class="ik" d="M60,156 C56,150 60,146 58,140 C64,144 70,148 68,156 C66,160 56,160 60,156"/>
+<text class="t" x="80" y="138">Consumers</text>
+<text class="s" x="80" y="154">reguleret</text>
+<text class="s" x="80" y="168">el og gas</text>
+<path class="l" d="M90,178 V228" marker-end="url(#cr-pil-m)"/>
+<rect class="k" x="176" y="116" width="148" height="62" rx="10"/>
+<circle class="nr" cx="188" cy="128" r="8"/><text class="nrt" x="188" y="132">4</text>
+<rect class="ik" x="200" y="144" width="20" height="12" rx="1"/>
+<path class="ik" d="M204,144 V136 M214,144 V138"/>
+<path class="ik" d="M202,136 C204,132 206,132 206,136 M212,138 C214,134 216,134 216,138"/>
+<text class="t" x="232" y="138">NorthStar</text>
+<text class="s" x="232" y="154">egne</text>
+<text class="s" x="232" y="168">kraftværker</text>
+<path class="l" d="M250,178 V228" marker-end="url(#cr-pil-m)"/>
+<rect class="k" x="16" y="230" width="148" height="56" rx="10"/>
+<circle class="nr" cx="28" cy="242" r="8"/><text class="nrt" x="28" y="246">3</text>
+<circle class="ik" cx="52" cy="250" r="6"/>
+<path class="ik" d="M40,270 C40,262 64,262 64,270"/>
+<text class="t" x="68" y="255">Kunder</text>
+<text class="s" x="68" y="273">i Michigan</text>
+<rect class="k" x="176" y="230" width="148" height="56" rx="10"/>
+<circle class="nr" cx="188" cy="242" r="8"/><text class="nrt" x="188" y="246">5</text>
+<rect class="ik" x="200" y="248" width="20" height="14" rx="2"/>
+<path class="ik" d="M203,248 V244 h14 V248"/>
+<text class="t" x="232" y="255">Aftagere</text>
+<text class="s" x="232" y="273">køber strøm</text>
+<path class="g2" d="M16,258 C6,258 6,147 16,147" marker-end="url(#cr-pil-gm)"/>
+<path class="g2" d="M324,258 C334,258 334,147 324,147" marker-end="url(#cr-pil-gm)"/>
+<line x1="24" x2="54" y1="316" y2="316" class="l"/>
+<text class="p" x="64" y="320">el og gas, fra Consumers</text>
+<line x1="24" x2="54" y1="340" y2="340" class="l"/>
+<text class="p" x="64" y="344">strøm, fra NorthStar til aftagerne</text>
+<line x1="24" x2="54" y1="364" y2="364" class="g2"/>
+<text class="pg" x="64" y="368">betaling efter tarif, fra kunderne</text>
+<line x1="24" x2="54" y1="388" y2="388" class="g2"/>
+<text class="pg" x="64" y="392">betaling for strøm, fra aftagerne</text>
+<line x1="24" x2="54" y1="412" y2="412" class="l"/>
+<text class="p" x="64" y="416">ejerskab, fra CMS</text>
+</svg>

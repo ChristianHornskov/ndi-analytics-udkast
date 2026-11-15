@@ -1,0 +1,20 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 462" role="img" aria-labelledby="cr-model-m-t" xmlns="http://www.w3.org/2000/svg"><title id="cr-model-m-t">Sådan tjener MicroVision penge på tre måder</title><defs><marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker><marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker></defs><style>.cr-model-m .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}.cr-model-m .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}.cr-model-m .pr{text-anchor:middle;font:500 12.5px "DM Sans",sans-serif;fill:#c7d3dc}.cr-model-m .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}.cr-model-m .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}.cr-model-m .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}.cr-model-m .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}.cr-model-m .pgm{text-anchor:middle;font:600 12.5px "DM Sans",sans-serif;fill:#e8d98a}</style>
+<rect class="k" x="20" y="8" width="300" height="52" rx="10"/><circle class="nr" cx="34" cy="22" r="8"/><text class="nrt" x="34" y="25.5">1</text><text class="t" x="60" y="30">Producent</text><text class="s" x="60" y="48">bygger sensorerne</text>
+<path class="l" d="M170,62 V84" marker-end="url(#cr-pil-m)"/>
+<rect class="k" x="20" y="86" width="300" height="52" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/><circle class="nr" cx="34" cy="100" r="8"/><text class="nrt" x="34" y="103.5">2</text><text class="t" x="60" y="108">MicroVision</text><text class="s" x="60" y="126">udvikler sensorer og software</text>
+<text class="pr" x="60" y="158">sensorer og</text><text class="pr" x="60" y="174">systemer</text>
+<path class="l" d="M46,184 V270" marker-end="url(#cr-pil-m)"/>
+<path class="g1" d="M74,272 V186" marker-end="url(#cr-pil-gm)"/>
+<text class="pgm" x="60" y="292">betaling</text><text class="pgm" x="60" y="308">pr. sensor</text>
+<text class="pr" x="170" y="158">licens til</text><text class="pr" x="170" y="174">software</text>
+<path class="l" d="M156,184 V270" marker-end="url(#cr-pil-m)"/>
+<path class="g1" d="M184,272 V186" marker-end="url(#cr-pil-gm)"/>
+<text class="pgm" x="170" y="292">royalty pr.</text><text class="pgm" x="170" y="308">solgt produkt</text>
+<text class="pr" x="280" y="158">udvikling</text><text class="pr" x="280" y="174">for kunden</text>
+<path class="l" d="M266,184 V270" marker-end="url(#cr-pil-m)"/>
+<path class="g1" d="M294,272 V186" marker-end="url(#cr-pil-gm)"/>
+<text class="pgm" x="280" y="292">fast pris for</text><text class="pgm" x="280" y="308">arbejdet</text>
+<rect class="k" x="20" y="322" width="300" height="52" rx="10"/><circle class="nr" cx="34" cy="336" r="8"/><text class="nrt" x="34" y="339.5">3</text><text class="t" x="60" y="344">Kunde</text><text class="s" x="60" y="362">bygger sensorerne ind</text>
+<path class="l" d="M170,376 V398" marker-end="url(#cr-pil-m)"/>
+<rect class="k" x="20" y="400" width="300" height="52" rx="10"/><circle class="nr" cx="34" cy="414" r="8"/><text class="nrt" x="34" y="417.5">4</text><text class="t" x="60" y="422">Slutmarked</text><text class="s" x="60" y="440">køretøjer og maskiner bruger dem</text>
+</svg>

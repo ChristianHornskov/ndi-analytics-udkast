@@ -1,0 +1,72 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan virker Merlins forretning</title>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .pr{text-anchor:middle;font:500 12.5px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- 1 USSOCOM -->
+<rect class="k" x="50" y="16" width="226" height="64" rx="10"/>
+<circle class="nr" cx="66" cy="32" r="9"/>
+<text class="nrt" x="66" y="36">1</text>
+<path class="ik" d="M86,34 L86,48 C86,54 100,58 100,58 C100,58 114,54 114,48 L114,34 Z"/>
+<path class="ik" d="M100,34 V50"/>
+<text class="t" x="130" y="40">USSOCOM</text>
+<text class="s" x="130" y="58">bestiller opgaver</text>
+<path class="l" d="M100,80 V108" marker-end="url(#cr-pil-m)"/>
+<!-- 2 Merlin -->
+<rect class="k" x="50" y="112" width="226" height="64" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="66" cy="128" r="9"/>
+<text class="nrt" x="66" y="132">2</text>
+<rect class="ik" x="86" y="126" width="22" height="22" rx="3"/>
+<path class="ik" d="M90,126 V122 M97,126 V122 M104,126 V122 M90,148 V152 M97,148 V152 M104,148 V152 M86,130 H82 M86,137 H82 M86,144 H82 M108,130 H112 M108,137 H112 M108,144 H112"/>
+<text class="t" x="130" y="136">Merlin</text>
+<text class="s" x="130" y="154">udvikler systemet</text>
+<path class="l" d="M100,176 V204" marker-end="url(#cr-pil-m)"/>
+<!-- 3 C-130J -->
+<rect class="k" x="50" y="208" width="226" height="64" rx="10"/>
+<circle class="nr" cx="66" cy="224" r="9"/>
+<text class="nrt" x="66" y="228">3</text>
+<g class="ik" transform="translate(78,224) scale(0.72)">
+  <path d="M6,22 L6,2 L18,12 L12,22"/>
+  <path d="M10,20 L62,20 C72,20 78,24 78,28 C78,32 72,34 62,34 L16,34 C10,34 8,30 8,26 C8,22 10,20 16,20"/>
+  <path d="M24,14 H70"/>
+  <path d="M32,14 V24 M42,14 V24 M52,14 V24 M62,14 V24"/>
+  <path d="M30,24 H34 M40,24 H44 M50,24 H54 M60,24 H64"/>
+</g>
+<text class="t" x="148" y="232">C-130J</text>
+<text class="s" x="148" y="250">eksisterende fly</text>
+<path class="l" d="M100,272 V300" marker-end="url(#cr-pil-m)"/>
+<!-- 4 New Zealand -->
+<rect class="k" x="50" y="304" width="226" height="64" rx="10"/>
+<circle class="nr" cx="66" cy="320" r="9"/>
+<text class="nrt" x="66" y="324">4</text>
+<circle class="ik" cx="94" cy="326" r="5"/>
+<path class="ik" d="M86,342 C86,334 102,334 102,342"/>
+<circle class="ik" cx="110" cy="326" r="5"/>
+<path class="ik" d="M102,342 C102,334 118,334 118,342"/>
+<text class="t" x="130" y="328">New Zealand</text>
+<text class="s" x="130" y="346">rådgivning</text>
+<!-- yellow payments on the right, labels only in the legend -->
+<path class="g1" d="M276,48 C318,48 318,136 276,136" marker-end="url(#cr-pil-gm)"/>
+<path class="g2" d="M276,240 C334,240 334,150 276,150" marker-end="url(#cr-pil-gm)"/>
+<!-- legend -->
+<line x1="24" x2="54" y1="400" y2="400" class="g1"/>
+<text class="pg" x="64" y="404">betaling for udviklingsarbejde</text>
+<line x1="24" x2="54" y1="428" y2="428" class="g2"/>
+<text class="pg" x="64" y="432">senere betaling for montering</text>
+<text class="pg" x="64" y="450">og softwarestøtte</text>
+</svg>

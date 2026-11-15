@@ -1,0 +1,80 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t cr-model-m-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan virker Marvells forretning</title>
+<desc id="cr-model-m-d">1. Kunder hos cloud og datacentre samt producenter af netudstyr bestiller chips. 2. Marvell designer chipene og lægger ordrer hos uafhængige fabrikker. 3. Fabrikkerne fremstiller chipene og leverer dem til Marvell. 4. En del af chipene går direkte til kunder, og en del går via distributører. 5. De gule pile er betalinger: kunder og distributører betaler Marvell for chipene, og Marvell betaler fabrikkerne for produktionen.</desc>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:start}
+.cr-model-m .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:start}
+.cr-model-m .p{font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:start}
+.cr-model-m .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:start}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .ik{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- 1 Kunder -->
+<rect class="k" x="24" y="16" width="240" height="86" rx="10"/>
+<circle class="nr" cx="40" cy="32" r="9"/>
+<text class="nrt" x="40" y="36">1</text>
+<g class="ik" transform="translate(58,30)">
+  <circle cx="8" cy="7" r="5"/>
+  <path d="M0,24 C0,16 16,16 16,24"/>
+  <circle cx="24" cy="8" r="4"/>
+  <path d="M17,24 C17,17 31,17 31,24"/>
+</g>
+<text class="t" x="100" y="48">Kunder</text>
+<text class="s" x="100" y="70">bestiller chips</text>
+<!-- 2 Marvell -->
+<rect class="k" x="24" y="122" width="240" height="86" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="40" cy="138" r="9"/>
+<text class="nrt" x="40" y="142">2</text>
+<g class="ik" transform="translate(58,136)">
+  <rect x="4" y="4" width="22" height="22" rx="2"/>
+  <path d="M9,4 V0 M16,4 V0 M23,4 V0 M9,26 V30 M16,26 V30 M23,26 V30 M4,9 H0 M4,15 H0 M4,21 H0 M26,9 H30 M26,15 H30 M26,21 H30"/>
+  <path d="M10,10 H20 M10,15 H20 M10,20 H18"/>
+</g>
+<text class="t" x="100" y="154">Marvell</text>
+<text class="s" x="100" y="176">designer chips</text>
+<!-- 3 Fabrikker -->
+<rect class="k" x="24" y="228" width="240" height="86" rx="10"/>
+<circle class="nr" cx="40" cy="244" r="9"/>
+<text class="nrt" x="40" y="248">3</text>
+<g class="ik" transform="translate(58,242)">
+  <path d="M2,24 V12 L8,6 L14,12 V24"/>
+  <path d="M14,24 V10 L20,4 L26,10 V24"/>
+  <path d="M8,6 L8,2 H12 L12,8"/>
+  <rect x="6" y="16" width="4" height="4"/>
+  <rect x="18" y="16" width="4" height="4"/>
+</g>
+<text class="t" x="100" y="260">Fabrikker</text>
+<text class="s" x="100" y="282">fremstiller chips</text>
+<!-- 4 Distributører -->
+<rect class="k" x="24" y="334" width="240" height="86" rx="10"/>
+<circle class="nr" cx="40" cy="350" r="9"/>
+<text class="nrt" x="40" y="354">4</text>
+<g class="ik" transform="translate(58,348)">
+  <path d="M2,22 L8,10 H24 L30,22 Z"/>
+  <path d="M8,10 V4 H24 V10"/>
+</g>
+<text class="t" x="100" y="366">Distributører</text>
+<text class="s" x="100" y="388">videresælger chips</text>
+<!-- blå: chips fra fabrikker op til Marvell, fra Marvell op til kunder, fra Marvell ned til distributører, og fra distributører op til kunder -->
+<path class="l" d="M140,228 V208" marker-end="url(#cr-pil-m)"/>
+<path class="l" d="M140,122 V102" marker-end="url(#cr-pil-m)"/>
+<path class="l" d="M24,200 H16 V377 H24" marker-end="url(#cr-pil-m)"/>
+<path class="l" d="M24,377 H8 V59 H24" marker-end="url(#cr-pil-m)"/>
+<!-- gule buer i højre side -->
+<path class="g1" d="M264,59 C300,59 300,165 264,165" marker-end="url(#cr-pil-g-m)"/>
+<path class="g1" d="M264,377 C318,377 318,181 264,181" marker-end="url(#cr-pil-g-m)"/>
+<path class="g1" d="M264,181 C300,181 300,271 264,271" marker-end="url(#cr-pil-g-m)"/>
+<line x1="16" x2="40" y1="440" y2="440" class="l"/>
+<text class="p" x="48" y="444">leverer chips, fra fabrikkerne</text>
+<line x1="16" x2="40" y1="464" y2="464" class="g1"/>
+<text class="pg" x="48" y="468">betaling for chips, til Marvell</text>
+<text class="pg" x="48" y="486">og fabrikkerne</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 380" role="img" aria-labelledby="cr-model-t cr-model-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Fluor penge på at planlægge og bygge anlæg</title>
+<desc id="cr-model-desc">1. Kunden beder Fluor om at planlægge, indkøbe og bygge et anlæg. 2. Fluor designer anlægget og leder projektet. 3. Leverandører og underentreprenører leverer materialer og udfører dele af byggeriet. 4. På en refusionskontrakt dækker kunden omkostningerne og betaler et gebyr. 5. På en sumkontrakt betaler kunden den aftalte pris. De gule pile er Fluors indtægter: løbende refusion og gebyr, eller en aftalt sumpris.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13.5px 'DM Sans',sans-serif;fill:#aebbc7}
+.cr-model-d .pr{text-anchor:start;font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc}
+.cr-model-d .pg{text-anchor:start;font:600 13px 'DM Sans',sans-serif;fill:#e8d98a}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.8;stroke-dasharray:5 4}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="90" y="16" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="28" r="8"/>
+<text class="nrt" x="104" y="32.5">1</text>
+<text class="t" x="128" y="39">Kunde</text>
+<text class="s" x="128" y="57">bestiller anlægget</text>
+<path class="l" d="M220,72 V118" marker-end="url(#cr-pil)"/>
+<text class="pr" x="232" y="100">bestilling</text>
+<rect class="k" x="90" y="122" width="260" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="104" cy="134" r="8"/>
+<text class="nrt" x="104" y="138.5">2</text>
+<text class="t" x="128" y="145">Fluor</text>
+<text class="s" x="128" y="163">designer og leder</text>
+<path class="l" d="M220,178 V224" marker-end="url(#cr-pil)"/>
+<text class="pr" x="232" y="206">indkøb og arbejde</text>
+<rect class="k" x="90" y="228" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="240" r="8"/>
+<text class="nrt" x="104" y="244.5">3</text>
+<text class="t" x="128" y="251">Leverandører</text>
+<text class="s" x="128" y="269">bygger og leverer</text>
+<path class="g2" d="M350,44 C410,44 410,140 350,140" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M350,56 C430,56 430,156 350,156" marker-end="url(#cr-pil-g)"/>
+<line x1="90" x2="120" y1="332" y2="332" class="g2"/>
+<text class="pg" x="130" y="336">løbende refusion og gebyr</text>
+<line x1="90" x2="120" y1="354" y2="354" class="g1"/>
+<text class="pg" x="130" y="358">aftalt sumpris</text>
+</svg>

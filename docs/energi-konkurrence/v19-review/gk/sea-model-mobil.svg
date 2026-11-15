@@ -1,0 +1,69 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan tjener Sea penge på Shopee, Monee og Garena</title>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .pr{text-anchor:middle;font:500 12.5px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .ky{fill:#0d1921;stroke:#e8d98a;stroke-width:1.6}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+
+<rect class="k" x="36" y="16" width="226" height="56" rx="10"/>
+<circle class="nr" cx="50" cy="30" r="8"/>
+<text class="nrt" x="50" y="34">1</text>
+<text class="t" x="68" y="40">Sælgere</text>
+<text class="s" x="68" y="58">udbyder varer</text>
+<path class="l" d="M100,72 V96" marker-end="url(#cr-pil-m)"/>
+
+<rect class="ky" x="36" y="100" width="226" height="56" rx="10"/>
+<circle class="nr" cx="50" cy="114" r="8"/>
+<text class="nrt" x="50" y="118">2</text>
+<text class="t" x="68" y="124">Shopee</text>
+<text class="s" x="68" y="142">handelsplatform</text>
+<path class="l" d="M100,156 V180" marker-end="url(#cr-pil-m)"/>
+
+<rect class="k" x="36" y="184" width="226" height="56" rx="10"/>
+<circle class="nr" cx="50" cy="198" r="8"/>
+<text class="nrt" x="50" y="202">3</text>
+<text class="t" x="68" y="208">Brugere</text>
+<text class="s" x="68" y="226">køber, låner, spiller</text>
+<path class="l" d="M100,264 V240" marker-end="url(#cr-pil-m)"/>
+
+<rect class="ky" x="36" y="268" width="226" height="56" rx="10"/>
+<circle class="nr" cx="50" cy="282" r="8"/>
+<text class="nrt" x="50" y="286">4</text>
+<text class="t" x="68" y="292">Monee</text>
+<text class="s" x="68" y="310">kredit og betaling</text>
+
+<rect class="ky" x="36" y="352" width="226" height="56" rx="10"/>
+<circle class="nr" cx="50" cy="366" r="8"/>
+<text class="nrt" x="50" y="370">5</text>
+<text class="t" x="68" y="376">Garena</text>
+<text class="s" x="68" y="394">onlinespil</text>
+<path class="l" d="M262,380 C300,380 300,212 262,212" marker-end="url(#cr-pil-m)"/>
+<text class="pr" transform="translate(314,300) rotate(-90)">adgang til spil</text>
+
+<path class="g1" d="M262,44 C308,44 308,128 262,128" marker-end="url(#cr-pil-gm)"/>
+<path class="g1" d="M262,212 C322,212 322,128 262,128" marker-end="url(#cr-pil-gm)"/>
+<path class="g2" d="M262,212 C334,212 334,296 262,296" marker-end="url(#cr-pil-gm)"/>
+<path class="g1" d="M262,212 C348,212 348,380 262,380" marker-end="url(#cr-pil-gm)"/>
+
+<line x1="16" x2="46" y1="428" y2="428" class="g1"/>
+<text class="pg" x="54" y="432">gebyrer og annoncer, fra sælgere</text>
+<line x1="16" x2="46" y1="448" y2="448" class="g1"/>
+<text class="pg" x="54" y="452">betaling for egne varer, fra brugere</text>
+<line x1="16" x2="46" y1="468" y2="468" class="g2"/>
+<text class="pg" x="54" y="472">renter og gebyrer, fra låntagere</text>
+<line x1="16" x2="46" y1="488" y2="488" class="g1"/>
+<text class="pg" x="54" y="492">køb i spillet, fra spillere</text>
+</svg>

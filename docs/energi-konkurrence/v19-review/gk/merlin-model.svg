@@ -1,0 +1,75 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan virker Merlins forretning</title>
+<desc id="cr-model-d">1. Merlin udvikler Merlin Pilot og tilpasser systemet til kundens fly, først C-130J. 2. Amerikanske myndigheder, især USSOCOM, bestiller udviklings- og integrationsopgaver under en rammeaftale. 3. Arbejdet lægges på eksisterende fly, så flyet kan styres med færre piloter eller uden. 4. En mindre strøm er rådgivning til kunder i New Zealand. 5. På sigt vil Merlin også kunne tage betaling for montering og løbende softwarestøtte. De gule pile viser betaling til Merlin. Fast streg er betaling for det udviklingsarbejde, der udføres nu. Stiplet streg er den senere, planlagte betaling for montering og softwarestøtte.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:start}
+.cr-model-d .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:start}
+.cr-model-d .p{font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:start}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- 1 USSOCOM -->
+<rect class="k" x="16" y="16" width="196" height="62" rx="10"/>
+<circle class="nr" cx="32" cy="32" r="9"/>
+<text class="nrt" x="32" y="36">1</text>
+<path class="ik" d="M50,36 L50,52 C50,58 66,62 66,62 C66,62 82,58 82,52 L82,36 Z"/>
+<path class="ik" d="M66,36 V54"/>
+<text class="t" x="96" y="42">USSOCOM</text>
+<text class="s" x="90" y="62">bestiller</text>
+<!-- arrow to Merlin -->
+<path class="l" d="M212,47 H230" marker-end="url(#cr-pil)"/>
+<!-- 2 Merlin -->
+<rect class="k" x="234" y="16" width="190" height="62" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="250" cy="32" r="9"/>
+<text class="nrt" x="250" y="36">2</text>
+<rect class="ik" x="268" y="34" width="22" height="22" rx="3"/>
+<path class="ik" d="M272,34 V30 M279,34 V30 M286,34 V30 M272,56 V60 M279,56 V60 M286,56 V60 M268,38 H264 M268,45 H264 M268,52 H264 M290,38 H294 M290,45 H294 M290,52 H294"/>
+<text class="t" x="304" y="42">Merlin</text>
+<text class="s" x="304" y="62">udvikler systemet</text>
+<!-- yellow solid under the top row, left of the tilpasning path -->
+<path class="g1" d="M114,78 C114,96 200,96 234,78" marker-end="url(#cr-pil-g)"/>
+<!-- 3 C-130J with transport-plane silhouette -->
+<rect class="k" x="16" y="128" width="250" height="80" rx="10"/>
+<circle class="nr" cx="32" cy="144" r="9"/>
+<text class="nrt" x="32" y="148">3</text>
+<g class="ik" transform="translate(50,148)">
+  <path d="M6,22 L6,2 L18,12 L12,22"/>
+  <path d="M10,20 L62,20 C72,20 78,24 78,28 C78,32 72,34 62,34 L16,34 C10,34 8,30 8,26 C8,22 10,20 16,20"/>
+  <path d="M24,14 H70"/>
+  <path d="M32,14 V24 M42,14 V24 M52,14 V24 M62,14 V24"/>
+  <path d="M30,24 H34 M40,24 H44 M50,24 H54 M60,24 H64"/>
+</g>
+<text class="t" x="140" y="156">C-130J</text>
+<text class="s" x="140" y="176">eksisterende fly</text>
+<!-- arrow Merlin -> C-130J, around the right of C-130J's top -->
+<path class="l" d="M350,78 V118 H200 V124" marker-end="url(#cr-pil)"/>
+<text class="p" x="300" y="112">tilpasning</text>
+<!-- 4 New Zealand -->
+<rect class="k" x="280" y="128" width="144" height="80" rx="10"/>
+<circle class="nr" cx="296" cy="144" r="9"/>
+<text class="nrt" x="296" y="148">4</text>
+<text class="t" x="314" y="152">New Zealand</text>
+<circle class="ik" cx="324" cy="170" r="5"/>
+<path class="ik" d="M316,186 C316,178 332,178 332,186"/>
+<circle class="ik" cx="340" cy="170" r="5"/>
+<path class="ik" d="M332,186 C332,178 348,178 348,186"/>
+<text class="s" x="356" y="180">rådgivning</text>
+<!-- yellow dashed: later payment from the aircraft side to Merlin, outside the boxes -->
+<path class="g2" d="M141,208 C141,226 432,226 432,208 V51 H424" marker-end="url(#cr-pil-g)"/>
+<!-- legend -->
+<line x1="16" x2="44" y1="248" y2="248" class="g1"/>
+<text class="pg" x="52" y="252">betaling for udviklingsarbejde</text>
+<line x1="16" x2="44" y1="272" y2="272" class="g2"/>
+<text class="pg" x="52" y="276">senere betaling for montering og softwarestøtte</text>
+</svg>

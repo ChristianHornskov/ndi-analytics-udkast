@@ -1,0 +1,53 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 420" role="img" aria-labelledby="cr-model-m-t" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan tjener Super Micro penge på komplette datacentre</title>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .pr{text-anchor:middle;font:500 12.5px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .pgm{text-anchor:middle;font:600 12.5px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .mt{text-anchor:middle;font:500 12px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .mk{fill:#0d1921;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="20" y="8" width="300" height="92" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="34" cy="22" r="8"/>
+<text class="nrt" x="34" y="25.5">1</text>
+<text class="t" x="60" y="30">Super Micro</text>
+<text class="s" x="60" y="48">samler standardmoduler</text>
+<rect class="mk" x="42" y="60" width="84" height="26" rx="6"/>
+<text class="mt" x="84" y="78">servere</text>
+<rect class="mk" x="136" y="60" width="84" height="26" rx="6"/>
+<text class="mt" x="178" y="78">køling</text>
+<rect class="mk" x="230" y="60" width="84" height="26" rx="6"/>
+<text class="mt" x="272" y="78">strøm</text>
+<text class="pr" x="95" y="116">helt datacenter</text>
+<path class="l" d="M81,126 V210" marker-end="url(#cr-pil-m)"/>
+<path class="g1" d="M109,212 V128" marker-end="url(#cr-pil-gm)"/>
+<text class="pgm" x="95" y="228">betaling for</text>
+<text class="pgm" x="95" y="244">anlæg</text>
+<text class="pr" x="245" y="116">dele og service</text>
+<path class="l" d="M231,126 V210" marker-end="url(#cr-pil-m)"/>
+<path class="g1" d="M259,212 V128" marker-end="url(#cr-pil-gm)"/>
+<text class="pgm" x="245" y="228">betaling for</text>
+<text class="pgm" x="245" y="244">service</text>
+<rect class="k" x="20" y="258" width="300" height="52" rx="10"/>
+<circle class="nr" cx="34" cy="272" r="8"/>
+<text class="nrt" x="34" y="275.5">2</text>
+<text class="t" x="60" y="280">Kunder</text>
+<text class="s" x="60" y="298">køber hele anlæg</text>
+<path class="l" d="M170,310 V332" marker-end="url(#cr-pil-m)"/>
+<text class="pr" x="255" y="324">sættes i drift</text>
+<rect class="k" x="20" y="340" width="300" height="52" rx="10"/>
+<circle class="nr" cx="34" cy="354" r="8"/>
+<text class="nrt" x="34" y="357.5">3</text>
+<text class="t" x="60" y="362">Datacentre</text>
+<text class="s" x="60" y="380">hos kunden</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Tesla penge</title>
+<desc id="cr-model-d">1. Tesla bygger biler og batterier. 2. Bilkøberen køber bilen direkte af Tesla og kan betale for FSD. 3. Andre bilproducenter køber kreditter af Tesla. 4. Elselskaber køber batterier. De gule pile viser betalingerne til Tesla.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-d .p{font:500 12.5px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 12px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:middle}
+.cr-model-d .lg{font:600 12px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:start}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 10px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="15" y="10" width="110" height="245" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<rect class="k" x="290" y="10" width="135" height="90" rx="10"/>
+<rect class="k" x="290" y="110" width="135" height="70" rx="10"/>
+<rect class="k" x="290" y="195" width="135" height="70" rx="10"/>
+<g><circle class="nr" cx="112" cy="22" r="8"/><text class="nrt" x="112" y="25.5">1</text></g>
+<g><circle class="nr" cx="412" cy="22" r="8"/><text class="nrt" x="412" y="25.5">2</text></g>
+<g><circle class="nr" cx="412" cy="122" r="8"/><text class="nrt" x="412" y="125.5">3</text></g>
+<g><circle class="nr" cx="412" cy="207" r="8"/><text class="nrt" x="412" y="210.5">4</text></g>
+<path class="ik" d="M50,104 V82 L60,88 V82 L70,88 V82 L80,88 V74 H90 V104 Z"/>
+<text class="t" x="70" y="132">Tesla</text><text class="s" x="70" y="151">bygger biler</text><text class="s" x="70" y="167">og batterier</text>
+<text class="t" x="357" y="50">Bilkøber</text><text class="s" x="357" y="68">køber direkte</text>
+<text class="t" x="357" y="150">Bilproducent</text><text class="s" x="357" y="168">overholder regler</text>
+<text class="t" x="357" y="235">Elselskab</text><text class="s" x="357" y="253">gemmer strøm</text>
+<path class="l" d="M127,28 H286" marker-end="url(#cr-pil)"/><text class="p" x="207" y="21">bil og FSD</text>
+<path class="g1" d="M288,56 H129" marker-end="url(#cr-pil-g)"/><text class="pg" x="207" y="49">betaling for bilen</text>
+<path class="g2" d="M288,86 H129" marker-end="url(#cr-pil-g)"/><text class="pg" x="207" y="79">abonnement på FSD</text>
+<path class="l" d="M127,128 H286" marker-end="url(#cr-pil)"/><text class="p" x="207" y="121">kreditter</text>
+<path class="g1" d="M288,162 H129" marker-end="url(#cr-pil-g)"/><text class="pg" x="207" y="155">betaling for kreditter</text>
+<path class="l" d="M127,213 H286" marker-end="url(#cr-pil)"/><text class="p" x="207" y="206">batterier</text>
+<path class="g1" d="M288,247 H129" marker-end="url(#cr-pil-g)"/><text class="pg" x="207" y="240">betaling for batterier</text>
+<line class="g1" x1="20" x2="45" y1="281" y2="281"/><text class="lg" x="52" y="285">betaling pr. køb</text>
+<line class="g2" x1="240" x2="265" y1="281" y2="281"/><text class="lg" x="272" y="285">løbende betaling</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 500" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan virker Swarmers licens til droneproducenter</title>
+<desc id="cr-model-d">1. Swarmer leverer en licens til Swarmer OS til droneproducenten. 2. Producenten lægger softwaren ind i sine fartøjer. 3. De militære brugere får fartøjer, som én operatør kan styre sammen. 4. Data fra missionerne går tilbage til Swarmer og bruges til at forbedre softwaren. 5. Producenten betaler Swarmer for licens og typisk løbende for support.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-d .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-d .p{text-anchor:start;font:500 13px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- 1 Swarmer, gul ramme -->
+<rect class="k" x="110" y="28" width="220" height="72" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="124" cy="42" r="9"/><text class="nrt" x="124" y="46">1</text>
+<!-- tre små fartøjer i sværm -->
+<circle class="ik" cx="156" cy="58" r="4"/>
+<circle class="ik" cx="168" cy="50" r="4"/>
+<circle class="ik" cx="168" cy="66" r="4"/>
+<text class="t" x="182" y="56">Swarmer</text>
+<text class="s" x="182" y="76">leverer licens</text>
+<!-- blå pil: licens ned til producenten -->
+<path class="l" d="M210,100 V132" marker-end="url(#cr-pil)"/>
+<!-- 2 Producent -->
+<rect class="k" x="110" y="140" width="220" height="72" rx="10"/>
+<circle class="nr" cx="124" cy="154" r="9"/><text class="nrt" x="124" y="158">2</text>
+<!-- værksted -->
+<rect class="ik" x="148" y="168" width="24" height="16" rx="1"/>
+<path class="ik" d="M146,168 L160,156 L174,168"/>
+<text class="t" x="182" y="168">Producent</text>
+<text class="s" x="182" y="188">lægger software ind</text>
+<!-- blå pil: fartøjer ned til militæret -->
+<path class="l" d="M210,212 V244" marker-end="url(#cr-pil)"/>
+<!-- 3 Militær -->
+<rect class="k" x="110" y="252" width="220" height="72" rx="10"/>
+<circle class="nr" cx="124" cy="266" r="9"/><text class="nrt" x="124" y="270">3</text>
+<!-- skjold -->
+<path class="ik" d="M160,262 L148,268 V282 L160,290 L172,282 V268 Z"/>
+<text class="t" x="182" y="280">Militær</text>
+<text class="s" x="182" y="300">bruger fartøjerne</text>
+<!-- stiplet blå bue: missionsdata tilbage til Swarmer, venstre side, uden tekst på buen -->
+<path class="ld" d="M110,288 C40,288 40,64 110,64" marker-end="url(#cr-pil)"/>
+<!-- gule pile: betaling fra producenten til Swarmer, højre side -->
+<path class="g1" d="M330,176 C400,176 400,64 330,64" marker-end="url(#cr-pil-g)"/>
+<path class="g2" d="M330,196 C422,196 422,48 330,48" marker-end="url(#cr-pil-g)"/>
+<!-- forklaring under tegningen, ikke på pilene -->
+<line x1="70" x2="100" y1="352" y2="352" class="l"/>
+<text class="p" x="110" y="356">licens, fra Swarmer</text>
+<line x1="70" x2="100" y1="376" y2="376" class="l"/>
+<text class="p" x="110" y="380">fartøjer med software, til militæret</text>
+<line x1="70" x2="100" y1="400" y2="400" class="ld"/>
+<text class="p" x="110" y="404">missionsdata, tilbage til Swarmer</text>
+<line x1="70" x2="100" y1="424" y2="424" class="g1"/>
+<text class="pg" x="110" y="428">betaling for licens, fra producenten</text>
+<line x1="70" x2="100" y1="448" y2="448" class="g2"/>
+<text class="pg" x="110" y="452">betaling for support, fra producenten</text>
+</svg>

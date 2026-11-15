@@ -1,0 +1,62 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 448" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Ondas penge på autonome systemer</title>
+<desc id="cr-model-d">1. Ondas samler flyvende systemer og kørende robotter til én løsning for kunden. 2. Kunderne er især forsvar, beredskab og ejere af vigtig infrastruktur. 3. Kunderne betaler for udstyr, når det bliver leveret. 4. De betaler løbende for service som support, installation og træning. 5. De kan også betale for særskilt udviklingsarbejde. De gule pile er Ondas indtægter: betaling for udstyr, for service og for udviklingsarbejde.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-d .pr{text-anchor:middle;font:500 12.5px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-d .pgm{text-anchor:middle;font:600 12.5px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+
+<rect class="k" x="50" y="8" width="340" height="52" rx="10"/>
+<circle class="nr" cx="64" cy="22" r="8"/><text class="nrt" x="64" y="25.5">1</text>
+<text class="t" x="90" y="30">Luftsystemer</text>
+<text class="s" x="90" y="48">droner og værn</text>
+
+<path class="l" d="M220,60 V82" marker-end="url(#cr-pil)"/>
+
+<rect class="k" x="50" y="84" width="340" height="52" rx="10"/>
+<circle class="nr" cx="64" cy="98" r="8"/><text class="nrt" x="64" y="101.5">2</text>
+<text class="t" x="90" y="106">Landsystemer</text>
+<text class="s" x="90" y="124">kørende robotter</text>
+
+<path class="l" d="M220,136 V158" marker-end="url(#cr-pil)"/>
+
+<rect class="k" x="50" y="160" width="340" height="52" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="64" cy="174" r="8"/><text class="nrt" x="64" y="177.5">3</text>
+<text class="t" x="90" y="182">Ondas</text>
+<text class="s" x="90" y="200">samler løsningen til kunden</text>
+
+<text class="pr" x="110" y="230">udstyr</text>
+<path class="l" d="M96,244 V330" marker-end="url(#cr-pil)"/>
+<path class="g1" d="M124,332 V246" marker-end="url(#cr-pil-g)"/>
+<text class="pgm" x="110" y="352">betaling</text>
+<text class="pgm" x="110" y="368">for udstyr</text>
+
+<text class="pr" x="220" y="230">service</text>
+<path class="l" d="M206,244 V330" marker-end="url(#cr-pil)"/>
+<path class="g2" d="M234,332 V246" marker-end="url(#cr-pil-g)"/>
+<text class="pgm" x="220" y="352">løbende</text>
+<text class="pgm" x="220" y="368">betaling</text>
+
+<text class="pr" x="330" y="230">udvikling</text>
+<path class="l" d="M316,244 V330" marker-end="url(#cr-pil)"/>
+<path class="g2" d="M344,332 V246" marker-end="url(#cr-pil-g)"/>
+<text class="pgm" x="330" y="352">betaling for</text>
+<text class="pgm" x="330" y="368">udvikling</text>
+
+<rect class="k" x="50" y="384" width="340" height="52" rx="10"/>
+<circle class="nr" cx="64" cy="398" r="8"/><text class="nrt" x="64" y="401.5">4</text>
+<text class="t" x="90" y="406">Kunder</text>
+<text class="s" x="90" y="424">forsvar, beredskab og anlæg</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan tjener Silicon Motion penge på controllere og færdige lagerenheder</title>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .pr{text-anchor:start;font:500 12.5px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .prm{text-anchor:middle;font:500 12.5px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="30" y="16" width="230" height="56" rx="10"/>
+<circle class="nr" cx="44" cy="28" r="8"/>
+<text class="nrt" x="44" y="32.5">1</text>
+<text class="t" x="66" y="39">Fabrikker</text>
+<text class="s" x="66" y="57">støber siliciumskiver</text>
+<path class="l" d="M145,72 V112" marker-end="url(#cr-pil-m)"/>
+<text class="pr" x="157" y="98">siliciumskiver</text>
+<rect class="k" x="30" y="116" width="230" height="74" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="44" cy="128" r="8"/>
+<text class="nrt" x="44" y="132.5">2</text>
+<text class="t" x="66" y="141">SIMO</text>
+<text class="s" x="66" y="159">designer controllere</text>
+<text class="s" x="66" y="177">køber NAND-lager</text>
+<text class="prm" x="90" y="210">controllere</text>
+<path class="l" d="M90,226 V260" marker-end="url(#cr-pil-m)"/>
+<text class="prm" x="190" y="202">færdige</text>
+<text class="prm" x="190" y="218">lagerenheder</text>
+<path class="l" d="M190,230 V260" marker-end="url(#cr-pil-m)"/>
+<rect class="k" x="30" y="268" width="230" height="56" rx="10"/>
+<circle class="nr" cx="44" cy="280" r="8"/>
+<text class="nrt" x="44" y="284.5">3</text>
+<text class="t" x="66" y="291">Kunder</text>
+<text class="s" x="66" y="309">producenter og samlere</text>
+<path class="l" d="M145,324 V360" marker-end="url(#cr-pil-m)"/>
+<text class="pr" x="157" y="348">til udstyret</text>
+<rect class="k" x="30" y="368" width="230" height="56" rx="10"/>
+<circle class="nr" cx="44" cy="380" r="8"/>
+<text class="nrt" x="44" y="384.5">4</text>
+<text class="t" x="66" y="391">Enheder</text>
+<text class="s" x="66" y="409">computere og telefoner</text>
+<path class="g1" d="M260,284 C310,284 310,148 260,148" marker-end="url(#cr-pil-gm)"/>
+<path class="g1" d="M260,308 C330,308 330,168 260,168" marker-end="url(#cr-pil-gm)"/>
+<line x1="30" x2="60" y1="448" y2="448" class="g1"/>
+<text class="pg" x="70" y="452">betaling for controllere</text>
+<line x1="30" x2="60" y1="470" y2="470" class="g1"/>
+<text class="pg" x="70" y="474">betaling for lagerenheder</text>
+</svg>

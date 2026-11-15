@@ -1,0 +1,65 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan tjener Kodiak AI penge</title>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 13px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- 1 Kodiak -->
+<rect class="k" x="24" y="16" width="226" height="64" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="40" cy="32" r="9"/>
+<text class="nrt" x="40" y="36">1</text>
+<rect class="ik" x="58" y="28" width="22" height="22" rx="3"/>
+<path class="ik" d="M62,28 V24 M69,28 V24 M76,28 V24 M62,50 V54 M69,50 V54 M76,50 V54 M58,32 H54 M58,39 H54 M58,46 H54 M80,32 H84 M80,39 H84 M80,46 H84"/>
+<text class="t" x="96" y="40">Kodiak</text>
+<text class="s" x="96" y="58">udvikler systemet</text>
+<!-- blå ned til de tre kunder -->
+<path class="l" d="M80,80 V108" marker-end="url(#cr-pil-m)"/>
+<!-- 2 Atlas -->
+<rect class="k" x="24" y="112" width="226" height="64" rx="10"/>
+<circle class="nr" cx="40" cy="128" r="9"/>
+<text class="nrt" x="40" y="132">2</text>
+<g class="ik" transform="translate(56,124)">
+  <rect x="0" y="8" width="28" height="14" rx="2"/>
+  <path d="M28,14 h12 v8 h-12"/>
+  <circle cx="10" cy="24" r="3.2"/>
+  <circle cx="32" cy="24" r="3.2"/>
+</g>
+<text class="t" x="108" y="136">Atlas</text>
+<text class="s" x="108" y="154">ejer lastbilen</text>
+<path class="l" d="M80,176 V204" marker-end="url(#cr-pil-m)"/>
+<!-- 3 Fragtkunde -->
+<rect class="k" x="24" y="208" width="226" height="64" rx="10"/>
+<circle class="nr" cx="40" cy="224" r="9"/>
+<text class="nrt" x="40" y="228">3</text>
+<path class="ik" d="M60,226 L71,220 L82,226 L71,232 Z M60,226 V236 L71,242 V232 M82,226 V236 L71,242"/>
+<text class="t" x="96" y="232">Fragtkunde</text>
+<text class="s" x="96" y="250">betaler pr. tur</text>
+<path class="l" d="M80,272 V300" marker-end="url(#cr-pil-m)"/>
+<!-- 4 Forsvar -->
+<rect class="k" x="24" y="304" width="226" height="64" rx="10"/>
+<circle class="nr" cx="40" cy="320" r="9"/>
+<text class="nrt" x="40" y="324">4</text>
+<path class="ik" d="M62,318 L76,322 L76,336 C76,344 69,348 62,352 C55,348 48,344 48,336 L48,322 Z"/>
+<text class="t" x="96" y="328">Forsvar</text>
+<text class="s" x="96" y="346">betaler ved godkendelse</text>
+<!-- gule buer i højre side, tilbage til Kodiak -->
+<path class="g2" d="M250,144 C310,144 310,48 250,48" marker-end="url(#cr-pil-gm)"/>
+<path class="g1" d="M250,240 C328,240 328,48 250,48" marker-end="url(#cr-pil-gm)"/>
+<path class="g1" d="M250,336 C340,336 340,48 250,48" marker-end="url(#cr-pil-gm)"/>
+<!-- forklaring under tegningen -->
+<text class="pg" x="24" y="404">Stiplet pil: løbende licens fra Atlas.</text>
+<text class="pg" x="24" y="426">Fast pil: betaling pr. tur fra fragtkunden</text>
+<text class="pg" x="24" y="444">og betaling ved godkendelse fra forsvaret.</text>
+</svg>

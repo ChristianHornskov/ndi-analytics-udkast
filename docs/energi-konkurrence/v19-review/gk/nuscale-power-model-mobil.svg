@@ -1,0 +1,50 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan tjener NuScale Power penge i dag, mens de første dele bliver fremstillet</title>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .pr{text-anchor:middle;font:500 12.5px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .p{text-anchor:start;font:500 13px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="40" y="16" width="226" height="56" rx="10"/>
+<circle class="nr" cx="52" cy="28" r="8"/><text class="nrt" x="52" y="32">1</text>
+<circle class="ik" cx="84" cy="36" r="7"/><path class="ik" d="M70,60 C70,50 98,50 98,60"/>
+<text class="t" x="118" y="40">Kunder</text>
+<text class="s" x="118" y="58">køber arbejde</text>
+<path class="l" d="M80,74 V110" marker-end="url(#cr-pil-m)"/>
+<text class="pr" x="186" y="96">arbejde og licens</text>
+<rect class="k" x="40" y="114" width="226" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="52" cy="126" r="8"/><text class="nrt" x="52" y="130">2</text>
+<rect class="ik" x="72" y="128" width="24" height="24" rx="12"/><path class="ik" d="M84,132 v16 M76,140 h16"/>
+<text class="t" x="118" y="138">NuScale</text>
+<text class="s" x="118" y="156">udvikler reaktoren</text>
+<path class="l" d="M80,172 V208" marker-end="url(#cr-pil-m)"/>
+<text class="pr" x="186" y="194">eksklusivt partnerskab</text>
+<rect class="k" x="40" y="212" width="226" height="56" rx="10"/>
+<circle class="nr" cx="52" cy="224" r="8"/><text class="nrt" x="52" y="228">3</text>
+<path class="ik" d="M72,236 C77,230 87,230 92,236 C97,230 107,230 112,236 L112,248 C97,256 87,256 72,248 Z"/>
+<text class="t" x="118" y="236">ENTRA1</text>
+<text class="s" x="118" y="254">partner</text>
+<rect class="k" x="40" y="310" width="226" height="56" rx="10"/>
+<circle class="nr" cx="52" cy="322" r="8"/><text class="nrt" x="52" y="326">4</text>
+<rect class="ik" x="72" y="324" width="32" height="22" rx="2"/><path class="ik" d="M78,324 v-6 h8 v6"/>
+<text class="t" x="118" y="334">Doosan</text>
+<text class="s" x="118" y="352">bygger dele</text>
+<path class="l" d="M270,338 C328,338 328,158 270,158" marker-end="url(#cr-pil-m)"/>
+<path class="g1" d="M270,44 C300,44 300,128 270,128" marker-end="url(#cr-pil-gm)"/>
+<line x1="24" x2="54" y1="396" y2="396" class="g1"/>
+<text class="pg" x="64" y="400">betaling for arbejde, fra kunderne</text>
+<line x1="24" x2="54" y1="420" y2="420" class="l"/>
+<text class="p" x="64" y="424">dele til første modul</text>
+</svg>

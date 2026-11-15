@@ -1,0 +1,80 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 500" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan virker Cipher Digitals datacentre</title>
+<desc id="cr-model-d">1. Elleverandøren leverer strøm til Cipher Digitals datacentre. 2. Cipher Digital leverer regnekraft til en minepulje, som er kunden i bitcoinudvindingen. 3. Cipher Digital stiller datacenterkapacitet til rådighed for HPC-lejere som Amazon og Fluidstack. 4. En del af et tidligere bitcoinanlæg, Black Pearl, er ved at blive overdraget til en HPC-lejer. 5. Den gule pil fra minepuljen viser betaling i bitcoin. Den stiplede gule pil fra lejerne viser løbende husleje. Den gule pil fra elmarkedet viser betaling, når selskabet sælger overskydende strøm.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+
+.cr-model-d .t{text-anchor:start;font:600 15px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 12px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-d .pg{text-anchor:start;font:600 12px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-d .p{text-anchor:start;font:500 12px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+
+</style>
+<!-- 1 Elleverandør -->
+<rect class="k" x="110" y="16" width="220" height="58" rx="10"/>
+<circle class="nr" cx="124" cy="30" r="9"/><text class="nrt" x="124" y="34">1</text>
+<path class="ik" d="M156,28 L148,42 H156 L148,56 L168,38 H158 L166,28 Z"/>
+<text class="t" x="182" y="42">Elleverandør</text>
+<text class="s" x="182" y="58">leverer strøm</text>
+<path class="l" d="M220,74 V96" marker-end="url(#cr-pil)"/>
+<!-- 2 Cipher Digital, gul ramme -->
+<rect class="k" x="110" y="100" width="220" height="64" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="124" cy="114" r="9"/><text class="nrt" x="124" y="118">2</text>
+<rect class="ik" x="146" y="124" width="22" height="26" rx="1"/>
+<path class="ik" d="M149,132 H165 M149,140 H165"/>
+<text class="t" x="182" y="132">Cipher Digital</text>
+<text class="s" x="182" y="148">driver datacentre</text>
+<!-- blå pile til de tre nederste knuder, uden tekst på pilene -->
+<path class="l" d="M150,164 C150,186 80,186 80,204" marker-end="url(#cr-pil)"/>
+<path class="l" d="M220,164 V204" marker-end="url(#cr-pil)"/>
+<path class="l" d="M290,164 C290,186 360,186 360,204" marker-end="url(#cr-pil)"/>
+<!-- 3 Minepulje -->
+<rect class="k" x="16" y="208" width="128" height="70" rx="10"/>
+<circle class="nr" cx="30" cy="222" r="9"/><text class="nrt" x="30" y="226">3</text>
+<circle class="ik" cx="52" cy="246" r="8"/>
+<text class="t" x="66" y="240">Minepulje</text>
+<text class="s" x="66" y="256">kunden</text>
+<!-- 5 Elmarked -->
+<rect class="k" x="156" y="208" width="128" height="70" rx="10"/>
+<circle class="nr" cx="170" cy="222" r="9"/><text class="nrt" x="170" y="226">5</text>
+<path class="ik" d="M186,238 L192,246 L198,234 L204,252 L210,238"/>
+<text class="t" x="214" y="240">Elmarked</text>
+<text class="s" x="214" y="256">i Texas</text>
+<!-- 4 HPC-lejere -->
+<rect class="k" x="296" y="208" width="128" height="70" rx="10"/>
+<circle class="nr" cx="310" cy="222" r="9"/><text class="nrt" x="310" y="226">4</text>
+<rect class="ik" x="322" y="236" width="14" height="14" rx="1"/>
+<path class="ik" d="M325,236 L329,228 L337,236"/>
+<text class="t" x="338" y="240">HPC-lejere</text>
+<text class="s" x="338" y="256">husleje</text>
+<!-- gule returbuer inde i viewBox, uden tekst på pilene -->
+<path class="g1" d="M16,244 C8,244 8,132 110,132" marker-end="url(#cr-pil-g)"/>
+<path class="g2" d="M424,244 C432,244 432,140 330,132" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M284,248 C304,248 316,176 316,164" marker-end="url(#cr-pil-g)"/>
+<!-- forklaring under tegningen -->
+<line x1="36" x2="66" y1="312" y2="312" class="l"/>
+<text class="p" x="76" y="316">strøm, fra elleverandøren</text>
+<line x1="36" x2="66" y1="334" y2="334" class="l"/>
+<text class="p" x="76" y="338">regnekraft, til minepuljen</text>
+<line x1="36" x2="66" y1="356" y2="356" class="l"/>
+<text class="p" x="76" y="360">overskydende strøm, til elmarkedet</text>
+<line x1="36" x2="66" y1="378" y2="378" class="l"/>
+<text class="p" x="76" y="382">datacenterkapacitet, til HPC-lejere</text>
+<line x1="36" x2="66" y1="400" y2="400" class="g1"/>
+<text class="pg" x="76" y="404">betaling i bitcoin, fra minepuljen</text>
+<line x1="36" x2="66" y1="422" y2="422" class="g2"/>
+<text class="pg" x="76" y="426">løbende husleje, fra lejerne</text>
+<line x1="36" x2="66" y1="444" y2="444" class="g1"/>
+<text class="pg" x="76" y="448">betaling for overskydende strøm, fra elmarkedet</text>
+</svg>

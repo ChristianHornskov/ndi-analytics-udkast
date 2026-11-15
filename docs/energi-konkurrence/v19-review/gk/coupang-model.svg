@@ -1,0 +1,54 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 460" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Coupang penge, og hvordan selskabet selv kører varerne ud næste dag</title>
+<desc id="cr-model-d">1. Leverandører og sælgere leverer varer til Coupangs eget lager. 2. Coupang sælger fra sit eget lager. 3. Coupangs egne biler kører varerne ud, ofte næste dag. 4. Varerne kommer til kundens dør. De gule pile er Coupangs indtægter: provision fra sælgere, betaling for varer og betaling for medlemskab og reklame.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13.5px 'DM Sans',sans-serif;fill:#aebbc7}
+.cr-model-d .pr{text-anchor:end;font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc}
+.cr-model-d .pg{text-anchor:start;font:600 13px 'DM Sans',sans-serif;fill:#e8d98a}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="90" y="16" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="28" r="8"/>
+<text class="nrt" x="104" y="32.5">1</text>
+<text class="t" x="128" y="39">Leverandører</text>
+<text class="s" x="128" y="57">og sælgere</text>
+<path class="l" d="M220,72 V106" marker-end="url(#cr-pil)"/>
+<text class="pr" x="208" y="94">varer</text>
+<rect class="k" x="90" y="110" width="260" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="104" cy="122" r="8"/>
+<text class="nrt" x="104" y="126.5">2</text>
+<text class="t" x="128" y="133">Coupang</text>
+<text class="s" x="128" y="151">eget lager</text>
+<path class="g1" d="M350,44 C408,44 408,122 350,122" marker-end="url(#cr-pil-g)"/>
+<path class="l" d="M220,166 V200" marker-end="url(#cr-pil)"/>
+<text class="pr" x="208" y="188">til egne biler</text>
+<rect class="k" x="90" y="204" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="216" r="8"/>
+<text class="nrt" x="104" y="220.5">3</text>
+<text class="t" x="128" y="227">Levering</text>
+<text class="s" x="128" y="245">egne biler</text>
+<path class="l" d="M220,260 V294" marker-end="url(#cr-pil)"/>
+<text class="pr" x="208" y="282">næste dag</text>
+<rect class="k" x="90" y="298" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="310" r="8"/>
+<text class="nrt" x="104" y="314.5">4</text>
+<text class="t" x="128" y="321">Kunden</text>
+<text class="s" x="128" y="339">ofte næste dag</text>
+<path class="g1" d="M350,326 C408,326 408,148 350,148" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M350,348 C430,348 430,164 350,164" marker-end="url(#cr-pil-g)"/>
+<line x1="90" x2="120" y1="390" y2="390" class="g1"/>
+<text class="pg" x="130" y="394">provision fra sælgere</text>
+<line x1="90" x2="120" y1="412" y2="412" class="g1"/>
+<text class="pg" x="130" y="416">betaling for varer</text>
+<line x1="90" x2="120" y1="434" y2="434" class="g1"/>
+<text class="pg" x="130" y="438">medlemskab og reklame</text>
+</svg>

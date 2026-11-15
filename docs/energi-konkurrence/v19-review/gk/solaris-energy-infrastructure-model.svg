@@ -1,0 +1,56 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 460" role="img" aria-labelledby="cr-model-t cr-model-d-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Solaris Energy Infrastructure penge på strøm og logistik</title>
+<desc id="cr-model-d-desc">1. Leverandører sælger turbiner og udstyr til Solaris. 2. Solaris stiller anlæg til rådighed, bygger og vedligeholder dem. 3. Datacentre og andre strømkunder får strøm på deres egen grund, ofte i stedet for at vente på elnettet. 4. Oliekunder får logistikudstyr til råvarer ved brønde. Kunderne betaler Solaris med løbende leje og med betaling for service og anlæg.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13.5px 'DM Sans',sans-serif;fill:#aebbc7}
+.cr-model-d .pr{text-anchor:middle;font:500 12.5px 'DM Sans',sans-serif;fill:#c7d3dc}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .leg{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:start}
+.cr-model-d .legy{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:start}
+</style>
+<rect class="k" x="20" y="12" width="220" height="56" rx="10"/>
+<circle class="nr" cx="40" cy="28" r="9"/>
+<text class="nrt" x="40" y="32">1</text>
+<text class="t" x="58" y="34">Leverandør</text>
+<text class="s" x="58" y="52">sælger udstyr</text>
+<path class="l" d="M130,68 V88" marker-end="url(#cr-pil)"/>
+<text class="pr" x="214" y="82">turbiner og udstyr</text>
+<rect class="k" x="20" y="92" width="220" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="40" cy="108" r="9"/>
+<text class="nrt" x="40" y="112">2</text>
+<text class="t" x="58" y="114">Solaris</text>
+<text class="s" x="58" y="132">lejer og bygger</text>
+<path class="l" d="M130,148 V168" marker-end="url(#cr-pil)"/>
+<text class="pr" x="214" y="162">anlæg bag måleren</text>
+<rect class="k" x="20" y="172" width="220" height="56" rx="10"/>
+<circle class="nr" cx="40" cy="188" r="9"/>
+<text class="nrt" x="40" y="192">3</text>
+<text class="t" x="58" y="194">Datacentre</text>
+<text class="s" x="58" y="212">får strømmen</text>
+<rect class="k" x="20" y="252" width="220" height="56" rx="10"/>
+<circle class="nr" cx="40" cy="268" r="9"/>
+<text class="nrt" x="40" y="272">4</text>
+<text class="t" x="58" y="274">Oliekunder</text>
+<text class="s" x="58" y="292">får logistik</text>
+<path class="l" d="M240,120 C360,160 360,250 240,280" marker-end="url(#cr-pil)"/>
+<text class="pr" x="304" y="296">logistikudstyr</text>
+<path class="g2" d="M240,200 C292,186 292,134 240,120" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M240,214 C318,196 318,124 240,112" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M240,280 C420,310 420,88 240,108" marker-end="url(#cr-pil-g)"/>
+<text class="legy" x="20" y="336">Gule pile er betaling til Solaris.</text>
+<text class="leg" x="20" y="356">Stiplet: løbende leje fra datacentre.</text>
+<text class="leg" x="20" y="374">Fast streg tæt på kasserne: anlæg</text>
+<text class="leg" x="20" y="392">og service fra datacentre.</text>
+<text class="leg" x="20" y="410">Yderste faste bue: feltarbejde</text>
+<text class="leg" x="20" y="428">fra oliekunder.</text>
+</svg>

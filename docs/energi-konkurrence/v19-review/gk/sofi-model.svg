@@ -1,0 +1,62 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener SoFi penge</title>
+<desc id="cr-model-d">1. Medlemmerne sparer op og låner hos SoFi, og de kan have flere produkter i samme app. 2. SoFi Bank yder lånene og driver konti og kort. 3. Investorer køber en del af lånene, og andre långivere betaler SoFi for at yde lån på deres vegne. 4. Andre banker og virksomheder bruger SoFis teknologi til deres egne kunders konti og kort. SoFi får renter fra dem, der låner, gebyrer for lån til andre långivere og betaling for teknologien.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+<radialGradient id="cr-glod" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#89aeb4" stop-opacity=".28"/><stop offset="1" stop-color="#89aeb4" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+.cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-d .p{font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:middle}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 10px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .pf{fill:#89aeb4}
+</style>
+<!-- 2 til 1: lån, konti og kort -->
+<path class="l" d="M150,72 C150,44 62,44 62,72" marker-end="url(#cr-pil)"/>
+<text class="p" x="100" y="36">lån, konti og kort</text>
+<!-- 2 til 4: teknologi -->
+<path class="ld" d="M182,72 C182,14 385,14 385,72" marker-end="url(#cr-pil)"/>
+<text class="p" x="300" y="22">teknologi</text>
+<!-- knuder -->
+<circle cx="165" cy="102" r="58" fill="url(#cr-glod)"/>
+<rect class="k" x="15" y="74" width="80" height="56" rx="10"/>
+<rect class="k" x="125" y="74" width="80" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<rect class="k" x="235" y="74" width="80" height="56" rx="10"/>
+<rect class="k" x="345" y="74" width="80" height="56" rx="10"/>
+<g><circle class="nr" cx="85" cy="82" r="8"/><text class="nrt" x="85" y="85.5">1</text></g>
+<g><circle class="nr" cx="195" cy="82" r="8"/><text class="nrt" x="195" y="85.5">2</text></g>
+<g><circle class="nr" cx="305" cy="82" r="8"/><text class="nrt" x="305" y="85.5">3</text></g>
+<g><circle class="nr" cx="415" cy="82" r="8"/><text class="nrt" x="415" y="85.5">4</text></g>
+<!-- ikoner: medlem, app med fire produkter, investor, virksomhed -->
+<circle class="ik" cx="55" cy="94" r="7"/><path class="ik" d="M41,118 C41,108 69,108 69,118"/>
+<rect class="ik" x="153" y="84" width="24" height="36" rx="4"/>
+<rect class="pf" x="158" y="91" width="6" height="6" rx="1"/><rect class="pf" x="166" y="91" width="6" height="6" rx="1"/><rect class="pf" x="158" y="99" width="6" height="6" rx="1"/><rect class="pf" x="166" y="99" width="6" height="6" rx="1"/>
+<path class="ik" d="M162,113h6"/>
+<path class="ik" d="M262,116v-8M270,116v-14M278,116v-20M286,116v-11M258,116h32"/><path class="ik" d="M261,100 L271,93 L279,97 L289,88"/>
+<path class="ik" d="M371,116 V92 H399 V116 M367,116 h36 M377,99h4M389,99h4M377,107h4M389,107h4"/>
+<!-- flow -->
+<path class="l" d="M97,108 H122" marker-end="url(#cr-pil)"/>
+<path class="l" d="M207,102 H232" marker-end="url(#cr-pil)"/>
+<!-- navne -->
+<text class="t" x="55" y="152">Medlem</text><text class="s" x="55" y="169">sparer og låner</text>
+<text class="t" x="165" y="152">SoFi</text><text class="s" x="165" y="169">bank og app</text>
+<text class="t" x="275" y="152">Investor</text><text class="s" x="275" y="169">køber lån</text>
+<text class="t" x="385" y="152">Virksomhed</text><text class="s" x="385" y="169">bruger</text><text class="s" x="385" y="184">teknologien</text>
+<!-- penge til SoFi -->
+<path class="g2" d="M55,182 C55,216 132,220 152,196" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="78" y="236">renter på lån</text>
+<path class="g1" d="M275,182 C275,216 196,220 178,196" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="262" y="230">gebyr for lån</text>
+<path class="g2" d="M385,192 C385,280 172,280 165,200" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="300" y="292">betaling for teknologien</text>
+</svg>

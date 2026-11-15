@@ -1,0 +1,86 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan virker Ballards forretning</title>
+<desc id="cr-model-d">1. Ballard udvikler og fremstiller PEM-brændselscellemoduler. 2. Producenter og systemintegratorer sætter modulerne ind i busser, tog og skibe. 3. Operatører kører typisk tilbage til et depot for at tanke brint. 4. Efter købet af GeoPura kan kunder også få stationær strøm og brint som en samlet tjeneste. De gule pile viser, at kunder betaler Ballard for moduler og service, og efter købet af GeoPura også for stationær strøm og brint.</desc>
+<defs>
+<marker id="cr-bldp-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-bldp-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:start}
+.cr-model-d .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:start}
+.cr-model-d .p{font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:start}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- 1 Ballard, gul ramme, brændselscellestak -->
+<rect class="k" x="28" y="16" width="188" height="68" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="44" cy="32" r="9"/>
+<text class="nrt" x="44" y="36">1</text>
+<g class="ik" transform="translate(62,30)">
+  <rect x="0" y="14" width="26" height="8" rx="1"/>
+  <rect x="0" y="7" width="26" height="8" rx="1"/>
+  <rect x="0" y="0" width="26" height="8" rx="1"/>
+  <path d="M26,4 H32 M26,18 H32"/>
+</g>
+<text class="t" x="102" y="42">Ballard</text>
+<text class="s" x="102" y="62">laver moduler</text>
+<!-- blå pil 1 til 2, ingen tekst på stregen -->
+<path class="l" d="M216,50 H228" marker-end="url(#cr-bldp-pil)"/>
+<!-- 2 Producenter, bus -->
+<rect class="k" x="228" y="16" width="188" height="68" rx="10"/>
+<circle class="nr" cx="244" cy="32" r="9"/>
+<text class="nrt" x="244" y="36">2</text>
+<g class="ik" transform="translate(260,36)">
+  <path d="M2,20 H6 M8,20 H14 M22,20 H28"/>
+  <circle cx="6" cy="20" r="3"/>
+  <circle cx="24" cy="20" r="3"/>
+  <path d="M0,16 H30 L28,8 H16 L14,4 H4 L0,8 Z"/>
+  <path d="M5,8 H13 M16,8 H26"/>
+</g>
+<text class="t" x="300" y="42">Producenter</text>
+<text class="s" x="300" y="62">sætter dem ind</text>
+<!-- blå pil 2 til 3, lodret, ingen tekst på stregen -->
+<path class="l" d="M322,84 V128" marker-end="url(#cr-bldp-pil)"/>
+<!-- 3 Depot, tankstander, under producenter -->
+<rect class="k" x="228" y="132" width="188" height="68" rx="10"/>
+<circle class="nr" cx="244" cy="148" r="9"/>
+<text class="nrt" x="244" y="152">3</text>
+<g class="ik" transform="translate(262,148)">
+  <path d="M2,0 H22"/>
+  <path d="M6,0 V6 H18 V0"/>
+  <rect x="8" y="6" width="10" height="22" rx="1"/>
+  <path d="M18,12 H24 C26,12 26,20 22,20"/>
+  <circle cx="13" cy="16" r="2"/>
+</g>
+<text class="t" x="300" y="158">Depot</text>
+<text class="s" x="300" y="178">tanker brint</text>
+<!-- blå pil 1 til 4, lodret, ingen tekst på stregen -->
+<path class="l" d="M122,84 V128" marker-end="url(#cr-bldp-pil)"/>
+<!-- 4 GeoPura, bygning og stik, under Ballard -->
+<rect class="k" x="28" y="132" width="188" height="68" rx="10"/>
+<circle class="nr" cx="44" cy="148" r="9"/>
+<text class="nrt" x="44" y="152">4</text>
+<g class="ik" transform="translate(62,148)">
+  <rect x="2" y="8" width="22" height="16" rx="2"/>
+  <path d="M6,12 V20 M10,12 V20 M14,12 V20"/>
+  <path d="M24,14 H28 V18 H24"/>
+  <path d="M8,8 V4 H18 V8"/>
+</g>
+<text class="t" x="102" y="158">GeoPura</text>
+<text class="s" x="102" y="178">strøm og brint</text>
+<!-- gul fast: betaling fra producenter til Ballard, U-bue i mellemrummet, uden tekst på stregen -->
+<path class="g1" d="M300,84 V104 H144 V84" marker-end="url(#cr-bldp-pil-g)"/>
+<!-- gul stiplet: løbende betaling fra GeoPura-kunder til Ballard, uden om venstre kant -->
+<path class="g2" d="M28,166 H12 V50 H28" marker-end="url(#cr-bldp-pil-g)"/>
+<!-- forklaring under tegningen -->
+<line x1="28" x2="56" y1="224" y2="224" class="g1"/>
+<text class="pg" x="64" y="228">betaling for moduler og service</text>
+<line x1="28" x2="56" y1="248" y2="248" class="g2"/>
+<text class="pg" x="64" y="252">betaling for strøm og brint</text>
+</svg>

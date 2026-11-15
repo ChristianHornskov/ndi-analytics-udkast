@@ -1,0 +1,67 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 500" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan flyder strøm og betaling hos NextEra Energy</title>
+<desc id="cr-model-d">1. NextEra Energy ejer både FPL og NEER. 2. FPL leverer strøm til husstande og virksomheder i Florida gennem sit eget net. 3. Kunderne betaler FPL efter godkendte tariffer, typisk hver måned. 4. NEER driver anlæg til elproduktion og batterilager og sælger typisk strøm og kapacitet på lange aftaler. 5. Aftagerne betaler NEER efter kontrakterne.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-d .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-d .p{text-anchor:start;font:500 13px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="107" y="20" width="226" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="119" cy="32" r="8"/><text class="nrt" x="119" y="36">1</text>
+<rect class="ik" x="139" y="34" width="26" height="20" rx="2"/>
+<path class="ik" d="M139,34 L152,24 L165,34"/>
+<text class="t" x="176" y="45">NextEra</text>
+<text class="s" x="176" y="63">ejer begge led</text>
+<path class="l" d="M180,76 V108 H116 V126" marker-end="url(#cr-pil)"/>
+<path class="l" d="M260,76 V108 H324 V126" marker-end="url(#cr-pil)"/>
+<rect class="k" x="24" y="126" width="184" height="62" rx="10"/>
+<circle class="nr" cx="36" cy="138" r="8"/><text class="nrt" x="36" y="142">2</text>
+<path class="ik" d="M50,166 L58,146 L66,166 M74,166 L82,146 L90,166 M46,166 h48"/>
+<text class="t" x="104" y="148">FPL</text>
+<text class="s" x="104" y="164">reguleret</text>
+<text class="s" x="104" y="178">elselskab</text>
+<path class="l" d="M116,188 V248" marker-end="url(#cr-pil)"/>
+<rect class="k" x="232" y="126" width="184" height="62" rx="10"/>
+<circle class="nr" cx="244" cy="138" r="8"/><text class="nrt" x="244" y="142">4</text>
+<rect class="ik" x="258" y="146" width="22" height="14" rx="2"/>
+<path class="ik" d="M262,146 V142 h14 V146 M280,160 h8 l-4,8 h-8 z"/>
+<text class="t" x="296" y="148">NEER</text>
+<text class="s" x="296" y="164">anlæg og</text>
+<text class="s" x="296" y="178">kontrakter</text>
+<path class="l" d="M324,188 V248" marker-end="url(#cr-pil)"/>
+<rect class="k" x="24" y="250" width="184" height="56" rx="10"/>
+<circle class="nr" cx="36" cy="262" r="8"/><text class="nrt" x="36" y="266">3</text>
+<circle class="ik" cx="64" cy="270" r="7"/>
+<path class="ik" d="M50,292 C50,282 78,282 78,292"/>
+<text class="t" x="88" y="275">Kunder</text>
+<text class="s" x="88" y="293">i Florida</text>
+<rect class="k" x="232" y="250" width="184" height="56" rx="10"/>
+<circle class="nr" cx="244" cy="262" r="8"/><text class="nrt" x="244" y="266">5</text>
+<rect class="ik" x="258" y="266" width="26" height="18" rx="2"/>
+<path class="ik" d="M262,266 V260 h18 V266"/>
+<text class="t" x="296" y="275">Aftagere</text>
+<text class="s" x="296" y="293">på kontrakt</text>
+<path class="g2" d="M24,278 C8,278 8,157 24,157" marker-end="url(#cr-pil-g)"/>
+<path class="g2" d="M416,278 C432,278 432,157 416,157" marker-end="url(#cr-pil-g)"/>
+<line x1="70" x2="100" y1="344" y2="344" class="l"/>
+<text class="p" x="110" y="348">strøm, fra FPL til kunderne</text>
+<line x1="70" x2="100" y1="368" y2="368" class="l"/>
+<text class="p" x="110" y="372">strøm og kapacitet, fra NEER</text>
+<line x1="70" x2="100" y1="392" y2="392" class="g2"/>
+<text class="pg" x="110" y="396">betaling efter tarif, fra kunderne</text>
+<line x1="70" x2="100" y1="416" y2="416" class="g2"/>
+<text class="pg" x="110" y="420">betaling efter kontrakt, fra aftagerne</text>
+<line x1="70" x2="100" y1="440" y2="440" class="l"/>
+<text class="p" x="110" y="444">ejerskab, fra NextEra</text>
+</svg>

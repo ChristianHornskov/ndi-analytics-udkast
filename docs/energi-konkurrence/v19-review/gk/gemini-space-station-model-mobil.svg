@@ -1,0 +1,47 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan tjener Gemini penge</title>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .p{text-anchor:start;font:500 13px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="60" y="20" width="226" height="56" rx="10"/>
+<circle class="nr" cx="72" cy="32" r="8"/><text class="nrt" x="72" y="36">1</text>
+<circle class="ik" cx="100" cy="40" r="7"/><path class="ik" d="M86,64 C86,54 114,54 114,64"/>
+<text class="t" x="134" y="45">Privatkunde</text><text class="s" x="134" y="63">handler i appen</text>
+<path class="l" d="M100,78 V126" marker-end="url(#cr-pil-m)"/>
+<rect class="k" x="60" y="130" width="226" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="72" cy="142" r="8"/><text class="nrt" x="72" y="146">2</text>
+<rect class="ik" x="88" y="146" width="24" height="24" rx="4"/><path class="ik" d="M94,158 L98,153 L102,162 L106,156"/>
+<text class="t" x="134" y="155">Gemini</text><text class="s" x="134" y="173">i fuldt omfang</text>
+<path class="l" d="M100,240 V192" marker-end="url(#cr-pil-m)"/>
+<rect class="k" x="60" y="240" width="226" height="56" rx="10"/>
+<circle class="nr" cx="72" cy="252" r="8"/><text class="nrt" x="72" y="256">3</text>
+<path class="ik" d="M88,258 L104,249 L120,258 Z M91,262v10M99,262v10M109,262v10M117,262v10M87,276h34"/>
+<text class="t" x="134" y="265">Institution</text><text class="s" x="134" y="283">handler og depot</text>
+<rect class="k" x="60" y="350" width="226" height="56" rx="10"/>
+<circle class="nr" cx="72" cy="362" r="8"/><text class="nrt" x="72" y="366">4</text>
+<rect class="ik" x="88" y="366" width="24" height="22" rx="3"/><path class="ik" d="M94,366 V362 a6,6 0 0 1 12,0 V366"/>
+<text class="t" x="134" y="375">Bank</text><text class="s" x="134" y="393">forrenter midler</text>
+<path class="g1" d="M290,48 C318,48 318,164 290,164" marker-end="url(#cr-pil-gm)"/>
+<path class="g2" d="M290,262 C318,262 318,164 290,164" marker-end="url(#cr-pil-gm)"/>
+<path class="g2" d="M290,378 C334,378 334,164 290,164" marker-end="url(#cr-pil-gm)"/>
+<line x1="24" x2="54" y1="432" y2="432" class="g1"/>
+<text class="pg" x="64" y="436">gebyr pr. handel, fra privatkunden</text>
+<line x1="24" x2="54" y1="456" y2="456" class="g2"/>
+<text class="pg" x="64" y="460">løbende depotgebyr, fra institutionen</text>
+<line x1="24" x2="54" y1="480" y2="480" class="g2"/>
+<text class="pg" x="64" y="484">renter af midlerne, fra banken</text>
+</svg>

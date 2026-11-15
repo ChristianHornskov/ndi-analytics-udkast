@@ -1,0 +1,51 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener HUBER+SUHNER penge</title>
+<desc id="cr-model-d">1. Industri-, kommunikations- og transportkunder bestiller forbindelser til data og strøm hos HUBER+SUHNER. 2. Selskabet udvikler og fremstiller løsningerne og leverer dem, når ordren er udført. 3. Datacenterkunder kan desuden få optiske kredsløbskoblere, som ændrer lysforbindelserne mellem systemer. 4. En ordre tæller først som salg, når varen er leveret. 5. Kunderne betaler selskabet for de leverede produkter, typisk pr. leverance.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{font:600 15px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .s{font:400 12px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-d .p{font:500 12px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 12px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:start}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- kunder til venstre -->
+<rect class="k" x="16" y="24" width="168" height="58" rx="10"/>
+<g><circle class="nr" cx="32" cy="36" r="9"/><text class="nrt" x="32" y="39.5">1</text></g>
+<text class="t" x="100" y="48">Industri</text>
+<text class="s" x="100" y="66">bestiller forbindelser</text>
+<rect class="k" x="16" y="102" width="168" height="66" rx="10"/>
+<g><circle class="nr" cx="32" cy="114" r="9"/><text class="nrt" x="32" y="117.5">2</text></g>
+<text class="t" x="100" y="126">Kommunikation</text>
+<text class="s" x="100" y="144">bestiller forbindelser</text>
+<text class="s" x="100" y="158">også kredsløbskobler</text>
+<rect class="k" x="16" y="188" width="168" height="58" rx="10"/>
+<g><circle class="nr" cx="32" cy="200" r="9"/><text class="nrt" x="32" y="203.5">3</text></g>
+<text class="t" x="100" y="212">Transport</text>
+<text class="s" x="100" y="230">bestiller forbindelser</text>
+<!-- selskab til højre -->
+<rect class="k" x="248" y="96" width="176" height="80" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<g><circle class="nr" cx="264" cy="108" r="9"/><text class="nrt" x="264" y="111.5">4</text></g>
+<text class="t" x="336" y="132">HUBER+SUHNER</text>
+<text class="s" x="336" y="150">udvikler og leverer</text>
+<!-- teal: leverance fra selskab til kunder (peger mod kunden) -->
+<path class="l" d="M248,118 C220,118 220,53 184,53" marker-end="url(#cr-pil)"/>
+<path class="l" d="M248,136 H184" marker-end="url(#cr-pil)"/>
+<path class="l" d="M248,154 C220,154 220,217 184,217" marker-end="url(#cr-pil)"/>
+<!-- gul: betaling fra kunder til selskab (peger mod selskabet), solid pr. leverance -->
+<path class="g1" d="M184,70 C214,70 214,128 248,128" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M184,150 H248" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M184,232 C214,232 214,148 248,148" marker-end="url(#cr-pil-g)"/>
+<!-- forklaring under tegningen, ikke på pilene -->
+<line x1="16" x2="40" y1="268" y2="268" class="l"/>
+<text class="p" x="48" y="272" style="text-anchor:start">leverer forbindelser, fra selskabet</text>
+<line x1="16" x2="40" y1="288" y2="288" class="g1"/>
+<text class="pg" x="48" y="292">betaling ved levering, fra kunderne</text>
+</svg>

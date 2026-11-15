@@ -1,0 +1,86 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 520" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Microsoft penge</title>
+<desc id="cr-model-d">1. Virksomheder og private bruger Microsofts programmer, cloud og enheder. 2. Azure og andre cloud-tjenester leveres fra Microsofts datacentre. 3. Annoncører køber plads i Microsofts søgning og øvrige tjenester. 4. Microsoft betaler leverandører for at drive datacentre og fremstille enheder. 5. De gule pile viser, hvem der betaler Microsoft, og for hvad. Pengestrømmene til Microsoft kommer fra licenser og abonnementer, forbrug i clouden, salg af enheder og spil, og fra annoncer.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-d .p{font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:start}
+.cr-model-d .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:start}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- 1 Kunder -->
+<rect class="k" x="170" y="16" width="100" height="56" rx="10"/>
+<g><circle class="nr" cx="260" cy="26" r="8"/><text class="nrt" x="260" y="30">1</text></g>
+<circle class="ik" cx="208" cy="36" r="7"/>
+<path class="ik" d="M194,60 C194,50 222,50 222,60"/>
+<circle class="ik" cx="232" cy="38" r="6"/>
+<path class="ik" d="M220,60 C220,51 244,51 244,60"/>
+<text class="t" x="220" y="90">Kunder</text>
+<text class="s" x="220" y="107">virksomheder og private</text>
+<!-- 2 Microsoft -->
+<rect class="k" x="30" y="150" width="100" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<g><circle class="nr" cx="120" cy="160" r="8"/><text class="nrt" x="120" y="164">2</text></g>
+<rect class="ik" x="62" y="164" width="14" height="14" rx="2"/>
+<rect class="ik" x="80" y="164" width="14" height="14" rx="2"/>
+<rect class="ik" x="62" y="182" width="14" height="14" rx="2"/>
+<rect class="ik" x="80" y="182" width="14" height="14" rx="2"/>
+<text class="t" x="80" y="224">Microsoft</text>
+<text class="s" x="80" y="241">software og cloud</text>
+<!-- 3 Datacentre: tre reoler -->
+<rect class="k" x="310" y="150" width="100" height="56" rx="10"/>
+<g><circle class="nr" cx="400" cy="160" r="8"/><text class="nrt" x="400" y="164">3</text></g>
+<rect class="ik" x="334" y="164" width="14" height="28" rx="2"/>
+<rect class="ik" x="353" y="164" width="14" height="28" rx="2"/>
+<rect class="ik" x="372" y="164" width="14" height="28" rx="2"/>
+<path class="ik" d="M337,171 h8 M337,177 h8 M337,183 h8 M356,171 h8 M356,177 h8 M356,183 h8 M375,171 h8 M375,177 h8 M375,183 h8"/>
+<text class="t" x="360" y="224">Datacentre</text>
+<text class="s" x="360" y="241">kører Azure</text>
+<!-- 4 Annoncører: søgefelt -->
+<rect class="k" x="30" y="300" width="100" height="56" rx="10"/>
+<g><circle class="nr" cx="120" cy="310" r="8"/><text class="nrt" x="120" y="314">4</text></g>
+<rect class="ik" x="54" y="318" width="36" height="16" rx="8"/>
+<circle class="ik" cx="92" cy="340" r="5"/>
+<path class="ik" d="M95,344 L100,350"/>
+<text class="t" x="80" y="374">Annoncører</text>
+<text class="s" x="80" y="391">køber søgeplads</text>
+<!-- 5 Leverandører: chip -->
+<rect class="k" x="310" y="300" width="100" height="56" rx="10"/>
+<g><circle class="nr" cx="400" cy="310" r="8"/><text class="nrt" x="400" y="314">5</text></g>
+<rect class="ik" x="346" y="316" width="28" height="24" rx="3"/>
+<path class="ik" d="M346,322 h-5 M346,328 h-5 M346,334 h-5 M374,322 h5 M374,328 h5 M374,334 h5 M353,316 v-5 M360,316 v-5 M367,316 v-5 M353,340 v5 M360,340 v5 M367,340 v5"/>
+<text class="t" x="360" y="374">Leverandører</text>
+<text class="s" x="360" y="391">servere og enheder</text>
+<!-- blå: tjenester til kunder, fra Microsoft og fra datacentre -->
+<path class="l" d="M80,150 C80,118 200,118 200,88" marker-end="url(#cr-pil)"/>
+<path class="l" d="M360,150 C360,118 240,118 240,88" marker-end="url(#cr-pil)"/>
+<!-- blå: servere til datacentre -->
+<path class="l" d="M360,300 V210" marker-end="url(#cr-pil)"/>
+<!-- gul stiplet: abonnement og licens, fra kunder (venstre bue, uden for boksene) -->
+<path class="g2" d="M170,44 C40,44 16,100 16,178 C16,200 30,200 30,178" marker-end="url(#cr-pil-g)"/>
+<!-- gul fast: forbrug i Azure og enheder, fra kunder (højre-om kan klemme; brug midterrum) -->
+<path class="g1" d="M170,60 C120,80 120,130 130,150" marker-end="url(#cr-pil-g)"/>
+<!-- gul fast: annoncer, fra annoncører op til Microsoft -->
+<path class="g1" d="M80,300 V210" marker-end="url(#cr-pil-g)"/>
+<!-- forklaring under tegningen, ikke på pilene -->
+<line x1="24" x2="54" y1="422" y2="422" class="l"/>
+<text class="p" x="64" y="426">programmer, cloud og enheder, til kunderne</text>
+<line x1="24" x2="54" y1="442" y2="442" class="l"/>
+<text class="p" x="64" y="446">servere og komponenter, til datacentrene</text>
+<line x1="24" x2="54" y1="462" y2="462" class="g2"/>
+<text class="pg" x="64" y="466">abonnement og licens, fra kunderne</text>
+<line x1="24" x2="54" y1="482" y2="482" class="g1"/>
+<text class="pg" x="64" y="486">forbrug i Azure og enheder, fra kunderne</text>
+<line x1="24" x2="54" y1="502" y2="502" class="g1"/>
+<text class="pg" x="64" y="506">betaling for annoncer, fra annoncørerne</text>
+</svg>

@@ -1,0 +1,45 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan får Trilogy Metals penge til at undersøge miner</title>
+<desc id="cr-model-d">1. Investorer får nye aktier i Trilogy Metals. 2. Trilogy Metals ejer halvdelen af Ambler Metals og betaler sin del af udgifterne. 3. Ambler Metals ejer projekterne og driver arbejdet. 4. South32 ejer den anden halvdel og betaler sin del af udgifterne. Investorerne betaler Trilogy Metals for nye aktier.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+<radialGradient id="cr-glod" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#89aeb4" stop-opacity=".28"/><stop offset="1" stop-color="#89aeb4" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+.cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-d .p{font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:middle}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<circle cx="165" cy="102" r="58" fill="url(#cr-glod)"/>
+<rect class="k" x="15" y="74" width="80" height="56" rx="10"/>
+<rect class="k" x="125" y="74" width="80" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<rect class="k" x="235" y="74" width="80" height="56" rx="10"/>
+<rect class="k" x="345" y="74" width="80" height="56" rx="10"/>
+<g><circle class="nr" cx="85" cy="82" r="8"/><text class="nrt" x="85" y="85.5">1</text></g>
+<g><circle class="nr" cx="195" cy="82" r="8"/><text class="nrt" x="195" y="85.5">2</text></g>
+<g><circle class="nr" cx="305" cy="82" r="8"/><text class="nrt" x="305" y="85.5">3</text></g>
+<g><circle class="nr" cx="415" cy="82" r="8"/><text class="nrt" x="415" y="85.5">4</text></g>
+<circle class="ik" cx="50" cy="101" r="11"/><path class="ik" d="M50,94v14M46,98h6a2.5,2.5 0 0 1 0,5h-5a2.5,2.5 0 0 0 0,5h7"/>
+<path class="ik" d="M148,112 L160,92 L168,104 L173,97 L182,112 z"/>
+<rect class="ik" x="262" y="90" width="26" height="22" rx="3"/><path class="ik" d="M268,112v-8a7,7 0 0 1 14,0v8"/>
+<rect class="ik" x="374" y="92" width="22" height="20" rx="2"/><path class="ik" d="M379,98h3M388,98h3M379,104h3M388,104h3"/>
+<path class="l" d="M122,102 H97" marker-end="url(#cr-pil)"/>
+<path class="l" d="M207,102 H232" marker-end="url(#cr-pil)"/>
+<path class="l" d="M342,102 H317" marker-end="url(#cr-pil)"/>
+<text class="t" x="55" y="152">Investorer</text><text class="s" x="55" y="169">får nye</text><text class="s" x="55" y="184">aktier</text>
+<text class="t" x="165" y="152">Trilogy</text><text class="s" x="165" y="169">ejer</text><text class="s" x="165" y="184">halvdelen</text>
+<text class="t" x="275" y="152">Ambler</text><text class="s" x="275" y="169">driver</text><text class="s" x="275" y="184">projekterne</text>
+<text class="t" x="385" y="152">South32</text><text class="s" x="385" y="169">ejer</text><text class="s" x="385" y="184">halvdelen</text>
+<path class="g1" d="M55,192 C55,224 138,226 158,198" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="108" y="238">betaling for aktier</text>
+</svg>

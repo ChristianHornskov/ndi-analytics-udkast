@@ -1,0 +1,62 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t cr-model-m-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan virker Sandisks forretning</title>
+<desc id="cr-model-m-d">1. Kioxia stiller fabrikker i Japan til rådighed, hvor fællesforetagendet Flash Ventures fremstiller flash-wafere. 2. Sandisk får typisk halvdelen af produktionen og betaler kostpris plus et lille tillæg, samt halvdelen af de faste omkostninger. 3. Sandisk designer, samler og tester produkterne og sælger SSD'er og anden flash-hukommelse. 4. Datacentre, producenter og forbrugere køber produkterne og betaler Sandisk. De gule pile viser betaling til Sandisk fra kunderne og Sandisks betaling til Flash Ventures for wafere. Begge er faste streger, fordi der betales pr. leverance.</desc>
+<defs>
+<marker id="sd-m-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="sd-m-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+<radialGradient id="sd-m-glod" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#89aeb4" stop-opacity=".28"/><stop offset="1" stop-color="#89aeb4" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+.cr-model-m .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-m .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-m .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:start}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<circle cx="170" cy="263" r="52" fill="url(#sd-m-glod)"/>
+<rect class="k" x="70" y="28" width="200" height="70" rx="10"/>
+<rect class="k" x="70" y="128" width="200" height="70" rx="10"/>
+<rect class="k" x="70" y="228" width="200" height="70" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<rect class="k" x="70" y="328" width="200" height="70" rx="10"/>
+<g><circle class="nr" cx="78" cy="40" r="9"/><text class="nrt" x="78" y="44">1</text></g>
+<g><circle class="nr" cx="78" cy="142" r="9"/><text class="nrt" x="78" y="146">2</text></g>
+<g><circle class="nr" cx="78" cy="244" r="9"/><text class="nrt" x="78" y="248">3</text></g>
+<g><circle class="nr" cx="78" cy="346" r="9"/><text class="nrt" x="78" y="350">4</text></g>
+<!-- ikoner til venstre i kassen, tekst til højre -->
+<polygon class="ik" points="100,68 118,50 136,68"/>
+<rect class="ik" x="102" y="68" width="32" height="18"/>
+<rect class="ik" x="107" y="73" width="7" height="7"/>
+<rect class="ik" x="122" y="73" width="7" height="7"/>
+<rect class="ik" x="128" y="54" width="5" height="10"/>
+<circle class="ik" cx="118" cy="163" r="16"/>
+<circle class="ik" cx="118" cy="163" r="9"/>
+<circle class="ik" cx="118" cy="163" r="3"/>
+<path class="ik" d="M102,163 h7"/>
+<rect class="ik" x="102" y="250" width="32" height="20" rx="2"/>
+<path class="ik" d="M106,250 v-4 M112,250 v-4 M118,250 v-4 M124,250 v-4 M130,250 v-4 M106,270 v4 M112,270 v4 M118,270 v4 M124,270 v4 M130,270 v4"/>
+<rect class="ik" x="104" y="346" width="28" height="8" rx="1"/>
+<rect class="ik" x="104" y="358" width="28" height="8" rx="1"/>
+<rect class="ik" x="104" y="370" width="28" height="8" rx="1"/>
+<path class="ik" d="M108,350 h4 M108,362 h4 M108,374 h4"/>
+<!-- blå pile lodret mellem kasser, ingen tekst på pilene -->
+<path class="l" d="M170,100 V126" marker-end="url(#sd-m-pil)"/>
+<path class="l" d="M170,200 V226" marker-end="url(#sd-m-pil)"/>
+<path class="l" d="M170,300 V326" marker-end="url(#sd-m-pil)"/>
+<text class="t" x="200" y="52">Kioxia</text>
+<text class="s" x="200" y="72">fabrikker i Japan</text>
+<text class="t" x="200" y="152">Flash Ventures</text>
+<text class="s" x="200" y="172">fremstiller wafere</text>
+<text class="t" x="200" y="254">Sandisk</text>
+<text class="s" x="200" y="274">designer og sælger</text>
+<text class="t" x="200" y="356">Kunder</text>
+<text class="s" x="200" y="376">datacentre m.fl.</text>
+<!-- gule pile i højre margen, forklaring under tegningen -->
+<path class="g1" d="M272,363 C330,363 330,263 272,263" marker-end="url(#sd-m-pil-g)"/>
+<path class="g1" d="M272,263 C318,263 318,163 272,163" marker-end="url(#sd-m-pil-g)"/>
+<text class="pg" x="24" y="444">betaling fra kunder for produkter</text>
+<text class="pg" x="24" y="466">Sandisks betaling til Flash Ventures</text>
+</svg>

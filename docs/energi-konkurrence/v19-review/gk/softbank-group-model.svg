@@ -1,0 +1,56 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener SoftBank Group penge</title>
+<desc id="cr-model-d">1. Kunder i Japan køber mobil og bredbånd, og chipproducenter bruger Arms design. 2. SoftBank Group ejer datterselskaberne og andele i andre selskaber. 3. SoftBank investerer i AI-selskaber som OpenAI. 4. Långivere låner SoftBank penge, ofte med aktier som sikkerhed. Kunderne betaler løbende for tjenester, og en ejerandel giver penge, når den bliver solgt.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+<radialGradient id="cr-glod" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#89aeb4" stop-opacity=".28"/><stop offset="1" stop-color="#89aeb4" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+.cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-d .p{font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:middle}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 10px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- 4 til 2: långivere låner SoftBank penge -->
+<path class="ld" d="M385,72 C385,20 172,20 172,72" marker-end="url(#cr-pil)"/>
+<text class="p" x="278" y="28">lån, ofte mod aktier</text>
+<!-- knuder -->
+<circle cx="165" cy="102" r="58" fill="url(#cr-glod)"/>
+<rect class="k" x="15" y="74" width="80" height="56" rx="10"/>
+<rect class="k" x="125" y="74" width="80" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<rect class="k" x="235" y="74" width="80" height="56" rx="10"/>
+<rect class="k" x="345" y="74" width="80" height="56" rx="10"/>
+<!-- numre -->
+<g><circle class="nr" cx="85" cy="82" r="8"/><text class="nrt" x="85" y="85.5">1</text></g>
+<g><circle class="nr" cx="195" cy="82" r="8"/><text class="nrt" x="195" y="85.5">2</text></g>
+<g><circle class="nr" cx="305" cy="82" r="8"/><text class="nrt" x="305" y="85.5">3</text></g>
+<g><circle class="nr" cx="415" cy="82" r="8"/><text class="nrt" x="415" y="85.5">4</text></g>
+<!-- ikoner -->
+<circle class="ik" cx="55" cy="94" r="7"/><path class="ik" d="M41,118 C41,108 69,108 69,118"/>
+<rect class="ik" x="153" y="88" width="24" height="24" rx="4"/><rect class="ik" x="160" y="95" width="10" height="10" rx="1"/>
+<path class="ik" d="M158,84v4M165,84v4M172,84v4M158,112v4M165,112v4M172,112v4M149,95h4M149,105h4M177,95h4M177,105h4"/>
+<path class="ik" d="M262,116v-8M270,116v-14M278,116v-20M286,116v-11M258,116h32"/><path class="ik" d="M261,100 L271,93 L279,97 L289,88"/>
+<path class="ik" d="M369,96 L385,87 L401,96 Z M372,100v12M380,100v12M390,100v12M398,100v12M368,116h34"/>
+<!-- leverancer og investeringer -->
+<path class="l" d="M122,102 H98" marker-end="url(#cr-pil)"/>
+<path class="l" d="M207,102 H232" marker-end="url(#cr-pil)"/>
+<!-- navne -->
+<text class="t" x="55" y="152">Kunder</text><text class="s" x="55" y="169">mobil og chips</text>
+<text class="t" x="165" y="152">SoftBank</text><text class="s" x="165" y="169">ejer andelene</text>
+<text class="t" x="275" y="152">AI-selskaber</text><text class="s" x="275" y="169">OpenAI m.fl.</text>
+<text class="t" x="385" y="152">Långivere</text><text class="s" x="385" y="169">låner penge ud</text>
+<!-- penge til SoftBank -->
+<path class="g2" d="M55,190 C55,222 140,224 158,196" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="88" y="240">betaling for tjenester</text>
+<path class="g1" d="M275,190 C275,276 185,276 172,198" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="315" y="292">penge, når en andel sælges</text>
+</svg>

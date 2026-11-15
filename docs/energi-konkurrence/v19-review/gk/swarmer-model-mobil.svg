@@ -1,0 +1,55 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan virker Swarmers licens til droneproducenter</title>
+<desc id="cr-model-m-d">1. Swarmer leverer en licens til Swarmer OS til droneproducenten. 2. Producenten lægger softwaren ind i sine fartøjer. 3. De militære brugere får fartøjer, som én operatør kan styre sammen. 4. Data fra missionerne går tilbage til Swarmer og bruges til at forbedre softwaren. 5. Producenten betaler Swarmer for licens og typisk løbende for support.</desc>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 15px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 12px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .pg{text-anchor:start;font:600 12px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .p{text-anchor:start;font:500 12px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="72" y="28" width="206" height="70" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="86" cy="42" r="9"/><text class="nrt" x="86" y="46">1</text>
+<circle class="ik" cx="116" cy="56" r="4"/>
+<circle class="ik" cx="128" cy="48" r="4"/>
+<circle class="ik" cx="128" cy="64" r="4"/>
+<text class="t" x="142" y="54">Swarmer</text>
+<text class="s" x="142" y="74">leverer licens</text>
+<path class="l" d="M170,98 V128" marker-end="url(#cr-pil-m)"/>
+<rect class="k" x="72" y="136" width="206" height="70" rx="10"/>
+<circle class="nr" cx="86" cy="150" r="9"/><text class="nrt" x="86" y="154">2</text>
+<rect class="ik" x="108" y="164" width="22" height="14" rx="1"/>
+<path class="ik" d="M106,164 L119,153 L132,164"/>
+<text class="t" x="142" y="164">Producent</text>
+<text class="s" x="142" y="184">lægger software ind</text>
+<path class="l" d="M170,206 V236" marker-end="url(#cr-pil-m)"/>
+<rect class="k" x="72" y="244" width="206" height="70" rx="10"/>
+<circle class="nr" cx="86" cy="258" r="9"/><text class="nrt" x="86" y="262">3</text>
+<path class="ik" d="M120,254 L109,260 V272 L120,280 L131,272 V260 Z"/>
+<text class="t" x="142" y="272">Militær</text>
+<text class="s" x="142" y="292">bruger fartøjerne</text>
+<path class="ld" d="M72,280 C24,280 24,62 72,62" marker-end="url(#cr-pil-m)"/>
+<path class="g1" d="M278,172 C324,172 324,62 278,62" marker-end="url(#cr-pil-gm)"/>
+<path class="g2" d="M278,190 C336,190 336,48 278,48" marker-end="url(#cr-pil-gm)"/>
+<line x1="28" x2="56" y1="344" y2="344" class="l"/>
+<text class="p" x="64" y="348">licens, fra Swarmer</text>
+<line x1="28" x2="56" y1="366" y2="366" class="l"/>
+<text class="p" x="64" y="370">fartøjer med software, til militæret</text>
+<line x1="28" x2="56" y1="388" y2="388" class="ld"/>
+<text class="p" x="64" y="392">missionsdata, tilbage til Swarmer</text>
+<line x1="28" x2="56" y1="410" y2="410" class="g1"/>
+<text class="pg" x="64" y="414">betaling for licens, fra producenten</text>
+<line x1="28" x2="56" y1="432" y2="432" class="g2"/>
+<text class="pg" x="64" y="436">betaling for support, fra producenten</text>
+</svg>

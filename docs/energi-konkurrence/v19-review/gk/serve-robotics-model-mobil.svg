@@ -1,0 +1,65 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan tjener Serve penge på robotter til levering og hospitaler</title>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .pr{text-anchor:start;font:500 12.5px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="86" y="12" width="174" height="50" rx="10"/>
+<circle class="nr" cx="100" cy="24" r="8"/>
+<text class="nrt" x="100" y="28.5">1</text>
+<text class="t" x="118" y="32">Platform</text>
+<text class="s" x="118" y="50">sender ordrer</text>
+<path class="l" d="M86,37 C72,37 72,193 86,193" marker-end="url(#cr-pil-m)"/>
+<text class="pr" x="4" y="118">ordrer</text>
+<rect class="k" x="86" y="90" width="174" height="50" rx="10"/>
+<circle class="nr" cx="100" cy="102" r="8"/>
+<text class="nrt" x="100" y="106.5">2</text>
+<text class="t" x="118" y="110">Butik</text>
+<text class="s" x="118" y="128">læsser varen</text>
+<path class="l" d="M114,140 V164" marker-end="url(#cr-pil-m)"/>
+<text class="pr" x="128" y="156">varen</text>
+<rect class="k" x="86" y="168" width="174" height="50" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="100" cy="180" r="8"/>
+<text class="nrt" x="100" y="184.5">3</text>
+<text class="t" x="118" y="188">Serve</text>
+<text class="s" x="118" y="206">kører turen</text>
+<path class="l" d="M114,218 V242" marker-end="url(#cr-pil-m)"/>
+<text class="pr" x="128" y="234">mad på fortovet</text>
+<rect class="k" x="86" y="246" width="174" height="50" rx="10"/>
+<circle class="nr" cx="100" cy="258" r="8"/>
+<text class="nrt" x="100" y="262.5">4</text>
+<text class="t" x="118" y="266">Kunde</text>
+<text class="s" x="118" y="284">får varen</text>
+<path class="l" d="M86,207 C72,207 72,349 86,349" marker-end="url(#cr-pil-m)"/>
+<text class="pr" x="4" y="268">intern</text>
+<text class="pr" x="4" y="284">transport</text>
+<rect class="k" x="86" y="324" width="174" height="50" rx="10"/>
+<circle class="nr" cx="100" cy="336" r="8"/>
+<text class="nrt" x="100" y="340.5">5</text>
+<text class="t" x="118" y="344">Hospital</text>
+<text class="s" x="118" y="362">får hjælp</text>
+<path class="g1" d="M260,37 C300,37 300,178 260,178" marker-end="url(#cr-pil-gm)"/>
+<path class="g1" d="M260,115 C310,115 310,188 260,188" marker-end="url(#cr-pil-gm)"/>
+<path class="g1" d="M260,271 C320,271 320,198 260,198" marker-end="url(#cr-pil-gm)"/>
+<path class="g2" d="M260,349 C328,349 328,208 260,208" marker-end="url(#cr-pil-gm)"/>
+<line x1="86" x2="114" y1="396" y2="396" class="g1"/>
+<text class="pg" x="124" y="400">betaling for levering</text>
+<line x1="86" x2="114" y1="416" y2="416" class="g1"/>
+<text class="pg" x="124" y="420">betaling for reklame</text>
+<line x1="86" x2="114" y1="436" y2="436" class="g1"/>
+<text class="pg" x="124" y="440">betaling for software</text>
+<line x1="86" x2="114" y1="456" y2="456" class="g2"/>
+<text class="pg" x="124" y="460">løbende betaling, hospital</text>
+</svg>

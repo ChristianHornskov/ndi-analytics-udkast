@@ -1,0 +1,61 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 530" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Carvana penge på køb og salg af brugte biler</title>
+<desc id="cr-model-d">1. Privatpersoner og auktioner leverer brugte biler til Carvana, typisk ved salg eller bytte. 2. Carvana efterser og klargør bilerne og lægger dem på hjemmesiden. 3. Privatkunder betaler for bilen, henter den ofte i en bilautomat eller får den leveret, og kan returnere den inden for syv dage. 4. Biler, der ikke skal sælges på hjemmesiden, går til engroskunder, som betaler for bilen eller for auktionsgebyret. 5. Carvana bevilger ofte et billån og sælger lånet videre til investorer, som betaler for det. De gule pile er Carvanas indtægter: betaling for bilen, betaling fra engros og betaling for videresolgte billån.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13.5px 'DM Sans',sans-serif;fill:#aebbc7}
+.cr-model-d .pr{text-anchor:start;font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc}
+.cr-model-d .pg{text-anchor:start;font:600 13px 'DM Sans',sans-serif;fill:#e8d98a}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="90" y="16" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="28" r="8"/>
+<text class="nrt" x="104" y="32.5">1</text>
+<text class="t" x="128" y="39">Sælgere</text>
+<text class="s" x="128" y="57">sælger eller bytter</text>
+<path class="l" d="M114,72 V106" marker-end="url(#cr-pil)"/>
+<text class="pr" x="130" y="96">brugte biler</text>
+<rect class="k" x="90" y="110" width="260" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="104" cy="122" r="8"/>
+<text class="nrt" x="104" y="126.5">2</text>
+<text class="t" x="128" y="133">Carvana</text>
+<text class="s" x="128" y="151">klargør og udbyder</text>
+<path class="l" d="M114,166 V200" marker-end="url(#cr-pil)"/>
+<text class="pr" x="130" y="190">bil og 7 dages retur</text>
+<rect class="k" x="90" y="204" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="216" r="8"/>
+<text class="nrt" x="104" y="220.5">3</text>
+<text class="t" x="128" y="227">Købere</text>
+<text class="s" x="128" y="245">privat, kan returnere</text>
+<path class="l" d="M114,260 V294" marker-end="url(#cr-pil)"/>
+<text class="pr" x="130" y="284">biler til engros</text>
+<rect class="k" x="90" y="298" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="310" r="8"/>
+<text class="nrt" x="104" y="314.5">4</text>
+<text class="t" x="128" y="321">Engros</text>
+<text class="s" x="128" y="339">køber øvrige biler</text>
+<path class="l" d="M114,354 V388" marker-end="url(#cr-pil)"/>
+<text class="pr" x="130" y="378">videresolgte billån</text>
+<rect class="k" x="90" y="392" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="404" r="8"/>
+<text class="nrt" x="104" y="408.5">5</text>
+<text class="t" x="128" y="415">Investor</text>
+<text class="s" x="128" y="433">køber billånene</text>
+<path class="g1" d="M350,232 C400,232 400,128 350,128" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M350,326 C418,326 418,140 350,140" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M350,420 C430,420 430,152 350,152" marker-end="url(#cr-pil-g)"/>
+<line x1="90" x2="120" y1="472" y2="472" class="g1"/>
+<text class="pg" x="130" y="476">betaling for bilen, fra køberne</text>
+<line x1="90" x2="120" y1="494" y2="494" class="g1"/>
+<text class="pg" x="130" y="498">betaling fra engros</text>
+<line x1="90" x2="120" y1="516" y2="516" class="g1"/>
+<text class="pg" x="130" y="520">betaling for lån, fra investorer</text>
+</svg>

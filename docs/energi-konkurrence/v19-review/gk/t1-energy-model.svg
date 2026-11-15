@@ -1,0 +1,60 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan får T1 Energy betaling for solcellemoduler</title>
+<desc id="cr-model-d-desc">1. Leverandører sender celler og materialer til G1_Dallas. 2. G2_Austin er under opførelse og skal senere levere celler. 3. G1_Dallas samler cellerne til solcellemoduler. 4. TUS aftager næsten alle modulerne og sælger dem videre. 5. TUS betaler T1 Energy for modulerne.</desc>
+<defs>
+<marker id="cr-pil-t1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g-t1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+<radialGradient id="cr-glod-t1" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#89aeb4" stop-opacity=".28"/><stop offset="1" stop-color="#89aeb4" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+.cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-d .p{font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:middle}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- G2 over T1: cellfabrik under opførelse, det særlige ved selskabet -->
+<rect class="k" x="125" y="10" width="80" height="48" rx="10"/>
+<g><circle class="nr" cx="195" cy="20" r="9"/><text class="nrt" x="195" y="24">5</text></g>
+<path class="ik" d="M149,22 h32 v20 h-32 z M157,30 h16"/>
+<text class="t" x="118" y="32" style="text-anchor:end">G2_Austin</text>
+<text class="s" x="118" y="50" style="text-anchor:end">under opførelse</text>
+<path class="ld" d="M165,58 V116" marker-end="url(#cr-pil-t1)"/>
+<text class="p" x="280" y="48">fremtidige celler</text>
+<!-- hovedrække -->
+<circle cx="165" cy="146" r="58" fill="url(#cr-glod-t1)"/>
+<rect class="k" x="15" y="118" width="80" height="56" rx="10"/>
+<rect class="k" x="125" y="118" width="80" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<rect class="k" x="235" y="118" width="80" height="56" rx="10"/>
+<rect class="k" x="345" y="118" width="80" height="56" rx="10"/>
+<g><circle class="nr" cx="85" cy="128" r="9"/><text class="nrt" x="85" y="132">1</text></g>
+<g><circle class="nr" cx="195" cy="128" r="9"/><text class="nrt" x="195" y="132">2</text></g>
+<g><circle class="nr" cx="305" cy="128" r="9"/><text class="nrt" x="305" y="132">3</text></g>
+<g><circle class="nr" cx="415" cy="128" r="9"/><text class="nrt" x="415" y="132">4</text></g>
+<rect class="ik" x="43" y="132" width="24" height="18" rx="2"/><path class="ik" d="M47,138 h16 M47,144 h10"/>
+<rect class="ik" x="153" y="132" width="24" height="24" rx="3"/><path class="ik" d="M157,144 h16 M157,150 h10"/>
+<path class="ik" d="M259,136 h32 v24 h-32 z M267,144 h16"/>
+<path class="ik" d="M373,148 a12,12 0 1,0 0.1,0"/>
+<path class="l" d="M97,146 H122" marker-end="url(#cr-pil-t1)"/>
+<path class="l" d="M207,146 H232" marker-end="url(#cr-pil-t1)"/>
+<path class="l" d="M317,146 H342" marker-end="url(#cr-pil-t1)"/>
+<text class="p" x="110" y="110">celler</text>
+<text class="p" x="220" y="110">moduler</text>
+<text class="p" x="330" y="110">sælger videre</text>
+<text class="t" x="55" y="196">Leverandører</text>
+<text class="s" x="55" y="213">sender celler</text>
+<text class="t" x="165" y="196">T1 Energy</text>
+<text class="s" x="165" y="213">samler</text>
+<text class="t" x="275" y="196">TUS</text>
+<text class="s" x="275" y="213">aftager moduler</text>
+<text class="t" x="385" y="196">Kunder</text>
+<text class="s" x="385" y="213">soludviklere</text>
+<path class="g1" d="M275,226 C275,258 210,258 210,176" marker-end="url(#cr-pil-g-t1)"/>
+<text class="pg" x="255" y="286">betaling for moduler</text>
+</svg>

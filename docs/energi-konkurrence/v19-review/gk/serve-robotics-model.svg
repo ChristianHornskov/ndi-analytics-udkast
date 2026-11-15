@@ -1,0 +1,66 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 560" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Serve penge på robotter til levering og hospitaler</title>
+<desc id="cr-model-d">1. Leveringsplatforme sender ordrer til Serves robotter på fortovet. 2. Forretningen læsser varen i robotten, som kører den hen til kunden. 3. Hospitaler bruger Moxi-robotter til intern transport. 4. Annoncører betaler for reklame på robotternes ydre. 5. Kunder kan også betale for software og udviklingsarbejde. De gule pile viser pengene ind til Serve: betaling for levering, for hospitalstjenester, for reklame og for software.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13.5px 'DM Sans',sans-serif;fill:#aebbc7}
+.cr-model-d .pr{text-anchor:start;font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc}
+.cr-model-d .pg{text-anchor:start;font:600 13px 'DM Sans',sans-serif;fill:#e8d98a}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="100" y="16" width="240" height="56" rx="10"/>
+<circle class="nr" cx="114" cy="28" r="8"/>
+<text class="nrt" x="114" y="32.5">1</text>
+<text class="t" x="132" y="39">Platform</text>
+<text class="s" x="132" y="57">sender ordrer</text>
+<path class="l" d="M100,44 C78,44 78,232 100,232" marker-end="url(#cr-pil)"/>
+<text class="pr" x="8" y="138">ordrer</text>
+<rect class="k" x="100" y="110" width="240" height="56" rx="10"/>
+<circle class="nr" cx="114" cy="122" r="8"/>
+<text class="nrt" x="114" y="126.5">2</text>
+<text class="t" x="132" y="133">Butik</text>
+<text class="s" x="132" y="151">læsser varen</text>
+<path class="l" d="M128,166 V200" marker-end="url(#cr-pil)"/>
+<text class="pr" x="144" y="190">varen</text>
+<rect class="k" x="100" y="204" width="240" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="114" cy="216" r="8"/>
+<text class="nrt" x="114" y="220.5">3</text>
+<text class="t" x="132" y="227">Serve</text>
+<text class="s" x="132" y="245">kører turen</text>
+<path class="l" d="M128,260 V294" marker-end="url(#cr-pil)"/>
+<text class="pr" x="144" y="284">mad på fortovet</text>
+<rect class="k" x="100" y="298" width="240" height="56" rx="10"/>
+<circle class="nr" cx="114" cy="310" r="8"/>
+<text class="nrt" x="114" y="314.5">4</text>
+<text class="t" x="132" y="321">Kunde</text>
+<text class="s" x="132" y="339">får varen</text>
+<path class="l" d="M100,250 C78,250 78,420 100,420" marker-end="url(#cr-pil)"/>
+<text class="pr" x="8" y="328">intern</text>
+<text class="pr" x="8" y="344">transport</text>
+<rect class="k" x="100" y="392" width="240" height="56" rx="10"/>
+<circle class="nr" cx="114" cy="404" r="8"/>
+<text class="nrt" x="114" y="408.5">5</text>
+<text class="t" x="132" y="415">Hospital</text>
+<text class="s" x="132" y="433">får hjælp</text>
+<path class="g1" d="M340,44 C400,44 400,214 340,214" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M340,138 C412,138 412,228 340,228" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M340,326 C424,326 424,242 340,242" marker-end="url(#cr-pil-g)"/>
+<path class="g2" d="M340,420 C430,420 430,256 340,256" marker-end="url(#cr-pil-g)"/>
+<line x1="100" x2="130" y1="468" y2="468" class="g1"/>
+<text class="pg" x="140" y="472">betaling for levering</text>
+<line x1="100" x2="130" y1="490" y2="490" class="g1"/>
+<text class="pg" x="140" y="494">betaling for reklame</text>
+<line x1="100" x2="130" y1="512" y2="512" class="g1"/>
+<text class="pg" x="140" y="516">betaling for software</text>
+<line x1="100" x2="130" y1="534" y2="534" class="g2"/>
+<text class="pg" x="140" y="538">løbende betaling, hospital</text>
+</svg>

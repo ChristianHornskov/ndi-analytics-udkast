@@ -1,0 +1,57 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 480" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener MNTN penge på reklamer på streaming-tv</title>
+<desc id="cr-model-d">1. Tv-kanaler og platforme har reklameplads at sælge. 2. MNTN køber reklameplads og styrer kampagnerne i sin software. 3. Kunderne betaler efter forbrug for kampagnerne. 4. Reklamerne vises for seerne på streaming-tv. 5. MNTN måler, om seeren handler, for eksempel køber noget, og finjusterer kampagnen. De gule pile er MNTNs indtægter: betaling efter forbrug for reklamer og betaling for kreativt arbejde og produktion.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13.5px 'DM Sans',sans-serif;fill:#aebbc7}
+.cr-model-d .pr{text-anchor:start;font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc}
+.cr-model-d .prm{text-anchor:middle;font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc}
+.cr-model-d .pg{text-anchor:start;font:600 13px 'DM Sans',sans-serif;fill:#e8d98a}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="90" y="16" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="28" r="8"/>
+<text class="nrt" x="104" y="32.5">1</text>
+<text class="t" x="128" y="39">Tv-kanaler</text>
+<text class="s" x="128" y="57">sælger reklameplads</text>
+<path class="l" d="M220,72 V118" marker-end="url(#cr-pil)"/>
+<text class="pr" x="232" y="102">reklameplads</text>
+<rect class="k" x="90" y="122" width="260" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="104" cy="134" r="8"/>
+<text class="nrt" x="104" y="138.5">2</text>
+<text class="t" x="128" y="145">MNTN</text>
+<text class="s" x="128" y="163">styrer og måler</text>
+<text class="prm" x="165" y="196">kampagner</text>
+<path class="l" d="M165,204 V246" marker-end="url(#cr-pil)"/>
+<text class="prm" x="265" y="196">kreativt arbejde</text>
+<path class="l" d="M265,204 V246" marker-end="url(#cr-pil)"/>
+<rect class="k" x="90" y="254" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="266" r="8"/>
+<text class="nrt" x="104" y="270.5">3</text>
+<text class="t" x="128" y="277">Kunder</text>
+<text class="s" x="128" y="295">virksomheder betaler</text>
+<path class="l" d="M220,310 V350" marker-end="url(#cr-pil)"/>
+<text class="pr" x="232" y="336">reklamer vises</text>
+<rect class="k" x="90" y="354" width="260" height="56" rx="10"/>
+<circle class="nr" cx="104" cy="366" r="8"/>
+<text class="nrt" x="104" y="370.5">4</text>
+<text class="t" x="128" y="377">Seerne</text>
+<text class="s" x="128" y="395">ser reklamerne</text>
+<path class="l" d="M90,382 H70 V150 H90" marker-end="url(#cr-pil)"/>
+<text class="pr" x="4" y="248">måler</text>
+<text class="pr" x="4" y="264">handling</text>
+<path class="g1" d="M350,270 C400,270 400,150 350,150" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M350,294 C428,294 428,166 350,166" marker-end="url(#cr-pil-g)"/>
+<line x1="90" x2="120" y1="434" y2="434" class="g1"/>
+<text class="pg" x="130" y="438">betaling efter forbrug</text>
+<line x1="90" x2="120" y1="456" y2="456" class="g1"/>
+<text class="pg" x="130" y="460">betaling for arbejde</text>
+</svg>

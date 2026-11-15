@@ -1,0 +1,50 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan virker Reddits platform</title>
+<desc id="cr-model-d">1. Brugerne deler indhold i fællesskaber efter interesser. 2. Reddit driver platformen og viser indholdet. 3. Annonsører betaler Reddit pr. klik eller visning. 4. Licenskunder betaler over aftaleperioden.</desc>
+<defs>
+<marker id="cr-rdt-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-rdt-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{font:600 15px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:start}
+.cr-model-d .s{font:400 12px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:start}
+.cr-model-d .pg{font:600 12px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:start}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8;stroke-linecap:round}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .leg{fill:#0d1921;stroke:#3a4658;stroke-width:1}
+</style>
+<!-- blå pil: indhold fra brugere til Reddit -->
+<path class="l" d="M80,62 V76" marker-end="url(#cr-rdt-pil)"/>
+<!-- gule pile uden tekst: betaling til Reddit -->
+<path class="g1" d="M300,163 C360,163 360,112 300,112" marker-end="url(#cr-rdt-pil-g)"/>
+<path class="g2" d="M300,225 C390,225 390,116 300,116" marker-end="url(#cr-rdt-pil-g)"/>
+<!-- knuder -->
+<rect class="k" x="48" y="16" width="250" height="46" rx="10"/>
+<rect class="k" x="48" y="78" width="250" height="46" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<rect class="k" x="48" y="140" width="250" height="46" rx="10"/>
+<rect class="k" x="48" y="202" width="250" height="46" rx="10"/>
+<!-- numre -->
+<g><circle class="nr" cx="62" cy="30" r="9"/><text class="nrt" x="62" y="33.5">1</text></g>
+<g><circle class="nr" cx="62" cy="92" r="9"/><text class="nrt" x="62" y="95.5">2</text></g>
+<g><circle class="nr" cx="62" cy="154" r="9"/><text class="nrt" x="62" y="157.5">3</text></g>
+<g><circle class="nr" cx="62" cy="216" r="9"/><text class="nrt" x="62" y="219.5">4</text></g>
+<!-- tekster i bokse -->
+<text class="t" x="80" y="36">Brugere</text>
+<text class="s" x="80" y="52">deler indhold</text>
+<text class="t" x="80" y="98">Reddit</text>
+<text class="s" x="80" y="114">efter interesser</text>
+<text class="t" x="80" y="160">Annonsører</text>
+<text class="s" x="80" y="176">køber annoncer</text>
+<text class="t" x="80" y="222">Licenskunder</text>
+<text class="s" x="80" y="238">køber licens</text>
+<!-- forklaring i egen boks, ingen tekst på pilene -->
+<rect class="leg" x="48" y="254" width="360" height="40" rx="8"/>
+<line x1="60" x2="84" y1="268" y2="268" class="g1"/>
+<text class="pg" x="90" y="272">betaling pr. klik eller visning</text>
+<line x1="60" x2="84" y1="286" y2="286" class="g2"/>
+<text class="pg" x="90" y="290">betaling over aftaleperioden</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 520" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener NVIDIA penge</title>
+<desc id="cr-model-d">1. Eksterne fabrikker fremstiller de chips, NVIDIA har designet. 2. NVIDIA samler chips, netudstyr og programmel til færdige anlæg. 3. Cloudleverandører og virksomheder betaler for datacenteranlæg og netudstyr. 4. Pc-producenter og spillere betaler for grafikchips til spil og arbejdsstationer. 5. CUDA-programmel binder udviklerne til selskabets chips. Pengestrømmene til NVIDIA kommer især fra salg af datacenteranlæg og netudstyr, og i mindre omfang fra grafikchips og programlicenser.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13.5px 'DM Sans',sans-serif;fill:#aebbc7}
+.cr-model-d .pr{text-anchor:start;font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc}
+.cr-model-d .prm{text-anchor:middle;font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc}
+.cr-model-d .pg{text-anchor:start;font:600 13px 'DM Sans',sans-serif;fill:#e8d98a}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="100" y="16" width="250" height="56" rx="10"/>
+<circle class="nr" cx="114" cy="28" r="8"/>
+<text class="nrt" x="114" y="32">1</text>
+<text class="t" x="176" y="41">Fabrikker</text>
+<text class="s" x="176" y="59">støber chips</text>
+<path class="l" d="M225,72 V118" marker-end="url(#cr-pil)"/>
+<text class="pr" x="238" y="102">færdige chips</text>
+<rect class="k" x="100" y="122" width="250" height="76" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="114" cy="134" r="8"/>
+<text class="nrt" x="114" y="138">2</text>
+<text class="t" x="176" y="147">NVIDIA</text>
+<text class="s" x="176" y="165">designer anlæg</text>
+<text class="s" x="176" y="183">CUDA til udviklere</text>
+<path class="l" d="M225,198 V236" marker-end="url(#cr-pil)"/>
+<text class="pr" x="238" y="224">anlæg og netudstyr</text>
+<rect class="k" x="100" y="240" width="250" height="56" rx="10"/>
+<circle class="nr" cx="114" cy="252" r="8"/>
+<text class="nrt" x="114" y="256">3</text>
+<text class="t" x="176" y="265">Datacenter</text>
+<text class="s" x="176" y="283">cloudkunder</text>
+<path class="l" d="M100,160 H36 V380 H100" marker-end="url(#cr-pil)"/>
+<text class="prm" x="225" y="328">grafikchips</text>
+<rect class="k" x="100" y="352" width="250" height="56" rx="10"/>
+<circle class="nr" cx="114" cy="364" r="8"/>
+<text class="nrt" x="114" y="368">4</text>
+<text class="t" x="176" y="377">Grafik</text>
+<text class="s" x="176" y="395">spil og pc</text>
+<path class="g1" d="M350,268 C378,268 378,158 350,158" marker-end="url(#cr-pil-g)"/>
+<path class="g2" d="M350,268 C406,268 406,184 350,178" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M350,380 C430,380 430,140 350,140" marker-end="url(#cr-pil-g)"/>
+<line x1="100" x2="130" y1="434" y2="434" class="g1"/>
+<text class="pg" x="140" y="438">betaling for anlæg</text>
+<line x1="100" x2="130" y1="458" y2="458" class="g1"/>
+<text class="pg" x="140" y="462">betaling for grafikchips</text>
+<line x1="100" x2="130" y1="482" y2="482" class="g2"/>
+<text class="pg" x="140" y="486">licens til programmel, løbende</text>
+</svg>

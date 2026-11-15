@@ -1,0 +1,79 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t cr-model-m-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan virker Nextpowers forretning</title>
+<desc id="cr-model-m-d">1. Leverandører fremstiller ståldele og andre komponenter til Nextpower. 2. Nextpower sælger solcelle-trackere, der drejer panelerne med solen, række for række. 3. Entreprenøren, typisk en EPC, køber udstyret og bygger solkraftværket for ejeren. 4. Ejeren driver værket og sælger strømmen. 5. Nextpower sælger også elektrisk tilbehør, batterilagre og vekselrettere. Kunden betaler typisk Nextpower pr. projekt, og Nextpower betaler sine leverandører.</desc>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .p{text-anchor:middle;font:500 12.5px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .g2{fill:none;stroke:#e8d98a;stroke-width:1.6}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-m .sun{fill:#e8d98a;stroke:none}
+.cr-model-m .ray{stroke:#e8d98a;stroke-width:1.3;stroke-linecap:round}
+.cr-model-m .pan{fill:#0d1921;stroke:#89aeb4;stroke-width:1.3}
+</style>
+<!-- 1 Leverandør -->
+<rect class="k" x="50" y="16" width="226" height="70" rx="10"/>
+<circle class="nr" cx="62" cy="28" r="9"/><text class="nrt" x="62" y="31.5">1</text>
+<rect class="ik" x="88" y="32" width="20" height="9" rx="1"/>
+<rect class="ik" x="92" y="43" width="20" height="9" rx="1"/>
+<text class="t" x="128" y="42">Leverandør</text>
+<text class="s" x="128" y="62">stål og dele</text>
+<path class="l" d="M90,86 V114" marker-end="url(#cr-pil-m)"/>
+<text class="p" x="200" y="106">stål og dele</text>
+<!-- 2 Nextpower + uafhængige rækker -->
+<rect class="k" x="50" y="118" width="226" height="86" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="62" cy="130" r="9"/><text class="nrt" x="62" y="133.5">2</text>
+<circle class="sun" cx="108" cy="142" r="6"/>
+<g class="ray" transform="translate(108,142)">
+  <line x1="0" y1="-9" x2="0" y2="-13"/>
+  <line x1="7" y1="-7" x2="10" y2="-10"/>
+  <line x1="9" y1="0" x2="13" y2="0"/>
+  <line x1="7" y1="7" x2="10" y2="10"/>
+  <line x1="-7" y1="7" x2="-10" y2="10"/>
+  <line x1="-9" y1="0" x2="-13" y2="0"/>
+  <line x1="-7" y1="-7" x2="-10" y2="-10"/>
+</g>
+<g transform="translate(96,168) rotate(-32)">
+  <rect class="pan" x="-14" y="-5" width="28" height="9" rx="1"/>
+</g>
+<g transform="translate(120,170) rotate(16)">
+  <rect class="pan" x="-14" y="-5" width="28" height="9" rx="1"/>
+</g>
+<text class="t" x="148" y="150">Nextpower</text>
+<text class="s" x="148" y="170">trackere og</text>
+<text class="s" x="148" y="186">andet udstyr</text>
+<path class="l" d="M90,204 V232" marker-end="url(#cr-pil-m)"/>
+<text class="p" x="200" y="224">trackere med solen</text>
+<!-- 3 EPC -->
+<rect class="k" x="50" y="236" width="226" height="70" rx="10"/>
+<circle class="nr" cx="62" cy="248" r="9"/><text class="nrt" x="62" y="251.5">3</text>
+<path class="ik" d="M88,258 l12,-8 l12,8 v6 h-24 z"/>
+<text class="t" x="128" y="262">EPC</text>
+<text class="s" x="128" y="282">bygger værket</text>
+<path class="l" d="M90,306 V334" marker-end="url(#cr-pil-m)"/>
+<text class="p" x="200" y="326">færdigt solkraftværk</text>
+<!-- 4 Ejer -->
+<rect class="k" x="50" y="338" width="226" height="70" rx="10"/>
+<circle class="nr" cx="62" cy="350" r="9"/><text class="nrt" x="62" y="353.5">4</text>
+<path class="ik" d="M88,362 h20 l4,8 h-28 z"/>
+<path class="ik" d="M98,362 v-8 M92,358 h12"/>
+<text class="t" x="128" y="364">Ejer</text>
+<text class="s" x="128" y="384">sælger strømmen</text>
+<!-- betaling til Nextpower, mærkater under tegningen -->
+<path class="g1" d="M276,271 C310,271 310,170 276,170" marker-end="url(#cr-pil-gm)"/>
+<path class="g2" d="M276,261 C328,261 328,150 276,150" marker-end="url(#cr-pil-gm)"/>
+<line x1="20" x2="50" y1="434" y2="434" class="g1"/>
+<text class="pg" x="60" y="438">betaling for trackere</text>
+<line x1="20" x2="50" y1="462" y2="462" class="g2"/>
+<text class="pg" x="60" y="466">betaling for andet udstyr</text>
+</svg>

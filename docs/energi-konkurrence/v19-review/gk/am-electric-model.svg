@@ -1,0 +1,46 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan flyder strøm og betaling hos American Electric Power</title>
+<desc id="cr-model-d-desc">1. Kraftværkerne laver strømmen. 2. Transmissionsnettet fører strømmen over lange afstande. 3. AEP's elselskaber fordeler strømmen til kunderne og sender dem regningen. 4. AEP's eget transmissionselskab får typisk betaling fra de andre AEP-selskaber. Kunderne betaler løbende for strøm og levering.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+<radialGradient id="cr-glod" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#89aeb4" stop-opacity=".28"/><stop offset="1" stop-color="#89aeb4" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+.cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-d .p{font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:middle}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<circle cx="275" cy="102" r="58" fill="url(#cr-glod)"/>
+<rect class="k" x="15" y="74" width="80" height="56" rx="10"/>
+<rect class="k" x="125" y="74" width="80" height="56" rx="10"/>
+<rect class="k" x="235" y="74" width="80" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<rect class="k" x="345" y="74" width="80" height="56" rx="10"/>
+<g><circle class="nr" cx="85" cy="82" r="8"/><text class="nrt" x="85" y="86">1</text></g>
+<g><circle class="nr" cx="195" cy="82" r="8"/><text class="nrt" x="195" y="86">2</text></g>
+<g><circle class="nr" cx="305" cy="82" r="8"/><text class="nrt" x="305" y="86">3</text></g>
+<g><circle class="nr" cx="415" cy="82" r="8"/><text class="nrt" x="415" y="86">4</text></g>
+<path class="ik" d="M41,118 L55,86 L69,118 Z M47,118 h16"/>
+<path class="ik" d="M141,116 L149,100 L157,116 M165,116 L173,94 L181,116 M137,116 h48"/>
+<path class="ik" d="M259,96 L275,87 L291,96 Z M262,100v12M270,100v12M280,100v12M288,100v12M258,116h34"/>
+<circle class="ik" cx="385" cy="96" r="7"/><path class="ik" d="M371,118 C371,108 399,108 399,118"/>
+<path class="l" d="M97,102 H122" marker-end="url(#cr-pil)"/>
+<path class="l" d="M207,102 H232" marker-end="url(#cr-pil)"/>
+<path class="l" d="M317,102 H342" marker-end="url(#cr-pil)"/>
+<text class="p" x="165" y="64">strømmen føres videre</text>
+<text class="t" x="55" y="152">Kraftværker</text><text class="s" x="55" y="169">laver strømmen</text>
+<text class="t" x="165" y="152">Transmission</text><text class="s" x="165" y="169">lange ledninger</text>
+<text class="t" x="275" y="152">AEP</text><text class="s" x="275" y="169">elselskaber</text><text class="s" x="275" y="184">fordeler strøm</text>
+<text class="t" x="385" y="152">Kunder</text><text class="s" x="385" y="169">betaler</text>
+<path class="g2" d="M385,190 C385,236 292,236 275,198" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="330" y="252">betaling for strøm og net</text>
+<path class="g2" d="M235,190 C200,250 165,250 165,198" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="165" y="272">betaling for nettet</text>
+</svg>

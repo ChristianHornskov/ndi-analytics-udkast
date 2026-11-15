@@ -1,0 +1,52 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 500" role="img" aria-labelledby="cr-crk-t cr-crk-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-crk-t">Sådan tjener Comstock Resources penge</title>
+<desc id="cr-crk-d">1. Comstock borer og producerer naturgas. 2. Pinnacle samler og behandler gassen i selskabets egne rør. 3. Køberne, blandt andet rørselskaber og købere af flydende naturgas, aftager gassen. 4. Andre kan sende gas gennem Pinnacle. De gule pile viser, at køberne betaler Comstock for gassen, og at andre kan betale Pinnacle for at samle og behandle gas.</desc>
+<defs>
+<marker id="cr-crk-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-crk-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-d .pr{text-anchor:middle;font:500 13px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-d .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- 1 Comstock -->
+<rect class="k" x="148" y="20" width="226" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="164" cy="32" r="8"/><text class="nrt" x="164" y="36">1</text>
+<text class="t" x="180" y="44">Comstock</text>
+<text class="s" x="180" y="62">borer og producerer</text>
+<path class="l" d="M261,76 V126" marker-end="url(#cr-crk-pil)"/>
+<text class="pr" x="214" y="107">naturgas</text>
+<!-- 4 Andre (venstre for Pinnacle) -->
+<rect class="k" x="10" y="140" width="112" height="56" rx="10"/>
+<circle class="nr" cx="24" cy="152" r="8"/><text class="nrt" x="24" y="156">4</text>
+<text class="t" x="36" y="164">Andre</text>
+<text class="s" x="36" y="182">sælger gas</text>
+<path class="l" d="M122,168 H148" marker-end="url(#cr-crk-pil)"/>
+<text class="pr" x="135" y="132">gas</text>
+<!-- 2 Pinnacle -->
+<rect class="k" x="148" y="140" width="226" height="56" rx="10"/>
+<circle class="nr" cx="164" cy="152" r="8"/><text class="nrt" x="164" y="156">2</text>
+<text class="t" x="180" y="164">Pinnacle</text>
+<text class="s" x="180" y="182">samler og behandler</text>
+<path class="l" d="M261,196 V246" marker-end="url(#cr-crk-pil)"/>
+<text class="pr" x="200" y="227">behandlet gas</text>
+<!-- 3 Købere -->
+<rect class="k" x="148" y="260" width="226" height="56" rx="10"/>
+<circle class="nr" cx="164" cy="272" r="8"/><text class="nrt" x="164" y="276">3</text>
+<text class="t" x="180" y="284">Købere</text>
+<text class="s" x="180" y="302">køber gassen</text>
+<!-- Gule betalingspile uden tekst på pilene -->
+<path class="g1" d="M374,276 C424,276 424,60 374,48" marker-end="url(#cr-crk-pil-g)"/>
+<path class="g1" d="M66,196 C66,228 140,228 148,188" marker-end="url(#cr-crk-pil-g)"/>
+<line x1="20" x2="50" y1="360" y2="360" class="g1"/>
+<text class="pg" x="60" y="364">betaling for gas, fra købere</text>
+<line x1="20" x2="50" y1="388" y2="388" class="g1"/>
+<text class="pg" x="60" y="392">betaling for samling, fra andre</text>
+</svg>

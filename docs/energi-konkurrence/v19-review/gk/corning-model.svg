@@ -1,0 +1,74 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 420" role="img" aria-labelledby="cr-glw-t cr-glw-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-glw-t">Sådan virker Cornings forretning</title>
+<desc id="cr-glw-d">1. Corning køber råvarer og energi og omdanner dem til glas, fiber og keramik. 2. Telenet og datacentre køber optisk fiber, kabel og tilbehør. 3. Producenter af skærme og mobiltelefoner køber specialglas. 4. Bilindustrien og laboratorier køber henholdsvis filtre og laboratorieudstyr. 5. Nogle kunder betaler et indskud på forhånd under flerårige aftaler. Pengestrømmene til Corning er dels almindelig betaling ved levering, dels forudbetalinger på de lange aftaler.</desc>
+<defs>
+<marker id="cr-glw-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-glw-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 15px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 12px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-d .p{text-anchor:start;font:500 12px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-d .pg{text-anchor:start;font:600 12px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- 1 Råvarer -->
+<rect class="k" x="110" y="16" width="220" height="58" rx="10"/>
+<circle class="nr" cx="124" cy="30" r="9"/><text class="nrt" x="124" y="34">1</text>
+<!-- ikon: krystal og energi -->
+<path class="ik" d="M156,30 L148,44 L156,58 L166,44 Z"/>
+<path class="ik" d="M170,32 L166,40 H172 L168,50"/>
+<text class="t" x="182" y="42">Råvarer</text>
+<text class="s" x="182" y="58">til fabrikken</text>
+<path class="l" d="M220,74 V96" marker-end="url(#cr-glw-pil)"/>
+<!-- 2 Corning, gul ramme -->
+<rect class="k" x="110" y="100" width="220" height="64" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="124" cy="114" r="9"/><text class="nrt" x="124" y="118">2</text>
+<!-- ikon: glasplade og fiberbue -->
+<rect class="ik" x="148" y="122" width="22" height="28" rx="2"/>
+<path class="ik" d="M152,130 H166 M152,138 H166"/>
+<path class="ik" d="M148,148 C154,156 164,156 170,148"/>
+<text class="t" x="182" y="132">Corning</text>
+<text class="s" x="182" y="148">laver produkterne</text>
+<!-- blå pile til de to kundeknuder, uden tekst på pilene -->
+<path class="l" d="M160,164 C160,188 100,188 100,208" marker-end="url(#cr-glw-pil)"/>
+<path class="l" d="M280,164 C280,188 340,188 340,208" marker-end="url(#cr-glw-pil)"/>
+<!-- 3 Datacentre -->
+<rect class="k" x="20" y="212" width="180" height="70" rx="10"/>
+<circle class="nr" cx="34" cy="226" r="9"/><text class="nrt" x="34" y="230">3</text>
+<!-- ikon: serverstativer -->
+<path class="ik" d="M48,240 H72 M48,248 H72 M48,256 H72"/>
+<rect class="ik" x="46" y="236" width="28" height="24" rx="2"/>
+<text class="t" x="82" y="244">Datacentre</text>
+<text class="s" x="82" y="260">køber fiber</text>
+<!-- 4 Skærme -->
+<rect class="k" x="240" y="212" width="180" height="70" rx="10"/>
+<circle class="nr" cx="254" cy="226" r="9"/><text class="nrt" x="254" y="230">4</text>
+<!-- ikon: skærm med fod -->
+<rect class="ik" x="266" y="236" width="26" height="18" rx="2"/>
+<path class="ik" d="M276,254 V260 M270,260 H282"/>
+<text class="t" x="300" y="244">Skærme</text>
+<text class="s" x="300" y="260">køber glas</text>
+<!-- gule returbuer: fast betaling ved levering, stiplet indskud. Ingen tekst på pilene. -->
+<path class="g1" d="M20,248 C6,248 6,140 110,132" marker-end="url(#cr-glw-pil-g)"/>
+<path class="g1" d="M420,248 C434,248 434,140 330,132" marker-end="url(#cr-glw-pil-g)"/>
+<path class="g2" d="M20,268 C2,268 2,112 110,118" marker-end="url(#cr-glw-pil-g)"/>
+<path class="g2" d="M420,268 C438,268 438,112 330,118" marker-end="url(#cr-glw-pil-g)"/>
+<!-- forklaring under tegningen -->
+<line x1="36" x2="66" y1="312" y2="312" class="l"/>
+<text class="p" x="76" y="316">råvarer og energi</text>
+<line x1="36" x2="66" y1="334" y2="334" class="l"/>
+<text class="p" x="76" y="338">fiber og kabel</text>
+<line x1="36" x2="66" y1="356" y2="356" class="l"/>
+<text class="p" x="76" y="360">glas og filtre</text>
+<line x1="36" x2="66" y1="378" y2="378" class="g1"/>
+<text class="pg" x="76" y="382">betaling ved levering</text>
+<line x1="36" x2="66" y1="400" y2="400" class="g2"/>
+<text class="pg" x="76" y="404">indskud på forhånd</text>
+</svg>

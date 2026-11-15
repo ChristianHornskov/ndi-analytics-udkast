@@ -1,0 +1,44 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 500" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Sivers Semiconductors penge</title>
+<desc id="cr-model-d">1. Kunder bestiller udviklingsarbejde og produkter. 2. Sivers tilpasser teknologien og sælger den. 3. Wireless leverer radiokredsløb og antenner. 4. Photonics leverer lasere til datacentre og lidar. Kunder betaler løbende for udviklingsarbejde og ved levering for produkter.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 16px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 13.5px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-d .pg{text-anchor:start;font:600 13px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-d .p{text-anchor:start;font:500 13px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="107" y="20" width="200" height="56" rx="10"/>
+<circle class="nr" cx="119" cy="32" r="8"/><text class="nrt" x="119" y="36">1</text>
+<text class="t" x="136" y="45">Kunder</text><text class="s" x="136" y="63">bestiller og betaler</text>
+<path class="l" d="M207,76 V126" marker-end="url(#cr-pil)"/>
+<rect class="k" x="107" y="130" width="200" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="119" cy="142" r="8"/><text class="nrt" x="119" y="146">2</text>
+<text class="t" x="136" y="155">Sivers</text><text class="s" x="136" y="173">udvikler og sælger</text>
+<path class="l" d="M170,186 C170,230 80,230 80,292" marker-end="url(#cr-pil)"/>
+<path class="l" d="M244,186 C244,230 334,230 334,292" marker-end="url(#cr-pil)"/>
+<rect class="k" x="20" y="296" width="160" height="56" rx="10"/>
+<circle class="nr" cx="32" cy="308" r="8"/><text class="nrt" x="32" y="312">3</text>
+<text class="t" x="48" y="321">Wireless</text><text class="s" x="48" y="339">radiokredsløb</text>
+<rect class="k" x="260" y="296" width="160" height="56" rx="10"/>
+<circle class="nr" cx="272" cy="308" r="8"/><text class="nrt" x="272" y="312">4</text>
+<text class="t" x="288" y="321">Photonics</text><text class="s" x="288" y="339">lasere og lidar</text>
+<path class="g2" d="M317,48 C390,48 390,158 317,158" marker-end="url(#cr-pil-g)"/>
+<path class="g1" d="M317,76 C370,90 370,150 317,168" marker-end="url(#cr-pil-g)"/>
+<line x1="24" x2="54" y1="400" y2="400" class="g2"/>
+<text class="pg" x="64" y="404">betaling for udvikling, løbende</text>
+<line x1="24" x2="54" y1="424" y2="424" class="g1"/>
+<text class="pg" x="64" y="428">betaling for produkter, ved levering</text>
+<line x1="24" x2="54" y1="448" y2="448" class="l"/>
+<text class="p" x="64" y="452">opgave og produkt, mellem boksene</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t cr-model-m-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan virker Ubers platform</title>
+<desc id="cr-model-m-d">1. Kunden bestiller en tur eller en udbringning i appen. 2. Uber forbinder kunden med en chauffør eller et bud, og ved mad også med en restaurant eller butik. 3. Chaufføren kører turen, eller buddet henter og bringer varen. 4. Kunden betaler. Uber tager et servicegebyr, og resten går til chauffør, bud eller butik. I de fleste markeder får Uber kun gebyret, ikke hele turprisen.</desc>
+<defs>
+<marker id="cr-uber-m-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-uber-m-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:start}
+.cr-model-m .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:start}
+.cr-model-m .pg{font:600 12px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:start}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8;stroke-linecap:round}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-m .leg{fill:#0d1921;stroke:#3a4658;stroke-width:1}
+</style>
+<!-- blå pile uden tekst -->
+<path class="l" d="M72,96 V116" marker-end="url(#cr-uber-m-pil)"/>
+<path class="l" d="M72,192 V212" marker-end="url(#cr-uber-m-pil)"/>
+<path class="l" d="M60,186 C16,186 16,300 40,324" marker-end="url(#cr-uber-m-pil)"/>
+<!-- gule pile uden tekst: til Uber (boks 2, y=120-196) -->
+<path class="g1" d="M250,72 C330,72 330,154 250,154" marker-end="url(#cr-uber-m-pil-g)"/>
+<path class="g1" d="M250,248 C318,248 318,168 250,168" marker-end="url(#cr-uber-m-pil-g)"/>
+<path class="g1" d="M250,344 C336,344 336,172 250,172" marker-end="url(#cr-uber-m-pil-g)"/>
+<!-- knuder -->
+<rect class="k" x="28" y="20" width="220" height="76" rx="10"/>
+<rect class="k" x="28" y="120" width="220" height="76" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<rect class="k" x="28" y="220" width="220" height="76" rx="10"/>
+<rect class="k" x="28" y="320" width="220" height="76" rx="10"/>
+<!-- numre -->
+<g><circle class="nr" cx="52" cy="42" r="10"/><text class="nrt" x="52" y="46">1</text></g>
+<g><circle class="nr" cx="52" cy="142" r="10"/><text class="nrt" x="52" y="146">2</text></g>
+<g><circle class="nr" cx="52" cy="242" r="10"/><text class="nrt" x="52" y="246">3</text></g>
+<g><circle class="nr" cx="52" cy="342" r="10"/><text class="nrt" x="52" y="346">4</text></g>
+<!-- tekster i bokse -->
+<text class="t" x="72" y="44">Kunder</text>
+<text class="s" x="72" y="66">bestiller i appen</text>
+<text class="t" x="72" y="144">Uber</text>
+<text class="s" x="72" y="166">forbinder parterne</text>
+<text class="t" x="72" y="244">Chauffører</text>
+<text class="s" x="72" y="266">kører og bringer</text>
+<text class="t" x="72" y="344">Butikker</text>
+<text class="s" x="72" y="366">mad og varer</text>
+<!-- forklaring under knuderne, ingen tekst på pilene -->
+<rect class="leg" x="20" y="414" width="300" height="68" rx="8"/>
+<line x1="36" x2="64" y1="438" y2="438" class="g1"/>
+<text class="pg" x="72" y="442">kundens betaling</text>
+<line x1="36" x2="64" y1="466" y2="466" class="g1"/>
+<text class="pg" x="72" y="470">gebyr pr. tur eller ordre</text>
+</svg>

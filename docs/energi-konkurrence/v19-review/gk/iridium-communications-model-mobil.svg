@@ -1,0 +1,55 @@
+<svg class="cr-model cr-model-m" viewBox="0 0 340 500" role="img" aria-labelledby="cr-model-m-t cr-model-m-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-m-t">Sådan tjener Iridium penge på satellittjenester, udstyr og flyovervågning</title>
+<desc id="cr-model-m-d">Satellitterne er forbundet i rummet. Iridium sælger tjenester via forhandlere, har en fast aftale med den amerikanske stat og får betaling for flyovervågning gennem Aireon. De gule pile er indtægterne.</desc>
+<defs>
+<marker id="cr-pil-m" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-m .t{text-anchor:start;font:600 15px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-m .s{text-anchor:start;font:400 12px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-m .p{text-anchor:middle;font:500 12px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-m .pg{text-anchor:start;font:600 12px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-m .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-m .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-m .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-m .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-m .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-m .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<rect class="k" x="44" y="8" width="206" height="56" rx="10"/>
+<circle class="nr" cx="58" cy="22" r="8"/><text class="nrt" x="58" y="26">1</text>
+<text class="t" x="76" y="30">Satellitnet</text>
+<text class="s" x="76" y="48">krydsforbindelser i rummet</text>
+<path class="l" d="M147,64 V86" marker-end="url(#cr-pil-m)"/>
+<text class="p" x="114" y="80">tjenester</text>
+<rect class="k" x="44" y="88" width="206" height="56" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="58" cy="102" r="8"/><text class="nrt" x="58" y="106">2</text>
+<text class="t" x="76" y="110">Iridium</text>
+<text class="s" x="76" y="128">sælger tjenester</text>
+<path class="l" d="M147,144 V166" marker-end="url(#cr-pil-m)"/>
+<text class="p" x="114" y="160">tjenester</text>
+<rect class="k" x="44" y="168" width="206" height="56" rx="10"/>
+<circle class="nr" cx="58" cy="182" r="8"/><text class="nrt" x="58" y="186">3</text>
+<text class="t" x="76" y="190">Forhandlere</text>
+<text class="s" x="76" y="208">engrosnettet</text>
+<path class="g2" d="M250,196 C314,196 314,124 250,124" marker-end="url(#cr-pil-gm)"/>
+<path class="g1" d="M250,178 C300,160 300,118 250,118" marker-end="url(#cr-pil-gm)"/>
+<rect class="k" x="44" y="248" width="206" height="56" rx="10"/>
+<circle class="nr" cx="58" cy="262" r="8"/><text class="nrt" x="58" y="266">4</text>
+<text class="t" x="76" y="270">Staten</text>
+<text class="s" x="76" y="288">egen jordstation</text>
+<path class="g2" d="M250,276 C326,240 326,132 250,132" marker-end="url(#cr-pil-gm)"/>
+<path class="l" d="M24,116 V356 H40" marker-end="url(#cr-pil-m)"/>
+<text class="p" transform="translate(16,250) rotate(-90)">overvågning</text>
+<rect class="k" x="44" y="328" width="206" height="56" rx="10"/>
+<circle class="nr" cx="58" cy="342" r="8"/><text class="nrt" x="58" y="346">5</text>
+<text class="t" x="76" y="350">Luftfart</text>
+<text class="s" x="76" y="368">Aireon følger fly</text>
+<path class="g2" d="M250,356 C332,290 332,140 250,140" marker-end="url(#cr-pil-gm)"/>
+<text class="pg" x="16" y="410">De gule pile er Iridiums indtægter:</text>
+<text class="pg" x="16" y="428">adgang og forbrug, udstyr, fast årlig</text>
+<text class="pg" x="16" y="446">betaling og betaling for overvågning.</text>
+<text class="s" x="16" y="466">Stiplet streg er løbende betaling.</text>
+<text class="s" x="16" y="482">Fast streg er betaling for udstyr.</text>
+</svg>

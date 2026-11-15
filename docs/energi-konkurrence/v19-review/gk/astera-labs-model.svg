@@ -1,0 +1,46 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 232" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Astera Labs penge på chips og moduler til datacentre</title>
+<desc id="cr-model-d">1. Slutkunderne er store skyudbydere, producenter af AI-processorer og systemproducenter. 2. Astera Labs laver chips, moduler og software til datacentre. 3. Producenter og distributører køber produkterne med indkøbsordrer. 4. Produkterne bruges i systemer i datacentre. De gule pile er Asteras indtægter: betaling for chips og betaling for moduler.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+<radialGradient id="cr-glod" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#89aeb4" stop-opacity=".28"/><stop offset="1" stop-color="#89aeb4" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+.cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .s{font:400 13px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-d .p{font:500 13px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 13px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:middle}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .ld{fill:none;stroke:#89aeb4;stroke-width:1.4;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+
+<rect class="k" x="12" y="10" width="150" height="56" rx="10"/>
+<g><circle class="nr" cx="152" cy="20" r="8"/><text class="nrt" x="152" y="23.5">1</text></g>
+<text class="t" x="87" y="34">Slutkunder</text><text class="s" x="87" y="52">skyudbydere m.fl.</text>
+<rect class="k" x="278" y="10" width="150" height="56" rx="10"/>
+<g><circle class="nr" cx="418" cy="20" r="8"/><text class="nrt" x="418" y="23.5">4</text></g>
+<text class="t" x="353" y="34">Datacentre</text><text class="s" x="353" y="52">bruger systemerne</text>
+<path class="l" d="M66,68 V90" marker-end="url(#cr-pil)"/>
+<path class="l" d="M374,90 V70" marker-end="url(#cr-pil)"/>
+<rect class="k" x="12" y="92" width="108" height="128" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<g><circle class="nr" cx="110" cy="102" r="8"/><text class="nrt" x="110" y="105.5">2</text></g>
+<text class="t" x="66" y="140">Astera Labs</text><text class="s" x="66" y="158">laver chips,</text><text class="s" x="66" y="174">moduler og</text><text class="s" x="66" y="190">software</text>
+<rect class="k" x="320" y="92" width="108" height="128" rx="10"/>
+<g><circle class="nr" cx="418" cy="102" r="8"/><text class="nrt" x="418" y="105.5">3</text></g>
+<text class="t" x="374" y="140">Producenter</text><text class="s" x="374" y="158">og distributører</text><text class="s" x="374" y="174">bestiller</text>
+<text class="p" x="220" y="108">chips til producenten</text>
+<path class="l" d="M124,114 H316" marker-end="url(#cr-pil)"/>
+<path class="g1" d="M316,128 H124" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="220" y="142">betaling for chips</text>
+<text class="p" x="220" y="164">moduler til producenten</text>
+<path class="l" d="M124,170 H316" marker-end="url(#cr-pil)"/>
+<path class="g1" d="M316,184 H124" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="220" y="198">betaling for moduler</text>
+</svg>

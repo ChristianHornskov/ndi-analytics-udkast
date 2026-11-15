@@ -1,0 +1,74 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan tjener Kodiak AI penge</title>
+<desc id="cr-model-d">1. Kodiak udvikler Kodiak Driver og sætter systemet på lastbiler. 2. I DaaS ejer kunden lastbilen, typisk Atlas, og kører den selv uden chauffør. 3. Kunden betaler en løbende licens pr. lastbil eller pr. kørt mil. 4. I fjertransport kører Kodiak gods i egne lastbiler, og fragtkunden betaler pr. mil eller pr. læs. 5. Forsvaret betaler, når en aftalt leverance er godkendt.</desc>
+<defs>
+<marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{font:600 15px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+.cr-model-d .s{font:400 12px 'DM Sans',sans-serif;fill:#aebbc7;text-anchor:middle}
+.cr-model-d .p{font:500 12px 'DM Sans',sans-serif;fill:#c7d3dc;text-anchor:middle}
+.cr-model-d .pg{font:600 12px 'DM Sans',sans-serif;fill:#e8d98a;text-anchor:middle}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .g2{fill:none;stroke:#e8d98a;stroke-width:1.6;stroke-dasharray:2 4;stroke-linecap:round}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- blå pile: systemet ud, tekst ved siden af stregen -->
+<path class="l" d="M200,114 L148,88" marker-end="url(#cr-pil)"/>
+<text class="p" x="150" y="98">systemet på lastbilen</text>
+<path class="l" d="M220,184 L220,208" marker-end="url(#cr-pil)"/>
+<text class="p" x="318" y="198">gods i egne lastbiler</text>
+<path class="l" d="M240,114 L292,88" marker-end="url(#cr-pil)"/>
+<text class="p" x="310" y="98">aftalt leverance</text>
+<!-- knuder -->
+<!-- 2 Atlas øverst venstre -->
+<rect class="k" x="16" y="18" width="120" height="70" rx="10"/>
+<circle class="nr" cx="30" cy="32" r="9"/>
+<text class="nrt" x="30" y="36">2</text>
+<!-- simpel lastbil -->
+<g class="ik" transform="translate(58,28)">
+  <rect x="0" y="8" width="28" height="14" rx="2"/>
+  <path d="M28,14 h12 v8 h-12"/>
+  <circle cx="10" cy="24" r="3.2"/>
+  <circle cx="32" cy="24" r="3.2"/>
+</g>
+<text class="t" x="76" y="62">Atlas</text>
+<text class="s" x="76" y="78">ejer lastbilen</text>
+<!-- 4 Forsvar øverst højre -->
+<rect class="k" x="304" y="18" width="120" height="70" rx="10"/>
+<circle class="nr" cx="318" cy="32" r="9"/>
+<text class="nrt" x="318" y="36">4</text>
+<!-- skjold -->
+<path class="ik" d="M364,28 L378,32 L378,46 C378,54 371,58 364,62 C357,58 350,54 350,46 L350,32 Z"/>
+<text class="t" x="364" y="62">Forsvar</text>
+<text class="s" x="364" y="78">ved godkendelse</text>
+<!-- 1 Kodiak midten, gul ramme -->
+<rect class="k" x="160" y="114" width="120" height="70" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="174" cy="128" r="9"/>
+<text class="nrt" x="174" y="132">1</text>
+<!-- chip -->
+<rect class="ik" x="202" y="124" width="22" height="22" rx="3"/>
+<path class="ik" d="M206,124 V120 M213,124 V120 M220,124 V120 M206,146 V150 M213,146 V150 M220,146 V150 M202,128 H198 M202,135 H198 M202,142 H198 M224,128 H228 M224,135 H228 M224,142 H228"/>
+<text class="t" x="220" y="158">Kodiak</text>
+<text class="s" x="220" y="174">udvikler systemet</text>
+<!-- 3 Fragtkunde nederst -->
+<rect class="k" x="160" y="212" width="120" height="70" rx="10"/>
+<circle class="nr" cx="174" cy="226" r="9"/>
+<text class="nrt" x="174" y="230">3</text>
+<!-- kasse -->
+<path class="ik" d="M206,226 L217,220 L228,226 L217,232 Z M206,226 V236 L217,242 V232 M228,226 V236 L217,242"/>
+<text class="t" x="220" y="256">Fragtkunde</text>
+<text class="s" x="220" y="272">betaler pr. tur</text>
+<!-- gule betalingspile, buer uden om de blå, tekst ved siden af -->
+<path class="g2" d="M50,88 C20,140 40,165 160,150" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="48" y="170">løbende licens</text>
+<path class="g1" d="M160,247 C110,247 100,175 160,160" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="70" y="230">betaling pr. tur</text>
+<path class="g1" d="M424,88 C430,160 300,175 280,150" marker-end="url(#cr-pil-g)"/>
+<text class="pg" x="368" y="168">ved godkendelse</text>
+</svg>

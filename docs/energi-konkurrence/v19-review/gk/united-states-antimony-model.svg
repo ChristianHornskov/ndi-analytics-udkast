@@ -1,0 +1,75 @@
+<svg class="cr-model cr-model-d" viewBox="0 0 440 500" role="img" aria-labelledby="cr-model-t" xmlns="http://www.w3.org/2000/svg">
+<title id="cr-model-t">Sådan kommer malm ind, og hvordan kunderne betaler United States Antimony</title>
+<desc id="cr-model-d">Egne miner og udenlandske leverandører sender antimonmalm til selskabets anlæg. Anlægget forarbejder malmen. Defense Logistics Agency køber antimonbarrer til beredskabsreserven. Industrikunder køber trioxid og zeolit. Betalingen kommer pr. leverance.</desc>
+<defs>
+<marker id="cr-pil-d" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
+<marker id="cr-pil-gd" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
+</defs>
+<style>
+.cr-model-d .t{text-anchor:start;font:600 15px "DM Sans",sans-serif;fill:#e6e8ed}
+.cr-model-d .s{text-anchor:start;font:400 12px "DM Sans",sans-serif;fill:#aebbc7}
+.cr-model-d .pg{text-anchor:start;font:600 12px "DM Sans",sans-serif;fill:#e8d98a}
+.cr-model-d .p{text-anchor:start;font:500 12px "DM Sans",sans-serif;fill:#c7d3dc}
+.cr-model-d .k{fill:#0d1921;stroke:#3a4658;stroke-width:1.2}
+.cr-model-d .ik{fill:none;stroke:#89aeb4;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.cr-model-d .l{fill:none;stroke:#89aeb4;stroke-width:1.6}
+.cr-model-d .g1{fill:none;stroke:#e8d98a;stroke-width:1.8}
+.cr-model-d .nr{fill:#050a0f;stroke:#89aeb4;stroke-width:1}
+.cr-model-d .nrt{font:600 12px "DM Sans",sans-serif;fill:#e6e8ed;text-anchor:middle}
+</style>
+<!-- 1 Miner -->
+<rect class="k" x="36" y="20" width="168" height="72" rx="10"/>
+<circle class="nr" cx="52" cy="36" r="9"/><text class="nrt" x="52" y="40">1</text>
+<path class="ik" d="M72,70 L84,48 L96,70 Z"/>
+<text class="t" x="108" y="48">Miner</text>
+<text class="s" x="108" y="68">egne miner</text>
+<!-- 2 Import -->
+<rect class="k" x="236" y="20" width="168" height="72" rx="10"/>
+<circle class="nr" cx="252" cy="36" r="9"/><text class="nrt" x="252" y="40">2</text>
+<rect class="ik" x="266" y="54" width="18" height="14" rx="1"/>
+<path class="ik" d="M266,58 H284 M266,64 H284"/>
+<text class="t" x="308" y="48">Import</text>
+<text class="s" x="308" y="68">købt malm</text>
+<!-- arrows down to USAC -->
+<path class="l" d="M120,92 L190,128" marker-end="url(#cr-pil-d)"/>
+<path class="l" d="M320,92 L250,128" marker-end="url(#cr-pil-d)"/>
+<!-- 3 USAC yellow frame -->
+<rect class="k" x="110" y="132" width="220" height="76" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
+<circle class="nr" cx="126" cy="148" r="9"/><text class="nrt" x="126" y="152">3</text>
+<rect class="ik" x="144" y="160" width="16" height="20" rx="1"/>
+<path class="ik" d="M148,160 V152 H156 V160"/>
+<text class="t" x="170" y="162">USAC</text>
+<text class="s" x="170" y="182">forarbejder malmen</text>
+<!-- arrows down to customers -->
+<path class="l" d="M170,208 L120,242" marker-end="url(#cr-pil-d)"/>
+<path class="l" d="M270,208 L320,242" marker-end="url(#cr-pil-d)"/>
+<!-- 4 DLA -->
+<rect class="k" x="36" y="248" width="168" height="72" rx="10"/>
+<circle class="nr" cx="52" cy="264" r="9"/><text class="nrt" x="52" y="268">4</text>
+<path class="ik" d="M84,268 L72,276 V292 L84,300 L96,292 V276 Z"/>
+<text class="t" x="108" y="276">DLA</text>
+<text class="s" x="108" y="296">antimonbarrer</text>
+<!-- 5 Industri -->
+<rect class="k" x="236" y="248" width="168" height="72" rx="10"/>
+<circle class="nr" cx="252" cy="264" r="9"/><text class="nrt" x="252" y="268">5</text>
+<rect class="ik" x="266" y="276" width="14" height="18" rx="1"/>
+<rect class="ik" x="282" y="270" width="12" height="24" rx="1"/>
+<text class="t" x="300" y="276">Industri</text>
+<text class="s" x="300" y="296">trioxid, zeolit</text>
+<!-- yellow payments, outside, no text on arrows -->
+<path class="g1" d="M36,284 C8,284 8,170 110,170" marker-end="url(#cr-pil-gd)"/>
+<path class="g1" d="M404,284 C432,284 432,170 330,170" marker-end="url(#cr-pil-gd)"/>
+<!-- legend -->
+<line x1="36" x2="64" y1="352" y2="352" class="l"/>
+<text class="p" x="72" y="356">malm, fra miner</text>
+<line x1="36" x2="64" y1="374" y2="374" class="l"/>
+<text class="p" x="72" y="378">malm, fra import</text>
+<line x1="36" x2="64" y1="396" y2="396" class="l"/>
+<text class="p" x="72" y="400">antimonbarrer, til DLA</text>
+<line x1="36" x2="64" y1="418" y2="418" class="l"/>
+<text class="p" x="72" y="422">produkter, til industri</text>
+<line x1="36" x2="64" y1="440" y2="440" class="g1"/>
+<text class="pg" x="72" y="444">betaling pr. parti, fra DLA</text>
+<line x1="36" x2="64" y1="462" y2="462" class="g1"/>
+<text class="pg" x="72" y="466">betaling pr. leverance, fra industri</text>
+</svg>
