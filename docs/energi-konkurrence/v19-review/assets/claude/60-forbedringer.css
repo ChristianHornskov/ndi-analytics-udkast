@@ -20,5 +20,6 @@
 .cf-tabel{width:100%;border-collapse:collapse;font-size:.95rem;margin-top:8px}
 .cf-tabel th,.cf-tabel td{text-align:left;padding:9px 8px;border-top:1px solid rgba(255,255,255,.08);vertical-align:top}
 .cf-tabel th{color:#a9b3bf;font-weight:600;font-size:.82rem}
-.cf-tabel td:last-child,.cf-tabel th:last-child{text-align:right;white-space:nowrap}
+.cf-tabel td:first-child{width:24%;color:#c3cad3}.cf-tal td:last-child,.cf-tal th:last-child{text-align:right;white-space:nowrap}
 .cf-sum td{font-weight:700;border-top:2px solid rgba(255,255,255,.25)}
+@media (max-width:560px){.cf-tabel thead{display:none}.cf-tabel,.cf-tabel tbody,.cf-tabel tr,.cf-tabel td{display:block;width:100%}.cf-tabel tr{border-top:1px solid rgba(255,255,255,.12);padding:8px 0}.cf-tabel td{border:0;padding:3px 0;text-align:left!important;white-space:normal!important}.cf-tabel td:first-child{font-weight:700;color:#e6e8ed}.cf-tabel td[data-l]::before{content:attr(data-l) ": ";color:#a9b3bf;font-size:.85rem}}
