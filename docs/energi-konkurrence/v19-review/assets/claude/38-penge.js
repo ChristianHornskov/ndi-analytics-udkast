@@ -34,14 +34,14 @@
       var v=cur.v[idx];
       stort.textContent=kr(v)+' mia. dollar';
       under.textContent=cur.hvad+' i '+AAR[idx];
-      vaekst.textContent=idx===0?'Startåret. Træk i årene for at se væksten.':'Det er '+kr(v/cur.v[0])+' gange så meget som i 2021.';
+      vaekst.textContent=idx===0?'Startåret. Træk i årene for at se væksten.':'Det er '+kr(v/cur.v[0])+' gange så meget som i 2021.'+(idx<4?' Fordelingen af hver 100 kr. nedenfor gælder 2025.':'');
       slider.value=idx;slider.setAttribute('aria-valuetext',AAR[idx]+': '+kr(v)+' mia. dollar');aarTxt.textContent=AAR[idx];
     }
     function vaelg(p,anim){
       cur=p;knapper.forEach(function(k){k.setAttribute('aria-pressed',k.getAttribute('data-p')===p.id?'true':'false');});
       del.style.width='0%';
       setTimeout(function(){del.style.width=p.andel+'%';},ro?0:60);
-      var pk=Math.round(p.andel);delTal.textContent=pk>=15?pk+' kr.':'';restTal.textContent=(100-pk)+' kr.';sec.querySelector('.pg-p-lab').textContent='Platformen, ca. '+pk+' kr.';
+      var pk=Math.round(p.andel);delTal.textContent=pk>=15?pk+' kr.':'';restTal.textContent=(100-pk)+' kr.';sec.querySelector('.pg-p-lab').textContent='Platformen i 2025, ca. '+pk+' kr.';
       delTxt.innerHTML=p.txt;note.textContent=p.note;
       sec.querySelector('.pg-rest-lab').textContent=p.rest+', ca. '+(100-pk)+' kr.';
       if(anim&&!ro)afspil();else{idx=4;tegn();}
