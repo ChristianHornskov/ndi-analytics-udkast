@@ -8,6 +8,9 @@
   function dato(s) { var p = s.split('-'); return +p[2] + '.' + +p[1] + '.' + p[0]; }
   function kortDato(s) { var p = s.split('-'); return +p[2] + '.' + +p[1] + '.' + p[0].slice(2); }
   function kvartal(s) { var p = s.split('-'); return Math.ceil(+p[1] / 3) + '. kvt. ' + p[0]; }
+  /* Selskabernes regnskabskvartaler følger ikke altid kalenderen. Perioden navngives derfor efter slutdatoen. */
+  function periode(k) { return (k.periode === 'halvår' ? 'Halvår' : 'Kvartal') + ' til ' + dato(k.til); }
+  function gen(x) { return /[sxz]$/i.test(x) ? x + '\u2019' : x + 's'; }
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
 
   /* Ét samlet diagram: omsætning øverst og resultat efter skat nederst i de samme kolonner.
@@ -101,7 +104,7 @@
     var nMax = Math.max(0, -Math.min.apply(null, cols.map(function (c) { return c.r; })));
     var skala = 118, nul = 30 + (pMax / ((pMax + nMax) || 1)) * skala;
     function soejleOms() {
-      return '<div class="cr-mb-cols" role="img" aria-label="Omsætning i mio. ' + v + ': ' + cols.map(function (c) { return c.lab + ' ' + mio(c.o); }).join(', ') + '">' +
+      return '<div class="cr-mb-cols" role="img" aria-label="' + ON + ' i mio. ' + v + ': ' + cols.map(function (c) { return c.lab + ' ' + mio(c.o); }).join(', ') + '">' +
         cols.map(function (c) {
           return '<div class="cr-mb-col' + (c.seneste ? ' cr-mb-col--seneste' : '') + '"><div class="cr-mb-plot"><div class="cr-mb-bar" style="height:' + (c.o / oMax * 135).toFixed(1) + 'px"><b>' + mio(c.o) + '</b></div></div><div class="cr-mb-aar">' + c.lab + '</div></div>';
         }).join('') + '</div>';
@@ -117,19 +120,19 @@
     function maal(lab, tal, enh, under) {
       return '<div class="cr-mb-metric"><div class="cr-mb-sub">' + lab + '</div><div class="cr-mb-value">' + tal + (enh ? ' <small>' + enh + '</small>' : '') + '</div><div class="cr-mb-sub">' + under + '</div></div>';
     }
-    var fra = kvartal(k.til).replace(/(\d{4})$/, function (y) { return String(+y - 1); });
+    var ON = n.omsNavn || 'Omsætning', fra = k.periode === 'halvår' ? 'samme halvår året før' : 'samme kvartal året før';
     boks.innerHTML =
       '<div class="cr-mb">' +
         '<div class="cr-mb-metrics">' +
-          (udenOms ? maal('Omsætning', 'Ingen', '', 'Selskabet har endnu ingen omsætning') : maal('Omsætning · ' + kvartal(k.til), mio(k.omsaetning), 'mio. ' + v, pct(kv) + ' mod ' + fra)) +
+          (udenOms ? maal('Omsætning', 'Ingen', '', 'Selskabet har endnu ingen omsætning') : maal(ON + ' · ' + periode(k), mio(k.omsaetning), 'mio. ' + v, pct(kv) + ' mod ' + fra)) +
           (mvOk ? maal('Markedsværdi', dk(mv / 1000, 1), 'mia. ' + v, 'Aktier × kurs · ' + dato(kursDato)) +
-          (udenOms ? '' : maal('Price/sales', dk(ps, 1), '×', 'Markedsværdi / LTM-omsætning')) : '') +
+          (udenOms || n.omsNavn ? '' : maal('Price/sales', dk(ps, 1), '×', 'Markedsværdi / LTM-omsætning')) : '') +
         '</div>' +
         '<div class="cr-mb-pair' + (udenOms ? ' cr-mb-pair--en' : '') + '">' +
-          (udenOms ? '' : '<div class="cr-mb-panel"><h3>Omsætning</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleOms() + '</div>') +
+          (udenOms ? '' : '<div class="cr-mb-panel"><h3>' + ON + '</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleOms() + '</div>') +
           '<div class="cr-mb-panel"><h3>Resultat efter skat</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleRes() + '</div>' +
         '</div>' +
-        '<p class="cr-mb-foot">Mio. ' + v + '. LTM er de 12 måneder til ' + dato(t.til) + '. Omsætning er ' + (n.navn ? n.navn + 's' : 'selskabets') + ' samlede indtægter. ' + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : (valutaForskel ? 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ' : '')) +
+        '<p class="cr-mb-foot">Mio. ' + v + '. LTM er de 12 måneder til ' + dato(t.til) + '. ' + (n.omsForkl ? n.omsForkl + ' ' : 'Omsætning er ' + (n.navn ? gen(n.navn) : 'selskabets') + ' samlede indtægter. ') + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : (valutaForskel ? 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ' : '')) +
           'Kilde: <a class="tekstlink" href="' + n.kildeUrl + '" target="_blank" rel="noopener">' + n.kilde + '</a>.</p>' +
       '</div>';
 
