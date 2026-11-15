@@ -30,12 +30,12 @@
 <rect class="k" x="22" y="170" width="142" height="72" rx="10"/>
 <circle class="nr" cx="152" cy="170" r="8"/><text class="nrt" x="152" y="174.5">2</text>
 <text class="t" x="93" y="200">Chipdesignere</text>
-<text class="s" x="93" y="218">designer chipene</text>
+<text class="s" x="93" y="218">designer chippene</text>
 <rect class="k" x="176" y="170" width="142" height="72" rx="10"/>
 <circle class="nr" cx="306" cy="170" r="8"/><text class="nrt" x="306" y="174.5">3</text>
 <text class="t" x="247" y="200">Fabrikker</text>
 <text class="s" x="247" y="216">fremstiller</text>
-<text class="s" x="247" y="232">chipene</text>
+<text class="s" x="247" y="232">chippene</text>
 <path class="g1" d="M22,206 H10 V48 H50" marker-end="url(#cr-pil-gm)"/>
 <path class="g2" d="M318,206 H330 V48 H290" marker-end="url(#cr-pil-gm)"/>
 <line x1="50" x2="80" y1="268" y2="268" class="g1"/>

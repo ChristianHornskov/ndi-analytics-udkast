@@ -20,7 +20,7 @@
 <circle class="nr" cx="44" cy="28" r="8"/>
 <text class="nrt" x="44" y="32.5">1</text>
 <text class="t" x="66" y="39">Fabrikker</text>
-<text class="s" x="66" y="57">støber siliciumskiver</text>
+<text class="s" x="66" y="57">laver chippene</text>
 <path class="l" d="M145,72 V112" marker-end="url(#cr-pil-m)"/>
 <text class="pr" x="157" y="98">siliciumskiver</text>
 <rect class="k" x="30" y="116" width="230" height="74" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>

@@ -1,6 +1,6 @@
 <svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d-desc" xmlns="http://www.w3.org/2000/svg">
 <title id="cr-model-t">Sådan flyder strøm og betaling hos American Electric Power</title>
-<desc id="cr-model-d-desc">1. Kraftværkerne laver strømmen. 2. Transmissionsnettet fører strømmen over lange afstande. 3. AEP's elselskaber fordeler strømmen til kunderne og sender dem regningen. 4. AEP's eget transmissionselskab får typisk betaling fra de andre AEP-selskaber. Kunderne betaler løbende for strøm og levering.</desc>
+<desc id="cr-model-d-desc">1. Kraftværkerne laver strømmen. 2. Transmissionsnettet fører strømmen over lange afstande. 3. AEP's elselskaber fordeler strømmen til kunderne og sender dem regningen. 4. AEP's eget transmissionsselskab får typisk betaling fra de andre AEP-selskaber. Kunderne betaler løbende for strøm og levering.</desc>
 <defs>
 <marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
 <marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>

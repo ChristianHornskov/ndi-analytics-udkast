@@ -41,5 +41,7 @@ window.NDI_NOEGLETAL["etoro-group"]={
  },
  "hentet": "2026-11-14",
  "kilde": "eToros investorside",
- "kildeUrl": "https://investors.etoro.com/"
+ "kildeUrl": "https://investors.etoro.com/",
+ "omsNavn": "Nettobidrag",
+ "omsForkl": "Nettobidrag er eToros omsætning fratrukket kostprisen på solgte kryptoaktiver og renteudgifter på kundernes gearede positioner."
 };

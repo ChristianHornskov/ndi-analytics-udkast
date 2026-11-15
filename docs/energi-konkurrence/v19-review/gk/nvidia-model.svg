@@ -22,7 +22,7 @@
 <circle class="nr" cx="114" cy="28" r="8"/>
 <text class="nrt" x="114" y="32">1</text>
 <text class="t" x="176" y="41">Fabrikker</text>
-<text class="s" x="176" y="59">støber chips</text>
+<text class="s" x="176" y="59">laver chips</text>
 <path class="l" d="M225,72 V118" marker-end="url(#cr-pil)"/>
 <text class="pr" x="238" y="102">færdige chips</text>
 <rect class="k" x="100" y="122" width="250" height="76" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>

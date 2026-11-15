@@ -1,6 +1,6 @@
 <svg class="cr-model cr-model-d" viewBox="0 0 440 520" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
 <title id="cr-model-t">Sådan tjener Monolithic Power Systems penge</title>
-<desc id="cr-model-d">1. Selskabet designer chipene og stiller sin egen procesteknologi til rådighed for støberierne. 2. Uafhængige støberier fremstiller siliciumskiverne, og andre partnere samler og tester chipene. 3. Distributører sælger chipene videre til elektronikproducenterne. 4. En del kunder køber også direkte. 5. Pengene kommer som betaling for leverede chips, typisk efter en indkøbsordre.</desc>
+<desc id="cr-model-d">1. Selskabet designer chippene og stiller sin egen procesteknologi til rådighed for støberierne. 2. Uafhængige støberier fremstiller siliciumskiverne, og andre partnere samler og tester chippene. 3. Distributører sælger chippene videre til elektronikproducenterne. 4. En del kunder køber også direkte. 5. Pengene kommer som betaling for leverede chips, typisk efter en indkøbsordre.</desc>
 <defs>
 <marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
 <marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
@@ -31,7 +31,7 @@
 <circle class="nr" cx="106" cy="146" r="9"/><text class="nrt" x="106" y="150">2</text>
 <rect class="ik" x="122" y="144" width="24" height="24" rx="3"/>
 <path class="ik" d="M128,150h12M128,156h12M128,162h12"/>
-<text class="t" x="174" y="154">MPS</text><text class="s" x="174" y="172">designer chipene</text>
+<text class="t" x="174" y="154">MPS</text><text class="s" x="174" y="172">designer chippene</text>
 <path class="l" d="M130,188 V236" marker-end="url(#cr-pil)"/>
 <text class="pr" x="178" y="218">leverer chips</text>
 <rect class="k" x="90" y="240" width="240" height="56" rx="10"/>

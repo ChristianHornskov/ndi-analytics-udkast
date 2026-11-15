@@ -31,7 +31,7 @@
 <circle class="nr" cx="74" cy="144" r="9"/><text class="nrt" x="74" y="148">2</text>
 <rect class="ik" x="90" y="144" width="24" height="24" rx="3"/>
 <path class="ik" d="M96,150h12M96,156h12M96,162h12"/>
-<text class="t" x="140" y="154">MPS</text><text class="s" x="140" y="172">designer chipene</text>
+<text class="t" x="140" y="154">MPS</text><text class="s" x="140" y="172">designer chippene</text>
 <path class="l" d="M100,188 V236" marker-end="url(#cr-pil-m)"/>
 <text class="pr" x="148" y="218">leverer chips</text>
 <rect class="k" x="60" y="240" width="226" height="56" rx="10"/>

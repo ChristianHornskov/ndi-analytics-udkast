@@ -49,7 +49,7 @@
 <circle class="nr" cx="50" cy="290" r="9"/><text class="nrt" x="50" y="294">4</text>
 <rect class="ik" x="66" y="300" width="26" height="18" rx="2"/>
 <path class="ik" d="M76,318 V324 M70,324 H82"/>
-<text class="t" x="100" y="308">Skærme</text>
+<text class="t" x="100" y="308">Skærmproducenter</text>
 <text class="s" x="100" y="324">køber glas</text>
 <!-- gule buer i højre side, uden tekst på pilene. Fast fra 3 og 4, stiplet længere ude. -->
 <path class="g1" d="M262,220 C300,220 300,140 262,132" marker-end="url(#cr-glw-pil-gm)"/>

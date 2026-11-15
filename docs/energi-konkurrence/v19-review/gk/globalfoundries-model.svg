@@ -1,6 +1,6 @@
 <svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
 <title id="cr-model-t">Sådan tjener GlobalFoundries penge</title>
-<desc id="cr-model-d">1. En chipvirksomhed tegner chippen og indgår ofte en aftale over flere år. 2. GlobalFoundries fremstiller chippene på wafers. 3. Wafers bliver samlet og testet hos en anden virksomhed. 4. Chippene ender i telefoner, biler, udstyr og datacentre. Kunden betaler for de leverede wafers og særskilt for ingeniørarbejde, masker og licenser.</desc>
+<desc id="cr-model-d">1. En chipvirksomhed tegner chippen og indgår ofte en aftale over flere år. 2. GlobalFoundries fremstiller chippene på wafers. 3. Chippene skæres ud af skiverne og bliver pakket og testet hos en anden virksomhed. 4. Chippene ender i telefoner, biler, udstyr og datacentre. Kunden betaler for de leverede wafers og særskilt for ingeniørarbejde, masker og licenser.</desc>
 <defs><marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker><marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker></defs>
 <style>
 .cr-model-d .t{font:600 16px 'DM Sans',sans-serif;fill:#e6e8ed;text-anchor:middle}

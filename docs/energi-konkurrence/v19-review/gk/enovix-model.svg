@@ -1,6 +1,6 @@
 <svg class="cr-model cr-model-d" viewBox="0 0 440 300" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
 <title id="cr-model-t">Sådan tjener Enovix penge</title>
-<desc id="cr-model-d">1. Enovix udvikler battericellerne. 2. Fabrikken i Malaysia laver batterier med en anode af ren silicium. 3. Fabrikken i Sydkorea laver batterier med silicium blandet i grafit. 4. Producenter af smarte briller køber batterier med ren silicium. 5. Producenter af droner og forsvarsudstyr køber batterierne fra Sydkorea. Kunderne betaler Enovix for de batterier, de bestiller.</desc>
+<desc id="cr-model-d">1. Enovix udvikler battericellerne. 2. Fabrikken i Malaysia laver batterier med en anode af rent silicium. 3. Fabrikken i Sydkorea laver batterier med silicium blandet i grafit. 4. Producenter af smarte briller køber batterier med rent silicium. 5. Producenter af droner og forsvarsudstyr køber batterierne fra Sydkorea. Kunderne betaler Enovix for de batterier, de bestiller.</desc>
 <defs>
 <marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
 <marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
@@ -29,7 +29,7 @@
 <g><circle class="nr" cx="422" cy="60" r="8"/><text class="nrt" x="422" y="63.5">4</text></g>
 <g><circle class="nr" cx="422" cy="180" r="8"/><text class="nrt" x="422" y="183.5">5</text></g>
 <text class="t" x="58" y="138">Enovix</text><text class="s" x="58" y="155">udvikler</text><text class="s" x="58" y="169">cellerne</text>
-<text class="t" x="202" y="78">Malaysia</text><text class="s" x="202" y="96">ren silicium</text>
+<text class="t" x="202" y="78">Malaysia</text><text class="s" x="202" y="96">rent silicium</text>
 <text class="t" x="202" y="198">Sydkorea</text><text class="s" x="202" y="215">silicium og</text><text class="s" x="202" y="229">grafit</text>
 <text class="t" x="376" y="78">Briller</text><text class="s" x="376" y="96">producenter</text>
 <text class="t" x="376" y="198">Droner</text><text class="s" x="376" y="215">og forsvar</text>

@@ -1,6 +1,6 @@
 <svg class="cr-model cr-model-d" viewBox="0 0 440 490" role="img" aria-labelledby="cr-model-t cr-model-d" xmlns="http://www.w3.org/2000/svg">
 <title id="cr-model-t">Sådan tjener Silicon Motion penge på controllere og færdige lagerenheder</title>
-<desc id="cr-model-d">1. Fabrikkerne støber chippenes siliciumskiver efter Silicon Motions tegninger. 2. Silicon Motion designer controllerne og samler også færdige lagerenheder, hvor selskabet selv køber NAND-lager. 3. Kunderne betaler for controllerne og for de færdige lagerenheder. 4. Produkterne ender i computere, telefoner, datacentre og andet udstyr. De gule pile er Silicon Motions indtægter: betaling for controllere og betaling for færdige lagerenheder.</desc>
+<desc id="cr-model-d">1. Fabrikkerne laver chippene på siliciumskiver efter Silicon Motions tegninger. 2. Silicon Motion designer controllerne og samler også færdige lagerenheder, hvor selskabet selv køber NAND-lager. 3. Kunderne betaler for controllerne og for de færdige lagerenheder. 4. Produkterne ender i computere, telefoner, datacentre og andet udstyr. De gule pile er Silicon Motions indtægter: betaling for controllere og betaling for færdige lagerenheder.</desc>
 <defs>
 <marker id="cr-pil" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#89aeb4"/></marker>
 <marker id="cr-pil-g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#e8d98a"/></marker>
@@ -21,7 +21,7 @@
 <circle class="nr" cx="124" cy="28" r="8"/>
 <text class="nrt" x="124" y="32.5">1</text>
 <text class="t" x="148" y="39">Fabrikker</text>
-<text class="s" x="148" y="57">støber siliciumskiver</text>
+<text class="s" x="148" y="57">laver chippene</text>
 <path class="l" d="M235,72 V112" marker-end="url(#cr-pil)"/>
 <text class="pr" x="247" y="98">siliciumskiver</text>
 <rect class="k" x="110" y="116" width="250" height="74" rx="10" style="stroke:#e8d98a;stroke-width:1.6"/>
