@@ -1,12 +1,36 @@
 # Selskabsreview
 
-Løbende checkpoint, 15. november 2026. Reviewet er ikke færdigt.
+Status pr. 15. november 2026: tekst- og kodegennemgang af alle 87 sider. Den visuelle browserkontrol mangler, og rapporten er derfor ikke et færdigt samlet review.
 
-Grundlag: `claude/selskabssider-review`, commit `7d4b6d6b7d343a3862d5b3231f322effccbbad8b`. Kun rapportfilen ændres på `codex/selskabsreview-20261115`.
+Grundlag: `claude/selskabssider-review`, commit `7d4b6d6b7d343a3862d5b3231f322effccbbad8b`. Rapporten ligger alene på `codex/selskabsreview-20261115`. Ingen sider, data eller scripts er ændret.
 
-87 sider i gk. Rolls-Royce mangler i gk og gennemgås særskilt fra selskaber/. Det private kildearkiv er tilgængeligt. Computerforbindelsen blev utilgængelig under arbejdet. Ingen af siderne er endnu visuelt kontrolleret ved 360 eller 1300 punkter. Reservevisning ved manglende fondsdata regnes ikke som en fejl.
+## Afgrænsning og kontrol
 
-P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, sprog- eller forståelsesfejl. Kodefund er ikke browserobservationer. Foreløbige afsnit er ikke en fuld godkendelse af alle faktuelle oplysninger.
+- Alle 87 HTML-sider er læst sammen med nøgletalsfilerne og teksten i de indlejrede desktop- og mobiltegninger. Tegningerne i HTML er flere steder forskellige fra de løse SVG-filer. Fund om sidens indhold gælder HTML-versionen.
+- Alle 87 nøgletalsfiler er sammenholdt med TAL.json i det private kildearkiv. De numeriske felter stemmer mellem de to. Det er ikke en uafhængig faktabekræftelse, og Samsungs enhedsfejl findes begge steder.
+- Udvalgte regnskabstal, perioder og udsagn er efterprøvet mod primærkilder og regnskabsuddrag fra kildearkivet, især for de prioriterede selskaber. Der er ikke foretaget en fuld uafhængig kontrol af hvert tal og hver faktuel sætning på alle 87 sider. Kontrolnoternes egne godkendelser er ikke betragtet som dokumentation i sig selv.
+- De kontrollerede kvartalsvæksttal i faktabåndene, hvor teksten bruger formuleringen 'vækst i omsætningen i kvartalet', stemmer med beregning på nøgletalsfilernes sammenligningstal inden for afrunding. Udvalgte LTM-regnestykker, bl.a. Tesla, Ford, Dell og Reddit, stemmer med årsregnskab plus indeværende delperiode minus sidste års tilsvarende delperiode.
+- Lokale filhenvisninger og interne ankermål er kontrolleret mod repo og HTML. Der blev ikke fundet manglende målfiler eller ankermål i denne kontrol. Det dokumenterer ikke, at alle ressourcer indlæses korrekt i browseren, eller at alle eksterne links virker.
+- Computerforbindelsen blev utilgængelig under arbejdet. Ingen af siderne er visuelt kontrolleret ved 360 eller 1300 punkter. Konsolfejl, vandret scroll, faktisk tekstoverlap, klipning og læsbarhed er derfor udestående. Reservevisningen ved manglende fondsdata er ikke regnet som en fejl.
+- Rolls-Royce findes ikke blandt de 87 gk-sider på denne commit. Den eksisterende side i `selskaber/` omtales særskilt, så dens anden version ikke forveksles med reviewets øvrige sider.
+
+P1 er en væsentlig tal-, periode- eller indholdsfejl. P2 er en sprog-, dokumentations- eller forståelsesfejl. Spørgsmål er forhold, der kræver afklaring, og ikke konstaterede faktafejl. Samsung står først på grund af enhedsfejlens størrelse. Derefter kommer de prioriterede selskaber, øvrige sider med P1-fund og resten.
+
+## samsung-electronics
+
+**Fejl**
+
+- **P1, alle beløb i nøgletalsgrafen: Tallene er 1.000 gange for små i forhold til den viste enhed.** Datafilen angiver 333605.938 for omsætning 2025, men rendererens enhed er mio. KRW. Samsungs resultatopgørelse angiver 333.605.938 mio. KRW. Brødtekstens 333,6 billioner won er dermed korrekt, mens grafen bliver ca. 333,6 mia. won. Samme faktorfejl findes i årets resultat, halvår, kvartal og LTM. LTM-omsætningen skal med denne enhed være 333.605.938 + 305.372.914 - 153.706.820 = 485.272.032 mio. KRW. Kilder: [Samsung, resultatopgørelse 2025](https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_con_quarter04_soi.pdf) og [halvårsregnskab 2026](https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_con_quarter02_all.pdf), efterprøvet mod arkivernes ordrette tabeluddrag.
+
+- **P2, dansk tekst i temabaggrundens link:** 'Uge 36 - Vælg udviklingen, ikke vinderen' bruger bindestreg som tankestreg.
+
+- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Samsung Electronicss samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
+
+- **P2. Tegning, kundegruppe:** 'AI-servere køber hukommelse' lader maskiner optræde som købere. Skriv, om køberen er serverproducenten eller datacenteroperatøren.
+
+**Forbedringsforslag**
+
+- Tilføj risikoen ved priser og konkurrence i hukommelse samt produktionsteknologi, dokumenteret i selskabets egne oplysninger. Den nuværende liste fokuserer næsten kun på generelle finansielle risici, selv om halvledere driver forklaringen af indtjeningen.
 
 ## nvidia
 
@@ -54,25 +78,11 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 **Forbedringsforslag**
 
 - Del bilsalg, energilagring og fremtidige indtægter fra selvkørsel tydeligt. Vis derefter forskellen på FSD med førerovervågning og den afgrænsede taxatjeneste, så de ikke glider sammen for en førstegangslæser.
-
-## samsung-electronics
-
-**Fejl**
-
-- **P1, alle beløb i nøgletalsgrafen: Tallene er 1.000 gange for små i forhold til den viste enhed.** Datafilen angiver 333605.938 for omsætning 2025, men rendererens enhed er mio. KRW. Samsungs resultatopgørelse angiver 333.605.938 mio. KRW. Brødtekstens 333,6 billioner won er dermed korrekt, mens grafen bliver ca. 333,6 mia. won. Samme faktorfejl findes i årets resultat, halvår, kvartal og LTM. LTM-omsætningen skal med denne enhed være 333.605.938 + 305.372.914 - 153.706.820 = 485.272.032 mio. KRW. Kilder: [Samsung, resultatopgørelse 2025](https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2025_con_quarter04_soi.pdf) og [halvårsregnskab 2026](https://images.samsung.com/is/content/samsung/assets/global/ir/docs/2026_con_quarter02_all.pdf), efterprøvet mod arkivernes ordrette tabeluddrag.
-
-- **P2, dansk tekst i temabaggrundens link:** 'Uge 36 - Vælg udviklingen, ikke vinderen' bruger bindestreg som tankestreg.
-
-- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Samsung Electronicss samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
-
-**Forbedringsforslag**
-
-- Tilføj risikoen ved priser og konkurrence i hukommelse samt produktionsteknologi, dokumenteret i selskabets egne oplysninger. Den nuværende liste fokuserer næsten kun på generelle finansielle risici, selv om halvledere driver forklaringen af indtjeningen.
 
 ## micron-technology
 
@@ -82,6 +92,8 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 - **P2, indledning:** 'gøre intelligens hurtigere og rigere for alle' er en uidiomatisk gengivelse af et selskabsslogan. Det fortæller ikke læseren, hvad hukommelsen gør. 'SSD' i tegningen forklares heller ikke ved forkortelsen.
 
+- **P2. Tegning, kundegruppe:** 'Telefon og pc køber hukommelse' og 'Biler og industri køber chips' blander produkter og kunder. Vis producenterne som købere, så pengestrømmen giver mening.
+
 **Forbedringsforslag**
 
 - Vis, hvor meget af væksten der kommer fra priser, og hvor meget der kommer fra solgte mængder. Det vil gøre faktabåndets store vækst og prisstigning forståelige og forbinde dem med risikoen for en vending i markedet.
@@ -89,6 +101,8 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 ## softbank-group
 
 **Fejl**
+
+- **P1. Nøgletal, kvartalsbetegnelse:** Perioden til 30.9.2026 bliver kaldt 3. kvartal 2026, selv om selskabet opgør den som 2. kvartal i regnskabsåret til 31.3.2027. Det fælles script bruger kalendermåneden uden at oplyse, at det ændrer regnskabets kvartalsbetegnelse. Kilde: `data/noegletal/softbank-group.js`, det deri angivne regnskab og `21-noegletal.js`.
 
 - **P1, nederste del af siden: Indholdsblokke er indsat to gange.** 'Teknologi → forretning', perspektiv og video gentages. HTML har dublerede id'er `v5-forretning`, `v5-perspektiv`, `mere-fra-ndi` og `rm-title`. Det gentager teksten og gør ankermål og tilgængelighedsreferencer tvetydige. Kodefund i `gk/softbank-group.html`.
 
@@ -162,7 +176,7 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 **Fejl**
 
-- **P2, USDC-forklaringen:** 'Jo mere USDC der er i omløb, desto mere får Coinbase i betaling' beskriver sammenhængen uden at holde renten konstant. Siden nævner selv renter som risiko, men ikke ved forklaringen af denne indtægt. Formuleringen bør afgrænses, så stigende omløb ikke fremstilles som en garanti for højere betaling.
+- **P2, USDC-forklaringen:** 'Jo mere USDC der er i omløb, desto mere får Coinbase i betaling' beskriver sammenhængen uden at holde renten konstant. Siden nævner selv renter som risiko, men ikke ved forklaringen af denne indtægt. Formuleringen bør afgrænses, så stigende omløb ikke fremstilles som en garanti for højere betaling. Kilde: [Coinbase, 10-Q for 30.9.2026](https://www.sec.gov/Archives/edgar/data/1679788/000167978826000122/coin-20260930.htm), forklaringen af stablecoin revenue viser både effekten af større beholdninger og lavere renter.
 
 - **P2, Mere fra NewDeal Invest:** 'Uge 19 - Den industrielle reformation' bruger bindestreg som tankestreg.
 
@@ -184,9 +198,145 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 **Fejl**
 
-- **P1, produktforklaring:** SoC beskrives som flere funktioner på 'én skive'. En siliciumskive rummer normalt mange chips. SoC handler om funktioner samlet på én chip. Forklaringen forveksler produktet med skiven, som det fremstilles på.
+- **P1. Nøgletal, kvartalsbetegnelse:** Perioden til 30.9.2026 bliver kaldt 3. kvartal 2026, selv om selskabet opgør den som 2. kvartal i regnskabsåret til 31.3.2027. Det fælles script bruger kalendermåneden uden at oplyse, at det ændrer regnskabets kvartalsbetegnelse. Kilde: `data/noegletal/advantest.js`, det deri angivne regnskab og `21-noegletal.js`.
+
+- **P1, produktforklaring:** SoC beskrives som flere funktioner på 'én skive'. En siliciumskive rummer normalt mange chips. SoC handler om funktioner samlet på én chip. Forklaringen forveksler produktet med skiven, som det fremstilles på. Kilde: [Arms definition af SoC](https://investors.arm.com/node/6551/html), afsnittet med definitioner.
 
 - **P2, produkttekst og tegning:** 'chipene' og 'chipen' bør være 'chippene' og 'chippen'. 'mixet' kan med fordel blive til fordelingen mellem produkter og service.
+
+## applovin
+
+**Fejl**
+
+- **P1, 'Om tallene':** 'Tallene dækker kun annonceforretningen' efterfølges af, at resultatet indeholder tab fra den solgte spilforretning. Det er ikke samme afgrænsning. Sætningen skal skelne mellem omsætning fra fortsættende aktiviteter og det viste samlede resultat.
+
+- **P2, perspektivlink:** 'Uge 41 - Skal du være nervøs ...' bruger bindestreg som tankestreg.
+
+## babcock-wilcox
+
+**Fejl**
+
+- **P1, 'Om tallene':** 'Tallene er uden de forretninger, B&W har solgt' modsiges af samme notes forklaring om mindre tab på solgte forretninger. Afgrænsningen af omsætning og resultat skal beskrives hver for sig.
+
+- **P2, 'Om tallene':** 'warrants, altså retter til at købe ...' er forkert dansk. Skriv rettigheder.
+
+- **P2, temabaggrund:** Teksten indeholder semikolon og linket 'Uge 50 - Fremtiden ...' bruger bindestreg som tankestreg.
+
+- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Babcock & Wilcoxs samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
+
+## enovix
+
+**Fejl**
+
+- **P1, kvartalsbetegnelse:** Scriptet kalder perioden til 4.10.2026 for 4. kvartal 2026. Datafilen og regnskabshenvisningen angiver 3. kvartal 2026.
+
+- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Enovixs samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
+
+- **P2, flere afsnit og tegning:** 'ren silicium' skal være 'rent silicium'.
+
+- **P2, Om tallene:** 'Warrants er retter til at købe aktier' skal være rettigheder.
+
+## etoro-group
+
+**Fejl**
+
+- **P1, nøgletalskort:** Datafeltet `omsaetning` indeholder nettobidrag, som siden selv udtrykkeligt skelner fra regnskabsmæssig omsætning. Alligevel kalder det fælles script både diagrammet og væksten 'Omsætning', beskriver tallet som 'samlede indtægter' og kan beregne 'Price/sales' på grundlaget. Noten nedenunder ophæver ikke de misvisende overskrifter. Angiv nettobidrag konsekvent, og brug ikke price/sales uden den rigtige omsætningsdefinition.
+
+- **P2, forretningsforklaring:** 'gearede positioner' forklares ikke. Forklar, at kunden handler for mere end sin egen indbetaling, og hvor renteindtægten opstår.
+
+- **P2, videotitler:** To titler bruger bindestreg som tankestreg, bl.a. 'NewDeal Invest x eToro - Event ...'.
+
+## globalfoundries
+
+**Fejl**
+
+- **P1, nederste indhold:** 'Teknologi → forretning' og 'NewDeal Invests perspektiv' gentages. `v5-forretning` og `v5-perspektiv` forekommer begge to gange som id'er. Det er en reel dobbeltindsættelse i HTML, ikke desktop- og mobiludgaver af tegningen.
+
+- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'GlobalFoundriess samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
+
+- **P2, tegningsforklaringen:** 'Wafers bliver samlet' er misvisende dansk. Forklar, at chippene skæres ud af skiven og derefter pakkes og testes. Skiven bliver ikke samlet som én færdig chip.
+
+## horizon-robotics
+
+**Fejl**
+
+- **P1. Nøgletal, seneste kvartal:** Halvårsomsætningen 2.118,187 mio. CNY for januar til juni 2026 ligger i feltet `kvartal`. Den fælles visning kalder derfor seks måneders omsætning for 2. kvartal. Angiv halvår, eller brug et faktisk kvartal. Kilde: sidens nøgletalsfil og dens kildeangivelse, som udtrykkeligt siger første halvår. Primærkilde: [halvårsrapport 2026, HKEX](https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0930/2026093000842.pdf).
+
+- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Horizon Roboticss samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
+
+## huber-suhner
+
+**Fejl**
+
+- **P1. Nøgletal, seneste kvartal:** De 457,402 mio. CHF er omsætning for første halvår 2026, men vises som 2. kvartal. Sammenligningstallet 445,919 mio. CHF er også et halvår. Kilde: nøgletalsfilens periode og kildeangivelse. Primærkilde: [HUBER+SUHNER, halvårsrapport 2026](https://reports.hubersuhner.com/2026/hyr/app/uploads/HS_Half-year_Report_2026.pdf).
+
+- **P2. Forretningsforklaring:** Radiofrekvens forklares for snævert som trådløs overførsel. Selskabets radiofrekvensprodukter omfatter også kabler og stik, der leder signalerne. Kilde: [HUBER+SUHNER, RF connectivity](https://www.hubersuhner.com/en/markets/industry/general-industrials/medical-device/imagingdiagnostics/rf-connectivity).
+
+- **P2. Sprog:** 'luft- og forsvar' mangler 'fart', hvis der menes luftfart og forsvar. Formuleringen 'øge krav til regler, kunder og åbenhed' gør det uklart, hvem der stiller krav til hvem.
+
+- **P2. Henvisninger under 'Mere fra NewDeal Invest' eller videoer:** `og er ikke en særskilt analyse af dette selskab. Uge 27 - Bygger vi for meget AI? ↗ NewDeal Invest · 26.07.2026. Dateret ko` Indeholder bindestreg brugt som tankestreg eller semikolon og bryder sidens faste sprogregler.
+
+## klarna
+
+**Fejl**
+
+- **P1. Tegningens forklaring om renter:** Udsagnet om, at forbrugere, der betaler over tid, betaler renter, er for bredt. Klarna tilbyder også rentefrie delbetalinger. Afgræns rentebetalingen til de relevante finansieringsprodukter. Kilde: [Klarnas egen produktbeskrivelse](https://docs.klarna.com/klarna-network-distribution/interoperability-distribution/distribute-payment-program-enablement/overview/).
+
+## lpkf-laser-electronics
+
+**Fejl**
+
+- **P1. Nederste del af siden:** Afsnittene 'Hvad er det vigtige at forstå?' og 'NewDeal Invests perspektiv' er indsat to gange. Begge kopier har de samme id'er, `v5-forretning` og `v5-perspektiv`. Det giver gentagelser og tvetydige ankermål. Kilde: HTML-koden til siden.
+
+- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'LPKF Laser & Electronicss samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
+
+## microvision
+
+**Fejl**
+
+- **P1. Risiko om børsnotering:** 'ikke kan blive noteret på Nasdaq Global Market' er både en forkert beskrivelse af risikoen og et forældet markedsnavn. Selskabets kvartalsrapport beskriver risikoen for ikke at kunne bevare noteringen og oplyser, at aktien blev flyttet fra Global Market til Capital Market med virkning fra 20.7.2026. Kilde: [MicroVision, 10-Q for 30.6.2026](https://ir.microvision.com/sec-filings/all-sec-filings/content/0001493152-26-036371/form10-q.htm).
+
+## nextracker
+
+**Fejl**
+
+- **P1. Nøgletal, kvartalsbetegnelse:** Perioden til 2.10.2026 bliver ud fra måneden kaldt 4. kvartal 2026, men teksten og regnskabet kalder den 2. kvartal 2026/27. Angiv det faktiske regnskabskvartal. Kilde: sidens kildehenvisning til kvartalsregnskabet og nøgletalsfilens slutdato.
+
+## sandisk
+
+**Fejl**
+
+- **P1. Nøgletal, kvartalsbetegnelse:** Perioden til 2.10.2026 vises som 4. kvartal 2026, selv om teksten angiver første kvartal 2026/27. Kilde: nøgletalsfilen og det kvartalsregnskab, siden henviser til.
+
+- **P2. Risiko:** 'skade konkurrencen' er misvisende i beskrivelsen af egne produktfejl. Der menes selskabets konkurrenceevne.
+
+## semtech
+
+**Fejl**
+
+- **P1. Nøgletal, kvartalsbetegnelse:** Perioden til 26.7.2026 vises som 3. kvartal 2026. Teksten angiver korrekt 2. kvartal 2026/27. Kilde: sidens nøgletalsfil og regnskabshenvisning.
+
+## super-micro-computer
+
+**Fejl**
+
+- **P1. Nøgletal, kvartalsbetegnelse:** Perioden til 30.9.2026 bliver kaldt 3. kvartal 2026, selv om selskabet opgør den som 1. kvartal i regnskabsåret til 30.6.2027. Det fælles script bruger kalendermåneden uden at oplyse, at det ændrer regnskabets kvartalsbetegnelse. Kilde: `data/noegletal/super-micro-computer.js`, det deri angivne regnskab og `21-noegletal.js`.
+
+## taiyo-yuden
+
+**Fejl**
+
+- **P1. Nøgletal, kvartalsbetegnelse:** Perioden til 30.9.2026 bliver kaldt 3. kvartal 2026, selv om selskabet opgør den som 2. kvartal i regnskabsåret til 31.3.2027. Det fælles script bruger kalendermåneden uden at oplyse, at det ændrer regnskabets kvartalsbetegnelse. Kilde: `data/noegletal/taiyo-yuden.js`, det deri angivne regnskab og `21-noegletal.js`.
+
+- **P2. Henvisninger under 'Mere fra NewDeal Invest' eller videoer:** `og er ikke en særskilt analyse af dette selskab. Uge 20 - Amerikansk-kinesisk chip forsoning ↗ NewDeal Invest · 18.05.2026.` Indeholder bindestreg brugt som tankestreg eller semikolon og bryder sidens faste sprogregler.
+
+## wolfspeed
+
+**Fejl**
+
+- **P1. Nøgletal, kvartalsbetegnelse:** Perioden til 27.9.2026 vises som 3. kvartal 2026, men er første kvartal 2026/27. Kilde: sidens nøgletalsfil og henvisning til kvartalsregnskabet.
+
+- **P2. Kildeafsnit:** 'Wolfspeed egne oplysninger' mangler ejefald. Skriv 'Wolfspeeds egne oplysninger'.
 
 ## am-electric
 
@@ -200,14 +350,6 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 - **P2, indtjeningsforklaringen:** 'hvilke produkter og markeder der sælges' siger, at markeder bliver solgt. Meningen er, hvilke produkter selskabet sælger, og på hvilke markeder.
 
-## applovin
-
-**Fejl**
-
-- **P1, 'Om tallene':** 'Tallene dækker kun annonceforretningen' efterfølges af, at resultatet indeholder tab fra den solgte spilforretning. Det er ikke samme afgrænsning. Sætningen skal skelne mellem omsætning fra fortsættende aktiviteter og det viste samlede resultat.
-
-- **P2, perspektivlink:** 'Uge 41 - Skal du være nervøs ...' bruger bindestreg som tankestreg.
-
 ## astera-labs
 
 **Fejl**
@@ -215,18 +357,6 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 - **P2, genitiv:** 'Astera Labs årsrapport' og 'Astera Labs egne oplysninger' mangler apostrof efter navnet. Det er 'Astera Labs’'. Siden bruger også den korrekte form andre steder.
 
 - **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Astera Labss samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
-
-## babcock-wilcox
-
-**Fejl**
-
-- **P1, 'Om tallene':** 'Tallene er uden de forretninger, B&W har solgt' modsiges af samme notes forklaring om mindre tab på solgte forretninger. Afgrænsningen af omsætning og resultat skal beskrives hver for sig.
-
-- **P2, 'Om tallene':** 'warrants, altså retter til at købe ...' er forkert dansk. Skriv rettigheder.
-
-- **P2, temabaggrund:** Teksten indeholder semikolon og linket 'Uge 50 - Fremtiden ...' bruger bindestreg som tankestreg.
-
-- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Babcock & Wilcoxs samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
 
 ## ballard-power-systems
 
@@ -246,7 +376,7 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## celanese
 
@@ -268,7 +398,7 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## cipher-mining
 
@@ -314,39 +444,17 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 - **P2, tegningsforklaring:** 'kunderne betaler for medlemskab og reklame' sammenblander forbrugere og annoncører. Angiv hver betaler særskilt.
 
-## enovix
-
-**Fejl**
-
-- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Enovixs samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
-
-- **P1, kvartalsbetegnelse:** Scriptet kalder perioden til 4.10.2026 for 4. kvartal 2026. Datafilen og regnskabshenvisningen angiver 3. kvartal 2026.
-
-- **P2, flere afsnit og tegning:** 'ren silicium' skal være 'rent silicium'.
-
-- **P2, Om tallene:** 'Warrants er retter til at købe aktier' skal være rettigheder.
-
-## etoro-group
-
-**Fejl**
-
-- **P1, nøgletalskort:** Datafeltet `omsaetning` indeholder nettobidrag, som siden selv udtrykkeligt skelner fra regnskabsmæssig omsætning. Alligevel kalder det fælles script både diagrammet og væksten 'Omsætning', beskriver tallet som 'samlede indtægter' og kan beregne 'Price/sales' på grundlaget. Noten nedenunder ophæver ikke de misvisende overskrifter. Angiv nettobidrag konsekvent, og brug ikke price/sales uden den rigtige omsætningsdefinition.
-
-- **P2, forretningsforklaring:** 'gearede positioner' forklares ikke. Forklar, at kunden handler for mere end sin egen indbetaling, og hvor renteindtægten opstår.
-
-- **P2, videotitler:** To titler bruger bindestreg som tankestreg, bl.a. 'NewDeal Invest x eToro - Event ...'.
-
 ## expand-energy
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## fluor
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## fubotv
 
@@ -366,51 +474,17 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 - **P2, kildeafgrænsning:** Den afsluttende kildebeskrivelse nævner kun materiale om 2025, selv om faktabånd og tekst indeholder tal for tredje kvartal og ni måneder 2026. Angiv det nyere grundlag også her, så læseren kan efterprøve de aktuelle tal.
 
-## globalfoundries
-
-**Fejl**
-
-- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'GlobalFoundriess samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
-
-- **P1, nederste indhold:** 'Teknologi → forretning' og 'NewDeal Invests perspektiv' gentages. `v5-forretning` og `v5-perspektiv` forekommer begge to gange som id'er. Det er en reel dobbeltindsættelse i HTML, ikke desktop- og mobiludgaver af tegningen.
-
-- **P2, tegningsforklaringen:** 'Wafers bliver samlet' er misvisende dansk. Forklar, at chippene skæres ud af skiven og derefter pakkes og testes. Skiven bliver ikke samlet som én færdig chip.
-
-## horizon-robotics
-
-**Fejl**
-
-- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Horizon Roboticss samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
-
-- **P1. Nøgletal, seneste kvartal:** Halvårsomsætningen 2.118,187 mio. CNY for januar til juni 2026 ligger i feltet `kvartal`. Den fælles visning kalder derfor seks måneders omsætning for 2. kvartal. Angiv halvår, eller brug et faktisk kvartal. Kilde: sidens nøgletalsfil og dens kildeangivelse, som udtrykkeligt siger første halvår.
-
-## huber-suhner
-
-**Fejl**
-
-- **P1. Nøgletal, seneste kvartal:** De 457,402 mio. CHF er omsætning for første halvår 2026, men vises som 2. kvartal. Sammenligningstallet 445,919 mio. CHF er også et halvår. Kilde: nøgletalsfilens periode og kildeangivelse.
-
-- **P2. Forretningsforklaring:** Radiofrekvens forklares som trådløs overførsel. Radiofrekvente signaler kan også føres gennem kabler og stik, som netop indgår i selskabets produkter. Forklar frekvensområdet uden at afgrænse det til trådløs overførsel.
-
-- **P2. Sprog:** 'luft- og forsvar' mangler 'fart', hvis der menes luftfart og forsvar. Formuleringen 'øge krav til regler, kunder og åbenhed' gør det uklart, hvem der stiller krav til hvem.
-
 ## iren
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## iridium-communications
 
 **Fejl**
 
 - **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Iridium Communicationss samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
-
-## klarna
-
-**Fejl**
-
-- **P1. Tegningens forklaring om renter:** Udsagnet om, at forbrugere, der betaler over tid, betaler renter, er for bredt. Klarna tilbyder også rentefrie delbetalinger. Afgræns rentebetalingen til de relevante finansieringsprodukter. Kilde: [Klarnas egen produktbeskrivelse](https://docs.klarna.com/klarna-network-distribution/interoperability-distribution/distribute-payment-program-enablement/overview/).
 
 ## kodiak-ai
 
@@ -419,12 +493,6 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 - **P2. Risiko:** 'kan undlade at blive rentabelt' lyder som et bevidst valg. Der menes en risiko for ikke at opnå rentabilitet.
 
 - **P2. Indledning og produktforklaring:** Forklaringen af det førerløse system gentages næsten ordret. Gentagelsen afbryder fremdriften, før læseren når frem til kunder og indtjening.
-
-## lpkf-laser-electronics
-
-**Fejl**
-
-- **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'LPKF Laser & Electronicss samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
 
 ## macom
 
@@ -438,17 +506,11 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 - **P2. Risiko:** 'kan undlade at blive rentabelt' giver indtryk af et valg. Der menes, at selskabet måske ikke bliver rentabelt.
 
-## microvision
-
-**Fejl**
-
-- **P2. Risiko, spørgsmål:** Betyder 'ikke kan blive noteret på Nasdaq Global Market' i virkeligheden, at selskabet risikerer ikke at kunne bevare sin notering? Formuleringen får en allerede børsnoteret virksomhed til at lyde som en kommende børsnotering. Kontroller mod den citerede risikofaktor.
-
 ## mntn
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## monolithic-power-systems
 
@@ -462,37 +524,31 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## nextera-energy
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
-
-## nextracker
-
-**Fejl**
-
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## nova
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## nuscale-power
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Produktbeskrivelse og tegningsforklaring:** 'modulene' skal være 'modulerne' begge steder.
 
 ## omada-health
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Produktbeskrivelse, spørgsmål:** Højt kolesterol omtales som et eksisterende tilbud, men senere står der, at programmet planlægges lanceret. Er den første kommercielle lancering sket? Angiv samme status begge steder.
 
 ## ondas-holdings
 
@@ -500,11 +556,13 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 - **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Ondass samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
 
+- **P2. Om tallene:** 'retter til at købe aktier' skal være 'rettigheder til at købe aktier'.
+
 ## opendoor
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Henvisninger under 'Mere fra NewDeal Invest' eller videoer:** `NEWDEAL INVEST · 13.06.2025 Webinar 12. juni kl. 20:00 - Forskellen på teknologi- og valuevirksomheder Om Opendoor Se på Y` Indeholder bindestreg brugt som tankestreg eller semikolon og bryder sidens faste sprogregler.
 
 ## rambus
 
@@ -516,31 +574,21 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## root
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
-
-## sandisk
-
-**Fejl**
-
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Risiko:** 'undlade at få nye, via samarbejdskanalen' er en klodset oversættelse og har et overflødigt komma. Det er risikoen for ikke at kunne tiltrække nye kunder, der skal beskrives.
 
 ## sea
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Risiko:** 'kan undlade at fastholde' og 'kan undlade at forblive rentabelt' fremstiller negative udfald som bevidste valg. Skriv, at selskabet måske ikke kan fastholde brugerne eller overskuddet.
 
-## semtech
-
-**Fejl**
-
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Henvisninger under 'Mere fra NewDeal Invest' eller videoer:** `de tal. Shopees rolle er central i gennemgangen. Uge 33 - Samme tal, modsatte konklusioner ↗ NewDeal Invest · 17.08.2026. D` / `AL INVEST · 13.05.2026 NewDeal Invest: Sea Limited 1Q26 - Increasing our investment! Om Sea Se på YouTube ↗ ▶ NEWDEAL INVES` Indeholder bindestreg brugt som tankestreg eller semikolon og bryder sidens faste sprogregler.
 
 ## serve-robotics
 
@@ -552,19 +600,19 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## sigma-lithium
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## silicon-motion
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Tegningsforklaring, spørgsmål:** 'Fabrikkerne støber chippenes siliciumskiver efter Silicon Motions tegninger' sammenblander fremstilling af selve skiven med fremstilling af kredsløb på den. Beskriv chipproduktion på siliciumskiver. 'Foundry' bør ikke oversættes til støbning i denne forklaring.
 
 ## sivers-semiconductors
 
@@ -572,65 +620,63 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 - **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Sivers Semiconductorss samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
 
+- **P2. Indledning:** 'designe rygraden i intelligent opkobling' er en uklar oversat reklameformulering. Den giver ikke læseren mere viden om produkterne.
+
+- **P2. Kildeafsnit:** Svenske ord som 'årsredovisning' og 'forvaltningsberättelsen' står i den danske brødtekst. Brug dansk beskrivelse af rapport og afsnit, og behold eventuelt originaltitlen i selve linket.
+
+- **P2. Henvisninger under 'Mere fra NewDeal Invest' eller videoer:** `og er ikke en særskilt analyse af dette selskab. Uge 27 - Bygger vi for meget AI? ↗ NewDeal Invest · 26.07.2026. Dateret ko` Indeholder bindestreg brugt som tankestreg eller semikolon og bryder sidens faste sprogregler.
+
 ## sofi
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## solaris-energy-infrastructure
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## soundhound-ai
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Henvisninger under 'Mere fra NewDeal Invest' eller videoer:** `ktiv på software & ai. Artiklen bruges som temabaggrund; den er ikke en særskilt analyse af dette selskab. Uge 33 - Samme` Indeholder bindestreg brugt som tankestreg eller semikolon og bryder sidens faste sprogregler.
 
 ## spire-global
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Indledning:** Kundetyperne og forklaringen af flysporing over havet gentages næsten direkte i de to første afsnit. Saml forklaringen, så der er plads til forskellen på datasalg og Space Services.
 
 ## standard-lithium
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
-
-## super-micro-computer
-
-**Fejl**
-
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## swarmer
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## t1-energy
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Risiko:** 'en amerikansk skattefradrag' har forkert køn. Forklar også ordningen ensartet: 'produktionskredit' og 'skattefradrag' bruges som synonymer uden forklaring.
 
-## taiyo-yuden
-
-**Fejl**
-
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Henvisninger under 'Mere fra NewDeal Invest' eller videoer:** `og er ikke en særskilt analyse af dette selskab. Uge 50 - Fremtiden rykker tættere på ↗ NewDeal Invest · 15.12.2025. Datere` Indeholder bindestreg brugt som tankestreg eller semikolon og bryder sidens faste sprogregler.
 
 ## tower-semiconductor
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Indledning:** 'har ingen produkter af egne' er forkert dansk. Skriv eksempelvis 'har ingen egne chipprodukter'.
+
+- **P2. Henvisninger under 'Mere fra NewDeal Invest' eller videoer:** `ces. Det er forfatterens argument om skifteomkostninger; konklusionerne er ikke en garanti for fremtidige ordrer. Tower S` / `emiconductor - Powering AI From Orbit (Pt.5) ↗ NewDeal Invest · Convequity · 20.` Indeholder bindestreg brugt som tankestreg eller semikolon og bryder sidens faste sprogregler.
 
 ## trilogy-metals
 
@@ -638,43 +684,45 @@ P1: væsentlig tal-, periode- eller funktionsfejl. P2: øvrig dokumentations-, s
 
 - **P2, automatisk fodnote under nøgletallene:** `21-noegletal.js` tilføjer altid s til selskabsnavnet og danner 'Trilogy Metalss samlede indtægter'. Navne, der ender på s, x eller z, skal have apostrof i dansk genitiv. Fejlen ligger i den fælles tekstgenerator.
 
+- **P2. Risiko:** 'kan blive ramt af de risici, som den slags selskaber ofte har' forklarer ingen konkret risiko. Sæt navn på eksempelvis finansiering, tilladelser eller risikoen for, at projekterne ikke bliver til producerende miner.
+
+- **P2. Kildeafsnit:** Begrundelsen om at bruge de første ti risikooverskrifter er en intern metodebemærkning. Den bryder læsningen og forklarer ikke, hvorfor netop de viste risici er væsentlige.
+
 ## uber-tech
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- **P2. Risiko:** 'kan undlade at holde fast i et overskud' lyder som et valg. Beskriv risikoen for, at overskuddet ikke kan fastholdes.
 
 ## umc
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## united-states-antimony
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## upstart
 
 **Fejl**
 
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
-
-## wolfspeed
-
-**Fejl**
-
-- Ingen yderligere fejl registreret i dette checkpoint. Afsnittet er endnu ikke en afsluttet faktuel eller visuel kontrol.
+- Ingen konkrete fejl fundet i den udførte tekst- og kodegennemgang. Den fælles afgrænsning ovenfor gælder også denne side.
 
 ## Fejl på tværs af siderne
 
-- Regnskabskvartaler udledes af kalendermåneden, så forskudte regnskabsår bliver fejlmærket. Halvårsdata vises også som kvartaler.
-- Automatisk tilføjelse af s giver forkerte ejefald ved navne, som allerede ender på s eller x.
-- Flere videohenvisninger bruger bindestreg som tankestreg, og enkelte tekster indeholder semikolon.
-- Gentagne indholdsblokke og identiske id-attributter findes på GlobalFoundries, LPKF og SoftBank.
+- **Perioder:** Nøgletalsscriptet udleder kvartalet af slutdatoens kalendermåned. Det fejlmærker forskudte regnskabskvartaler og viser endda halvår som kvartaler på Horizon Robotics og HUBER+SUHNER.
+- **Gentagelser:** GlobalFoundries, LPKF og SoftBank har hele indholdsblokke to gange og dublerede id'er.
+- **Automatisk sprog:** Fodnoten tilføjer altid s til selskabsnavnet. Det giver forkert ejefald ved navne, der allerede ender på s eller x.
+- **Sprogregler:** Flere video- og artikeltitler bruger bindestreg som tankestreg. Enkelte redaktionelle tekster bruger semikolon.
+- **Oversættelser:** 'kan undlade at' bruges flere steder om manglende evne eller risiko for at mislykkes. Det kan på dansk læses som et bevidst valg. Der forekommer også uforklarede fagord og direkte oversatte slogans.
+- **Tegning og forklaring:** Produkter som servere, telefoner og skærme optræder flere steder som købere. Vis de faktiske kunder. På Dell passer numrene i forklaringen ikke til figurens aktører.
 
-## Udestående kontrol
+## Udestående visuel kontrol
 
-Visuel kontrol ved 360 og 1300 punkter, browserkonsol og netværksfejl er ikke udført. Lokale henvisninger er kontrolleret mod repoets filoversigt uden fund af manglende målfiler. Eksterne links er ikke fuldt kontrolleret. Primærkildeafstemning og tekstgennemgang fortsætter.
+Alle 87 sider mangler browserkontrol ved begge bredder gennem serveren fra `docs/energi-konkurrence`. Kontroller især de tre nøgletalskolonner på mobil og grafer med negative resultater. I den fælles CSS er årstal og kildetekst 11 px, mens negative søjlers tal placeres under søjlen tæt på årstallet. Giver det faktisk overlap eller for lille tekst på 360 punkter? Dette er et kontrolspørgsmål fra koden, ikke en observeret layoutfejl.
+
+Eksterne links og konsol skal ligeledes kontrolleres i browseren. En reservevisning alene er ikke en fejl. Rapporten kan bruges til de dokumenterede fund nu, men må ikke omtales som en afsluttet visuel godkendelse.
