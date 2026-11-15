@@ -313,11 +313,14 @@
     }catch(error){
       window.removeEventListener('error',onRendererError);
       loading.remove();
-      document.documentElement.classList.remove('ndi-live-loading');document.documentElement.classList.add('ndi-live-failed');
+      // Temasider: teksten, tegningerne og kilderne vises fortsat. Kun fondstallene markeres som utilgængelige.
+      const themePage=/\/temaer\//.test(location.pathname);
+      document.documentElement.classList.remove('ndi-live-loading');document.documentElement.classList.add(themePage?'ndi-live-text':'ndi-live-failed');
       document.querySelectorAll('[data-tal],.cf-weight,[data-w]').forEach(e=>{if(e.hasAttribute('data-w'))e.dataset.w='Data kunne ikke hentes';else e.textContent='—'});
-      const note=document.createElement('p');note.className='ndi-live-error';note.setAttribute('role','alert');note.textContent='De aktuelle data kunne ikke hentes. Genindlæs siden for at prøve igen. Der vises ikke gemte kurser som aktuelle tal.';
+      const note=document.createElement('p');note.className='ndi-live-error';note.setAttribute('role','alert');note.textContent=themePage?'Fondens aktuelle tal kunne ikke hentes, så andele og placeringer vises som en streg. Teksten og kilderne nedenfor er uændrede.':'De aktuelle data kunne ikke hentes. Genindlæs siden for at prøve igen. Der vises ikke gemte kurser som aktuelle tal.';
       const retry=document.createElement('button');retry.type='button';retry.className='knap';retry.textContent='Prøv igen';retry.addEventListener('click',()=>location.reload());note.append(document.createElement('br'),retry);
       const main=document.querySelector('main')||document.body;main.prepend(note);
+      if(themePage){const st=document.createElement('style');st.textContent='.ndi-live-text .ftf{display:none}';document.head.append(st)}
       // On company pages, retain only the editorial explanation and its sources.
       // No snapshot charts, holdings or cached numeric cards are revealed.
       if(/\/selskaber\//.test(location.pathname)){
