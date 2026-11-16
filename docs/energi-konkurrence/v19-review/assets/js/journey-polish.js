@@ -1,7 +1,7 @@
 (()=>{'use strict';
  // The preserved homepage emits this message for its Wix host. In a standalone
  // review there is no host, so finish the navigation locally instead.
- if(parent===window)window.addEventListener('message',event=>{
+ window.addEventListener('message',event=>{
   if(event.source!==window||event.origin!==location.origin||event.data?.type!=='ndi-preview-scroll')return;
   const top=event.data.top;
   if(typeof top==='number'&&Number.isFinite(top))window.scrollTo({top:Math.max(0,top-20),behavior:'auto'});

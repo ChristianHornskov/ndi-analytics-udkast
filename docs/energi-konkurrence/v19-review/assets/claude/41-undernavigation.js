@@ -41,7 +41,7 @@
     // Hop i siden går gennem homepage-patch.js, der stopper klikket og sender
     // beskeden ndi-preview-scroll. Uden Wix-vært ruller journey-polish.js til top-20.
     // Her rettes hoppet, så sektionen lander under den sticky navigation.
-    if (window.parent === window) {
+    {
       window.addEventListener('message', function (e) {
         if (e.source !== window || e.origin !== location.origin || !e.data || e.data.type !== 'ndi-preview-scroll') return;
         var top = e.data.top;

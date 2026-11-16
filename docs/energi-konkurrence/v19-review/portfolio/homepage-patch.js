@@ -66,7 +66,7 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Operationelt hov
     notifyHeight();
     setTimeout(()=>{
       const top=target.getBoundingClientRect().top+window.scrollY;
-      parent.postMessage({type:'ndi-preview-scroll',top,height:Math.ceil(document.documentElement.scrollHeight)},'*');
+      const msg={type:'ndi-preview-scroll',top,height:Math.ceil(document.documentElement.scrollHeight)};parent.postMessage(msg,'*');if(parent!==window)window.postMessage(msg,location.origin);
     },120);
   }
   function improve(){
