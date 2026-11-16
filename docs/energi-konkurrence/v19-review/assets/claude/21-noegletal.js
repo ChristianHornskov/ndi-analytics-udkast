@@ -101,7 +101,7 @@
 
     // Design "Midnatsblå" (valgt 13.11.2026): tre nøgletal øverst, to søjlediagrammer, fodnote med kilde.
     var cols = aar.map(function (a) { return { lab: a.etiket || String(a.aar), o: a.omsaetning, r: a.resultat }; })
-      .concat([{ lab: 'LTM', o: t.omsaetning, r: t.resultat, seneste: true }]);
+      .concat([{ lab: '12 mdr.', o: t.omsaetning, r: t.resultat, seneste: true }]);
     var oMax = Math.max.apply(null, cols.map(function (c) { return c.o; }));
     var pMax = Math.max(0, Math.max.apply(null, cols.map(function (c) { return c.r; })));
     var nMax = Math.max(0, -Math.min.apply(null, cols.map(function (c) { return c.r; })));
@@ -129,13 +129,13 @@
         '<div class="cr-mb-metrics">' +
           (udenOms ? maal('Omsætning', 'Ingen', '', 'Selskabet har endnu ingen omsætning') : maal(ON + ' · ' + periode(k), mio(k.omsaetning), 'mio. ' + v, (k.sammeKvartalAaretFoer > 0 ? pct(kv) + ' mod ' + fra : 'Ingen sammenlignelig omsætning året før'))) +
           (mvOk ? maal('Markedsværdi', dk(mv / 1000, 1), 'mia. ' + v, 'Kurs pr. ' + dato(kursDato) + (ak.aktierDato ? ' · Aktieantal pr. ' + dato(ak.aktierDato) : '') + (forhold !== 1 ? ' · ' + dk(forhold, 0) + ' aktier pr. ADS' : '')) +
-          (udenOms || n.omsNavn ? '' : maal('Price/sales', dk(ps, 1), '×', 'Markedsværdi / LTM-omsætning')) : '') +
+          (udenOms || n.omsNavn ? '' : maal('Price/sales', dk(ps, 1), '×', 'Markedsværdi delt med omsætningen de seneste 12 måneder')) : '') +
         '</div>' +
         '<div class="cr-mb-pair' + (udenOms ? ' cr-mb-pair--en' : '') + '">' +
           (udenOms ? '' : '<div class="cr-mb-panel"><h3>' + ON + '</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleOms() + '</div>') +
           '<div class="cr-mb-panel"><h3>Resultat efter skat</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleRes() + '</div>' +
         '</div>' +
-        '<p class="cr-mb-foot">Historiske regnskabstal' + (n.hentet ? ' · samlet ' + dato(n.hentet) : '') + '. Mio. ' + v + '. LTM er de 12 måneder til ' + dato(t.til) + '. ' + (n.omsForkl ? n.omsForkl + ' ' : 'Omsætning er ' + (n.navn ? gen(n.navn) : 'selskabets') + ' samlede indtægter. ') + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : (valutaForskel ? 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ' : '')) +
+        '<p class="cr-mb-foot">Historiske regnskabstal' + (n.hentet ? ' · samlet ' + dato(n.hentet) : '') + '. Mio. ' + v + '. 12 mdr. er de seneste 12 måneder til ' + dato(t.til) + '. ' + (n.omsForkl ? n.omsForkl + ' ' : 'Omsætning er ' + (n.navn ? gen(n.navn) : 'selskabets') + ' samlede indtægter. ') + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : (valutaForskel ? 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ' : '')) +
           'Kilde: <a class="tekstlink" href="' + esc(n.kildeUrl) + '" target="_blank" rel="noopener">' + esc(n.kilde) + '</a>.</p>' +
       '</div>';
 
