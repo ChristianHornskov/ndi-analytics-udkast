@@ -5,7 +5,7 @@
   function dk(v, d) { if (v == null || !isFinite(v)) return 'Ikke tilgængelig'; return v.toLocaleString('da-DK', { minimumFractionDigits: d, maximumFractionDigits: d }).replace('-', '−'); }
   var talSkala = 1, enh = 'mio.';
   function mio(v) { v = v / talSkala; return dk(v, Math.abs(v) < 10 ? 1 : 0); }
-  function pct(v) { return (v > 0 ? '+' : '') + dk(v, 0) + ' %'; }
+  function pct(v) { return (v > 0 ? '+' : '') + dk(v, 1) + ' %'; }
   function dato(s) { var p = s.split('-'); return +p[2] + '.' + +p[1] + '.' + p[0]; }
   function kortDato(s) { var p = s.split('-'); return +p[2] + '.' + +p[1] + '.' + p[0].slice(2); }
   function kvartal(s) { var p = s.split('-'); return Math.ceil(+p[1] / 3) + '. kvt. ' + p[0]; }
