@@ -29,6 +29,7 @@ with sync_playwright() as p:
   text=render(f.stem,live=False);assert 'NaN' not in text and 'Infinity' not in text,f.stem
  checks.append('all local company datasets render without NaN')
  # Actual pages: mobile/desktop, dark/light tables, no live provider required.
+ page.route('**/*',lambda route:route.continue_() if route.request.url.startswith('http://127.0.0.1:') else route.abort())
  for width in [390,792,1440]:
   page.set_viewport_size({'width':width,'height':950})
   for theme in ['fintech','platforme','raastoffer','software']:
