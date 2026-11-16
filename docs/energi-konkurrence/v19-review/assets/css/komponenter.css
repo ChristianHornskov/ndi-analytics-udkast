@@ -821,7 +821,7 @@ main { display: block; max-width: calc(var(--content-max) + 2 * var(--page-pad))
 .legende-farve[data-trin="12"]{background:#5F7389}.ring-seg[data-trin="12"]{stroke:#5F7389}
 
 
-.sidefod-tekst { display: grid; gap: var(--sp-2); min-width: 0; }
+.sidefod-tekst { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-2); min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
 .sidefod-tekst p { margin: 0; }
 .sidefod-kilde { font-size: var(--fs-13); color: var(--c-text-2); }
 
