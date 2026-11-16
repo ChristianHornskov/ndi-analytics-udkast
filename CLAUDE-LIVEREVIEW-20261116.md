@@ -103,6 +103,29 @@ Kildefilerne i noter-repoet (`reviews/2026-11-13-grok/*/side/`) er synkroniseret
 - Meget store beløb vises nu i mia. i stedet for mio. Det gælder Samsung, SoftBank og Advantest. Før stod der fx "171.499.470 mio. KRW", nu står der "171.499 mia. KRW".
 - Kildelinjen havde forkerte ejefald og et svensk ord: "Astera Labss", "FuboTV's", "LPKF's" og "årsredovisning". Det er rettet i dataene på 28 sider, og ejefaldene bruger nu samme apostrof overalt.
 
+## D. Anden runde 16.11 kl. 16 (gennemgang af den udgivne version 9b08124e)
+
+Den udgivne version indeholder alle rettelser fra første runde. Fanerne på porteføljesiden ruller korrekt i en ramme, og nøgletallene hentes fra Azure og vises i mia., hvor det er nødvendigt.
+
+Rettelserne fra anden runde ligger på grenen `claude/live-runde2-20261116`, som bygger direkte på `9b08124e`. Codex skal:
+
+1. **Udgive grenen som ny frontend-release** på samme måde som før. Ændrede filer: `widget/` og `portfolio/` (homepage-patch.js, simple-refinement.js, review.js, evidence.js, index.html, portfolio.js), `assets/js/` (v18-portefolje.js, v18-afkast.js, review-widget.js) og `data/portefolje.js`/`.json`.
+2. **Genudgive review-data** fra `review-input/homepage-source/` (geography.json og highs.json). Noterne om hovedsæder stod på engelsk på porteføljesiden, fx "Group headquarters Icheon, not US subsidiary". Alle 30 noter og definitionen er nu på dansk. Kursnoterne (Honeywell, IPO'er, SPAC) har fået punktum i stedet for semikolon.
+3. **Sætte et link til grafen på newdealinvest.dk**, hvis siden skal kunne findes fra forsiden i aften. Hverken forsiden eller /portefoljer linker til /graf-review i dag. Siden kan kun nås ved at skrive adressen.
+
+Rettet i anden runde:
+- Nasdaq-noten på forside og portefølje er skrevet om til almindeligt dansk uden semikolon.
+- "Emissions- og indløsningstillæg på henholdsvis 0,25 % og 0,25 %" hedder nu "Tillægget ved køb og salg på 0,25 % hver gang", når satserne er ens.
+- Engelske ord i omkostningsboksen ("KID’s entry-omkostning", "Investorens entry/exit") er erstattet af "Tillæg ved køb/salg".
+- "Alle 41 nedtures bunde" hedder nu "Bunden i alle 41 nedture".
+- Metodeteksten er skrevet om, hvor den var teknisk eller havde semikolon: "Datofællesskab ... kontrolleres maskinelt", "Indikativ Aktuel IV", "principal executive office", "Azure-feed", "Følgende observationer er udeladt ...: Ingen. Ingen er erstattet".
+- Tech-sidens risikoafsnit siger nu "klassen" og "Valg af klasse og skat" i stedet for "afdelingen".
+
+Til Codex' vurdering (ikke rettet):
+- SK hynix står som "Ikke klassificeret" i sektorfordelingen. Det bør være Teknologi. Det kommer fra dataleverandøren.
+- Linjen "Beregninger: review-2026-09-23" i metodeafsnittet er en intern versionsbetegnelse og kan fjernes.
+- 2023-rækken i porteføljens månedskalender viser "Intet grundlag" for september, mens forsidens tabel viser 0,9 %.
+
 ## C. Til Christians stillingtagen (ikke rettet)
 - **Price/sales** vises i nøgletalsboksen på de 87 nye selskabssider. Christian har tidligere sagt, at værdiansættelsestal som P/E ikke skal vises. Skal price/sales også fjernes?
 - **De 386 ældre selskabssider:** Beskrivelserne øverst er i orden, men korte og ensartede. De er ikke skrevet om. Det gælder især de 96 sider for selskaber, fonden ikke længere ejer.
