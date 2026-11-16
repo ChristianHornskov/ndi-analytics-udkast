@@ -1,4 +1,4 @@
-/* Nye forklaringer på temasiderne, november 2026 */
+/* Nye forklaringer pÃ¥ temasiderne, november 2026 */
 .cf-kort{padding:22px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);margin-top:22px}
 .cf-k{margin:0 0 10px;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:#83acfa}
 .cf-note{margin:14px 0 0;font-size:.88rem;color:#a9b3bf;line-height:1.5}
@@ -23,3 +23,24 @@
 .cf-tabel td:first-child{width:24%;color:#c3cad3}.cf-tal td:last-child,.cf-tal th:last-child{text-align:right;white-space:nowrap}
 .cf-sum td{font-weight:700;border-top:2px solid rgba(255,255,255,.25)}
 @media (max-width:560px){.cf-tabel thead{display:none}.cf-tabel,.cf-tabel tbody,.cf-tabel tr,.cf-tabel td{display:block;width:100%}.cf-tabel tr{border-top:1px solid rgba(255,255,255,.12);padding:8px 0}.cf-tabel td{border:0;padding:3px 0;text-align:left!important;white-space:normal!important}.cf-tabel td:first-child{font-weight:700;color:#e6e8ed}.cf-tabel td[data-l]::before{content:attr(data-l) ": ";color:#a9b3bf;font-size:.85rem}}
+
+/* Samme forklaringer skal være læsbare i begge farvetemaer. */
+html[data-tema="lys"] .cf-kort{border-color:#c8d0db;background:#f1f4f8}
+html[data-tema="lys"] .cf-k{color:#285ca3}
+html[data-tema="lys"] .cf-note,
+html[data-tema="lys"] .cf-tabel th,
+html[data-tema="lys"] .cf-tabel td[data-l]::before{color:#48576b}
+html[data-tema="lys"] .cf-tabel td:first-child{color:#27364a}
+html[data-tema="lys"] .cf-tabel th,
+html[data-tema="lys"] .cf-tabel td,
+html[data-tema="lys"] .cf-tabel tr{border-color:#c8d0db}
+html[data-tema="lys"] .cf-trin button{color:#27364a;background:#f1f4f8;border-color:#8c9bac}
+html[data-tema="lys"] .cf-trin button[aria-pressed="true"]{background:#285ca3;border-color:#285ca3;color:#fff}
+html[data-tema="lys"] .cf-bar{background:#dbe2eb}
+html[data-tema="lys"] .cf-bar::after{background:#53647a}
+html[data-tema="lys"] .cf-v.neg{color:#a12c24}
+@media(max-width:560px){
+ .cf-tabel td:first-child{width:100%;margin:4px 0 8px}
+ .cf-tabel td[data-l]{padding:5px 0}
+ .cf-tabel td[data-l]::before{display:block;margin-bottom:2px}
+}

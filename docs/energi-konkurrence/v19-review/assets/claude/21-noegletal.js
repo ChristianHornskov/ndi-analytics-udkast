@@ -57,7 +57,7 @@
   }
 
   /* Aktiens tal hentes fra fondens validerede kursdata (samme kilde som kursgrafen), så alle aktietal har samme dato.
-     Mangler de, bruges kursen fra datafilen. */
+     Mangler de, vises ingen lokal reservekurs eller kursbaserede nøgletal. */
   function live(slug) {
     var s = window.NDI_LIVE;
     try {
@@ -83,8 +83,11 @@
     var v = n.valuta, aar = n.aar.slice(-4), t = n.ttm, k = n.kvartal, ak = n.aktie;
     var smal = boks.clientWidth < 600;
     var L = live(boks.getAttribute('data-noegletal'));
-    var kurs = L && L.valuta === v ? L.kurs : ak.kurs, kursDato = L && L.valuta === v ? L.dato : ak.dato;
-    var mv = ak.aktier ? ak.aktier * kurs / 1e6 : ak.markedsvaerdi;
+    var kurs = L && L.valuta === v ? L.kurs : NaN, kursDato = L ? L.dato : null;
+    // aktier er ordinære aktier; den noterede ADS repræsenterer adsForhold af dem.
+    var forhold = n.adsForhold == null ? 1 : Number(n.adsForhold);
+    var mv = Number.isFinite(forhold) && forhold > 0 && Number.isFinite(ak.aktier) && ak.aktier > 0
+      ? ak.aktier / forhold * kurs / 1e6 : NaN;
     var ps = mv / t.omsaetning;
     /* Handles aktien i en anden valuta end regnskabet (fx ADR i USD og regnskab i NTD), kan markedsværdi og
        price/sales ikke regnes uden omregning. Så vises de ikke, og kursen vises i sin egen valuta. */
@@ -125,14 +128,14 @@
       '<div class="cr-mb">' +
         '<div class="cr-mb-metrics">' +
           (udenOms ? maal('Omsætning', 'Ingen', '', 'Selskabet har endnu ingen omsætning') : maal(ON + ' · ' + periode(k), mio(k.omsaetning), 'mio. ' + v, pct(kv) + ' mod ' + fra)) +
-          (mvOk ? maal('Markedsværdi', dk(mv / 1000, 1), 'mia. ' + v, 'Aktier × kurs · ' + dato(kursDato)) +
+          (mvOk ? maal('Markedsværdi', dk(mv / 1000, 1), 'mia. ' + v, 'Kurs pr. ' + dato(kursDato) + (ak.aktierDato ? ' · Aktieantal pr. ' + dato(ak.aktierDato) : '') + (forhold !== 1 ? ' · ' + dk(forhold, 0) + ' aktier pr. ADS' : '')) +
           (udenOms || n.omsNavn ? '' : maal('Price/sales', dk(ps, 1), '×', 'Markedsværdi / LTM-omsætning')) : '') +
         '</div>' +
         '<div class="cr-mb-pair' + (udenOms ? ' cr-mb-pair--en' : '') + '">' +
           (udenOms ? '' : '<div class="cr-mb-panel"><h3>' + ON + '</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleOms() + '</div>') +
           '<div class="cr-mb-panel"><h3>Resultat efter skat</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleRes() + '</div>' +
         '</div>' +
-        '<p class="cr-mb-foot">Mio. ' + v + '. LTM er de 12 måneder til ' + dato(t.til) + '. ' + (n.omsForkl ? n.omsForkl + ' ' : 'Omsætning er ' + (n.navn ? gen(n.navn) : 'selskabets') + ' samlede indtægter. ') + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : (valutaForskel ? 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ' : '')) +
+        '<p class="cr-mb-foot">Historiske regnskabstal' + (n.hentet ? ' · samlet ' + dato(n.hentet) : '') + '. Mio. ' + v + '. LTM er de 12 måneder til ' + dato(t.til) + '. ' + (n.omsForkl ? n.omsForkl + ' ' : 'Omsætning er ' + (n.navn ? gen(n.navn) : 'selskabets') + ' samlede indtægter. ') + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : (valutaForskel ? 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ' : '')) +
           'Kilde: <a class="tekstlink" href="' + n.kildeUrl + '" target="_blank" rel="noopener">' + n.kilde + '</a>.</p>' +
       '</div>';
 
