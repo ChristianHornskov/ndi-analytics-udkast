@@ -11,7 +11,7 @@
   /* Selskabernes regnskabskvartaler følger ikke altid kalenderen. Perioden navngives derfor efter slutdatoen. */
   function periode(k) { return (k.periode === 'halvår' ? 'Halvår' : 'Kvartal') + ' til ' + dato(k.til); }
   function gen(x) { return /[sxz]$/i.test(x) ? x + '\u2019' : x + 's'; }
-  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;'); }
 
   /* Ét samlet diagram: omsætning øverst og resultat efter skat nederst i de samme kolonner.
      Hver række har sin egen skala. De seneste 12 måneder står i en ramme for sig. */
@@ -127,7 +127,7 @@
     boks.innerHTML =
       '<div class="cr-mb">' +
         '<div class="cr-mb-metrics">' +
-          (udenOms ? maal('Omsætning', 'Ingen', '', 'Selskabet har endnu ingen omsætning') : maal(ON + ' · ' + periode(k), mio(k.omsaetning), 'mio. ' + v, pct(kv) + ' mod ' + fra)) +
+          (udenOms ? maal('Omsætning', 'Ingen', '', 'Selskabet har endnu ingen omsætning') : maal(ON + ' · ' + periode(k), mio(k.omsaetning), 'mio. ' + v, (k.sammeKvartalAaretFoer > 0 ? pct(kv) + ' mod ' + fra : 'Ingen sammenlignelig omsætning året før'))) +
           (mvOk ? maal('Markedsværdi', dk(mv / 1000, 1), 'mia. ' + v, 'Kurs pr. ' + dato(kursDato) + (ak.aktierDato ? ' · Aktieantal pr. ' + dato(ak.aktierDato) : '') + (forhold !== 1 ? ' · ' + dk(forhold, 0) + ' aktier pr. ADS' : '')) +
           (udenOms || n.omsNavn ? '' : maal('Price/sales', dk(ps, 1), '×', 'Markedsværdi / LTM-omsætning')) : '') +
         '</div>' +
@@ -136,7 +136,7 @@
           '<div class="cr-mb-panel"><h3>Resultat efter skat</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleRes() + '</div>' +
         '</div>' +
         '<p class="cr-mb-foot">Historiske regnskabstal' + (n.hentet ? ' · samlet ' + dato(n.hentet) : '') + '. Mio. ' + v + '. LTM er de 12 måneder til ' + dato(t.til) + '. ' + (n.omsForkl ? n.omsForkl + ' ' : 'Omsætning er ' + (n.navn ? gen(n.navn) : 'selskabets') + ' samlede indtægter. ') + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : (valutaForskel ? 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ' : '')) +
-          'Kilde: <a class="tekstlink" href="' + n.kildeUrl + '" target="_blank" rel="noopener">' + n.kilde + '</a>.</p>' +
+          'Kilde: <a class="tekstlink" href="' + esc(n.kildeUrl) + '" target="_blank" rel="noopener">' + esc(n.kilde) + '</a>.</p>' +
       '</div>';
 
     // Aktiens tal hører til kurskortet og flyttes derind, når det findes.
@@ -158,12 +158,22 @@
       placerAktie.vagt.observe(document.body, { childList: true, subtree: true });
     }
   }
+  var T = null;
   function start() {
-    var T = window.NDI_NOEGLETAL || {};
+    if (!T) return;
     [].forEach.call(document.querySelectorAll('.cr-noegletal[data-noegletal]'), function (b) {
-      var n = T[b.getAttribute('data-noegletal')]; if (n) byg(b, n);
+      var n = T[b.getAttribute('data-noegletal')]; if (n) byg(b, n); else b.textContent = 'Regnskabstal er endnu ikke tilgængelige for dette selskab.';
     });
   }
   document.addEventListener('ndi:live', start); // kursdata kommer efter siden er indlæst
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+  function load() {
+    document.querySelectorAll('.cr-noegletal').forEach(function (b) { b.textContent = 'Henter regnskabstal…'; });
+    Promise.resolve(window.NDI_KEYFIGURES_READY).then(function (data) {
+      if (!data) throw new Error('Missing Azure figures');
+      T = data; start();
+    }).catch(function () {
+      document.querySelectorAll('.cr-noegletal').forEach(function (b) { b.textContent = 'Regnskabstallene kan ikke hentes lige nu. Prøv at genindlæse siden.'; });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', load); else load();
 })();
