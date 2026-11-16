@@ -87,6 +87,25 @@ Alle knapper på de 12 temasider, forsiden, porteføljen og tech er klikket igen
   - "LTM" er blevet til "12 mdr."
   - Forklaringen "Markedsværdi / LTM-omsætning" er blevet til "Markedsværdi delt med omsætningen de seneste 12 måneder".
 
+### B5. Fuld gennemlæsning af alle sider (anden runde)
+Alle 473 selskabssider, de 12 temasider, tech, alle-selskaber, forsiden og porteføljen er nu læst igennem. Rettelserne ligger i de senere commits på grenen.
+
+- **18 selskabssider**, boksen "Hvad er det vigtige at forstå?": begge tekster er skrevet om fra AI-dansk til almindeligt dansk. Det gælder AppLovin, Babcock & Wilcox, Carvana, Cerebras, Ford, GlobalFoundries, HUBER+SUHNER, Kioxia, LPKF, Samsung, Sea, Sivers, SK hynix, SoftBank, SoundHound, T1 Energy, Tesla og Tower.
+- **Joby Aviation**: beskrivelsen handlede kun om datterselskabet Blade. Nu står det først, at Joby udvikler en elektrisk lufttaxa.
+- **USA Rare Earth**: boksen sagde "ingen kunder", men selskabet har salg gennem Less Common Metals. Det er rettet.
+- **Tal skrevet i hele dollar** (fx "496.072.000 USD") er ændret til mio. på Camtek, Cohu, Enphase, Eos og First Solar.
+- **Enkelte sætninger på omkring 35 sider**, fx:
+  - Agility, Dow og Fortinet: metasætninger.
+  - MARA og Riot: jargon.
+  - TSMC: gentagelse.
+  - SK hynix: det ødelagte ord "produkterneet".
+  - Broadcom, Ballard, Ciena, Coupang, Dell, HUBER+SUHNER, Iridium, Klarna, Rocket Lab, Opendoor, Semtech, Serve, Solaris, Silicon Motion, Sandisk, Uber og Wolfspeed: stive eller oversatte risikotekster.
+  - NVIDIA og Ciena: "programmel" er blevet til "software".
+- **Temaer**: fintech ("redaktionelle opdeling") og platforme ("stat-figurerne").
+- **Kontrol**: Der er ikke flere semikoloner eller tankestreger i den synlige tekst på nogen side. Undtaget er titler på eksterne videoer og indlæg, som står uændret.
+
+**Bemærk:** Rettelserne i de 87 nye selskabssider er lavet direkte i `selskaber/*.html` på denne gren. Kildefilerne i noter-repoet (`reviews/2026-11-13-grok/*/side/`) er ikke opdateret tilsvarende. Bygges siderne igen derfra, skal rettelserne føres med over.
+
 ## C. Til Christians stillingtagen (ikke rettet)
 - **Price/sales** vises i nøgletalsboksen på de 87 nye selskabssider. Christian har tidligere sagt, at værdiansættelsestal som P/E ikke skal vises. Skal price/sales også fjernes?
 - **De 386 ældre selskabssider:** Beskrivelserne øverst er i orden, men korte og ensartede. De er ikke skrevet om. Det gælder især de 96 sider for selskaber, fonden ikke længere ejer.
