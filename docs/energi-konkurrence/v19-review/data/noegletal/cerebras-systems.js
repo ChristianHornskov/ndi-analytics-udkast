@@ -54,6 +54,6 @@ window.NDI_NOEGLETAL["cerebras-systems"]={
   "kilde": "10-Q 3. kvt. 2026, forsiden (klasse A, B og N)"
  },
  "hentet": "2026-11-14",
- "kilde": "Cerebras' regnskaber hos SEC",
+ "kilde": "Cerebras’ regnskaber hos SEC",
  "kildeUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0002021728"
 };

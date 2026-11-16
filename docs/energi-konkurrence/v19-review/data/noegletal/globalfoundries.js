@@ -5,7 +5,7 @@
 window.NDI_NOEGLETAL=window.NDI_NOEGLETAL||{};
 window.NDI_NOEGLETAL["globalfoundries"]={
  "skema":2,"navn":"GlobalFoundries","ticker":"GFS","valuta":"USD","hentet":"2026-11-14",
- "kilde":"GlobalFoundries' regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001709048&type=20-F",
+ "kilde":"GlobalFoundries’ regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001709048&type=20-F",
  "aar":[
   {"aar":2022,"til":"2022-12-31","omsaetning":8108.000,"resultat":1446.000,"kilde":"20-F 2024"},
   {"aar":2023,"til":"2023-12-31","omsaetning":7392.000,"resultat":1018.000,"kilde":"20-F 2025"},

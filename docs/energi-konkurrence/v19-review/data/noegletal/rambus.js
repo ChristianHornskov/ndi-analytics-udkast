@@ -47,6 +47,6 @@ window.NDI_NOEGLETAL["rambus"]={
   "kilde": "10-Q 3. kvt. 2026, forsiden"
  },
  "hentet": "2026-11-14",
- "kilde": "Rambus' regnskaber hos SEC",
+ "kilde": "Rambus’ regnskaber hos SEC",
  "kildeUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000917273"
 };

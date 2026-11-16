@@ -8,7 +8,7 @@ window.NDI_NOEGLETAL["dell-tech"]={
  "ticker": "DELL",
  "valuta": "USD",
  "hentet": "2026-11-13",
- "kilde": "Dell Technologies regnskaber hos SEC",
+ "kilde": "Dell Technologies’ regnskaber hos SEC",
  "kildeUrl": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001571996&type=10-",
  "aar": [
   {

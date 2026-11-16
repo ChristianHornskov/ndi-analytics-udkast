@@ -5,7 +5,7 @@
 window.NDI_NOEGLETAL=window.NDI_NOEGLETAL||{};
 window.NDI_NOEGLETAL["sivers-semiconductors"]={
  "skema":2,"navn":"Sivers Semiconductors","ticker":"SIVE","valuta":"SEK","hentet":"2026-11-13",
- "kilde":"Sivers Semiconductors' årsredovisning og delårsrapport","kildeUrl":"https://www.sivers-semiconductors.com/investors/",
+ "kilde":"Sivers Semiconductors’ årsrapporter og delårsrapport","kildeUrl":"https://www.sivers-semiconductors.com/investors/",
  "aar":[
   {"aar":2022,"til":"2022-12-31","omsaetning":132.607,"resultat":-86.384,"kilde":"K1 femårsöversikt (ikke omregnet, ikke fuldt sammenlignelig)"},
   {"aar":2023,"til":"2023-12-31","omsaetning":236.334,"resultat":-157.384,"kilde":"K2 resultaträkning"},

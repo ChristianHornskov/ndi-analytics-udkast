@@ -2,7 +2,7 @@
    Læser window.NDI_NOEGLETAL[slug] og bygger blokken i <div class="cr-noegletal" data-noegletal="slug">.
    Kun historiske tal. Ingen forventninger fra selskabet eller analytikere. */
 (function () {
-  function dk(v, d) { return v.toLocaleString('da-DK', { minimumFractionDigits: d, maximumFractionDigits: d }).replace('-', '−'); }
+  function dk(v, d) { if (v == null || !isFinite(v)) return 'Ikke tilgængelig'; return v.toLocaleString('da-DK', { minimumFractionDigits: d, maximumFractionDigits: d }).replace('-', '−'); }
   function mio(v) { return dk(v, Math.abs(v) < 10 ? 1 : 0); }
   function pct(v) { return (v > 0 ? '+' : '') + dk(v, 0) + ' %'; }
   function dato(s) { var p = s.split('-'); return +p[2] + '.' + +p[1] + '.' + p[0]; }

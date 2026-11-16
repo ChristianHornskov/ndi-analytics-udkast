@@ -4,7 +4,7 @@
 window.NDI_NOEGLETAL=window.NDI_NOEGLETAL||{};
 window.NDI_NOEGLETAL["fubotv"]={
  "skema":2,"navn":"FuboTV","ticker":"FUBO","valuta":"USD","hentet":"2026-11-13",
- "kilde":"FuboTV's regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001484769&type=10-",
+ "kilde":"FuboTVs regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001484769&type=10-",
  "aar":[
   {"aar":2023,"etiket":"2022/23","til":"2023-09-30","omsaetning":3845.619,"resultat":-172.320,"kilde":"8-K/A Exhibit 99.3"},
   {"aar":2024,"etiket":"2023/24","til":"2024-09-28","omsaetning":4219.630,"resultat":-159.053,"kilde":"8-K/A Exhibit 99.3"},

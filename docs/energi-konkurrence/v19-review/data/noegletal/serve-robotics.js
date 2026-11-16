@@ -4,7 +4,7 @@
 window.NDI_NOEGLETAL=window.NDI_NOEGLETAL||{};
 window.NDI_NOEGLETAL["serve-robotics"]={
  "skema":2,"navn":"Serve Robotics","ticker":"SERV","valuta":"USD","hentet":"2026-11-13",
- "kilde":"Serve Robotics regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001832483&type=10-",
+ "kilde":"Serve Robotics’ regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001832483&type=10-",
  "aar":[
   {"aar":2022,"til":"2022-12-31","omsaetning":0.108,"resultat":-21.855,"kilde":"10-K 2023"},
   {"aar":2023,"til":"2023-12-31","omsaetning":0.208,"resultat":-24.814,"kilde":"10-K 2024"},

@@ -4,7 +4,7 @@
 window.NDI_NOEGLETAL=window.NDI_NOEGLETAL||{};
 window.NDI_NOEGLETAL["comstock-resources"]={
  "skema":2,"navn":"Comstock Resources","ticker":"CRK","valuta":"USD","hentet":"2026-11-13",
- "kilde":"Comstock Resources' regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000023194&type=10-",
+ "kilde":"Comstock Resources’ regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000023194&type=10-",
  "aar":[
   {"aar":2022,"til":"2022-12-31","omsaetning":3628.397,"resultat":1124.868,"kilde":"10-K 2024"},
   {"aar":2023,"til":"2023-12-31","omsaetning":1565.234,"resultat":211.117,"kilde":"10-K 2025"},

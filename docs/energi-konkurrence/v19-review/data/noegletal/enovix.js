@@ -4,7 +4,7 @@
 window.NDI_NOEGLETAL=window.NDI_NOEGLETAL||{};
 window.NDI_NOEGLETAL.enovix={
  "skema":2,"navn":"Enovix","ticker":"ENVX","valuta":"USD","hentet":"2026-11-14",
- "kilde":"Enovix' regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001828318&type=10-",
+ "kilde":"Enovix’ regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001828318&type=10-",
  "aar":[
   {"aar":2022,"etiket":"2022","til":"2023-01-01","omsaetning":6.202,"resultat":-51.622,"kilde":"10-K 2024 og 10-K 2023"},
   {"aar":2023,"etiket":"2023","til":"2023-12-31","omsaetning":7.644,"resultat":-214.071,"kilde":"10-K 2025 og 10-K 2024"},

@@ -4,7 +4,7 @@
 window.NDI_NOEGLETAL=window.NDI_NOEGLETAL||{};
 window.NDI_NOEGLETAL["trilogy-metals"]={
  "skema":2,"navn":"Trilogy Metals","ticker":"TMQ","valuta":"USD","hentet":"2026-11-13",
- "kilde":"Trilogy Metals' regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001543418&type=10-",
+ "kilde":"Trilogy Metals’ regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001543418&type=10-",
  "aar":[
   {"aar":2022,"etiket":"2021/22","til":"2022-11-30","omsaetning":0,"resultat":-24.257,"kilde":"10-K 2023"},
   {"aar":2023,"etiket":"2022/23","til":"2023-11-30","omsaetning":0,"resultat":-14.951,"kilde":"10-K 2025"},

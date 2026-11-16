@@ -4,7 +4,7 @@
 window.NDI_NOEGLETAL=window.NDI_NOEGLETAL||{};
 window.NDI_NOEGLETAL["ondas-holdings"]={
  "skema":2,"navn":"Ondas","ticker":"ONDS","valuta":"USD","hentet":"2026-11-13",
- "kilde":"Ondas' regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001646188&type=10-",
+ "kilde":"Ondas’ regnskaber hos SEC","kildeUrl":"https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001646188&type=10-",
  "aar":[
   {"aar":2023,"til":"2023-12-31","omsaetning":15.691,"resultat":-46.359,"kilde":"10-K 2024"},
   {"aar":2024,"til":"2024-12-31","omsaetning":7.193,"resultat":-42.419,"kilde":"10-K 2025"},
