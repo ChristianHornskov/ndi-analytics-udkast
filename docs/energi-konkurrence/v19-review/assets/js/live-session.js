@@ -1,6 +1,29 @@
 /* One validated Azure release per page. No embedded snapshot is a live fallback. */
 (function () {
   'use strict';
+  // Public X integrations are temporarily paused. The curator and stored posts remain intact.
+  window.NDI_X_ENABLED = false;
+  if (!window.NDI_X_ENABLED) {
+    const style=document.createElement('style');
+    style.textContent='[data-x-tema],section.xs,.rm-x,.sx-mads-posts,.rm-grid-x,.ndi-x-samlet,.x-embed,.ndi-paused-x{display:none!important}';
+    document.head.append(style);
+    function hidePausedX(){
+      document.querySelectorAll('[data-x-tema],section.xs,.rm-x,.sx-mads-posts,.rm-grid-x,.ndi-x-samlet,.x-embed').forEach(node=>{
+        let box=node;
+        const section=node.closest('section');
+        if(section&&!section.querySelector('[data-youtube],[data-video],[data-yt],iframe[src*="youtube"]'))box=section;
+        const fold=box.closest('details');if(fold&&!fold.querySelector('[data-youtube],[data-video],[data-yt]'))box=fold;
+        box.classList.add('ndi-paused-x');
+        if(box.id)document.querySelectorAll('a[href="#'+CSS.escape(box.id)+'"]').forEach(a=>a.classList.add('ndi-paused-x'));
+        if(section&&section.id&&section.classList.contains('ndi-paused-x'))document.querySelectorAll('a[href="#'+CSS.escape(section.id)+'"]').forEach(a=>a.classList.add('ndi-paused-x'));
+      });
+    }
+    document.addEventListener('DOMContentLoaded',()=>{
+      hidePausedX();let queued=false;
+      new MutationObserver(()=>{if(!queued){queued=true;requestAnimationFrame(()=>{queued=false;hidePausedX()})}}).observe(document.body,{childList:true,subtree:true});
+    },{once:true});
+    document.addEventListener('ndi:live',hidePausedX);
+  }
   const BASE='https://ndigrafdatab5174313.blob.core.windows.net/graph/review-data-v1/';
   const GRAPH='https://ndigrafdatab5174313.blob.core.windows.net/graph/';
   const ROOT=new URL('../../',document.currentScript.src).href;
@@ -283,7 +306,7 @@
     try{
       const session=await ready;
       const metadata=node=>/(^|\/)data\//.test(node.dataset.ndiSrc||'')||(node.dataset.ndiSrc||'').includes('/valg.js');
-      const skip=node=>/market-supplement\.js|data\/review-funds\.js|data\/regnskab\.js|data\/kurs\/|assets\/js\/kursgraf\.js/.test(node.dataset.ndiSrc||'');
+      const skip=node=>/market-supplement\.js|data\/review-funds\.js|data\/regnskab\.js|data\/kurs\/|assets\/js\/kursgraf\.js/.test(node.dataset.ndiSrc||'') || (!window.NDI_X_ENABLED && /(?:x-tema|x-curated)\.js(?:\?|$)/.test(node.dataset.ndiSrc||''));
       // Fetch classic core scripts concurrently, but execute them in the exact
       // dependency order below. Optional media remains lazy and outside this list.
       const preloaded=new Set();
@@ -310,7 +333,7 @@
       document.dispatchEvent(new CustomEvent('ndi:live',{detail:session}));
       // No extra click and no polling: install the existing scroll observers
       // after the core page is visible, retaining media-script order.
-      void loadMedia(queue.filter(optionalMedia));
+      void loadMedia(queue.filter(n=>optionalMedia(n)&&!skip(n)));
     }catch(error){
       window.removeEventListener('error',onRendererError);
       loading.remove();

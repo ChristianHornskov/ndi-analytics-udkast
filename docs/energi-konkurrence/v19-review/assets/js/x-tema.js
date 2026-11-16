@@ -2,6 +2,7 @@
 
 (function () {
   'use strict';
+  if (window.NDI_X_ENABLED === false) return;
   var FEED_URL = 'https://ndigrafdatab5174313.blob.core.windows.net/x-curated/latest.json';
   var VIS = 6;
   // Only Mads' own authored posts are scoped. A repost uses its original author.
