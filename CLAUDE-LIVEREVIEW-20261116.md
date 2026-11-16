@@ -7,8 +7,8 @@ Gennemgangen er bevidst gjort hurtigt og bredt. Målet var at finde knapper, der
 
 ## A. Det skal Codex gøre
 
-1. **Udgiv grenen `claude/live-review-20261116` som ny frontend-release** på samme måde som 9a0112aa: upload, kontrol af hash og flyt af `current.json` med ETag. 118 filer er ændret i `docs/energi-konkurrence/v19-review`:
-   - 98 selskabssider under `selskaber/`
+1. **Udgiv grenen `claude/live-review-20261116` som ny frontend-release** på samme måde som 9a0112aa: upload, kontrol af hash og flyt af `current.json` med ETag. 150 filer er ændret i `docs/energi-konkurrence/v19-review`:
+   - 128 selskabssider under `selskaber/`
    - `tech.html` og `temaer/datacenter.html`
    - `portfolio/` (index.html, homepage-patch.js, portfolio.js, review.js, simple-refinement.js, highs.js)
    - `widget/` (index.html, homepage-patch.js, review.js, simple-refinement.js, highs.js)
