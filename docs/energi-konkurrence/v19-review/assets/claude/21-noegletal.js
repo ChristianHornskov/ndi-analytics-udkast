@@ -3,7 +3,8 @@
    Kun historiske tal. Ingen forventninger fra selskabet eller analytikere. */
 (function () {
   function dk(v, d) { if (v == null || !isFinite(v)) return 'Ikke tilgængelig'; return v.toLocaleString('da-DK', { minimumFractionDigits: d, maximumFractionDigits: d }).replace('-', '−'); }
-  function mio(v) { return dk(v, Math.abs(v) < 10 ? 1 : 0); }
+  var talSkala = 1, enh = 'mio.';
+  function mio(v) { v = v / talSkala; return dk(v, Math.abs(v) < 10 ? 1 : 0); }
   function pct(v) { return (v > 0 ? '+' : '') + dk(v, 0) + ' %'; }
   function dato(s) { var p = s.split('-'); return +p[2] + '.' + +p[1] + '.' + p[0]; }
   function kortDato(s) { var p = s.split('-'); return +p[2] + '.' + +p[1] + '.' + p[0].slice(2); }
@@ -40,7 +41,7 @@
       var cx = venstre + slot * i + slot / 2, x = cx - bw / 2;
       if (c.seneste) g += '<rect class="cr-nt-ramme" x="' + (venstre + slot * i + 3) + '" y="' + (oTop - 34) + '" width="' + (slot - 6) + '" height="' + (H - oTop + 30) + '" rx="10"/>';
       var yO = yo(c.o);
-      g += '<g class="cr-nt-punkt"><title>' + c.lab + ': omsætning ' + mio(c.o) + ' mio. ' + v + ', resultat ' + mio(c.r) + ' mio. ' + v + '</title>' +
+      g += '<g class="cr-nt-punkt"><title>' + c.lab + ': omsætning ' + mio(c.o) + ' ' + enh + ' ' + v + ', resultat ' + mio(c.r) + ' ' + enh + ' ' + v + '</title>' +
         bar(x, yO, oBase, 'cr-nt-bar' + (c.seneste ? ' cr-nt-bar--seneste' : '')) +
         '<text class="cr-nt-vaerdi" x="' + cx + '" y="' + (yO - 8) + '" text-anchor="middle">' + mio(c.o) + '</text>';
       var yR = yr(c.r), pos = c.r >= 0;
@@ -48,10 +49,10 @@
         '<text class="cr-nt-vaerdi" x="' + cx + '" y="' + (pos ? yR - 8 : yR + 18) + '" text-anchor="middle">' + mio(c.r) + '</text>' +
         '<text class="cr-nt-aar" x="' + cx + '" y="' + (H - 18) + '" text-anchor="middle">' + esc(c.lab) + '</text></g>';
     });
-    var enh = '<tspan class="cr-nt-enhed-t" dx="8">mio. ' + v + '</tspan>';
-    var lab = '<text class="cr-nt-band" x="' + venstre + '" y="' + (oTop - 22) + '">Omsætning' + enh + '</text>' +
-      '<text class="cr-nt-band" x="' + venstre + '" y="' + (rTop - 30) + '">Resultat efter skat' + enh + '</text>';
-    return '<svg class="cr-nt-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Omsætning og resultat efter skat, mio. ' + v + '">' +
+    var enhT = '<tspan class="cr-nt-enhed-t" dx="8">' + enh + ' ' + v + '</tspan>';
+    var lab = '<text class="cr-nt-band" x="' + venstre + '" y="' + (oTop - 22) + '">Omsætning' + enhT + '</text>' +
+      '<text class="cr-nt-band" x="' + venstre + '" y="' + (rTop - 30) + '">Resultat efter skat' + enhT + '</text>';
+    return '<svg class="cr-nt-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Omsætning og resultat efter skat, ' + enh + ' ' + v + '">' +
       '<line class="cr-nt-nul" x1="' + venstre + '" x2="' + (W - hoejre) + '" y1="' + oBase + '" y2="' + oBase + '"/>' +
       '<line class="cr-nt-nul cr-nt-nul--r" x1="' + venstre + '" x2="' + (W - hoejre) + '" y1="' + r0 + '" y2="' + r0 + '"/>' + lab + g + '</svg>';
   }
@@ -81,6 +82,9 @@
 
   function byg(boks, n) {
     var v = n.valuta, aar = n.aar.slice(-4), t = n.ttm, k = n.kvartal, ak = n.aktie;
+    // Meget store beløb (fx won og yen) vises i mia. i stedet for mio., så tallene kan læses.
+    var stoerst = Math.max.apply(null, aar.concat([t]).map(function (a) { return Math.max(Math.abs(a.omsaetning || 0), Math.abs(a.resultat || 0)); }));
+    talSkala = stoerst >= 1e6 ? 1000 : 1; enh = talSkala === 1 ? 'mio.' : 'mia.';
     var smal = boks.clientWidth < 600;
     var L = live(boks.getAttribute('data-noegletal'));
     var kurs = L && L.valuta === v ? L.kurs : NaN, kursDato = L ? L.dato : null;
@@ -107,13 +111,13 @@
     var nMax = Math.max(0, -Math.min.apply(null, cols.map(function (c) { return c.r; })));
     var skala = 118, nul = 30 + (pMax / ((pMax + nMax) || 1)) * skala;
     function soejleOms() {
-      return '<div class="cr-mb-cols" role="img" aria-label="' + ON + ' i mio. ' + v + ': ' + cols.map(function (c) { return c.lab + ' ' + mio(c.o); }).join(', ') + '">' +
+      return '<div class="cr-mb-cols" role="img" aria-label="' + ON + ' i ' + enh + ' ' + v + ': ' + cols.map(function (c) { return c.lab + ' ' + mio(c.o); }).join(', ') + '">' +
         cols.map(function (c) {
           return '<div class="cr-mb-col' + (c.seneste ? ' cr-mb-col--seneste' : '') + '"><div class="cr-mb-plot"><div class="cr-mb-bar" style="height:' + (c.o / oMax * 135).toFixed(1) + 'px"><b>' + mio(c.o) + '</b></div></div><div class="cr-mb-aar">' + c.lab + '</div></div>';
         }).join('') + '</div>';
     }
     function soejleRes() {
-      return '<div class="cr-mb-cols cr-mb-cols--res" role="img" aria-label="Resultat efter skat i mio. ' + v + ': ' + cols.map(function (c) { return c.lab + ' ' + mio(c.r); }).join(', ') + '">' +
+      return '<div class="cr-mb-cols cr-mb-cols--res" role="img" aria-label="Resultat efter skat i ' + enh + ' ' + v + ': ' + cols.map(function (c) { return c.lab + ' ' + mio(c.r); }).join(', ') + '">' +
         cols.map(function (c) {
           var h = Math.abs(c.r) / ((pMax + nMax) || 1) * skala, neg = c.r < 0;
           return '<div class="cr-mb-col' + (c.seneste ? ' cr-mb-col--seneste' : '') + '"><div class="cr-mb-plot"><div class="cr-mb-nul" style="top:' + nul.toFixed(1) + 'px"></div>' +
@@ -127,15 +131,15 @@
     boks.innerHTML =
       '<div class="cr-mb">' +
         '<div class="cr-mb-metrics">' +
-          (udenOms ? maal('Omsætning', 'Ingen', '', 'Selskabet har endnu ingen omsætning') : maal(ON + ' · ' + periode(k), mio(k.omsaetning), 'mio. ' + v, (k.sammeKvartalAaretFoer > 0 ? pct(kv) + ' mod ' + fra : 'Ingen sammenlignelig omsætning året før'))) +
+          (udenOms ? maal('Omsætning', 'Ingen', '', 'Selskabet har endnu ingen omsætning') : maal(ON + ' · ' + periode(k), mio(k.omsaetning), enh + ' ' + v, (k.sammeKvartalAaretFoer > 0 ? pct(kv) + ' mod ' + fra : 'Ingen sammenlignelig omsætning året før'))) +
           (mvOk ? maal('Markedsværdi', dk(mv / 1000, 1), 'mia. ' + v, 'Kurs pr. ' + dato(kursDato) + (ak.aktierDato ? ' · Aktieantal pr. ' + dato(ak.aktierDato) : '') + (forhold !== 1 ? ' · ' + dk(forhold, 0) + ' aktier pr. ADS' : '')) +
           (udenOms || n.omsNavn ? '' : maal('Price/sales', dk(ps, 1), '×', 'Markedsværdi delt med omsætningen de seneste 12 måneder')) : '') +
         '</div>' +
         '<div class="cr-mb-pair' + (udenOms ? ' cr-mb-pair--en' : '') + '">' +
-          (udenOms ? '' : '<div class="cr-mb-panel"><h3>' + ON + '</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleOms() + '</div>') +
-          '<div class="cr-mb-panel"><h3>Resultat efter skat</h3><div class="cr-mb-sub">mio. ' + v + '</div>' + soejleRes() + '</div>' +
+          (udenOms ? '' : '<div class="cr-mb-panel"><h3>' + ON + '</h3><div class="cr-mb-sub">' + enh + ' ' + v + '</div>' + soejleOms() + '</div>') +
+          '<div class="cr-mb-panel"><h3>Resultat efter skat</h3><div class="cr-mb-sub">' + enh + ' ' + v + '</div>' + soejleRes() + '</div>' +
         '</div>' +
-        '<p class="cr-mb-foot">Historiske regnskabstal' + (n.hentet ? ' · samlet ' + dato(n.hentet) : '') + '. Mio. ' + v + '. 12 mdr. er de seneste 12 måneder til ' + dato(t.til) + '. ' + (n.omsForkl ? n.omsForkl + ' ' : 'Omsætning er ' + (n.navn ? gen(n.navn) : 'selskabets') + ' samlede indtægter. ') + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : (valutaForskel ? 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ' : '')) +
+        '<p class="cr-mb-foot">Historiske regnskabstal' + (n.hentet ? ' · samlet ' + dato(n.hentet) : '') + '. ' + (enh === 'mio.' ? 'Mio. ' : 'Mia. ') + v + '. 12 mdr. er de seneste 12 måneder til ' + dato(t.til) + '. ' + (n.omsForkl ? n.omsForkl + ' ' : 'Omsætning er ' + (n.navn ? gen(n.navn) : 'selskabets') + ' samlede indtægter. ') + (mvOk ? 'Markedsværdi pr. ' + dato(kursDato) + '. ' : (valutaForskel ? 'Aktien handles i en anden valuta end regnskabet, så markedsværdi og price/sales vises ikke. ' : '')) +
           'Kilde: <a class="tekstlink" href="' + esc(n.kildeUrl) + '" target="_blank" rel="noopener">' + esc(n.kilde) + '</a>.</p>' +
       '</div>';
 
