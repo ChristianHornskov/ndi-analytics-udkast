@@ -30,7 +30,7 @@ export const ZOOM_LAYERS=[
 ];
 export const LAYER_EXPLANATIONS={
  'ai-use': ['Dit spørgsmål sætter maskiner i arbejde',
-  'Når du sender en besked til en AI-tjeneste i skyen, bliver svaret beregnet på en computer et andet sted. Modellen bruger det, den har lært under træningen; den begynder ikke forfra hver gang.',
+  'Når du sender en besked til en AI-tjeneste i skyen, bliver svaret beregnet på en computer et andet sted. Modellen bruger det, den har lært under træningen. Den begynder ikke forfra hver gang.',
   'Vi ser nu på udstyret bag svaret. Første stop er datacentret, hvor computerne står. Mindre modeller kan også køre direkte på din egen enhed.'],
  'gpu-cloud': ['Her står computerne, der leverer svaret',
   'Et datacenter samler servere, netværk, strøm og køling. En AI-udbyder kan eje maskinerne selv eller leje regnekraft hos andre. Den behøver altså ikke selv at bygge alt fra bunden.',
