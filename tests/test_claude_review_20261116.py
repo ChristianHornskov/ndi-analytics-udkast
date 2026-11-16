@@ -1,4 +1,5 @@
-import sys,json,threading,functools,http.server,os,tempfile
+import sys,json,threading,functools,http.server,os,tempfile,mimetypes
+from urllib.parse import urlsplit,unquote
 from pathlib import Path
 sys.stdout.reconfigure(encoding='utf-8')
 from playwright.sync_api import sync_playwright
@@ -29,7 +30,12 @@ with sync_playwright() as p:
   text=render(f.stem,live=False);assert 'NaN' not in text and 'Infinity' not in text,f.stem
  checks.append('all local company datasets render without NaN')
  # Actual pages: mobile/desktop, dark/light tables, no live provider required.
- page.route('**/*',lambda route:route.continue_() if route.request.url.startswith('http://127.0.0.1:') else route.abort())
+ def local_asset(route):
+  if not route.request.url.startswith('http://127.0.0.1:'):return route.abort()
+  f=site/unquote(urlsplit(route.request.url).path).lstrip('/')
+  if f.is_file():return route.fulfill(body=f.read_bytes(),content_type=mimetypes.guess_type(f.name)[0] or 'application/octet-stream')
+  return route.fulfill(status=404,body='Not found')
+ page.route('**/*',local_asset)
  for width in [390,792,1440]:
   page.set_viewport_size({'width':width,'height':950})
   for theme in ['fintech','platforme','raastoffer','software']:
