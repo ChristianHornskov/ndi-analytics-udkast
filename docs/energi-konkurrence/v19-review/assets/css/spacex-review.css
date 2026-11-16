@@ -14,7 +14,8 @@
 .sx-orbit text{fill:#e1edf2;font:13px sans-serif;letter-spacing:1px}
 .sx-orbit [data-orbit-part]{cursor:pointer;transition:opacity .2s,filter .2s;outline:none}
 .sx-orbit .sx-dim{opacity:.4}
-.sx-orbit [data-orbit-part]:focus{filter:drop-shadow(0 0 7px #f5ee9e);opacity:1}
+.sx-orbit [data-orbit-part]:focus-within{filter:drop-shadow(0 0 7px #f5ee9e);opacity:1}
+.sx-orbit [data-orbit-control]:focus-visible{outline:2px solid #f5ee9e;outline-offset:3px}
 .sx-interaction-hint{font-size:13px;line-height:1.5;color:#a8c4d0;margin:10px 8px 0}
 .sx-system-reading{padding:32px;min-width:0}
 .sx-system-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:28px}

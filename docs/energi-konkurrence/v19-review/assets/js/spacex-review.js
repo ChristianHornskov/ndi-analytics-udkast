@@ -10,7 +10,7 @@
       const id=el.dataset.sxSelect||el.dataset.orbitPart;
       el.addEventListener('click',()=>select(id));
       el.addEventListener('pointerenter',e=>{if(e.pointerType==='mouse')select(id)});
-      el.addEventListener('focus',()=>select(id));
+      el.addEventListener('focusin',()=>select(id));
       if(el.hasAttribute('data-orbit-part'))el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select(id)}});
     });
     select('launch');

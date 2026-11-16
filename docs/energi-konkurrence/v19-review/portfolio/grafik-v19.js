@@ -122,7 +122,19 @@
     if (!box || typeof insights === 'undefined' || !insights || !insights.funds) return;
     var f = data.funds[selected], m = insights.funds[f.id];
     if (!m || !m.monthly || !m.monthly.length) return;
-    var aarListe = Array.from(new Set(m.monthly.map(function (x) { return x.month.slice(0, 4); }))).sort().reverse();
+    // The homepage and this calendar share the same live return series,
+    // including the partial inception month. Do not change risk statistics.
+    var liveFund = (window.REVIEW_FUNDS || []).find(function (x) { return String(x.id).toLowerCase() === String(f.id).toLowerCase(); });
+    var liveCalendar = liveFund && liveFund.u && liveFund.u.kalender;
+    var monthly = Array.isArray(liveCalendar) ? liveCalendar.flatMap(function (year) {
+      return (year.maaneder || []).filter(function (x) { return Number.isFinite(x.afkast); }).map(function (x) {
+        return { month: x.maaned, return: x.afkast / 100, complete: !x.delvis,
+          inception: x.delvis && x.maaned === liveFund.u.start.slice(0, 7),
+          start: x.maaned === liveFund.u.start.slice(0, 7) ? liveFund.u.start : x.maaned + '-01',
+          end: x.maaned === liveFund.u.kursdato.slice(0, 7) ? liveFund.u.kursdato : '' };
+      });
+    }) : m.monthly;
+    var aarListe = Array.from(new Set(monthly.map(function (x) { return x.month.slice(0, 4); }))).sort().reverse();
     // årsafkast efter samme metode som tabellen "Afkast pr. kalenderår"
     var slut = new Map(); f.data.forEach(function (p) { slut.set(p.d.slice(0, 4), p); });
     var basis = 100, aarAfkast = {};
@@ -132,11 +144,11 @@
       aarAfkast[y] = { v: v, d: p.d, note: nu ? 'år til dato' : stub ? 'fra start' : '' };
     });
     var celle = function (y, i) {
-      var r = m.monthly.find(function (x) { return x.month === y + '-' + String(i + 1).padStart(2, '0'); });
+      var r = monthly.find(function (x) { return x.month === y + '-' + String(i + 1).padStart(2, '0'); });
       if (!r) return '<td class="g19-k-tom" title="Intet grundlag"><span class="g19-sr">Intet grundlag</span></td>';
       var v = r.return * 100, kls = (v >= 0 ? 'pos' : 'neg') + (r.complete ? '' : ' g19-igang');
-      var lab = MD[i] + ' ' + y + ': ' + procent(v) + (r.complete ? '' : ', måneden er ikke afsluttet');
-      return '<td class="' + kls + '" title="' + e(r.start + ' til ' + r.end) + '" aria-label="' + e(lab) + '">' + tal(v).replace('-', '−') + (r.complete ? '' : '*') + '</td>';
+      var lab = MD[i] + ' ' + y + ': ' + procent(v) + (r.inception ? ', fra fondens start ' + datoTekst(r.start) : r.complete ? '' : ', måneden er ikke afsluttet');
+      return '<td class="' + kls + '" title="' + e(lab) + '" aria-label="' + e(lab) + '">' + tal(v).replace('-', '−') + (r.complete ? '' : '*') + '</td>';
     };
     var aarCelle = function (y) {
       var a = aarAfkast[y]; if (!a) return '<td class="g19-k-aar"></td>';
@@ -149,7 +161,7 @@
       aarListe.map(function (y) { return '<th scope="col">' + y + '</th>'; }).join('') + '</tr></thead><tbody>' +
       MD.map(function (x, i) { return '<tr><th scope="row">' + x + '</th>' + aarListe.map(function (y) { return celle(y, i); }).join('') + '</tr>'; }).join('') +
       '<tr class="g19-k-aarr"><th scope="row">Året</th>' + aarListe.map(aarCelle).join('') + '</tr></tbody></table>';
-    var leg = '<p class="g19-k-leg" aria-hidden="true"><span><i class="pos"></i>Plus</span><span><i class="neg"></i>Minus</span><span><i class="g19-igang"></i>Måneden er ikke afsluttet</span></p>';
+    var leg = '<p class="g19-k-leg"><span><i class="pos"></i>Plus</span><span><i class="neg"></i>Minus</span><span><i class="g19-igang"></i>* Startmåned eller igangværende måned</span></p>';
     box.innerHTML = d + mo + leg;
     box.classList.add('g19-kal-box');
     // Den separate tabel med årsafkast er nu en del af kalenderen. Noten under den bliver stående.
