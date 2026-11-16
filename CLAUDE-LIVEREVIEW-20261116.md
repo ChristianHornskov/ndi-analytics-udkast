@@ -1,41 +1,33 @@
 # Claude: gennemgang af live-udgaven 16.11.2026 og opgaver til Codex
 
 Grundlag: den udgave, Wix viser nu (release `9a0112aa`, gren `codex/claude-rettelser-20261116`).
-Mine rettelser ligger på grenen `claude/live-review-20261116`, som bygger direkte oven på `33aa6ee3`. Der er fire commits, og der er ingen merge-konflikter.
+Mine rettelser ligger på grenen `claude/live-review-20261116`, som bygger direkte oven på `33aa6ee3`. Grenen kan udgives, som den er.
 
-Gennemgangen er bevidst gjort hurtigt og bredt. Målet var at finde knapper, der ikke virker, data, der kommer det forkerte sted fra, og det værste sprog. Regnskabstallene er ikke efterprøvet ét for ét.
+Alle sider er læst igennem. Alle knapper er klikket igennem på forside, portefølje, tech og temaer, og nøgletalsboksen er testet på alle 87 nye selskabssider. Regnskabstallene er ikke efterprøvet ét for ét.
 
-## A. Det skal Codex gøre
+## A. Det skal Codex gøre (i denne rækkefølge)
 
-1. **Udgiv grenen `claude/live-review-20261116` som ny frontend-release** på samme måde som 9a0112aa: upload, kontrol af hash og flyt af `current.json` med ETag. 150 filer er ændret i `docs/energi-konkurrence/v19-review`:
+1. **Upload nøgletallene til Azure.** Filerne ligger færdige i `azure-staging/company-keyfigures-v1/` på grenen. Upload først `releases/2cbd7737...json` og derefter `latest.json` til `graph/company-keyfigures-v1/`. Snapshottet har alle 87 selskaber og er bygget fra `data/noegletal/*.js`. Det indeholder også rettelserne til Samsung, eToro, Horizon og HUBER+SUHNER. Hvert selskab er kontrolleret med sidernes egen `valid()`, og alle 87 sider er testet med snapshottet ved 360 px uden fejl. Se `azure-staging/LAES-MIG.md`. Skal det bygges igen: `node tools/build-keyfigures.js` fra `docs/energi-konkurrence/v19-review`.
+
+2. **Udgiv grenen `claude/live-review-20261116` som ny frontend-release** på samme måde som 9a0112aa: upload, kontrol af hash og flyt af `current.json` med ETag. Kun mappen `docs/energi-konkurrence/v19-review` skal med. 164 filer er ændret:
    - 128 selskabssider under `selskaber/`
    - `tech.html`, `temaer/datacenter.html`, `temaer/fintech.html` og `temaer/platforme.html`
-   - `portfolio/` (index.html, homepage-patch.js, portfolio.js, review.js, simple-refinement.js, highs.js)
-   - `widget/` (index.html, homepage-patch.js, review.js, simple-refinement.js, highs.js)
+   - `portfolio/` og `widget/` (index.html, homepage-patch.js, review.js, simple-refinement.js, highs.js, portfolio.js)
    - `assets/js/` (journey-polish.js, review-widget.js, v18-afkast.js, v18-portefolje.js, zoom-camera.mjs)
    - `assets/claude/` (21-noegletal.js, 41-undernavigation.js)
 
-   Da hver release har sin egen mappe, skal versionsnumrene i adresserne ikke ændres.
+   `azure-staging/`, `tools/`, `tests/` og denne note skal ikke med i releasen. Da hver release har sin egen mappe, skal versionsnumrene i adresserne ikke ændres.
 
-2. **Test fanerne i Wix efter udgivelsen.** Åbn `newdealinvest.dk/graf-review?side=portfolio%2Findex` og klik på Overblik, Risiko i tal, Afstand til toppen, Fordeling & selskaber, Nedture & afkast og Datagrundlag. Siden skal rulle til hver sektion, både på mobil og desktop.
-   - Det skal også testes, at hoppene på forsiden (`widget/index.html`) virker inde i Wix.
-   - Det er den fejl, Mads har meldt (punkt B1).
+3. **Kun hvis Christian godkender det: price/sales.** Grenen `claude/uden-price-sales` er den samme som `claude/live-review-20261116` plus én ændring i `21-noegletal.js`, der fjerner price/sales. Udgiv den gren i stedet for punkt 2, hvis Christian siger ja.
 
-3. **Kontrollér nøgletallene i Azure** (`graph/company-keyfigures-v1`). Snapshottet skal indeholde mine seneste data fra commit 59683a5, dvs.:
-   - Samsung i mio. KRW (tallene var 1.000 gange for små)
-   - eToro med `omsNavn: "Nettobidrag"` og `omsForkl`
-   - Horizon Robotics og Huber+Suhner med `kvartal.periode: "halvår"`
+4. **Test fanerne i Wix efter udgivelsen:** `python3 tests/wix_tabs_check.py`. Scriptet åbner den rigtige Wix-side, klikker på alle seks faner ved mobil- og desktopbredde og fejler, hvis siden ikke flytter sig. Det er den fejl, Mads har meldt (punkt B1).
 
-   Er det ikke tilfældet, skal snapshottet genereres fra `data/noegletal/*.js` på grenen.
+5. **Kør X-opslagene og top-ti-researchen.** Jeres egen driftskontrol viser, at de er over 36 timer gamle. Opslagene på de 20 største selskaber står ellers som gamle.
 
-4. **Kontrollér kolonnen "Året" i månedstabellen på porteføljesiden** (`portfolio/grafik-v19.js`, kalenderen). Med testdata var kolonnen tom i desktop-tabellen, selv om forsidens tabel viser årsafkast. Hvis den også er tom på den rigtige side, skal årsafkastet vises, eller kolonnen skal fjernes.
-
-5. **Kontrollér de hårdkodede regnskabstal på Kioxia og SK hynix** (afsnittet "Historiske regnskabseksempler").
-   - Kioxia viser en kvartalsomsætning på 1.767.117 mio. JPY og et resultat på 842.165 mio. JPY for Q1 FY2026, mod 342.799 mio. JPY året før.
-   - SK hynix viser 79.318.746 mio. KRW for Q2 2026 mod 22.231.952 mio. KRW året før.
-   - Spring på 3,5 til 5 gange ser forkerte ud. Er tallene ikke dokumenteret i den angivne kilde, skal afsnittet fjernes fra de to sider.
-
-6. **X-publiceringen og top-ti-researchen er over 36 timer gamle** ifølge jeres egen driftskontrol. Det skal være kørt før i aften, ellers står opslagene på de 20 største selskaber som gamle.
+Kontrolleret og i orden, så det kræver ikke noget:
+- Kolonnen "Året" i porteføljens månedstabel virker. Den var bare ikke tegnet endnu, da jeg aflæste den første gang.
+- Regnskabstallene på Kioxia og SK hynix stemmer med selskabernes meddelelser. SK hynix havde en omsætning på 79,3 billioner won i 2. kvartal 2026, og Kioxia havde 1.767 mia. yen i 1. kvartal af regnskabsåret 2026.
+- Kildefilerne i noter-repoet er nu synkroniseret med de udgivne selskabssider.
 
 ## B. Det har jeg rettet på grenen
 
@@ -104,7 +96,12 @@ Alle 473 selskabssider, de 12 temasider, tech, alle-selskaber, forsiden og porte
 - **Temaer**: fintech ("redaktionelle opdeling") og platforme ("stat-figurerne").
 - **Kontrol**: Der er ikke flere semikoloner eller tankestreger i den synlige tekst på nogen side. Undtaget er titler på eksterne videoer og indlæg, som står uændret.
 
-**Bemærk:** Rettelserne i de 87 nye selskabssider er lavet direkte i `selskaber/*.html` på denne gren. Kildefilerne i noter-repoet (`reviews/2026-11-13-grok/*/side/`) er ikke opdateret tilsvarende. Bygges siderne igen derfra, skal rettelserne føres med over.
+Kildefilerne i noter-repoet (`reviews/2026-11-13-grok/*/side/`) er synkroniseret med de udgivne sider.
+
+### B6. Nøgletalsboksen
+- Merlin-siden gav en JavaScript-fejl, når kursen manglede. Nu skriver boksen "Ikke tilgængelig" i stedet for at stoppe.
+- Meget store beløb vises nu i mia. i stedet for mio. Det gælder Samsung, SoftBank og Advantest. Før stod der fx "171.499.470 mio. KRW", nu står der "171.499 mia. KRW".
+- Kildelinjen havde forkerte ejefald og et svensk ord: "Astera Labss", "FuboTV's", "LPKF's" og "årsredovisning". Det er rettet i dataene på 28 sider, og ejefaldene bruger nu samme apostrof overalt.
 
 ## C. Til Christians stillingtagen (ikke rettet)
 - **Price/sales** vises i nøgletalsboksen på de 87 nye selskabssider. Christian har tidligere sagt, at værdiansættelsestal som P/E ikke skal vises. Skal price/sales også fjernes?
