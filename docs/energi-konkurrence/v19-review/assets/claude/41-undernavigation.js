@@ -38,6 +38,7 @@
     nav = document.getElementById('analysis-nav');
     if (!nav) return;
     links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+    new MutationObserver(function () { var a = nav.querySelector('[aria-current]'); if (!a || nav.scrollWidth <= nav.clientWidth + 2) return; var ar = a.getBoundingClientRect(), nr = nav.getBoundingClientRect(); if (ar.left < nr.left || ar.right > nr.right) nav.scrollLeft += (ar.left + ar.width / 2) - (nr.left + nr.width / 2); }).observe(nav, { subtree: true, attributes: true, attributeFilter: ['aria-current'] });
     // Hop i siden går gennem homepage-patch.js, der stopper klikket og sender
     // beskeden ndi-preview-scroll. Uden Wix-vært ruller journey-polish.js til top-20.
     // Her rettes hoppet, så sektionen lander under den sticky navigation.
