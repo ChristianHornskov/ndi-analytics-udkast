@@ -34,7 +34,7 @@
  const history=document.getElementById('andel-historie');
  if(history&&!(d.spacex?.historik?.length>1)){
   history.querySelectorAll('#graf-andel,.tabel-fold,.kildelinje').forEach(e=>e.hidden=true);
-  put(history,'#historik p','Den aktuelle andel vises ovenfor. Historiske beholdningsdata er endnu ikke tilgængelige i det fælles datagrundlag.');
+  const hist=history.querySelector('#historik');if(hist)hist.hidden=true;
  }
  for(const prefix of ['ft','kr','fa','su']){
   const groups=[];

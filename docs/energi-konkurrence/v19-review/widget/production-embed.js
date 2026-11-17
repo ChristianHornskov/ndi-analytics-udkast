@@ -82,6 +82,7 @@ function notifyHeight(){
  if(height===sentHeight||height<100||height>100000)return;
  sentHeight=height;
  if(parent!==window){
+  if(new URLSearchParams(location.search).get('embed')==='home')parent.postMessage({type:'ndi-home-height',height:height+32},'https://www.newdealinvest.dk');
   parent.postMessage({type:'newdeal-performance-height',height},'*');
   parent.postMessage({type:'newdeal:resize',version:1,height},'*');
  }

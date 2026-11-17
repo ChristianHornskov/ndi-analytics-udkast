@@ -28,6 +28,7 @@
   const GRAPH='https://ndigrafdatab5174313.blob.core.windows.net/graph/';
   const ROOT=new URL('../../',document.currentScript.src).href;
   const navigation=document.createElement('script');navigation.src=ROOT+'assets/js/review-navigation.js';document.head.append(navigation);
+  const mobileStyle=document.createElement('link');mobileStyle.rel='stylesheet';mobileStyle.href=ROOT+'assets/css/mobile-review.css';document.head.append(mobileStyle);
   const originalFetch=window.fetch.bind(window);
   document.documentElement.classList.add('ndi-live-loading');
   const names=['data.json','highs.json','insights.json','nav-evidence.json','geography.json','fund-documents.json','annual-evidence.json'];
@@ -327,6 +328,7 @@
       await script({dataset:{ndiSrc:ROOT+'assets/js/live-theme-values.js'},textContent:''});
       window.removeEventListener('error',onRendererError);
       if(rendererErrors.length){window.NDI_RENDERER_FAILURES=rendererErrors;partialFailure(session)}
+      await script({dataset:{ndiSrc:ROOT+'assets/js/mobile-review.js'},textContent:''});
       dataStatus(session);
       loading.remove();document.documentElement.dataset.liveRelease=session.pointer.release;
       document.documentElement.classList.remove('ndi-live-loading');
