@@ -9,7 +9,7 @@
  const menu=document.querySelector('.sm-rul');if(menu)menu.prepend(nav('mobile-main-links'));
  const main=document.querySelector('main');
  if(location.pathname.endsWith('/portfolio/index.html')){
-  document.body.classList.add('mobile-portfolio');const header=el('header','mobile-portfolio-header');header.append(link('NewDeal Invest','tech.html'),nav('mobile-main-links'));document.body.prepend(header);
+  document.body.classList.add('mobile-portfolio');const header=el('header','mobile-portfolio-header');const home=el('a','','NewDeal Invest');home.href='https://www.newdealinvest.dk/';home.target='_top';home.setAttribute('aria-label','NewDeal Invest – til forsiden');header.append(home,nav('mobile-main-links'));document.body.prepend(header);
  }
  document.querySelectorAll('.topbar-mobil>a.knap').forEach(a=>{a.classList.add('mobile-kid-link');a.replaceChildren(document.createTextNode('Faktaark'));a.setAttribute('aria-label','Faktaark (KID) og prospekt · åbner i nyt vindue')});
  function fold(node,title){if(!node||node.closest('.mobile-fold'))return;const d=el('details','mobile-fold'),s=el('summary','',title);node.before(d);d.append(s,node);return d}
