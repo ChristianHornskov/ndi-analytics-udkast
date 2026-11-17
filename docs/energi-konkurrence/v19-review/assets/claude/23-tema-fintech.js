@@ -1,6 +1,6 @@
 /* Fintech: fem måder at tjene penge på. Tal fra fondens data (DAGENS_TAL). */
 (function(){
-  function fmt(v){if(v==null)return'';if(v>0&&v<0.005)return'under 0,01 %';return v.toFixed(2).replace('.',',')+' %'}
+  function fmt(v){if(v==null)return'';if(v>0&&v<0.05)return'under 0,1 %';return v.toFixed(1).replace('.',',')+' %'}
   function tegn(){
     var R=document.getElementById('tjener'),D=window.DAGENS_TAL;if(!R||!D||!D.temaer)return;
     var tid=R.getAttribute('data-tema')||'fintech';var t=null;D.temaer.forEach(function(x){if(x.id===tid)t=x});if(!t||!t.selskaber)return;

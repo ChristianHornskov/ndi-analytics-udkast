@@ -2,9 +2,10 @@
 (function () {
   'use strict';
   var nav, links = [], laast = null, laastTil = 0;
+  function mobileTop(){var h=document.querySelector('.mobile-portfolio-header');return h&&h.getClientRects().length?h.getBoundingClientRect().height:0}
   function sticky() { return nav && getComputedStyle(nav).position === 'sticky'; }
   function maal() {
-    var top = sticky() ? Math.ceil(nav.getBoundingClientRect().height) + 16 : 16;
+    var top = sticky() ? Math.ceil(nav.getBoundingClientRect().height) + 16 : mobileTop()+16;
     document.documentElement.style.setProperty('--cr41-top', top + 'px');
   }
   function marker() {
@@ -14,7 +15,7 @@
       aktuel = laast;
     } else {
       laast = null;
-      var graense = (sticky() ? nav.getBoundingClientRect().bottom : 0) + 24;
+      var graense = (sticky() ? nav.getBoundingClientRect().bottom : mobileTop()) + 24;
       links.forEach(function (a) {
         var t = document.querySelector(a.hash);
         if (t && t.getClientRects().length && t.getBoundingClientRect().top <= graense) aktuel = a;
@@ -48,7 +49,7 @@
         var top = e.data.top;
         if (typeof top !== 'number' || !isFinite(top)) return;
         maal();
-        var luft = sticky() ? Math.ceil(nav.getBoundingClientRect().height) + 16 : 20;
+        var luft = sticky() ? Math.ceil(nav.getBoundingClientRect().height) + 16 : mobileTop()+20;
         links.forEach(function (a) {
           var t = document.querySelector(a.hash);
           if (t && Math.abs(t.getBoundingClientRect().top + window.scrollY - top) < 2) { laast = a; laastTil = Date.now() + 900; }

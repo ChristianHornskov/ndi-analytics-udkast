@@ -1,5 +1,6 @@
 /* Mobile composition. Figures, risk text and Azure values are not recalculated here. */
 (()=>{'use strict';
+ const sheet=document.querySelector('link[href*="mobile-review.css"]');if(sheet)document.head.append(sheet);
  const root=new URL('../../',document.currentScript.src),small=matchMedia('(max-width:700px)');
  const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text)n.textContent=text;return n};
  const link=(label,path)=>{const a=el('a','',label);a.href=new URL(path,root);return a};
@@ -18,12 +19,14 @@
  const local=document.querySelector('#analysis-nav');
  if(local){const wrap=el('label','mobile-section-picker','På denne side'),select=el('select');select.setAttribute('aria-label','Vælg afsnit på porteføljesiden');
   local.querySelectorAll('a[href^="#"]').forEach(a=>{const o=el('option','',a.textContent.trim());o.value=a.getAttribute('href');select.append(o)});
-  select.addEventListener('change',()=>{const a=[...local.querySelectorAll('a')].find(a=>a.getAttribute('href')===select.value);a?.click()});
+  select.addEventListener('change',()=>{const a=[...local.querySelectorAll('a')].find(a=>a.getAttribute('href')===select.value);const target=a&&document.querySelector(a.hash);if(target){const h=document.querySelector('.mobile-portfolio-header')?.getBoundingClientRect().height||0;window.scrollTo({top:target.getBoundingClientRect().top+scrollY-h-16,behavior:'auto'})}});
   new MutationObserver(()=>{const a=local.querySelector('[aria-current]');if(a)select.value=a.getAttribute('href')}).observe(local,{subtree:true,attributes:true,attributeFilter:['aria-current']});wrap.append(select);local.before(wrap);
  }
- if(/\/temaer\//.test(location.pathname)){
+ if(/\/(?:temaer|selskaber)\//.test(location.pathname)){
   const shortcuts=document.querySelector('.up-shortcuts');if(shortcuts){const d=el('details','mobile-page-index'),s=el('summary','','På denne side');d.append(s);document.querySelectorAll('main section[id]').forEach(sec=>{const h=sec.querySelector('h2');if(h){const a=el('a','',h.textContent.trim());a.href='#'+sec.id;a.addEventListener('click',()=>d.open=false);d.append(a)}});shortcuts.after(d)}
  }
+ function foldMap(){document.querySelectorAll('.analysis-sector-map,#hq-map').forEach(n=>{if(n.closest('.mobile-map-fold'))return;const d=fold(n,n.id==='hq-map'?'Se landene på kortet':'Se fordelingen som felter');if(d){d.classList.add('mobile-map-fold');d.open=!small.matches}})}foldMap();const geography=document.getElementById('geography-review');if(geography)new MutationObserver(foldMap).observe(geography,{childList:true,subtree:true});
+ const sectorText=document.querySelector('.analysis-explain');if(sectorText&&small.matches)sectorText.textContent='Vælg en sektor for at se selskaberne. Andelene viser fordelingen blandt fondens aktier.';
  const previous=document.getElementById('tidligere');if(previous){const d=fold(previous,'Tidligere positioner i fonden');if(d)d.classList.add('mobile-previous')}
  // Hide only unavailable history, never a current position or real observations.
  const history=document.querySelector('#historik');if(history?.hidden)document.querySelectorAll('a[href="#historik"]').forEach(a=>a.hidden=true);
