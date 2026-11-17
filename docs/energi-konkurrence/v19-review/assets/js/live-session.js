@@ -313,12 +313,17 @@
       const preloaded=new Set();
       for(const node of queue){
         const src=node.dataset.ndiSrc;
-        if(!src||node.dataset.ndiType==='module'||skip(node)||optionalMedia(node))continue;
+        if(!src||skip(node)||optionalMedia(node))continue;
         const href=new URL(src,document.baseURI).href;
         if(preloaded.has(href))continue;
         preloaded.add(href);
-        const link=document.createElement('link');link.rel='preload';link.as='script';link.href=href;
+        const link=document.createElement('link');link.rel=node.dataset.ndiType==='module'?'modulepreload':'preload';if(link.rel==='preload')link.as='script';link.href=href;
         document.head.append(link);
+      }
+      // These two renderers are required on every page, but execute only after
+      // the validated Azure session. Fetch them now to avoid two late round trips.
+      for(const name of ['live-theme-values.js','mobile-review.js']){
+        const link=document.createElement('link');link.rel='preload';link.as='script';link.href=ROOT+'assets/js/'+name;document.head.append(link);
       }
       const session=await ready;
       // Inline diagrams can precede data tags in the document. Load all editorial
