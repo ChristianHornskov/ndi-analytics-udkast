@@ -15,6 +15,7 @@
   if(!/^(?:(?:widget|portfolio)\/index|tech|index|alle-selskaber|fondens-udvikling|(?:temaer|selskaber)\/[a-z0-9-]+)\.html$/.test(path))return;
   const url=new URL('/graf-review',wix);if(path!=='widget/index.html')url.searchParams.set('side',path==='portfolio/index.html'?'portfolio':path.replace(/\.html$/,''));url.hash=u.hash;
   a.href=url.href;a.target='_top';
+  if(!e.ctrlKey&&!e.metaKey&&!e.shiftKey&&!e.altKey&&e.button===0){e.preventDefault();parent.postMessage({type:'ndi-home-open',url:url.href},wix);}
  },true);
  schedule();
 })();

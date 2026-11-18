@@ -39,7 +39,12 @@
    if(c.points.at(-1)[0]!==priceDate||Math.abs(c.points.at(-1)[1]-close)>Math.max(1e-6,close*1e-7))throw Error('close mismatch');
    daily.replaceChildren();daily.append(el('h3',null,'Daglige lukkekurser'));
    const controls=el('div','ndi-price-periods'),canvas=el('div','ndi-price-canvas'),caption=el('p','lille');caption.setAttribute('aria-live','polite');
-   const NS='http://www.w3.org/2000/svg',buttons=[];let points=c.points,selected=points.length-1;
+   const yearStart=r.returnBaseDates?.y1;
+   const yearPoints=yearStart?c.points.filter(v=>v[0]>=yearStart):[];
+   const hasYear=yearPoints.length>=2&&yearPoints[0][0]===yearStart;
+   const showYear=hasYear&&(Date.parse(c.points.at(-1)[0])-Date.parse(c.points[0][0]))/864e5<=380;
+   const defaultPoints=showYear?yearPoints:c.points;
+   const NS='http://www.w3.org/2000/svg',buttons=[];let points=defaultPoints,selected=points.length-1;
    function node(tag,attrs,text){const n=document.createElementNS(NS,tag);Object.entries(attrs||{}).forEach(([k,v])=>n.setAttribute(k,String(v)));if(text)n.textContent=text;return n}
    function draw(){
     canvas.replaceChildren();const W=Math.max(280,canvas.getBoundingClientRect().width||640),smal=W<480,H=smal?230:280,left=smal?2:68,right=smal?2:88,top=smal?22:24,bottom=smal?34:40;
@@ -58,7 +63,7 @@
     svg.addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();inspect(event.key==='Home'?0:event.key==='End'?points.length-1:selected+(event.key==='ArrowRight'?1:-1))}});
     canvas.append(svg);inspect(selected,true);
    }
-   [['m1','1 måned',1],['m3','3 måneder',3],['all',(Date.parse(c.points.at(-1)[0])-Date.parse(c.points[0][0]))/864e5<=380?'12 måneder':'Hele perioden',null]].forEach(([id,label,months])=>{const button=el('button','knap knap--rolig',label);button.type='button';button.style.minHeight='44px';button.setAttribute('aria-pressed',String(id==='all'));buttons.push(button);button.addEventListener('click',()=>{const cutoff=new Date(priceDate+'T12:00:00Z');if(months){const day=cutoff.getUTCDate();cutoff.setUTCDate(1);cutoff.setUTCMonth(cutoff.getUTCMonth()-months);const end=new Date(cutoff);end.setUTCMonth(end.getUTCMonth()+1);end.setUTCDate(0);cutoff.setUTCDate(Math.min(day,end.getUTCDate()))}const day=r.returnBaseDates?.[id]||cutoff.toISOString().slice(0,10);const base=c.points.filter(v=>v[0]<=day).at(-1);const filtered=months?c.points.filter(v=>v[0]>=(base?.[0]||day)):c.points;if(filtered.length<2)return;points=filtered;selected=points.length-1;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));draw()});controls.append(button)});
+   [['m1','1 måned',1],['m3','3 måneder',3],['all',showYear?'12 måneder':'Hele perioden',null]].forEach(([id,label,months])=>{const button=el('button','knap knap--rolig',label);button.type='button';button.style.minHeight='44px';button.setAttribute('aria-pressed',String(id==='all'));buttons.push(button);button.addEventListener('click',()=>{const cutoff=new Date(priceDate+'T12:00:00Z');if(months){const day=cutoff.getUTCDate();cutoff.setUTCDate(1);cutoff.setUTCMonth(cutoff.getUTCMonth()-months);const end=new Date(cutoff);end.setUTCMonth(end.getUTCMonth()+1);end.setUTCDate(0);cutoff.setUTCDate(Math.min(day,end.getUTCDate()))}const day=r.returnBaseDates?.[id]||cutoff.toISOString().slice(0,10);const base=c.points.filter(v=>v[0]<=day).at(-1);const filtered=months?c.points.filter(v=>v[0]>=(base?.[0]||day)):defaultPoints;if(filtered.length<2)return;points=filtered;selected=points.length-1;buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));draw()});controls.append(button)});
    controls.style.cssText='display:flex;flex-wrap:wrap;gap:8px;margin:12px 0';daily.append(controls,canvas,caption);draw();
    if(window.ResizeObserver){let width=canvas.clientWidth,frame;const resize=new ResizeObserver(()=>{const next=canvas.clientWidth;if(Math.abs(next-width)<1)return;width=next;cancelAnimationFrame(frame);frame=requestAnimationFrame(()=>{if(canvas.isConnected)draw();else resize.disconnect()})});resize.observe(canvas)}
   }catch{daily.replaceChildren(el('p','lille','Den daglige kurshistorik kan ikke vises for denne dataudgave lige nu. De validerede nøgletal ovenfor er fortsat tilgængelige.'));const retry=el('button','knap','Prøv igen');retry.type='button';retry.addEventListener('click',()=>{retry.disabled=true;showDaily()},{once:true});daily.append(retry)}

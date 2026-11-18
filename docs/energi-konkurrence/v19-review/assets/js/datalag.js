@@ -36,7 +36,7 @@
     andel: function (v) { return (v > 0 && v < 0.05 ? "under 0,1" : decimal(v, 1)) + NB + "%"; },
     pct: function (v, el) { return percent(v, el) + NB + "%"; },
     tal: function (v, el) { return isWeight(el) ? percent(v, el) : decimal(v, 2); },
-    tal2: function (v) { return v > 0 && v < 0.005 ? "under 0,01" : decimal(v, 2); },
+    tal2: function (v, el) { return isWeight(el) ? percent(v, el) : (v > 0 && v < 0.005 ? "under 0,01" : decimal(v, 2)); },
     heltal: function (v) { return heltal(v); },
     tekst: function (v) { return String(v); },
     plads: function (v) { return "nr." + NB + v; },
