@@ -68,3 +68,23 @@ article.panel #preview-calendar .tablewrap{border-color:#30454d}
 }
 
 #class-choice button .class-inception{display:block;font-size:13px;color:#d2e0e3;font-weight:500}
+
+/* iPhone review 18 November: one gutter, aligned values and compact controls. */
+@media(max-width:600px){
+ html.simple-view body main{padding:12px 0!important}
+ html.simple-view #overview .primary-chart>.panel{padding:16px 12px!important}
+ html.simple-view #growth-controls .segmented:first-child:before{display:none!important}
+ html.simple-view #growth-controls .segmented:nth-child(2){display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));order:2;gap:6px!important}
+ html.simple-view #growth-controls .segmented:nth-child(2):before{grid-column:1/-1;margin-bottom:0}
+ html.simple-view #growth-controls [data-growth-period]{grid-column:span 2;min-height:44px!important;font-size:14px;padding:8px 4px!important;white-space:nowrap}
+ html.simple-view #growth-controls [data-growth-period="y1"],html.simple-view #growth-controls [data-growth-period="all"]{grid-column:span 3}
+ html.simple-view #growth-controls #growth-period-result{order:3;font-size:13px!important;line-height:1.5!important}
+ html.simple-view #growth .return-legend{grid-template-columns:1fr 1fr!important;align-items:start;margin:12px 0 4px!important}
+ html.simple-view #growth .return-legend>div{display:flex;flex-direction:column;gap:4px}
+ html.simple-view #growth .return-legend span{font-size:13px!important;line-height:20px!important}
+ html.simple-view #growth .return-legend strong{font-size:26px!important;line-height:1.2}
+ html.simple-view #growth .return-legend small{font-size:12px;line-height:1.4;color:#b3c6cc}
+ html.simple-view #growth svg path{stroke-linejoin:round;stroke-linecap:round}
+ html.simple-view #growth svg path[stroke="#a4d8df"]{stroke-width:2}
+ html.simple-view #growth svg path[stroke="#e3bd83"]{stroke-width:1.6}
+}
