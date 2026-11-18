@@ -68,3 +68,28 @@
  #analysis-hero-chart .analysis-returns strong{font-size:28px!important;white-space:nowrap;line-height:1.3}
  #analysis-hero-chart .analysis-returns span,#analysis-hero-chart .analysis-returns small{font-size:12px;line-height:1.5}
 }
+/* Physical iPhone review: aligned return values and a quiet, consistent card rhythm. */
+@media(max-width:700px){
+ html body.mobile-portfolio .mobile-portfolio-header{position:sticky!important;top:0;z-index:30;padding:6px 12px!important}
+ html body #analysis-hero-chart .analysis-returns>div:not(:first-child){display:grid!important;grid-template-rows:minmax(39px,auto) auto 1fr!important;align-content:start;gap:6px!important;text-align:left!important}
+ html body #analysis-hero-chart .analysis-returns>div:not(:first-child)>span{grid-row:1;grid-column:1;line-height:19px!important;min-height:39px}
+ html body #analysis-hero-chart .analysis-returns>div:not(:first-child)>strong{grid-row:2;grid-column:1;margin:0!important;white-space:nowrap}
+ html body #analysis-hero-chart .analysis-returns>div:not(:first-child)>small{grid-row:3;grid-column:1}
+ html body .analysis-snapshot{grid-template-columns:1fr 1fr!important;gap:10px!important;margin:14px 0 22px!important}
+ html body .analysis-snapshot>a{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:space-between;gap:12px!important;padding:16px!important;border:1px solid #30454d!important;border-radius:12px;background:linear-gradient(140deg,#152c35,#102029);min-width:0;box-sizing:border-box}
+ html body .analysis-snapshot>a>span{order:0;min-height:38px;font-size:13px!important;line-height:19px!important;color:#bdd2d6}
+ html body .analysis-snapshot>a>strong{order:1;font-size:29px!important;line-height:1.2!important;font-weight:600;color:#d3edf0;font-variant-numeric:tabular-nums}
+ html body .analysis-snapshot>a:last-child{grid-column:1/-1!important;display:grid!important;grid-template-columns:1fr auto!important;align-items:center!important;gap:16px!important}
+ html body .analysis-snapshot>a:last-child>span{grid-column:1;grid-row:1;min-height:0}
+ html body .analysis-snapshot>a:last-child>strong{grid-column:2;grid-row:1;font-size:25px!important}
+ html body.mobile-portfolio #analysis-dashboard{margin-bottom:20px!important;border:0!important}
+ html body.mobile-portfolio #preview-risk-summary,html body.mobile-portfolio #highs,html body.mobile-portfolio #portfolio{margin:12px 0!important;padding:0!important;border:0!important}
+ html body.mobile-portfolio #portfolio>.sector-layout{margin:0 0 20px!important;padding:0!important}
+ html body.mobile-portfolio .portfolio-disclosure{margin:0!important;border:1px solid #30454d;border-radius:12px;background:#122630;overflow:hidden}
+ html body.mobile-portfolio .portfolio-disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;box-sizing:border-box;min-height:64px;padding:18px 16px;list-style:none;font-size:16px;font-weight:600;line-height:1.4;color:#e4eef0}
+ html body.mobile-portfolio .portfolio-disclosure>summary::-webkit-details-marker{display:none}
+ html body.mobile-portfolio .portfolio-disclosure>summary::after{content:'+';display:grid;place-items:center;width:26px;height:26px;border:1px solid #54717a;border-radius:50%;flex:none;color:#b8dce2;font-size:20px;font-weight:400}
+ html body.mobile-portfolio .portfolio-disclosure[open]>summary{border-bottom:1px solid #30454d;margin-bottom:16px}
+ html body.mobile-portfolio .portfolio-disclosure[open]>summary::after{content:'−'}
+ html body.mobile-portfolio .portfolio-disclosure>summary:focus-visible{outline:2px solid #a4d8df;outline-offset:-4px}
+}
