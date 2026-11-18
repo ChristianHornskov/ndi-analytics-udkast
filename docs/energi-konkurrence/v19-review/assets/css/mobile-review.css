@@ -104,3 +104,10 @@
  .mobile-ai-journey{--zc-ink:var(--c-text,#e6e8ed);--zc-bg:var(--c-bg,#050a0f);--zc-teal:var(--c-accent,#89aeb4);--zc-line:var(--c-line,#313a4a)}
  #ai-rejsen .mobile-ai-heading{font-family:system-ui,sans-serif!important}
 }
+
+@media(max-width:700px){
+ .mobile-ai-picture{position:relative}
+ .mobile-ai-portal{position:absolute;transform:translate(-50%,-50%);width:58px;height:58px;min-width:58px;min-height:58px;border:2px solid #f3e89d;border-radius:50%;background:#07101544;color:#fff4b8;box-shadow:0 0 0 6px #f3e89d20,0 0 22px #f3e89d44;display:grid;place-items:center;cursor:pointer;padding:0;font:26px/1 system-ui}
+ .mobile-ai-portal[hidden]{display:none!important}
+ .mobile-ai-portal:focus-visible{outline:3px solid white;outline-offset:5px}
+}
