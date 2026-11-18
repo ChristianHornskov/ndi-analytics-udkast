@@ -118,3 +118,6 @@
 @media(max-width:700px){
  #preview-risk-summary>article>.portfolio-disclosure,#highs>article>.portfolio-disclosure{margin:0!important}
 }
+
+#global-disclaimer,#important-information{scroll-margin-top:85px}
+.pm-chart-note a{color:inherit;text-decoration:underline;text-underline-offset:3px}

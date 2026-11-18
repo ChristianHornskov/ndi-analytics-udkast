@@ -65,7 +65,9 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Det sted, hvor s
     if(!target)return;
     notifyHeight();
     setTimeout(()=>{
-      const top=target.getBoundingClientRect().top+window.scrollY;
+      const header=document.querySelector('.mobile-portfolio-header');
+      const inset=header&&getComputedStyle(header).position==='sticky'?header.getBoundingClientRect().height:0;
+      const top=Math.max(0,target.getBoundingClientRect().top+window.scrollY-inset);
       const msg={type:'ndi-preview-scroll',top,height:Math.ceil(document.documentElement.scrollHeight)};parent.postMessage(msg,'*');if(parent!==window)window.postMessage(msg,location.origin);
     },120);
   }
