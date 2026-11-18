@@ -46,7 +46,7 @@
     const entries=groups.map(([name,value],i)=>({name,value,i}));
     const tiles=partition(entries,0,0,1000,440);
     box.innerHTML='<p class="analysis-explain">Jo større et felt er, desto mere fylder sektoren blandt fondens aktier. Selskaber i forskellige sektorer kan stadig være afhængige af den samme teknologi. Vælg et felt eller et navn for at se selskaberne.</p><div class="analysis-sector-map"><svg viewBox="0 0 1000 440" role="group" aria-label="Sektorer fordelt efter deres vægt blandt aktierne">'+tiles.map(t=>'<g tabindex="0" role="button" data-sector="'+esc(t.name)+'" aria-label="'+esc(sectorNames[t.name]||t.name)+' '+pct(t.value)+'"><title>'+esc(sectorNames[t.name]||t.name)+' · '+pct(t.value)+' af fonden</title><rect x="'+(t.x+3)+'" y="'+(t.y+3)+'" width="'+Math.max(0,t.w-6)+'" height="'+Math.max(0,t.h-6)+'" rx="8" fill="'+colors[t.i%colors.length]+'"/>'+(t.w>105&&t.h>95?'<text x="'+(t.x+18)+'" y="'+(t.y+38)+'" fill="#0b2029" font-size="'+(t.w<160?13:t.w<250?17:23)+'">'+esc(sectorNames[t.name]||t.name)+'</text><text x="'+(t.x+18)+'" y="'+(t.y+72)+'" fill="#0b2029" font-size="30">'+pct(t.value)+'</text>':'')+'</g>').join('')+'</svg></div><div class="analysis-sector-key">'+entries.map(t=>'<button type="button" data-sector="'+esc(t.name)+'"><i style="background:'+colors[t.i%colors.length]+'"></i><span>'+esc(sectorNames[t.name]||t.name)+'</span><strong>'+pct(t.value)+'</strong></button>').join('')+'</div>';
-    box.querySelectorAll('[data-sector]').forEach(b=>{b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();b.click();}};b.onclick=()=>{sectorFilter=b.dataset.sector;countryFilter='';holdings();document.getElementById('all-holdings-title').scrollIntoView({behavior:'smooth',block:'start'});};});
+    box.querySelectorAll('[data-sector]').forEach(b=>{b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();b.click();}};b.onclick=()=>{sectorFilter=b.dataset.sector;countryFilter='';holdings();document.getElementById('all-holdings-title').closest('.portfolio-disclosure').open=true;document.getElementById('all-holdings-title').scrollIntoView({behavior:'smooth',block:'start'});};});
     document.getElementById('sectorNote').textContent='Andel af hele fondens formue. Klik på en sektor for at se selskaberne. Sektorerne følger dataleverandørens inddeling. Kontanter er ikke med.';
   }
   function returnFigure(f,id,distributions=false){
@@ -89,7 +89,7 @@
     selected=0;
     const f=data.funds[0],m=insights?.funds?.[f.id],ps=f.positions.filter(p=>p.isin&&p.weight>0);
     const val=(v,percent=true)=>Number.isFinite(v)?(percent?pct(v):n(v,2)):'—';
-    const markup='<div class="analysis-dashboard-title"><span class="eyebrow">OVERBLIK FØR DETALJERNE</span><h2>Hvad har fonden givet, og hvad ejer den?</h2><p>Begynd med afkastet. Se derefter, hvor meget det har svinget, og hvordan pengene er fordelt. Tallene her gælder fonden. Kursændringerne længere nede gælder de enkelte aktier.</p></div><div class="analysis-returns">'+[['Totalafkast siden start',m?.totalReturn,'Med geninvesteret udbytte'],['Gennemsnitligt årligt afkast',m?.cagr,'Årligt sammensat afkast siden start'],['År til dato',f.reportedYtd,'Fra årets begyndelse']].map(([label,value,note])=>'<div><span>'+label+'</span><strong>'+val(value)+'</strong><small>'+note+'</small></div>').join('')+'</div><div class="analysis-snapshot"><a href="#portfolio"><strong>'+ps.length+'</strong><span>aktier og andre værdipapirer</span></a><a href="#portfolio"><strong>'+pct(ps.slice().sort((a,b)=>b.weight-a.weight).slice(0,10).reduce((a,p)=>a+p.weight,0))+'</strong><span>i de ti største positioner</span></a><a href="#preview-risk-summary"><strong>'+val(m?.sharpe,false)+'</strong><span>Sharpe-ratio · afkast i forhold til udsving</span></a></div>';
+    const markup='<div class="analysis-dashboard-title"><span class="eyebrow">OVERBLIK FØR DETALJERNE</span><h2>Hvad har fonden givet, og hvad ejer den?</h2><p>Begynd med afkastet. Se derefter, hvor meget det har svinget, og hvordan pengene er fordelt. Tallene her gælder fonden. Kursændringerne længere nede gælder de enkelte aktier.</p></div><div class="analysis-returns">'+[['Totalafkast siden start',m?.totalReturn,'Med geninvesteret udbytte'],['Gennemsnitligt årligt afkast',m?.cagr,'Årligt sammensat afkast siden start'],['År til dato',f.reportedYtd,'Fra årets begyndelse']].map(([label,value,note])=>'<div><span>'+label+'</span><strong>'+val(value)+'</strong><small>'+note+'</small></div>').join('')+'</div><div class="analysis-snapshot"><a href="#portfolio"><strong>'+ps.length+'</strong><span>Positioner i fonden</span></a><a href="#portfolio"><strong>'+pct(ps.slice().sort((a,b)=>b.weight-a.weight).slice(0,10).reduce((a,p)=>a+p.weight,0))+'</strong><span>i de ti største positioner</span></a></div>';
     if(dashboard.innerHTML!==markup)dashboard.innerHTML=markup;
     function explain(id,text){const host=document.getElementById(id);if(!host)return;let p=host.querySelector('.analysis-guide');if(!p){p=document.createElement('p');p.className='analysis-guide';const h=host.querySelector('h2');if(h)h.after(p);else host.prepend(p);}if(p.textContent!==text)p.textContent=text;}
     explain('method','Aktiernes ugeændring sammenligner slutkursen med den seneste handelsdag på eller før datoen syv kalenderdage tidligere. Kurserne er i aktiens handelsvaluta. For selskaber med kort historik viser tabellen afstanden til den højeste observerede kurs siden den angivne startdato. De tæller ikke med som fulde 52 uger i fordelingen ovenfor.');
@@ -114,7 +114,7 @@
     document.getElementById('analysis-date').textContent='PMINDI · Afkast til '+da(data.funds[0].performanceAsOf)+' · Beholdning pr. '+da(data.positionsAsOf||data.asOf);
     document.querySelectorAll('#method p').forEach(p=>{if(p.textContent.startsWith('Data kommer fra Fundmarkets rapporter via'))p.textContent='Fondens tal og aktiekurserne kommer fra den seneste kontrollerede udgave af datagrundlaget, og alle sider bruger den samme udgave. Afkastet følger kursdatoen, og beholdningerne følger beholdningsdatoen. Det er ikke kurser i realtid. Står siden åben, ser den efter nye tal hvert femte minut. Opslagene fra X hentes for sig.';});
     let cursor=menu;
-    for(const id of ['analysis-dashboard','preview-risk-summary','highs','portfolio','risk','analysis-distributions','method']){
+    for(const id of ['analysis-dashboard','preview-risk-summary','highs','portfolio','method']){
       const section=document.getElementById(id);
       if(section){if(cursor.nextElementSibling!==section)cursor.after(section);section.hidden=false;cursor=section;}
     }
@@ -139,7 +139,21 @@
     disclosure(document.getElementById('preview-risk-summary'),'Afkast og risiko i tal');
     disclosure(document.getElementById('highs'),'Afstand fra 52-ugers top');
     disclosure(sectorLayout,'Fordeling på sektorer');
+    disclosure(geoPanel,'Hvor ligger selskabernes hovedsæder?');
+    disclosure(holdingsPanel,'Se alle aktierne');
+    for(const [id,title] of [['drawdown','Vejen gennem nedturene'],['calendar','Afkastkalender'],['rolling-chart','Afkast over 12 måneder']])disclosure(document.getElementById(id)?.closest('article'),title);
+    const riskNote=document.querySelector('#risk > .callout'),drawdownBody=document.getElementById('drawdown')?.closest('.portfolio-disclosure-body');if(riskNote&&drawdownBody)drawdownBody.prepend(riskNote);
+    disclosure(document.getElementById('analysis-distributions'),'Udbytte og samlet afkast');
     disclosure(document.getElementById('method'),'Data og omkostninger');
+    // Keep all optional analyses together; the company list is opened on demand.
+    if(geoPanel&&sectorLayout)sectorLayout.after(geoPanel);
+    const risk=document.getElementById('risk');
+    if(risk&&geoPanel){risk.hidden=false;if(geoPanel.nextElementSibling!==risk)geoPanel.after(risk);}
+    const distribution=document.getElementById('analysis-distributions');
+    if(distribution&&risk)risk.after(distribution);
+    if(holdingsPanel&&distribution)distribution.after(holdingsPanel);
+    if(bridge&&holdingsPanel)holdingsPanel.after(bridge);
+    dashboard.querySelectorAll('a[href="#portfolio"]').forEach(a=>a.onclick=()=>{const d=holdingsPanel?.querySelector(':scope > details');if(d)d.open=true;setTimeout(()=>holdingsPanel?.scrollIntoView({behavior:'smooth'}),0);});
 
 
 

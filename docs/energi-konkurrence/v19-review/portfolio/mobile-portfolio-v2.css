@@ -93,3 +93,20 @@
  html body.mobile-portfolio .portfolio-disclosure[open]>summary::after{content:'−'}
  html body.mobile-portfolio .portfolio-disclosure>summary:focus-visible{outline:2px solid #a4d8df;outline-offset:-4px}
 }
+
+/* One consistent reading direction: label left, result right. */
+@media(max-width:700px){
+ html body #analysis-hero-chart .analysis-returns{display:flex!important;flex-direction:column;gap:0!important;padding:4px 16px!important;text-align:left!important}
+ html body #analysis-hero-chart .analysis-returns>div,html body #analysis-hero-chart .analysis-returns>div:not(:first-child){display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;grid-template-rows:auto auto!important;gap:4px 12px!important;padding:15px 0!important;align-items:center!important;text-align:left!important}
+ html body #analysis-hero-chart .analysis-returns>div+div{border-top:1px solid #30454d!important}
+ html body #analysis-hero-chart .analysis-returns>div>span,html body #analysis-hero-chart .analysis-returns>div:not(:first-child)>span{grid-column:1!important;grid-row:1!important;min-height:0!important;line-height:1.4!important;font-size:13px!important}
+ html body #analysis-hero-chart .analysis-returns>div>strong,html body #analysis-hero-chart .analysis-returns>div:not(:first-child)>strong{grid-column:2!important;grid-row:1/3!important;font-size:27px!important;white-space:nowrap;text-align:right!important}
+ html body #analysis-hero-chart .analysis-returns>div>small,html body #analysis-hero-chart .analysis-returns>div:not(:first-child)>small{grid-column:1!important;grid-row:2!important;line-height:1.4!important}
+ html body .analysis-snapshot>a:last-child{display:flex!important;grid-column:auto!important;align-items:flex-start!important;gap:12px!important}
+ html body .analysis-snapshot>a:last-child>strong{font-size:29px!important}
+ html body .analysis-snapshot>a:last-child>span{min-height:38px}
+ html body.mobile-portfolio #portfolio,html body.mobile-portfolio #risk{display:flex!important;flex-direction:column;gap:12px!important;padding:0!important;border:0!important}
+ html body.mobile-portfolio #portfolio>.sector-layout,html body.mobile-portfolio #portfolio>#geography-review,html body.mobile-portfolio #portfolio>#risk,html body.mobile-portfolio #portfolio>#analysis-distributions,html body.mobile-portfolio #portfolio>article,html body.mobile-portfolio #risk>article{margin:0!important;padding:0!important;border:0!important;background:transparent!important}
+ html body.mobile-portfolio #risk>.callout{margin:0;font-size:12px;padding:12px}
+ html body.mobile-portfolio .portfolio-disclosure-body>h2,html body.mobile-portfolio .portfolio-disclosure-body>.panelhead h2{font-size:20px}
+}
