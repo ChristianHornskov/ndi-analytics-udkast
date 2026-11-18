@@ -5,7 +5,7 @@
  const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text)n.textContent=text;return n};
  const link=(label,path)=>{const a=el('a','',label);a.href=new URL(path,root);return a};
  const paths=[['Afkast','widget/index.html'],['Portefølje','portfolio/index.html'],['Temaer','tech.html']];
- function nav(cls){const n=el('nav',cls);n.setAttribute('aria-label','Porteføljens hovedsider');paths.filter(([label])=>!location.pathname.endsWith('/portfolio/index.html')||label!=='Afkast').forEach(([label,path])=>{const a=link(label==='Temaer'&&location.pathname.endsWith('/portfolio/index.html')?'Investeringstemaer':label,path);if(location.pathname.endsWith('/'+path))a.setAttribute('aria-current','page');n.append(a)});return n}
+ function nav(cls){const n=el('nav',cls);n.setAttribute('aria-label','Porteføljens hovedsider');paths.filter(([label])=>label!=='Afkast').forEach(([label,path])=>{const a=link(label==='Temaer'?'Investeringstemaer':label,path);if(location.pathname.endsWith('/'+path))a.setAttribute('aria-current','page');n.append(a)});return n}
  if(window!==window.top)document.documentElement.classList.add('ndi-embedded');
  const menu=document.querySelector('.sm-rul');if(menu){
   menu.prepend(nav('mobile-main-links'));
@@ -16,15 +16,15 @@
    }
   });
  }
- const entry=document.querySelector('.review-intro .review-paths');if(entry)entry.replaceWith(nav('mobile-main-links'));
+ const entry=document.querySelector('.review-intro .review-paths');if(entry)entry.remove();
  // Instagram does not expose a dependable inline player here. Keep the original source link.
  document.querySelectorAll('button[data-instagram]').forEach(button=>{
   const card=button.closest('article');const a=card?.querySelector('a[href^="https://www.instagram.com/"]');
   if(a){a.classList.add('knap','knap--rolig');a.textContent='Se klippet på Instagram ↗';button.remove()}
  });
  const main=document.querySelector('main');
- if(location.pathname.endsWith('/portfolio/index.html')){
-  document.body.classList.add('mobile-portfolio');const polish=document.querySelector('link[href*="mobile-portfolio-v2.css"]');if(polish)document.head.append(polish);const header=el('header','mobile-portfolio-header');const home=el('a','','NewDeal Invest');home.href='https://www.newdealinvest.dk/';home.target='_top';home.setAttribute('aria-label','NewDeal Invest – til forsiden');if(window===window.top)header.append(home);header.append(nav('mobile-main-links'));document.body.prepend(header);
+ if(location.pathname.endsWith('/portfolio/index.html')||document.querySelector('.topbar-mobil')){
+  document.body.classList.add('mobile-shared-navigation');if(location.pathname.endsWith('/portfolio/index.html'))document.body.classList.add('mobile-portfolio');const polish=document.querySelector('link[href*="mobile-portfolio-v2.css"]');if(polish)document.head.append(polish);const header=el('header','mobile-portfolio-header');const home=el('a','','NewDeal Invest');home.href='https://www.newdealinvest.dk/';home.target='_top';home.setAttribute('aria-label','NewDeal Invest – til forsiden');if(window===window.top)header.append(home);header.append(nav('mobile-main-links'));document.body.prepend(header);
  }
  document.querySelectorAll('.topbar-mobil>a.knap').forEach(a=>{a.classList.add('mobile-kid-link');a.replaceChildren(document.createTextNode('Faktaark'));a.setAttribute('aria-label','Faktaark (KID) og prospekt · åbner i nyt vindue')});
  function fold(node,title){if(!node||node.closest('.mobile-fold'))return;const d=el('details','mobile-fold'),s=el('summary','',title);node.before(d);d.append(s,node);return d}

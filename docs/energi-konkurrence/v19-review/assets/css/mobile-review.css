@@ -59,3 +59,20 @@
  .mobile-page-index[open]>summary:after{content:'−'}
  .review-intro>.mobile-main-links{flex-wrap:nowrap}.review-intro>.mobile-main-links a{font-size:13px;min-width:0;padding:6px}
 }
+
+/* A single mobile navigation across portfolio, themes and company pages. */
+@media(max-width:700px){
+ .mobile-shared-navigation .topbar-mobil{display:none!important}
+ html body.mobile-shared-navigation .mobile-portfolio-header{display:block;position:sticky!important;top:0;z-index:30;background:#0b151b;color:#eef4f5;padding:6px 12px!important;border-bottom:1px solid #82959c66}
+ html body.mobile-shared-navigation .mobile-portfolio-header nav{display:flex!important;margin:0;padding:0;gap:6px;flex-wrap:nowrap}
+ html body.mobile-shared-navigation .mobile-portfolio-header nav a{font:600 14px/1.3 system-ui,sans-serif!important;padding:10px 8px!important;min-height:44px;flex:1;box-sizing:border-box}
+ html.ndi-embedded{overflow-x:clip!important;overflow-y:auto!important}
+ html.ndi-embedded body:not(.laast){overflow:visible!important}
+ .mobile-shared-navigation .review-intro>.mobile-main-links{display:none!important}
+}
+
+@media(max-width:700px){
+ html body.mobile-shared-navigation .mobile-portfolio-header{margin:0!important;box-sizing:border-box}
+ html body.mobile-shared-navigation .mobile-portfolio-header nav{border:0!important}
+ html body.mobile-shared-navigation main{padding-top:16px!important}
+}
