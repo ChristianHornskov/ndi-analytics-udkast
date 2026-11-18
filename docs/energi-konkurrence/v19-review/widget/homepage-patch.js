@@ -440,7 +440,7 @@ drawNasdaq=function(){
  const fundColor='#a4d8df',indexColor='#e3bd83',signed=v=>(v>0?'+':'')+n(v,1)+' %';
  const dateLabel=d=>ndiDate(d);
  let grid='',axisLabels='';for(let v=low;v<=high+step/100;v+=step){
-  grid+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="${Math.abs(v)<1e-8?'#71868d':'#2a3b44'}" stroke-dasharray="${Math.abs(v)<1e-8?'5 5':'0'}" opacity="${mobile&&Math.abs(v)>1e-8?.35:1}"/>`;
+  grid+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="${Math.abs(v)<1e-8?'#71868d':'#2a3b44'}" stroke-dasharray="${Math.abs(v)<1e-8?'5 5':'0'}" opacity="${mobile&&Math.abs(v)>1e-8?.85:1}"/>`;
   axisLabels+=`<text class="growth-scale-label" x="${mobile?W-R-2:L-10}" y="${y(v)+5}" text-anchor="end" fill="#b3c6cc" font-size="${mobile?12:14}" ${mobile?'stroke="#13232c" stroke-width="4" stroke-linejoin="round" paint-order="stroke"':''}>${n(v,Number.isInteger(step)?0:1)} %</text>`;
  }
  const weekly=mobile&&growthPeriod==='all'&&lastDate-firstDate>366*86400000;
