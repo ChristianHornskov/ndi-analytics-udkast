@@ -203,7 +203,7 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Det sted, hvor s
     parent.postMessage({type:'ndi-preview-ready'},'*');
   }
   const originalRender=render;render=function(){originalRender();improve()};
-  const originalGrowth=drawProductionGrowth;drawProductionGrowth=function(){originalGrowth();improve();drawNasdaq()};
+  const originalGrowth=drawProductionGrowth;drawProductionGrowth=function(){originalGrowth();improve();drawNasdaq();mobilePeriodReturns()};
   let allHoldings=false;
   function limitHoldings(){const rows=document.querySelectorAll('#holdings tr');document.getElementById('holdings')?.classList.toggle('preview-all',allHoldings);const button=document.getElementById('holdings-more');if(button){button.hidden=rows.length<=10;button.textContent=allHoldings?'Vis kun de første 10':'Se alle '+rows.length+' positioner';button.setAttribute('aria-expanded',String(allHoldings))}if(typeof notifyHeight==='function')notifyHeight()}
   function ensureHoldingsButton(){const table=document.getElementById('holdings')?.closest('.tablewrap');if(table&&!document.getElementById('holdings-more')){const actions=document.createElement('div');actions.className='holdings-actions';const button=document.createElement('button');button.id='holdings-more';button.setAttribute('aria-controls','holdings');button.onclick=()=>{allHoldings=!allHoldings;limitHoldings()};const download=document.createElement('button');download.id='holdings-excel';download.textContent='Download alle beholdninger (Excel)';download.onclick=()=>downloadHoldings();actions.append(button,download);table.after(actions)}limitHoldings()}
@@ -239,6 +239,20 @@ function ensureNasdaq(){
  }
  const note=document.getElementById('nasdaq-note');if(note)note.hidden=growthView!=='total';
 }
+
+function mobilePeriodReturns(){
+ const mobile=matchMedia('(max-width:600px)').matches;
+ const labels={m1:'1 md.',m3:'3 mdr.',ytd:'I år',y1:'1 år',all:'Start'};
+ document.querySelectorAll('[data-growth-period]').forEach(b=>{
+  if(!b.dataset.fullLabel)b.dataset.fullLabel=b.textContent;
+  if(!mobile){b.textContent=b.dataset.fullLabel;return}
+  const points=comparisonPoints(data.funds[selected],b.dataset.growthPeriod,null);
+  const value=points.length?points.at(-1).fund-100:null;
+  b.innerHTML='<span>'+labels[b.dataset.growthPeriod]+'</span><strong>'+(Number.isFinite(value)?(value>0?'+':'')+n(value,1)+' %':'—')+'</strong>';
+  b.setAttribute('aria-label',labels[b.dataset.growthPeriod]+', totalafkast '+(Number.isFinite(value)?n(value,1)+' procent':'ikke tilgængeligt'));
+ });
+}
+
 function comparisonPoints(fund,period,source){
  let points=fund.data.slice();const end=new Date(points.at(-1).d+'T12:00:00Z');let cutoff=null;
  if(period==='ytd')cutoff=String(end.getUTCFullYear()-1)+'-12-31';
@@ -419,20 +433,20 @@ drawNasdaq=function(){
  const points=comparisonPoints(fund,growthPeriod,source);if(points.length<2){if(note){note.hidden=false;note.textContent='Der er ikke tilstrækkelig historik til at sammenligne den valgte periode.'}setGraphContextNote(false);return;}
  const indexPoints=points.filter(p=>Number.isFinite(p.index));compare=compare&&indexPoints.length>=2;
  const end=points.at(-1),firstDate=Date.parse(points[0].d),lastDate=Date.parse(end.d);
- const mobile=box.clientWidth<600,W=mobile?Math.max(220,box.clientWidth):Math.max(600,Math.round(box.clientWidth)),H=mobile?Math.round(Math.max(230,Math.min(300,box.clientWidth*.78))):Math.round(Math.min(410,Math.max(300,W*.41))),L=mobile?43:68,R=mobile?8:92,T=24,B=44;
+ const mobile=box.clientWidth<600,W=mobile?Math.max(220,box.clientWidth):Math.max(600,Math.round(box.clientWidth)),H=mobile?Math.round(Math.max(230,Math.min(300,box.clientWidth*.78))):Math.round(Math.min(410,Math.max(300,W*.41))),L=mobile?4:68,R=mobile?51:92,T=24,B=44;
  // Keep axes, and therefore the fund curve's geometry, identical when toggled.
  const values=points.flatMap(p=>Number.isFinite(p.index)?[p.fund-100,p.index-100]:[p.fund-100]);
  const {low,high,step}=niceScale([...values,0],false),x=d=>L+(Date.parse(d)-firstDate)/(lastDate-firstDate||1)*(W-L-R),y=v=>T+(high-v)/(high-low||1)*(H-T-B);
  const fundColor='#a4d8df',indexColor='#e3bd83',signed=v=>(v>0?'+':'')+n(v,1)+' %';
  const dateLabel=d=>ndiDate(d);
- let grid='';for(let v=low;v<=high+step/100;v+=step)grid+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="${Math.abs(v)<1e-8?'#71868d':'#2a3b44'}" stroke-dasharray="${Math.abs(v)<1e-8?'5 5':'0'}"/><text x="${L-10}" y="${y(v)+5}" text-anchor="end" fill="#b3c6cc" font-size="14">${n(v,Number.isInteger(step)?0:1)} %</text>`;
+ let grid='';for(let v=low;v<=high+step/100;v+=step)grid+=`<line x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}" stroke="${Math.abs(v)<1e-8?'#71868d':'#2a3b44'}" stroke-dasharray="${Math.abs(v)<1e-8?'5 5':'0'}" opacity="${mobile&&Math.abs(v)>1e-8?.35:1}"/><text x="${mobile?W-R+8:L-10}" y="${y(v)+5}" text-anchor="${mobile?'start':'end'}" fill="#b3c6cc" font-size="${mobile?12:14}">${n(v,Number.isInteger(step)?0:1)} %</text>`;
  const count=mobile?3:5;for(let i=0;i<count;i++){const dt=new Date(firstDate+(lastDate-firstDate)*i/(count-1)),xx=L+(W-L-R)*i/(count-1);const label=dt.toLocaleDateString('da-DK',lastDate-firstDate>180*86400000?{month:'short',year:'numeric'}:{day:'numeric',month:'short'});grid+=`<text x="${xx}" y="${H-10}" text-anchor="${i===0?'start':i===count-1?'end':'middle'}" fill="#b3c6cc" font-size="14">${label}</text>`}
  const path=key=>points.filter(p=>Number.isFinite(p[key])).map((p,i)=>`${i?'L':'M'}${x(p.d)},${y(p[key]-100)}`).join(' ');
  const indexEnd=indexPoints.at(-1),indexReturn=indexEnd?indexEnd.index-100:null;
  const commonComparison=compare?'<strong>Samme slutdato — '+dateLabel(indexEnd.d)+': '+esc(fund.short)+' '+signed(indexEnd.fund-100)+' · Nasdaq-100 '+signed(indexReturn)+'.</strong><br>':'';
  let labelY=y(end.fund-100),indexY=indexEnd?y(indexReturn):0;if(compare&&Math.abs(labelY-indexY)<24)indexY=labelY+26;
  const endpoint=(key,color,yy)=>{if(mobile)return '';const p=key==='index'?indexEnd:end;return `<line x1="${x(p.d)}" x2="${W-R+7}" y1="${y(p[key]-100)}" y2="${yy}" stroke="${color}" stroke-dasharray="${key==='index'?'2 3':'0'}"/><text x="${W-R+10}" y="${yy+5}" fill="${color}" font-size="14" font-weight="700">${signed(p[key]-100)}</text>`};
- box.innerHTML=`<div class="return-legend"><div style="--series-color:${fundColor}"><span>${esc(fund.short)}</span><strong>${signed(end.fund-100)}</strong></div>${compare?`<div style="--series-color:${indexColor}"><span>${mobile?'Nasdaq-100':'Nasdaq-100 · til sammenligning · pr. '+dateLabel(indexEnd.d)}</span><strong>${signed(indexReturn)}</strong>${mobile?`<small>Til sammenligning<br>${dateLabel(indexEnd.d)}</small>`:''}</div>`:''}</div><svg viewBox="0 0 ${W} ${H}" role="img" tabindex="0" aria-label="Totalafkast i procent fra periodens start, ${esc(fund.short)}${compare?' og Nasdaq-100':''}">${grid}${compare?`<path d="${path('index')}" stroke="${indexColor}" stroke-width="2" stroke-dasharray="7 5" fill="none"/>`:''}<path d="${path('fund')}" stroke="${fundColor}" stroke-width="3.2" fill="none"/>${endpoint('fund',fundColor,labelY)}${compare?endpoint('index',indexColor,indexY):''}<line class="growth-cursor" y1="${T}" y2="${H-B}" stroke="#dae9ec" visibility="hidden"/><circle class="fund-dot" r="5" fill="${fundColor}" visibility="hidden"/>${compare?`<circle class="index-dot" r="4" fill="${indexColor}" visibility="hidden"/>`:''}</svg><p class="small growth-tooltip" aria-live="polite">Peg på grafen for at se dato og afkast. På mobil: træk en finger hen over kurven.</p>`;
+ box.innerHTML=`<div class="return-legend"><div style="--series-color:${fundColor}"><span>${esc(fund.short)}</span><strong>${signed(end.fund-100)}</strong></div>${compare?`<div style="--series-color:${indexColor}"><span>${mobile?'Nasdaq-100':'Nasdaq-100 · til sammenligning · pr. '+dateLabel(indexEnd.d)}</span><strong>${signed(indexReturn)}</strong>${mobile?`<small>Til sammenligning<br>${dateLabel(indexEnd.d)}</small>`:''}</div>`:''}</div><svg viewBox="0 0 ${W} ${H}" role="img" tabindex="0" aria-label="Totalafkast i procent fra periodens start, ${esc(fund.short)}${compare?' og Nasdaq-100':''}">${grid}${compare?`<path d="${path('index')}" stroke="${indexColor}" stroke-width="2" stroke-dasharray="7 5" fill="none"/>`:''}<path d="${path('fund')}" stroke="${fundColor}" stroke-width="3.2" fill="none"/>${endpoint('fund',fundColor,labelY)}${compare?endpoint('index',indexColor,indexY):''}<line class="growth-cursor" y1="${T}" y2="${H-B}" stroke="#dae9ec" visibility="hidden"/><circle class="fund-dot" r="5" fill="${fundColor}" visibility="hidden"/>${compare?`<circle class="index-dot" r="4" fill="${indexColor}" visibility="hidden"/>`:''}</svg><p class="small growth-tooltip" aria-live="polite">${mobile?'Træk på kurven for at se dato og afkast.':'Peg på grafen for at se dato og afkast.'}</p>`;
  // Desktop: tallene står ud for overskriften. Mobil: de bliver lige over grafen.
  if(matchMedia('(min-width:701px)').matches)box.closest('article').querySelector('.panelhead').append(box.querySelector('.return-legend'));
  document.getElementById('growth-period-result').textContent=dateLabel(points[0].d)+' – '+dateLabel(end.d)+(mobile?' · Totalafkast i DKK':' · Totalafkast i DKK · '+(fund.performanceAsOf?'officielle kursdatoer':'rapportdatoer')+' · 0 % ved periodens start');
@@ -452,7 +466,7 @@ drawNasdaq=function(){
  const svg=box.querySelector('svg'),cursor=box.querySelector('.growth-cursor'),tooltip=box.querySelector('.growth-tooltip');let active=points.length-1;
  function show(i){active=Math.max(0,Math.min(points.length-1,i));const p=points[active],xx=x(p.d);cursor.setAttribute('x1',xx);cursor.setAttribute('x2',xx);cursor.setAttribute('visibility','visible');for(const [cls,key] of [['fund-dot','fund'],['index-dot','index']]){const dot=box.querySelector('.'+cls);if(dot){dot.setAttribute('cx',xx);dot.setAttribute('cy',Number.isFinite(p[key])?y(p[key]-100):0);dot.setAttribute('visibility',Number.isFinite(p[key])?'visible':'hidden')}}tooltip.textContent=dateLabel(p.d)+' · '+fund.short+(fund.performanceAsOf?' (kursdato): ':' (rapportdato): ')+signed(p.fund-100)+(compare?' · Nasdaq-100: '+(Number.isFinite(p.index)?signed(p.index-100):'ingen observation'):'')}
  function pointer(e){const r=svg.getBoundingClientRect(),target=firstDate+Math.max(0,Math.min(1,((e.clientX-r.left)/r.width*W-L)/(W-L-R)))*(lastDate-firstDate);let i=0;for(let j=1;j<points.length;j++)if(Math.abs(Date.parse(points[j].d)-target)<Math.abs(Date.parse(points[i].d)-target))i=j;show(i)}
- svg.style.touchAction='pan-y';svg.onpointermove=pointer;svg.onpointerdown=pointer;svg.onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();show(e.key==='Home'?0:e.key==='End'?points.length-1:active+(e.key==='ArrowLeft'?-1:1))}};notifyHeight();
+ svg.style.touchAction='pan-y';svg.onpointermove=pointer;svg.onpointerdown=e=>{svg.setPointerCapture(e.pointerId);pointer(e)};svg.onkeydown=e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();show(e.key==='Home'?0:e.key==='End'?points.length-1:active+(e.key==='ArrowLeft'?-1:1))}};notifyHeight();
 };
 // Wix changes iframe width after first render; redraw geometry, never the data.
 let graphWidth=0,graphResizeTimer;
@@ -460,7 +474,7 @@ const graphResizeObserver=new ResizeObserver(entries=>{
  const width=Math.round(entries[0].contentRect.width);
  if(width<100||width===graphWidth)return;
  graphWidth=width;clearTimeout(graphResizeTimer);
- graphResizeTimer=setTimeout(()=>{if(growthView==='total')drawNasdaq();},80);
+ graphResizeTimer=setTimeout(()=>{if(growthView==='total')drawNasdaq();mobilePeriodReturns();},80);
 });
 graphResizeObserver.observe(document.getElementById('growth'));
 

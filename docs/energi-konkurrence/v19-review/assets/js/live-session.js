@@ -5,10 +5,10 @@
   window.NDI_X_ENABLED = false;
   if (!window.NDI_X_ENABLED) {
     const style=document.createElement('style');
-    style.textContent='[data-x-tema],section.xs,.rm-x,.sx-mads-posts,.rm-grid-x,.ndi-x-samlet,.x-embed,.ndi-paused-x{display:none!important}';
+    style.textContent='[data-x-tema],section.xs,.rm-x,.sx-mads-x-title,.sx-mads-posts,.rm-grid-x,.ndi-x-samlet,.x-embed,.ndi-paused-x{display:none!important}';
     document.head.append(style);
     function hidePausedX(){
-      document.querySelectorAll('[data-x-tema],section.xs,.rm-x,.sx-mads-posts,.rm-grid-x,.ndi-x-samlet,.x-embed').forEach(node=>{
+      document.querySelectorAll('[data-x-tema],section.xs,.rm-x,.sx-mads-x-title,.sx-mads-posts,.rm-grid-x,.ndi-x-samlet,.x-embed').forEach(node=>{
         let box=node;
         const section=node.closest('section');
         if(section&&!section.querySelector('[data-youtube],[data-video],[data-yt],iframe[src*="youtube"]'))box=section;
