@@ -197,7 +197,7 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Det sted, hvor s
       const title=document.createElement('h2');title.id='important-information-title';title.className='information-title';title.textContent='Vigtig information om afkast, omkostninger og risiko';panel.append(title);
       [...info.childNodes].filter(node=>node.nodeName!=='SUMMARY').forEach(node=>panel.append(node));info.replaceWith(panel);
     }
-    document.querySelectorAll('[data-growth-period="ytd"]').forEach(b=>b.textContent='År til dato');
+    document.querySelectorAll('[data-growth-period="ytd"]').forEach(b=>{if(!matchMedia('(max-width:600px)').matches)b.textContent='År til dato'});
     // Do not gate readiness on animation frames: browsers pause them in offscreen iframes.
     if(typeof notifyHeight==='function')notifyHeight();
     parent.postMessage({type:'ndi-preview-ready'},'*');
