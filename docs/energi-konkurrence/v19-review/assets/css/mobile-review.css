@@ -76,3 +76,27 @@
  html body.mobile-shared-navigation .mobile-portfolio-header nav{border:0!important}
  html body.mobile-shared-navigation main{padding-top:16px!important}
 }
+
+/* Phone: picture, six direct steps and explanation together; desktop camera unchanged. */
+@media(max-width:700px){
+ #ai-rejsen .zc[data-zc].is-scene:not(.is-static) .zc-view{height:230px!important;min-height:0!important}
+ #ai-rejsen .zc.is-scene:not(.is-static) .zc-head,#ai-rejsen .zc.is-scene:not(.is-static) .zc-start-cue,#ai-rejsen .zc.is-scene:not(.is-static) .zc-controls{display:none!important}
+ #ai-rejsen .zc.is-scene:not(.is-static) .zc-rail{top:auto!important;bottom:0!important;left:12px!important;width:calc(100% - 24px)!important;height:44px!important}
+ #ai-rejsen .zc.is-scene:not(.is-static) .zc-chain{display:none}
+ #ai-rejsen .zc.is-scene:not(.is-static) .zc-rail ol{position:static;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:5px;counter-reset:ai-step}
+ #ai-rejsen .zc.is-scene:not(.is-static) .zc-rail li{height:44px;counter-increment:ai-step}
+ #ai-rejsen .zc.is-scene:not(.is-static) .zc-rail button{position:static;width:100%;height:44px;border:1px solid var(--zc-line);border-radius:8px;background:var(--zc-bg);font:600 15px system-ui;color:var(--zc-ink)}
+ #ai-rejsen .zc.is-scene:not(.is-static) .zc-rail button:before{content:counter(ai-step)}
+ #ai-rejsen .zc.is-scene:not(.is-static) .zc-rail button i,#ai-rejsen .zc.is-scene:not(.is-static) .zc-rail button span{display:none!important}
+ #ai-rejsen .zc.is-scene:not(.is-static) .zc-rail button[aria-current]{background:var(--zc-teal);color:var(--zc-bg);border-color:var(--zc-teal)}
+ #ai-rejsen .ndi-figure-note{display:none}
+ #ai-rejsen .zc-reader{padding:0 14px 18px!important}
+ #ai-rejsen .zc-reader .zc-card{padding:14px 0 0!important;margin-top:12px}
+ #ai-rejsen .zc-reader .zc-card h3{font-size:22px!important;line-height:1.25;margin:8px 0 12px}
+ #ai-rejsen .zc-reader .zc-card .zc-explanation{margin:12px 0 18px}
+ #ai-rejsen .zc-reader .zc-card .zc-explanation p{font-size:16px!important;line-height:1.5!important}
+ #ai-rejsen .zc .zc-electricity-link>span{bottom:58px;right:12px;font-size:14px;padding:8px 12px}
+}
+
+.ai-mobile-hint{display:none}
+@media(max-width:700px){.ai-desktop-hint{display:none}.ai-mobile-hint{display:inline}}
