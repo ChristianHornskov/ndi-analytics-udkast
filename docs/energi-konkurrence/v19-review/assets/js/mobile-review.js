@@ -17,7 +17,7 @@
  document.querySelectorAll('.mobile-class-details').forEach(d=>{d.open=!small.matches;small.addEventListener('change',()=>d.open=!small.matches)});
  // Local navigation without squeezing six labels into a horizontal strip.
  const local=document.querySelector('#analysis-nav');
- if(local){const wrap=el('label','mobile-section-picker','På denne side'),select=el('select');select.setAttribute('aria-label','Vælg afsnit på porteføljesiden');
+ if(local&&!document.body.classList.contains('mobile-portfolio')){const wrap=el('label','mobile-section-picker','På denne side'),select=el('select');select.setAttribute('aria-label','Vælg afsnit på porteføljesiden');
   local.querySelectorAll('a[href^="#"]').forEach(a=>{const o=el('option','',a.textContent.trim());o.value=a.getAttribute('href');select.append(o)});
   select.addEventListener('change',()=>{const a=[...local.querySelectorAll('a')].find(a=>a.getAttribute('href')===select.value);const target=a&&document.querySelector(a.hash);if(target){target.querySelector(':scope > details')?.setAttribute('open','');const h=document.querySelector('.mobile-portfolio-header')?.getBoundingClientRect().height||0;window.scrollTo({top:target.getBoundingClientRect().top+scrollY-h-16,behavior:'auto'})}});
   new MutationObserver(()=>{const a=local.querySelector('[aria-current]');if(a)select.value=a.getAttribute('href')}).observe(local,{subtree:true,attributes:true,attributeFilter:['aria-current']});wrap.append(select);local.before(wrap);

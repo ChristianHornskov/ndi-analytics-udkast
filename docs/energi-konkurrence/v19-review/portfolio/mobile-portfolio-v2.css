@@ -110,3 +110,11 @@
  html body.mobile-portfolio #risk>.callout{margin:0;font-size:12px;padding:12px}
  html body.mobile-portfolio .portfolio-disclosure-body>h2,html body.mobile-portfolio .portfolio-disclosure-body>.panelhead h2{font-size:20px}
 }
+
+/* Keep one dated graph caption and the detail controls in reading order. */
+#analysis-date,#analysis-nav{display:none!important}
+#analysis-hero-chart>figcaption>span{display:block;line-height:1.6}
+#preview-risk-summary>article,#highs>article{margin:12px 0 0!important;padding:0!important;border:0!important;background:transparent!important}
+@media(max-width:700px){
+ #preview-risk-summary>article>.portfolio-disclosure,#highs>article>.portfolio-disclosure{margin:0!important}
+}

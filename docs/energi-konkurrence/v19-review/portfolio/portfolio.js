@@ -73,7 +73,7 @@
       const figure=document.createElement('figure');figure.id='analysis-hero-chart';intro.appendChild(figure);
     }
     const figure=document.getElementById('analysis-hero-chart');
-    const content='<figcaption><span>Totalafkast i DKK<small>Med geninvesteret udbytte · '+esc(f.performanceAsOf)+'</small></span></figcaption>'+returnFigure(f,'hero-return');
+    const content='<figcaption><span>Totalafkast i DKK · med geninvesteret udbytte — '+new Date(f.performanceAsOf+'T12:00:00').toLocaleDateString('da-DK',{day:'numeric',month:'long',year:'numeric'})+'</span></figcaption>'+returnFigure(f,'hero-return');
     if(!figure.querySelector('.analysis-returns')||figure.dataset.chartKey!==content){figure.innerHTML=content;figure.dataset.chartKey=content;}
     const returns=dashboard.querySelector('.analysis-returns');if(returns){figure.querySelector('.analysis-returns')?.remove();figure.prepend(returns);}
     let panel=document.getElementById('analysis-distributions');
@@ -153,6 +153,9 @@
     if(distribution&&risk)risk.after(distribution);
     if(holdingsPanel&&distribution)distribution.after(holdingsPanel);
     if(bridge&&holdingsPanel)holdingsPanel.after(bridge);
+    const summaryPanel=document.getElementById('preview-risk-summary'),highPanel=document.getElementById('highs'),drawdownPanel=document.getElementById('drawdown')?.closest('article');
+    if(holdingsPanel&&summaryPanel)summaryPanel.append(holdingsPanel);
+    if(drawdownPanel&&highPanel)highPanel.append(drawdownPanel);
     dashboard.querySelectorAll('a[href="#portfolio"]').forEach(a=>a.onclick=()=>{const d=holdingsPanel?.querySelector(':scope > details');if(d)d.open=true;setTimeout(()=>holdingsPanel?.scrollIntoView({behavior:'smooth'}),0);});
 
 
