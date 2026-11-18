@@ -57,6 +57,7 @@
     const compact=window.matchMedia('(max-width:700px)').matches;
     const host=document.getElementById(id==='hero-return'?'analysis-hero-chart':'analysis-distributions'),hostW=host&&host.clientWidth?Math.round(host.clientWidth):0;
     /* Graf-review 10.11 punkt 2: tegn i rammens egen bredde, så aksetekst står i 14 px. */
+    if(compact&&window.NDI_MOBILE_FIGURE)return window.NDI_MOBILE_FIGURE(points,id,distributions?f.dividends.filter(d=>d.status==='confirmed'):[]);
     const W=hostW?Math.max(300,hostW):(compact?360:760),H=compact?260:Math.round(Math.min(340,Math.max(240,W*.45))),L=compact?45:52,R=compact?12:22,T=distributions?70:24,B=42;
     const first=Date.parse(points[0].d),last=Date.parse(points.at(-1).d),lo=Math.min(0,...points.map(p=>p.v)),hi=Math.max(1,...points.map(p=>p.v));
     const x=d=>L+(Date.parse(d)-first)/(last-first||1)*(W-L-R),y=v=>T+(hi-v)/(hi-lo)*(H-T-B);
@@ -72,8 +73,9 @@
       const figure=document.createElement('figure');figure.id='analysis-hero-chart';intro.appendChild(figure);
     }
     const figure=document.getElementById('analysis-hero-chart');
-    const content='<figcaption><span>Totalafkast i DKK<small>Med geninvesteret udbytte · '+esc(f.performanceAsOf)+'</small></span><strong>'+pct(m?.totalReturn)+'</strong></figcaption>'+returnFigure(f,'hero-return');
-    if(figure.innerHTML!==content)figure.innerHTML=content;
+    const content='<figcaption><span>Totalafkast i DKK<small>Med geninvesteret udbytte · '+esc(f.performanceAsOf)+'</small></span></figcaption>'+returnFigure(f,'hero-return');
+    if(!figure.querySelector('.analysis-returns')||figure.dataset.chartKey!==content){figure.innerHTML=content;figure.dataset.chartKey=content;}
+    const returns=dashboard.querySelector('.analysis-returns');if(returns){figure.querySelector('.analysis-returns')?.remove();figure.prepend(returns);}
     let panel=document.getElementById('analysis-distributions');
     if(!panel){panel=document.createElement('section');panel.id='analysis-distributions';panel.className='panel analysis-distributions';}
     const table='<table><thead><tr><th>Ex-dato</th><th>Betalingsdato</th><th>Kr. pr. bevis</th></tr></thead><tbody>'+f.dividends.filter(d=>d.status==='confirmed').map(d=>'<tr><td>'+esc(d.exDate)+'</td><td>'+esc(d.paymentDate)+'</td><td>'+n(d.amount,2)+'</td></tr>').join('')+'</tbody></table>';
@@ -125,6 +127,20 @@
     const geoPanel=document.getElementById('geography-review');
     if(geoPanel&&bridge.nextElementSibling!==geoPanel)bridge.after(geoPanel);
     graphicalOverview(f,m);
+    function disclosure(node,title){
+      if(!node||node.querySelector(':scope > .portfolio-disclosure'))return;
+      const detail=document.createElement('details');detail.className='portfolio-disclosure';
+      const summary=document.createElement('summary');summary.textContent=title;
+      const body=document.createElement('div');body.className='portfolio-disclosure-body';
+      while(node.firstChild)body.append(node.firstChild);
+      detail.append(summary,body);node.append(detail);
+      detail.addEventListener('toggle',()=>{notifyHeight();});
+    }
+    disclosure(document.getElementById('preview-risk-summary'),'Afkast og risiko i tal');
+    disclosure(document.getElementById('highs'),'Afstand fra 52-ugers top');
+    disclosure(sectorLayout,'Fordeling på sektorer');
+    disclosure(document.getElementById('method'),'Data og omkostninger');
+
 
 
 

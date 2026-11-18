@@ -1,0 +1,70 @@
+.portfolio-disclosure{border:1px solid #30454d;border-radius:12px;margin:12px 0;background:#102029}
+.portfolio-disclosure>summary{padding:18px 16px;cursor:pointer;font-weight:650;font-size:18px;min-height:48px}
+.portfolio-disclosure-body{padding:0 16px 16px}
+.portfolio-disclosure-body>.analysis-guide{margin-top:0}
+.pm-chart svg{display:block;width:100%;height:auto;touch-action:pan-y}
+.pm-readout{height:40px;font-size:12px;line-height:1.5;margin:8px 0;font-variant-numeric:tabular-nums}
+.pm-chart-note{font-size:12px!important;line-height:1.5;color:#b3c6cc;margin:8px 0}
+#analysis-hero-chart>.analysis-returns{margin:0 0 16px}
+#analysis-hero-chart>figcaption>span{font-size:13px}
+.analysis-dashboard-title{display:none!important}
+@media(max-width:700px){
+ html body.mobile-portfolio .mobile-portfolio-header{position:static!important;padding:6px 12px!important}
+ html body.mobile-portfolio .mobile-portfolio-header nav a{font-size:14px!important;padding:10px 8px!important;min-height:44px;flex:1}
+ html body.mobile-portfolio .mobile-portfolio-header nav{grid-template-columns:1fr 1fr!important}
+ html body.mobile-portfolio .analysis-intro{display:block!important;padding-top:12px!important}
+ .analysis-intro .analysis-paths,.analysis-hero-copy>.eyebrow{display:none!important}
+ .analysis-intro h1{font-size:29px!important;margin:8px 0!important}
+ .analysis-intro p{font-size:15px;line-height:1.5}
+ html body #analysis-hero-chart{margin:20px 0 0!important;padding:0!important;width:100%!important;min-width:0}
+ html body #analysis-hero-chart .analysis-returns{display:grid!important;grid-template-columns:1fr 1fr!important;gap:12px!important;padding:14px!important;border-radius:12px}
+ html body #analysis-hero-chart .analysis-returns>div{display:flex!important;flex-direction:column!important;gap:4px!important;padding:0!important;border:0!important}
+ html body #analysis-hero-chart .analysis-returns>div:first-child{grid-column:1/-1}
+ html body #analysis-hero-chart .analysis-returns strong{font-size:25px!important;line-height:1.15!important}
+ html body #analysis-hero-chart .analysis-returns>div:first-child strong{font-size:34px!important}
+ html body #analysis-hero-chart .analysis-returns span{font-size:13px!important}
+ html body #analysis-hero-chart .analysis-returns small{font-size:11px!important;line-height:1.4!important}
+ html body .analysis-snapshot{display:grid!important;grid-template-columns:1fr!important;gap:0!important;margin:12px 0!important;padding:0!important}
+ html body .analysis-snapshot>a{display:grid!important;grid-template-columns:85px 1fr!important;align-items:center!important;gap:12px!important;padding:14px 0!important;border-bottom:1px solid #30454d}
+ html body .analysis-snapshot strong{font-size:25px!important;line-height:1.2!important}
+ html body .analysis-snapshot span{font-size:13px!important;line-height:1.4!important}
+ html body #analysis-dashboard{margin:0 0 20px!important;padding:0!important}
+ .analysis-sector-key{display:grid!important;grid-template-columns:1fr!important}
+ .analysis-sector-key button{display:grid!important;grid-template-columns:12px 1fr auto;gap:10px;min-height:46px}
+ .cr1-liste .analysis-holding-card.cr1-kort{padding:14px 0!important}
+ .cr1-hoved{grid-template-columns:18px minmax(0,1fr) 62px!important;gap:4px 6px!important}
+ .cr1-navn a,.cr1-navn>strong{font-size:16px!important}
+ .cr1-navn small{font-size:11px!important;line-height:1.4}
+ .cr1-vaegt{min-width:0!important}.cr1-vaegt strong{font-size:16px!important}
+ .cr1-tal{margin:10px 0 0 24px!important;gap:6px!important;grid-template-columns:1fr 1fr 1fr 32px!important}
+ .cr1-tal span{font-size:10px!important}.cr1-tal b{font-size:13px!important}
+ .cr1-mere{min-width:32px!important;width:32px!important}.cr1-mere::before{left:11px!important}
+ #geography-review #hq-map{display:block!important}
+ #geography-review .maplayout{display:flex!important;flex-direction:column!important}
+ #geography-review .maplayout>#hq-map{order:0}
+ #geography-review .maplayout>.mobile-fold{order:1}
+ .g19-nedture>.pm-chart{display:block}
+}
+@media(min-width:701px){.g19-nedture>.pm-chart{display:none}}
+
+@media(max-width:700px){
+ html body .pm-chart svg text{font-size:12px!important;font-weight:400!important}
+ html body .pm-chart svg{overflow:visible;max-width:100%}
+ html body #geography-review .cr5-valgt{padding:12px;margin:12px 0}
+ html body #geography-review .maplayout>.mobile-fold{margin-top:12px}
+ html body #geography-review .maplayout{gap:12px!important}
+ html body .cr1-liste .cr1-navn a,html body .cr1-liste .cr1-navn>strong{font-size:16px!important}
+ html body .cr1-liste .cr1-tal b{font-size:14px!important}
+ html body .cr1-liste .cr1-tal span{font-size:11px!important}
+ html body.mobile-portfolio .analysis-intro{margin-top:14px!important;padding:16px!important}
+ html body.mobile-portfolio .analysis-intro h1{font-size:27px!important}
+ html body.mobile-portfolio #analysis-hero-chart figcaption{padding:0;margin-bottom:0}
+ html body.mobile-portfolio #analysis-hero-chart .analysis-returns{margin-bottom:12px}
+ html body.mobile-portfolio #highs,html body.mobile-portfolio #preview-risk-summary{margin:12px 0!important;padding:0!important;border:0!important}
+}
+@media(min-width:701px){
+ #analysis-hero-chart .analysis-returns{padding:18px;gap:14px;grid-template-columns:repeat(3,minmax(0,1fr))}
+ #analysis-hero-chart .analysis-returns>div{min-width:0;padding:0 12px 0 0}
+ #analysis-hero-chart .analysis-returns strong{font-size:28px!important;white-space:nowrap;line-height:1.3}
+ #analysis-hero-chart .analysis-returns span,#analysis-hero-chart .analysis-returns small{font-size:12px;line-height:1.5}
+}

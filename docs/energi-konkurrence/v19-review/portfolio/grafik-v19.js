@@ -61,6 +61,7 @@
     return ep;
   }
   function nedtureSvg(points, W, H, mob) {
+    if(mob&&window.NDI_MOBILE_FIGURE)return window.NDI_MOBILE_FIGURE(points,'drawdown-mobile',[],bunde(points));
     var a = mob ? 40 : 52, b = W - (mob ? 12 : 34), top = 18, bot = H - 34;
     var t0 = Date.parse(points[0].d), t1 = Date.parse(points[points.length - 1].d);
     var min = Math.min.apply(null, points.map(function (p) { return p.v; }));
