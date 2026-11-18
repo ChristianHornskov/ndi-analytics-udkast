@@ -43,9 +43,9 @@
       return w>h?[...partition(items.slice(0,cut),x,y,w*share,h),...partition(items.slice(cut),x+w*share,y,w*(1-share),h)]:[...partition(items.slice(0,cut),x,y,w,h*share),...partition(items.slice(cut),x,y+h*share,w,h*(1-share))];
     }
     const colors=['#79b9c0','#d9ce92','#94bba5','#6f94ad','#b6a98f','#86a4a2','#c6d5bc','#789d81','#a6b8c8','#b8a7bf','#8c9aab','#799b9f'];
-    const entries=groups.map(([name,value],i)=>({name,value,i}));
+    const entries=groups.map(([name,value],i)=>({name,value,i})).sort((a,b)=>b.value-a.value);
     const tiles=partition(entries,0,0,1000,440);
-    box.innerHTML='<p class="analysis-explain">Jo større et felt er, desto mere fylder sektoren blandt fondens aktier. Selskaber i forskellige sektorer kan stadig være afhængige af den samme teknologi. Vælg et felt eller et navn for at se selskaberne.</p><div class="analysis-sector-map"><svg viewBox="0 0 1000 440" role="group" aria-label="Sektorer fordelt efter deres vægt blandt aktierne">'+tiles.map(t=>'<g tabindex="0" role="button" data-sector="'+esc(t.name)+'" aria-label="'+esc(sectorNames[t.name]||t.name)+' '+pct(t.value)+'"><title>'+esc(sectorNames[t.name]||t.name)+' · '+pct(t.value)+' af fonden</title><rect x="'+(t.x+3)+'" y="'+(t.y+3)+'" width="'+Math.max(0,t.w-6)+'" height="'+Math.max(0,t.h-6)+'" rx="8" fill="'+colors[t.i%colors.length]+'"/>'+(t.w>105&&t.h>95?'<text x="'+(t.x+18)+'" y="'+(t.y+38)+'" fill="#0b2029" font-size="'+(t.w<160?13:t.w<250?17:23)+'">'+esc(sectorNames[t.name]||t.name)+'</text><text x="'+(t.x+18)+'" y="'+(t.y+72)+'" fill="#0b2029" font-size="30">'+pct(t.value)+'</text>':'')+'</g>').join('')+'</svg></div><div class="analysis-sector-key">'+entries.map(t=>'<button type="button" data-sector="'+esc(t.name)+'"><i style="background:'+colors[t.i%colors.length]+'"></i><span>'+esc(sectorNames[t.name]||t.name)+'</span><strong>'+pct(t.value)+'</strong></button>').join('')+'</div>';
+    box.innerHTML='<p class="analysis-explain">Jo større et felt er, desto mere fylder sektoren blandt fondens aktier. Selskaber i forskellige sektorer kan stadig være afhængige af den samme teknologi. Vælg et felt eller et navn for at se selskaberne.</p><div class="analysis-sector-map"><svg viewBox="0 0 1000 440" role="group" aria-label="Sektorer fordelt efter deres vægt blandt aktierne">'+tiles.map(t=>'<g tabindex="0" role="button" data-sector="'+esc(t.name)+'" aria-label="'+esc(sectorNames[t.name]||t.name)+' '+pct(t.value)+'"><title>'+esc(sectorNames[t.name]||t.name)+' · '+pct(t.value)+' af fonden</title><rect x="'+(t.x+3)+'" y="'+(t.y+3)+'" width="'+Math.max(0,t.w-6)+'" height="'+Math.max(0,t.h-6)+'" rx="8" fill="'+colors[t.i%colors.length]+'"/>'+(t.w>105&&t.h>95?'<text x="'+(t.x+18)+'" y="'+(t.y+38)+'" fill="#0b2029" font-size="'+(t.w<160?13:t.w<250?17:23)+'">'+esc(sectorNames[t.name]||t.name)+'</text><text x="'+(t.x+18)+'" y="'+(t.y+72)+'" fill="#0b2029" font-size="30">'+pct(t.value)+'</text>':'')+'</g>').join('')+'</svg></div><div class="analysis-sector-key">'+entries.map(t=>'<button type="button" data-sector="'+esc(t.name)+'"><i style="background:'+colors[t.i%colors.length]+'"></i><span>'+esc(sectorNames[t.name]||t.name)+'</span><strong>'+pct(t.value)+'</strong><span class="sector-weight-track" aria-hidden="true"><i style="width:'+Math.max(0,Math.min(100,t.value))+'%"></i></span></button>').join('')+'</div>';
     box.querySelectorAll('[data-sector]').forEach(b=>{b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();b.click();}};b.onclick=()=>{sectorFilter=b.dataset.sector;countryFilter='';holdings();document.getElementById('all-holdings-title').closest('.portfolio-disclosure').open=true;document.getElementById('all-holdings-title').scrollIntoView({behavior:'smooth',block:'start'});};});
     document.getElementById('sectorNote').textContent='Andel af hele fondens formue. Klik på en sektor for at se selskaberne. Sektorerne følger dataleverandørens inddeling. Kontanter er ikke med.';
   }
@@ -112,7 +112,7 @@
     }
     const da=day=>day.split('-').reverse().join('.');
     document.getElementById('analysis-date').textContent='PMINDI · Afkast til '+da(data.funds[0].performanceAsOf)+' · Beholdning pr. '+da(data.positionsAsOf||data.asOf);
-    document.querySelectorAll('#method p').forEach(p=>{if(p.textContent.startsWith('Data kommer fra Fundmarkets rapporter via'))p.textContent='Fondens tal og aktiekurserne kommer fra den seneste kontrollerede udgave af datagrundlaget, og alle sider bruger den samme udgave. Afkastet følger kursdatoen, og beholdningerne følger beholdningsdatoen. Det er ikke kurser i realtid. Står siden åben, ser den efter nye tal hvert femte minut. Opslagene fra X hentes for sig.';});
+    document.querySelectorAll('#method p').forEach(p=>{if(p.textContent.startsWith('Data kommer fra Fundmarkets rapporter via'))p.textContent='Fondens tal og aktiekurserne kommer fra den seneste kontrollerede udgave af datagrundlaget, og alle sider bruger den samme udgave. Afkastet følger kursdatoen, og beholdningerne følger beholdningsdatoen. Det er ikke kurser i realtid. Opdateringsdatoerne fremgår ved tallene.';});
     let cursor=menu;
     for(const id of ['analysis-dashboard','preview-risk-summary','highs','portfolio','method']){
       const section=document.getElementById(id);
@@ -142,7 +142,15 @@
     disclosure(geoPanel,'Hvor ligger selskabernes hovedsæder?');
     disclosure(holdingsPanel,'Se alle aktierne');
     for(const [id,title] of [['drawdown','Vejen gennem nedturene'],['calendar','Afkastkalender'],['rolling-chart','Afkast over 12 måneder']])disclosure(document.getElementById(id)?.closest('article'),title);
-    const riskNote=document.querySelector('#risk > .callout'),drawdownBody=document.getElementById('drawdown')?.closest('.portfolio-disclosure-body');if(riskNote&&drawdownBody)drawdownBody.prepend(riskNote);
+    const calendarPanel=document.getElementById('calendar')?.closest('article');
+    calendarPanel?.querySelectorAll('p').forEach(p=>{if(p.textContent.startsWith('Alle tal er i %. Afkast mellem'))p.textContent='Alle tal er i procent og inkluderer geninvesteret udbytte. Stjernen markerer startmåneden eller en måned, der endnu ikke er afsluttet. Tomme felter er perioder uden afkasttal.';});
+    const riskSummary=document.querySelector('#preview-risk-summary > details > .portfolio-disclosure-body');
+    const period=document.getElementById('risk-period');
+    const audit=period?.nextElementSibling?.classList.contains('audit-addition')?period.nextElementSibling:null;
+    if(riskSummary&&period&&!riskSummary.contains(period))riskSummary.append(period);
+    if(riskSummary&&audit){audit.textContent='Risikomålene beskriver fondens historiske udsving. De fortæller ikke, hvor store fremtidige fald kan blive.';riskSummary.append(audit);}
+    const riskNote=document.querySelector('#risk > .callout'),drawdownBody=document.getElementById('drawdown')?.closest('.portfolio-disclosure-body');if(riskNote)riskNote.remove();
+    if(drawdownBody){let note=drawdownBody.querySelector('.drawdown-risk-note');if(!note){note=document.createElement('p');note.className='small muted drawdown-risk-note';note.textContent='Historisk afkast er ikke en retvisende indikator for fremtidigt afkast.';drawdownBody.append(note);}}
     disclosure(document.getElementById('analysis-distributions'),'Udbytte og samlet afkast');
     disclosure(document.getElementById('method'),'Data og omkostninger');
     // Keep all optional analyses together; the company list is opened on demand.
@@ -204,7 +212,8 @@
   function decorateGeography(){
     if(!data||!geography||geography.asOf!==data.asOf)return;
     const rows=geography.funds[data.funds[0].id]||[];
-    const groups=sumBy(rows.filter(r=>r.status==='profile_found'),r=>r.country);
+    const groups=sumBy(rows.filter(r=>r.status==='profile_found'&&r.country&&!/^(unknown|ukendt|n\/a)$/i.test(r.country)),r=>r.country);
+    document.querySelectorAll('#geography-review p').forEach(p=>{if(p.textContent.startsWith('Ukendt:'))p.remove();});
     const weights=new Map(groups);
     document.querySelectorAll('#geography-review .country-pick').forEach(button=>{
       const weight=weights.get(button.dataset.hq);

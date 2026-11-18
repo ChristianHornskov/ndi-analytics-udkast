@@ -114,7 +114,7 @@ window.NDI_HQ_REVIEW={"checkedAt": "2026-10-01", "definition": "Det sted, hvor s
     const rollingDetails=document.querySelector('.rolling-details');if(rollingDetails){rollingDetails.hidden=true;rollingDetails.style.display='none'}
     refineHighs();
     const highTable=document.querySelector('#highs-content .high-table');
-    if(highTable&&highTable.parentElement.tagName!=='DETAILS'){const details=document.createElement('details');const summary=document.createElement('summary');summary.textContent='Se aktierne bag fordelingen';highTable.before(details);details.append(summary,highTable)}
+    if(highTable){highTable.hidden=highBucket===null;const head=highTable.previousElementSibling;if(head?.classList.contains('panelhead'))head.hidden=highBucket===null;}
     // Capture phase prevents the inherited click listener from replacing our all-position view.
     ensureNasdaq();
     const asof=document.getElementById('asof');
@@ -294,7 +294,8 @@ function refineHighs(){
  box.querySelectorAll('.highmetrics .metric').forEach(m=>{if(m.querySelector('.label')?.textContent==='Ikke fordelt')m.remove()});
  box.querySelector('#high-unknown')?.remove();
  const caption=box.querySelector('.hist-scroll + p');
- if(caption&&!caption.querySelector('.preview-high-coverage')){const span=document.createElement('span');span.className='preview-high-coverage';span.textContent=' '+missing+' positioner er ikke fordelt på grund af manglende, utilstrækkelig eller for kort valideret kurshistorik.';caption.append(span)}
+ box.querySelector('.preview-high-coverage')?.remove();
+ const table=box.querySelector('.high-table');if(table){table.hidden=highBucket===null;const head=table.previousElementSibling;if(head?.classList.contains('panelhead'))head.hidden=highBucket===null;}
 }
 const beforeHighs=renderHighs;renderHighs=function(...args){beforeHighs(...args);refineHighs()};
 const readableStyle=document.createElement('style');readableStyle.textContent=`
