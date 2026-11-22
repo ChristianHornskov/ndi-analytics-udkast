@@ -146,7 +146,7 @@
     // Aktiens tal hører til kurskortet og flyttes derind, når det findes.
     var aktieRk = isFinite(kursVis) && kursVis !== null ? celle('Seneste lukkekurs', dk(kursVis, 2), kursValuta, (L && L.ticker ? L.ticker + ' · ' : '') + dato(kursDato)) : '';
     if (L && isFinite(L.y1) && L.y1fra) aktieRk += celle('Kursændring, 12 måneder', (L.y1 > 0 ? '+' : '') + dk(L.y1, 1) + ' %', '', dato(L.y1fra.slice(0, 10)) + ' til ' + dato(kursDato));
-    if (L && L.afstand !== null) aktieRk += celle(L.fuldtAar ? 'Under 52-ugers top' : 'Under toppen i perioden', dk(L.afstand, 1) + ' %', '', 'Afstand til højeste dagskurs');
+    if (L && L.afstand !== null) aktieRk += celle(L.fuldtAar ? 'Under toårs top' : 'Under toppen i perioden', dk(L.afstand, 1) + ' %', '', 'Afstand til højeste dagskurs');
     var rk = document.querySelector('.cr-nt-aktie') || document.createElement('div');
     rk.className = 'cr-nt-aktie cr-nt-raekke';
     rk.innerHTML = aktieRk;

@@ -26,7 +26,7 @@
  const shortTop=r.status==='short_history'?r.availableHistoryTop:null;
  const distance=Number.isFinite(r.distance)?r.distance:Number.isFinite(shortTop?.distance)?shortTop.distance:null;
  const topStart=shortTop?.start||r.start;
- metric(r.status==='ok'?'Under 52-ugers top':'Under toppen i tilgængelig historik',distance===null?'—':number(distance,1)+' %',r.status==='ok'?'Højeste dagskurs i perioden':topStart?'Historik fra '+date(topStart):'Kortere end 52 uger');
+ metric(r.status==='ok'?'Under toårs top':'Under toppen i tilgængelig historik',distance===null?'—':number(distance,1)+' %',r.status==='ok'?'Højeste dagskurs i perioden':topStart?'Historik fra '+date(topStart):'Kortere end to år');
  box.append(grid);
  const daily=el('div','ndi-daily-history');box.append(daily);
  daily.append(el('p','lille','Henter daglige lukkekurser …'));

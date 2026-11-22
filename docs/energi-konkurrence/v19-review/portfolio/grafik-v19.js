@@ -1,5 +1,5 @@
 /* Nye grafer i porteføljeanalysen (v19):
- *  1. 52-ugers top: på smal skærm vises fordelingen som en liste med vandrette
+ *  1. toårs top: på smal skærm vises fordelingen som en liste med vandrette
  *     bjælker i stedet for søjlediagrammet, der ellers skæres af.
  *  2. Vejen gennem nedturene: ny kurve med udfyldt flade, tal ved de fem
  *     dybeste bunde og egen tegning til mobil.
@@ -19,7 +19,7 @@
   var e = function (x) { return String(x == null ? '' : x).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
   var datoTekst = function (d) { return new Date(d + 'T12:00:00Z').toLocaleDateString('da-DK', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' }); };
 
-  /* ------------------------------------------------------------ 52-ugers top, mobil */
+  /* ------------------------------------------------------------ toårs top, mobil */
   function highsListe(fund, source) {
     var box = document.getElementById('highs-content');
     if (!box || !fund || !source || !source.funds) return;
@@ -40,7 +40,7 @@
     }).join('');
     var html = '<div class="g19-hl"><p class="g19-hl-forkl">Bjælken viser, hvor stor en del af formuen der ligger i hvert spænd. Tryk for at se aktierne.</p>' +
       '<div class="g19-hl-hd" aria-hidden="true"><span>Under top</span><span></span><span>Formue</span><span>Aktier</span></div>' +
-      '<ol class="g19-hl-liste" aria-label="Andel af formuen efter afstand til 52-ugers top">' + rk + '</ol></div>';
+      '<ol class="g19-hl-liste" aria-label="Andel af formuen efter afstand til toårs top">' + rk + '</ol></div>';
     scroll.insertAdjacentHTML('afterend', html);
     box.querySelectorAll('[data-g19bucket]').forEach(function (k) {
       k.addEventListener('click', function () {
@@ -175,7 +175,7 @@
 
   function efterRender() {
     if (typeof data === 'undefined' || !data || !data.funds) return;
-    try { highsListe(data.funds[selected], typeof highData === 'undefined' ? null : highData); } catch (err) { console.warn('g19 52-uger', err); }
+    try { highsListe(data.funds[selected], typeof highData === 'undefined' ? null : highData); } catch (err) { console.warn('g19 toår', err); }
     try { nedture(); } catch (err) { console.warn('g19 nedture', err); }
     try { kalender(); } catch (err) { console.warn('g19 kalender', err); }
   }
@@ -186,7 +186,7 @@
     var forrigeHighs = renderHighs;
     renderHighs = function (fund, source) {
       var r = forrigeHighs.apply(this, arguments);
-      try { highsListe(fund, source); } catch (err) { console.warn('g19 52-uger', err); }
+      try { highsListe(fund, source); } catch (err) { console.warn('g19 toår', err); }
       return r;
     };
   }

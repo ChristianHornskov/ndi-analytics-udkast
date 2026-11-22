@@ -92,14 +92,14 @@
     const markup='<div class="analysis-dashboard-title"><span class="eyebrow">OVERBLIK FØR DETALJERNE</span><h2>Hvad har fonden givet, og hvad ejer den?</h2><p>Begynd med afkastet. Se derefter, hvor meget det har svinget, og hvordan pengene er fordelt. Tallene her gælder fonden. Kursændringerne længere nede gælder de enkelte aktier.</p></div><div class="analysis-returns">'+[['Totalafkast siden start',m?.totalReturn,'Med geninvesteret udbytte'],['Gennemsnitligt årligt afkast',m?.cagr,'Årligt sammensat afkast siden start'],['År til dato',f.reportedYtd,'Fra årets begyndelse']].map(([label,value,note])=>'<div><span>'+label+'</span><strong>'+val(value)+'</strong><small>'+note+'</small></div>').join('')+'</div><div class="analysis-snapshot"><a href="#portfolio"><strong>'+ps.length+'</strong><span>Positioner i fonden</span></a><a href="#portfolio"><strong>'+pct(ps.slice().sort((a,b)=>b.weight-a.weight).slice(0,10).reduce((a,p)=>a+p.weight,0))+'</strong><span>i de ti største positioner</span></a></div>';
     if(dashboard.innerHTML!==markup)dashboard.innerHTML=markup;
     function explain(id,text){const host=document.getElementById(id);if(!host)return;let p=host.querySelector('.analysis-guide');if(!p){p=document.createElement('p');p.className='analysis-guide';const h=host.querySelector('h2');if(h)h.after(p);else host.prepend(p);}if(p.textContent!==text)p.textContent=text;}
-    explain('method','Aktiernes ugeændring sammenligner slutkursen med den seneste handelsdag på eller før datoen syv kalenderdage tidligere. Kurserne er i aktiens handelsvaluta. For selskaber med kort historik viser tabellen afstanden til den højeste observerede kurs siden den angivne startdato. De tæller ikke med som fulde 52 uger i fordelingen ovenfor.');
+    explain('method','Aktiernes ugeændring sammenligner slutkursen med den seneste handelsdag på eller før datoen syv kalenderdage tidligere. Kurserne er i aktiens handelsvaluta. For selskaber med kort historik viser tabellen afstanden til den højeste observerede kurs siden den angivne startdato. De tæller ikke med som fulde to år i fordelingen ovenfor.');
     explain('preview-risk-summary','Afkast fortæller kun en del af historien. Her ser du, hvor store udsving fonden har haft, og hvor dybe nedturene har været. Volatilitet måler udsvingene. Sharpe-ratio viser, hvor meget afkast fonden har givet ud over den risikofrie rente i forhold til udsvingene.');
     const dd=document.getElementById('drawdown');if(dd){let p=document.getElementById('analysis-drawdown-guide');if(!p){p=document.createElement('p');p.id='analysis-drawdown-guide';p.className='analysis-explain';p.textContent='Forestil dig, at du investerede lige før en top. Grafen viser, hvor langt værdien derefter faldt under den hidtidige top. Ved 0 % har fonden indhentet hele faldet. Jo dybere og længere et dyk er, desto større og mere langvarig har nedturen været.';dd.before(p);}}
     document.querySelectorAll('#drawdown > p').forEach(p=>{if(p.textContent.startsWith('Datoerne i grafen'))p.textContent='Fold listen ud for at se dato og størrelse for hver nedtur. En nedtur slutter, når den tidligere top genvindes. Den aktuelle nedturs bund kan ændre sig.';});
     const rolling=document.getElementById('rolling-chart');if(rolling&&!document.getElementById('analysis-rolling-guide')){const p=document.createElement('p');p.id='analysis-rolling-guide';p.className='analysis-explain';p.textContent='Flyt starttidspunktet én dag ad gangen: hvert punkt viser det afkast, en investering havde givet over de foregående 12 måneder. Det gør det tydeligt, hvor meget resultatet afhænger af, hvornår man investerede.';rolling.before(p);}
 
     const methodHost=document.getElementById('method-content');
-    const formulaTitles=new Set(['Totalafkast, ÅTD og CAGR','12 måneder og månedsafkast','Volatilitet og Sharpe','Fald fra top','52-ugers top','Aktiernes eksterne kursudvikling']);
+    const formulaTitles=new Set(['Totalafkast, ÅTD og CAGR','12 måneder og månedsafkast','Volatilitet og Sharpe','Fald fra top','toårs top','Aktiernes eksterne kursudvikling']);
     if(methodHost)for(const heading of [...methodHost.children].filter(el=>el.tagName==='H3'&&formulaTitles.has(el.textContent))){
       const details=document.createElement('details');details.className='analysis-formula';
       const summary=document.createElement('summary');heading.before(details);details.append(summary);summary.append(heading);
@@ -137,7 +137,7 @@
       detail.addEventListener('toggle',()=>{notifyHeight();});
     }
     disclosure(document.getElementById('preview-risk-summary'),'Afkast og risiko i tal');
-    disclosure(document.getElementById('highs'),'Afstand fra 52-ugers top');
+    disclosure(document.getElementById('highs'),'Afstand fra toårs top');
     disclosure(sectorLayout,'Fordeling på sektorer');
     disclosure(geoPanel,'Hvor ligger selskabernes hovedsæder?');
     disclosure(holdingsPanel,'Se alle aktierne');
@@ -200,7 +200,7 @@
   function decorateHoldings(){
     const body=document.getElementById('holdings'),table=body.closest('table');
     const headers=table.querySelectorAll('thead th');
-    headers[headers.length-1].innerHTML='Under toppen<small>52 uger eller tilgængelig historik</small>';
+    headers[headers.length-1].innerHTML='Under toppen<small>to år eller tilgængelig historik</small>';
     const keys={3:'weight'};periods.forEach(([key],i)=>keys[4+i]=key);
     Object.entries(keys).forEach(([index,key])=>{const th=headers[index];if(!th)return;const label=th.textContent;th.setAttribute('aria-sort',key===sortKey?(sortDirection===-1?'descending':'ascending'):'none');th.innerHTML='<button type="button" class="analysis-sort">'+esc(label)+' <span aria-hidden="true">'+(key===sortKey?(sortDirection===-1?'↓':'↑'):'↕')+'</span></button>';th.firstChild.onclick=()=>{sortDirection=sortKey===key?-sortDirection:-1;sortKey=key;holdings();};});
     body.querySelectorAll('tr').forEach(row=>{periods.forEach((_,i)=>{const cell=row.cells[4+i];if(!cell)return;const v=Number(cell.textContent.replace(/[^0-9,.-]/g,'').replace(',','.'));if(cell.textContent.includes('%'))cell.classList.add(v>0?'analysis-up':v<0?'analysis-down':'analysis-flat');});const isin=row.cells[0]?.querySelector('small:last-child')?.textContent;const r=highData?.funds.find(f=>f.short===data.funds[0].short)?.rows.find(r=>r.isin===isin);const last=row.cells[row.cells.length-1],extra=r?.availableHistoryTop;if(r?.status==='short_history'){last.innerHTML=Number.isFinite(extra?.distance)?pct(extra.distance)+'<small>Top siden '+esc(extra.start.split('-').reverse().join('.'))+'</small>':'<span class="analysis-missing">—</span><small>Afventer kurshistorik</small>';}});

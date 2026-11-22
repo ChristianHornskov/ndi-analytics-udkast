@@ -250,7 +250,7 @@ holdingsMarkup=function(ps){return ps.map(p=>{const r=marketRow(p);return `<tr d
 holdings=function(){
  const f=data.funds[selected],query=$('search').value.toLowerCase(),geo=geography?.funds[f.id]||[];
  const ps=f.positions.filter(p=>p.isin&&p.weight>0&&(!sectorFilter||(p.sector||'Ikke klassificeret')===sectorFilter)&&(!countryFilter||geo.some(r=>r.isin===p.isin&&r.country===countryFilter&&r.status==='profile_found'))&&`${p.name} ${p.isin} ${ndiListing(p).symbol} ${ndiListingLabel(p)}`.toLowerCase().includes(query));
- $('holdings').closest('table').querySelector('thead').innerHTML=`<tr><th>Selskab</th><th>Sektor</th><th>Markedskurs</th><th>Vægt</th>${periodHeaders()}<th>Under 52-ugers top</th></tr>`;
+ $('holdings').closest('table').querySelector('thead').innerHTML=`<tr><th>Selskab</th><th>Sektor</th><th>Markedskurs</th><th>Vægt</th>${periodHeaders()}<th>Under toårs top</th></tr>`;
  $('holdings').innerHTML=holdingsMarkup(ps)||'<tr><td colspan="10">Ingen positioner matcher.</td></tr>';
  $('activefilter').innerHTML=`<p class="small muted">${ps.length} ${ps.length===1?"position":"positioner"}. Kursændring i aktiens noteringsvaluta, uden geninvesteret udbytte. Eksterne markedskurser, uafhængigt af hvor længe fonden har ejet aktien. En streg betyder, at datagrundlaget er utilstrækkeligt.</p>`+((sectorFilter||countryFilter)?`<button id="clearfilter" class="chip">${esc([sectorNames[sectorFilter]||sectorFilter,countryLabel(countryFilter)].filter(Boolean).join(' · '))} × Nulstil filtre</button>`:'');
  ensureHoldingsButton();
@@ -261,7 +261,7 @@ holdings=function(){
 // Strings are inline text (never formulas); numbers stay numeric and missing values blank.
 function holdingsWorkbook(fund,asOf,market){
  const escXml=v=>String(v??'').replace(/[\x00-\x08\x0b\x0c\x0e-\x1f]/g,'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
- const cols=['Selskab / post','ISIN','Type','Sektor','Vægt af formue','Rapportkurs','Rapportvaluta','Markedskurs','Markedsvaluta','Markedsdato','1 dag','1 måned','3 måneder','År til dato','1 år','Under 52-ugers top','Ticker','Børs','Leverandørsymbol'];
+ const cols=['Selskab / post','ISIN','Type','Sektor','Vægt af formue','Rapportkurs','Rapportvaluta','Markedskurs','Markedsvaluta','Markedsdato','1 dag','1 måned','3 måneder','År til dato','1 år','Under toårs top','Ticker','Børs','Leverandørsymbol'];
  const positions=fund.positions.filter(p=>p.isin&&p.weight>0).sort((a,b)=>b.weight-a.weight);
  const rows=[[fund.short+', alle værdipapirpositioner'],['Rapportdato',asOf],['Kilde: Fundmarkets rapporter via dataregisteret. Markedskurser og kursændringer: Yahoo Finance.'],['Vægte er andele af hele formuen. Kursændringer er i noteringsvaluta uden geninvesteret udbytte.'],['Alle aktier, fonden ejer medtages uanset søgning/filtre. Konti og øvrige balanceposter er udeladt. Tomme celler betyder manglende data.'],cols];
  const numeric=(v,percent=false)=>typeof v==='number'&&Number.isFinite(v)?(percent?v/100:v):null;
