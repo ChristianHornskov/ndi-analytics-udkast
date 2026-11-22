@@ -3,6 +3,17 @@
   document.documentElement.classList.add('advanced-view','portfolio-analysis');
   if(!periods.some(([key])=>key==='w1'))periods.splice(1,0,['w1','1 uge']);
   function attachWeek(){}
+  // Only phones use collapsible analysis sections; preserve their state on resize.
+  const disclosureMobile=matchMedia('(max-width:700px)');
+  const mobileDisclosureState=new WeakMap();
+  function syncDisclosures(){
+    document.querySelectorAll('.portfolio-disclosure').forEach(detail=>{
+      if(disclosureMobile.matches)detail.open=mobileDisclosureState.get(detail)??false;
+      else {mobileDisclosureState.set(detail,detail.open);detail.open=true;}
+    });
+    requestAnimationFrame(()=>{window.dispatchEvent(new Event('resize'));notifyHeight();});
+  }
+  disclosureMobile.addEventListener('change',syncDisclosures);
   const main=document.querySelector('main');
   const intro=document.createElement('section');intro.className='analysis-intro';
   intro.innerHTML='<div class="analysis-paths"><a href="../widget/index.html">← Fondens afkast</a><a href="../tech.html">Udforsk selskaberne →</a></div><p class="eyebrow">NEWDEAL INVEST · PMINDI</p><h1>Porteføljen under lup</h1><p>Se, hvad fonden ejer, hvordan investeringerne er fordelt, og hvor store udsving porteføljen har haft.</p><p id="analysis-date" class="small muted"></p>';
@@ -134,6 +145,8 @@
       const body=document.createElement('div');body.className='portfolio-disclosure-body';
       while(node.firstChild)body.append(node.firstChild);
       detail.append(summary,body);node.append(detail);
+      detail.open=!disclosureMobile.matches;
+      summary.addEventListener('click',event=>{if(!disclosureMobile.matches)event.preventDefault();});
       detail.addEventListener('toggle',()=>{notifyHeight();});
     }
     disclosure(document.getElementById('preview-risk-summary'),'Afkast og risiko i tal');
