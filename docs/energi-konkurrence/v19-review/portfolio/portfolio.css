@@ -145,3 +145,9 @@ html body .sector-theme-cta{margin-top:14px}
  html body .sector-layout>.portfolio-disclosure>.portfolio-disclosure-body{border:0;border-radius:0;gap:8px}
  html body .sector-theme-links a{font-size:14px;min-height:84px;padding:12px}
 }
+
+/* Match panel edges and give each live theme weight a consistent hierarchy. */
+html body .sector-layout .portfolio-disclosure-body>.panel{align-self:stretch;height:auto;min-height:0;margin:0}
+html body .sector-theme-label{display:flex;flex-direction:column;gap:5px;min-width:0}
+html body .sector-theme-weight{font-size:23px;line-height:1.1;color:#e8f1d0;font-variant-numeric:tabular-nums}
+html body .sector-theme-links a{min-height:98px}
