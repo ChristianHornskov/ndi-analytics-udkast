@@ -93,7 +93,7 @@
  .mobile-ai-controls button{width:48px;height:48px;border:1px solid #82959c88;background:#8eb8be22;border-radius:50%;color:inherit;font:24px/1 system-ui;cursor:pointer}
  .mobile-ai-controls button:disabled{opacity:.3;cursor:default}
  .mobile-ai-controls button:focus-visible{outline:3px solid #eee797;outline-offset:3px}
- #ai-rejsen .mobile-ai-cards>.zc-card{display:block;position:static;inset:auto;width:auto;max-width:none;opacity:1;visibility:visible;transform:none;margin:0;padding:20px 16px;border:0;background:none;box-shadow:none}
+ #ai-rejsen .mobile-ai-cards>.zc-card{display:block;position:static;inset:auto;width:auto;max-width:none;opacity:1;visibility:visible;transform:none;margin:0;padding:20px 16px;border:0;background:none;box-shadow:none;pointer-events:auto}
  #ai-rejsen .mobile-ai-cards>.zc-card[hidden]{display:none!important}
  .mobile-ai-cards .zc-card-kicker{display:none}
  #ai-rejsen .mobile-ai-cards h3{font-size:24px!important;line-height:1.2;margin:0 0 14px}

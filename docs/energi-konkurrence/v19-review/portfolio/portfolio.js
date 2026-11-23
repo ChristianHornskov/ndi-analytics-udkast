@@ -15,11 +15,11 @@
   }
   disclosureMobile.addEventListener('change',syncDisclosures);
   const main=document.querySelector('main');
-  const intro=document.createElement('section');intro.className='analysis-intro';
+  const intro=document.createElement('section');intro.className='analysis-intro';intro.id='analysis-introduction';
   intro.innerHTML='<div class="analysis-paths"><a href="../widget/index.html">← Fondens afkast</a><a href="../tech.html">Udforsk selskaberne →</a></div><p class="eyebrow">NEWDEAL INVEST · PMINDI</p><h1>Porteføljen under lup</h1><p>Se, hvad fonden ejer, hvordan investeringerne er fordelt, og hvor store udsving porteføljen har haft.</p><p id="analysis-date" class="small muted"></p>';
   main.prepend(intro);
   const menu=document.createElement('nav');menu.id='analysis-nav';menu.setAttribute('aria-label','Porteføljeanalyse');
-  menu.innerHTML='<a href="#analysis-dashboard">Overblik</a><a href="#preview-risk-summary">Risiko i tal</a><a href="#highs">Afstand til toppen</a><a href="#portfolio">Fordeling & selskaber</a><a href="#risk">Nedture & afkast</a><a href="#method">Datagrundlag</a>';
+  menu.innerHTML='<a href="#analysis-introduction">Overblik</a><a href="#preview-risk-summary">Risiko i tal</a><a href="#highs">Afstand til toppen</a><a href="#portfolio">Fordeling & selskaber</a><a href="#risk">Nedture & afkast</a><a href="#method">Datagrundlag</a>';
   intro.after(menu);
   const sectionLinks=[...menu.querySelectorAll('a')];
   function markSection(){
@@ -41,24 +41,36 @@
   const dashboard=document.createElement('section');dashboard.id='analysis-dashboard';dashboard.className='analysis-dashboard';menu.after(dashboard);
   const bridge=document.createElement('a');bridge.href='../tech.html';bridge.className='analysis-tech-bridge';
   bridge.innerHTML='<div><span class="eyebrow">FORSTÅ SELSKABERNE BAG TALLENE</span><h2>Teknologi går på tværs af sektorer</h2><p>En chip, et datacenter og elnettet kan ligge i hver sin sektor, men være afhængige af hinanden. Gå på opdagelse i de 12 temaer og se forbindelserne.</p><strong>Gå på opdagelse i tech <span aria-hidden="true">→</span></strong></div><img src="../assets/img/v5-fotos/chips-siliciumwafer.webp" alt="" loading="lazy">';
+  function revealHoldings(){
+    const heading=document.getElementById('all-holdings-title');
+    if(!heading)return;
+    for(let el=heading.parentElement;el;el=el.parentElement)if(el.tagName==='DETAILS')el.open=true;
+    requestAnimationFrame(()=>heading.scrollIntoView({behavior:'smooth',block:'start'}));
+  }
   function sectors(){
     if(!data)return;
     const groups=sumBy(data.funds[0].positions.filter(p=>p.isin&&p.weight>0),p=>p.sector||'Ikke klassificeret');
     const box=document.getElementById('sector');
-    // A proportional area map, with a readable legend rather than a wall of bars.
-    function partition(items,x,y,w,h){
-      if(items.length===1)return [{...items[0],x,y,w,h}];
-      const total=items.reduce((a,v)=>a+v.value,0);let sum=0,cut=0;
-      while(cut<items.length-1&&sum<total/2){sum+=items[cut++].value;}
-      const share=sum/total;
-      return w>h?[...partition(items.slice(0,cut),x,y,w*share,h),...partition(items.slice(cut),x+w*share,y,w*(1-share),h)]:[...partition(items.slice(0,cut),x,y,w,h*share),...partition(items.slice(cut),x,y+h*share,w,h*(1-share))];
+    const sectorColors=['#8bb8bc','#d4c889','#91af9a','#b49a7a','#929fbc','#9b8caa','#6c9ba5','#b7c89a','#c3a5a0','#7a9b8d','#a6afb8','#b99a72'];
+    const themeImages={"software": "assets/img/v5-fotos/software-ai-serverbakke.webp", "chips": "assets/img/v5-fotos/chips-siliciumwafer.webp", "datacenter": "assets/img/v5-fotos/datacentre-serverraekker.webp", "energi": "assets/img/v5-fotos/energi-hoejspaendingsmast.webp", "platforme": "assets/img/v5-fotos/platforme-pakkesortering.webp", "fintech": "assets/img/v5-fotos/fintech-betalingsterminal.webp", "krypto": "assets/img/v5-fotos/krypto-regnecontainer.webp", "fysisk-ai": "assets/img/v5-fotos/robotter-robotarm-kamera.webp", "rumfart": "assets/img/v5-fotos/rumfart-satellit-i-kredsloeb.webp", "kvante": "assets/img/v5-fotos/kvante-fortyndingskryostat.webp", "sundhed": "assets/img/v5-fotos/sundhed-mr-scanner.webp", "raastoffer": "assets/img/v5-fotos/raastoffer-malm-og-silicium.webp"};
+    const entries=groups.map(([name,value])=>({name,value})).sort((a,b)=>b.value-a.value);
+    box.innerHTML='<div class="analysis-sector-key">'+entries.map((t,i)=>'<button type="button" style="--sector-color:'+sectorColors[i%sectorColors.length]+'" data-sector="'+esc(t.name)+'"><span>'+esc(sectorNames[t.name]||t.name)+'</span><strong>'+pct(t.value)+'</strong><span class="sector-weight-track" aria-hidden="true"><i style="width:'+Math.max(0,Math.min(100,t.value))+'%"></i></span></button>').join('')+'</div>';
+    const sectorPanel=box.closest('article');
+    sectorPanel.classList.add('sector-standard');
+    sectorPanel.querySelector('h2').textContent='Morningstars sektorer';
+    sectorPanel.querySelector('.eyebrow').textContent='FONDEN EFTER BRANCHE';
+    sectorPanel.querySelector('.segmented')?.setAttribute('hidden','');
+    let introduction=sectorPanel.querySelector('.sector-introduction');
+    if(!introduction){introduction=document.createElement('p');introduction.className='sector-introduction';box.before(introduction);}
+    introduction.textContent='Fondens fordeling efter Morningstars sektorstruktur. Tryk på en sektor for at se aktierne.';
+    let themes=document.getElementById('sector-themes');
+    if(!themes){
+      themes=document.createElement('article');themes.id='sector-themes';themes.className='panel sector-themes';sectorPanel.after(themes);
+      const links=[['chips','Chips og halvledere'],['energi','Energi og elnet'],['datacenter','Datacentre'],['platforme','Platformsøkonomi'],['fysisk-ai','Robotter og fysisk AI'],['raastoffer','Råstoffer'],['rumfart','Rumfart'],['fintech','Fintech'],['krypto','Krypto'],['software','Software og AI'],['sundhed','Sundhed og biotek'],['kvante','Kvantecomputere']];
+      themes.innerHTML='<span class="eyebrow">VORES BLIK PÅ SELSKABERNE</span><h2>Vores investeringstemaer</h2><p>Vi inddeler også fondens selskaber efter den teknologi, de arbejder med. Det viser forbindelser, som sektorinddelingen ikke får med.</p><div class="sector-theme-links">'+links.map(([id,name])=>'<a href="../temaer/'+id+'.html"><img src="../'+themeImages[id]+'" alt="" loading="lazy"><span>'+name+'</span><span aria-hidden="true">↗</span></a>').join('')+'</div><p class="small muted">Et selskab kan være med i flere investeringstemaer.</p><a class="sector-theme-cta" href="../tech.html">Udforsk investeringstemaerne <span aria-hidden="true">→</span></a>';
     }
-    const colors=['#79b9c0','#d9ce92','#94bba5','#6f94ad','#b6a98f','#86a4a2','#c6d5bc','#789d81','#a6b8c8','#b8a7bf','#8c9aab','#799b9f'];
-    const entries=groups.map(([name,value],i)=>({name,value,i})).sort((a,b)=>b.value-a.value);
-    const tiles=partition(entries,0,0,1000,440);
-    box.innerHTML='<p class="analysis-explain">Jo større et felt er, desto mere fylder sektoren blandt fondens aktier. Selskaber i forskellige sektorer kan stadig være afhængige af den samme teknologi. Vælg et felt eller et navn for at se selskaberne.</p><div class="analysis-sector-map"><svg viewBox="0 0 1000 440" role="group" aria-label="Sektorer fordelt efter deres vægt blandt aktierne">'+tiles.map(t=>'<g tabindex="0" role="button" data-sector="'+esc(t.name)+'" aria-label="'+esc(sectorNames[t.name]||t.name)+' '+pct(t.value)+'"><title>'+esc(sectorNames[t.name]||t.name)+' · '+pct(t.value)+' af fonden</title><rect x="'+(t.x+3)+'" y="'+(t.y+3)+'" width="'+Math.max(0,t.w-6)+'" height="'+Math.max(0,t.h-6)+'" rx="8" fill="'+colors[t.i%colors.length]+'"/>'+(t.w>105&&t.h>95?'<text x="'+(t.x+18)+'" y="'+(t.y+38)+'" fill="#0b2029" font-size="'+(t.w<160?13:t.w<250?17:23)+'">'+esc(sectorNames[t.name]||t.name)+'</text><text x="'+(t.x+18)+'" y="'+(t.y+72)+'" fill="#0b2029" font-size="30">'+pct(t.value)+'</text>':'')+'</g>').join('')+'</svg></div><div class="analysis-sector-key">'+entries.map(t=>'<button type="button" data-sector="'+esc(t.name)+'"><i style="background:'+colors[t.i%colors.length]+'"></i><span>'+esc(sectorNames[t.name]||t.name)+'</span><strong>'+pct(t.value)+'</strong><span class="sector-weight-track" aria-hidden="true"><i style="width:'+Math.max(0,Math.min(100,t.value))+'%"></i></span></button>').join('')+'</div>';
-    box.querySelectorAll('[data-sector]').forEach(b=>{b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();b.click();}};b.onclick=()=>{sectorFilter=b.dataset.sector;countryFilter='';holdings();document.getElementById('all-holdings-title').closest('.portfolio-disclosure').open=true;document.getElementById('all-holdings-title').scrollIntoView({behavior:'smooth',block:'start'});};});
-    document.getElementById('sectorNote').textContent='Andel af hele fondens formue. Klik på en sektor for at se selskaberne. Sektorerne følger dataleverandørens inddeling. Kontanter er ikke med.';
+    box.querySelectorAll('[data-sector]').forEach(b=>{b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();b.click();}};b.onclick=()=>{sectorFilter=b.dataset.sector;countryFilter='';holdings();revealHoldings();};});
+    document.getElementById('sectorNote').textContent='Andel af fondens formue. Kontanter er ikke med.';
   }
   function returnFigure(f,id,distributions=false){
     const points=f.data.filter(p=>Number.isFinite(p.total)).map(p=>({d:p.d,v:p.total}));
@@ -138,6 +150,13 @@
     const geoPanel=document.getElementById('geography-review');
     if(geoPanel&&bridge.nextElementSibling!==geoPanel)bridge.after(geoPanel);
     graphicalOverview(f,m);
+    const snapshot=dashboard.querySelector('.analysis-snapshot');
+    if(snapshot){
+      intro.querySelector('.intro-fund-facts')?.remove();
+      snapshot.className='intro-fund-facts';intro.querySelector('.analysis-hero-copy').append(snapshot);
+    }
+    dashboard.hidden=true;
+
     function disclosure(node,title){
       if(!node||node.querySelector(':scope > .portfolio-disclosure'))return;
       const detail=document.createElement('details');detail.className='portfolio-disclosure';
@@ -151,7 +170,7 @@
     }
     disclosure(document.getElementById('preview-risk-summary'),'Afkast og risiko i tal');
     disclosure(document.getElementById('highs'),'Afstand fra toårs top');
-    disclosure(sectorLayout,'Fordeling på sektorer');
+    disclosure(sectorLayout,'Sektorer og investeringstemaer');
     disclosure(geoPanel,'Hvor ligger selskabernes hovedsæder?');
     disclosure(holdingsPanel,'Se alle aktierne');
     for(const [id,title] of [['drawdown','Vejen gennem nedturene'],['calendar','Afkastkalender'],['rolling-chart','Afkast over 12 måneder']])disclosure(document.getElementById(id)?.closest('article'),title);
@@ -177,7 +196,7 @@
     const summaryPanel=document.getElementById('preview-risk-summary'),highPanel=document.getElementById('highs'),drawdownPanel=document.getElementById('drawdown')?.closest('article');
     if(holdingsPanel&&summaryPanel)summaryPanel.append(holdingsPanel);
     if(drawdownPanel&&highPanel)highPanel.append(drawdownPanel);
-    dashboard.querySelectorAll('a[href="#portfolio"]').forEach(a=>a.onclick=()=>{const d=holdingsPanel?.querySelector(':scope > details');if(d)d.open=true;setTimeout(()=>holdingsPanel?.scrollIntoView({behavior:'smooth'}),0);});
+    intro.querySelectorAll('.intro-fund-facts a[href="#portfolio"]').forEach(a=>a.onclick=event=>{event.preventDefault();revealHoldings();});
 
 
 

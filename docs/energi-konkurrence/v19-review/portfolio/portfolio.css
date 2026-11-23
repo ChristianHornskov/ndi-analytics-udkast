@@ -95,3 +95,53 @@ html.portfolio-analysis main{max-width:1180px;padding:28px 20px!important}
 .analysis-data-path{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:0;margin:25px 0 35px}.analysis-data-path li{position:relative;background:#10252e;border:1px solid #33505b;border-radius:14px;padding:18px}.analysis-data-path li:not(:last-child)::after{content:'→';position:absolute;right:-18px;top:38%;color:#8dbcc3}.analysis-data-path span{display:block;color:#8dbcc3;font-size:12px;margin-bottom:10px}.analysis-data-path strong{font-size:17px}.analysis-data-path p{font-size:14px;line-height:1.6;color:#b6c7cd;margin-bottom:0}@media(max-width:700px){.analysis-data-path{grid-template-columns:1fr;gap:18px}.analysis-data-path li:not(:last-child)::after{content:'↓';right:auto;left:28px;top:auto;bottom:-20px}}
 
 #analysis-nav a{min-height:44px;display:inline-flex;align-items:center;box-sizing:border-box}#analysis-nav a[aria-current='location']{color:#eee69b;text-decoration:underline;text-underline-offset:6px}
+
+/* Two complementary ways into the portfolio. */
+html body .sector-layout>.portfolio-disclosure>.portfolio-disclosure-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:stretch}
+html body .sector-standard,html body .sector-themes{margin:0;padding:26px;min-width:0;box-sizing:border-box}
+html body .sector-standard .segmented{display:none}
+html body #sector .analysis-sector-key{display:flex!important;flex-direction:column;gap:0!important}
+html body #sector .analysis-sector-key button{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:7px 16px!important;padding:10px 0!important;min-height:0!important;border:0!important;border-radius:0!important;background:none!important;text-align:left;width:100%}
+html body #sector .sector-weight-track{display:block;grid-column:1/-1;height:3px;background:#20363f;border-radius:4px;overflow:hidden}
+html body #sector .sector-weight-track i{display:block;height:100%;background:#8bb8bc;border-radius:4px}
+html body .sector-introduction,html body .sector-themes>p{font-size:15px;line-height:1.65;color:#bdd0d5}
+html body .sector-theme-links{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:24px 0 16px}
+html body .sector-theme-links a{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:48px;padding:10px 12px;box-sizing:border-box;border:1px solid #38505a;border-radius:8px;text-decoration:none;font-size:14px;line-height:1.35;color:#e3edf0;background:#132830}
+html body .sector-theme-links a:hover,html body .sector-theme-links a:focus-visible{background:#25444d;border-color:#9fc6cb}
+html body .sector-theme-links a>span:last-child{color:#9fc6cb}
+html body .sector-theme-cta{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#d9e8a5;color:#10232c;padding:15px 18px;min-height:48px;border-radius:8px;font-weight:650;text-decoration:none;margin-top:22px}
+html body .intro-fund-facts{display:flex;gap:24px;margin-top:28px;padding-top:20px;border-top:1px solid #38505a}
+html body .intro-fund-facts a{display:flex;flex-direction:column;gap:5px;text-decoration:none;color:#c3d7db;flex:1;font-size:13px;line-height:1.5}
+html body .intro-fund-facts strong{font-size:27px;font-weight:600;color:#d5e9eb;line-height:1.2}
+@media(max-width:700px){
+ html body .sector-layout>.portfolio-disclosure>.portfolio-disclosure-body{grid-template-columns:1fr;gap:24px}
+ html body .sector-standard,html body .sector-themes{padding:16px!important}
+ html body .sector-theme-links{gap:8px}
+ html body .sector-theme-links a{font-size:13px}
+ html body .intro-fund-facts{gap:18px;margin:18px 0 0;padding-top:16px}
+ html body .intro-fund-facts strong{font-size:24px}
+}
+
+/* Editorial split: restrained sector data, visual entry points into the themes. */
+html body .sector-layout>.portfolio-disclosure>.portfolio-disclosure-body{gap:0;border:1px solid #30454d;border-radius:18px;overflow:hidden;background:#10212a}
+html body .sector-standard,html body .sector-themes{border:0;border-radius:0;padding:32px;background:transparent}
+html body .sector-standard{border-right:1px solid #30454d;background:linear-gradient(155deg,#172e37,#10212a 65%)}
+html body .sector-standard h2,html body .sector-themes h2{font-size:27px;line-height:1.2;margin:12px 0 18px;letter-spacing:-.6px}
+html body .sector-introduction,html body .sector-themes>p{font-size:14px;line-height:1.6;margin:0 0 22px}
+html body #sector .analysis-sector-key button{padding:11px 0!important;gap:8px 16px!important;font-size:15px}
+html body #sector .analysis-sector-key button strong{font-size:16px;color:#e3ecee}
+html body #sector .sector-weight-track{height:5px;background:#203740}
+html body #sector .sector-weight-track i{background:var(--sector-color)}
+html body .sector-theme-links{gap:10px;margin:0 0 18px}
+html body .sector-theme-links a{position:relative;isolation:isolate;overflow:hidden;min-height:82px;padding:16px 14px;border:1px solid #40545c;border-radius:9px;font-size:15px;font-weight:600;align-items:flex-end;background:#10212a}
+html body .sector-theme-links img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;opacity:.7;transition:transform .2s}
+html body .sector-theme-links a::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(5,17,23,.96),rgba(5,17,23,.15))}
+html body .sector-theme-links a:hover img{transform:scale(1.06)}
+html body .sector-theme-links a>span{position:relative;text-shadow:0 1px 5px #000}
+html body .sector-theme-cta{margin-top:14px}
+@media(max-width:700px){
+ html body .sector-standard{border-right:0;border-bottom:1px solid #30454d}
+ html body .sector-standard h2,html body .sector-themes h2{font-size:23px}
+ html body .sector-layout>.portfolio-disclosure>.portfolio-disclosure-body{border:0;border-radius:0;gap:8px}
+ html body .sector-theme-links a{font-size:14px;min-height:84px;padding:12px}
+}
