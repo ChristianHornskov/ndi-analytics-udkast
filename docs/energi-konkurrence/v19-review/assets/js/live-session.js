@@ -339,6 +339,8 @@
       loading.remove();document.documentElement.dataset.liveRelease=session.pointer.release;
       document.documentElement.classList.remove('ndi-live-loading');
       document.dispatchEvent(new CustomEvent('ndi:live',{detail:session}));
+      // Optional visitor counts must never delay or fail the financial page.
+      void script({dataset:{ndiSrc:ROOT+'assets/js/graph-analytics.js'},textContent:''}).catch(()=>{});
       // No extra click and no polling: install the existing scroll observers
       // after the core page is visible, retaining media-script order.
       void loadMedia(queue.filter(n=>optionalMedia(n)&&!skip(n)));
