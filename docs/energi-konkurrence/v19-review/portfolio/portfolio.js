@@ -57,12 +57,12 @@
     box.innerHTML='<div class="analysis-sector-key">'+entries.map((t,i)=>'<button type="button" style="--sector-color:'+sectorColors[i%sectorColors.length]+'" data-sector="'+esc(t.name)+'"><span>'+esc(sectorNames[t.name]||t.name)+'</span><strong>'+pct(t.value)+'</strong><span class="sector-weight-track" aria-hidden="true"><i style="width:'+Math.max(0,Math.min(100,t.value))+'%"></i></span></button>').join('')+'</div>';
     const sectorPanel=box.closest('article');
     sectorPanel.classList.add('sector-standard');
-    sectorPanel.querySelector('h2').textContent='Morningstars sektorer';
+    sectorPanel.querySelector('h2').textContent='Fordeling på sektorer';
     sectorPanel.querySelector('.eyebrow').textContent='FONDEN EFTER BRANCHE';
     sectorPanel.querySelector('.segmented')?.setAttribute('hidden','');
     let introduction=sectorPanel.querySelector('.sector-introduction');
     if(!introduction){introduction=document.createElement('p');introduction.className='sector-introduction';box.before(introduction);}
-    introduction.textContent='Fondens fordeling efter Morningstars sektorstruktur. Tryk på en sektor for at se aktierne.';
+    introduction.textContent='Se, hvilke brancher fondens selskaber arbejder i. Tryk på en sektor for at se aktierne.';
     let themes=document.getElementById('sector-themes');
     if(!themes){
       themes=document.createElement('article');themes.id='sector-themes';themes.className='panel sector-themes';sectorPanel.after(themes);
