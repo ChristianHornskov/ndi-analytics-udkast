@@ -10,7 +10,7 @@
  const r=rows.find(r=>r.isin===isin);
  const host=document.getElementById('kurs')||document.getElementById('aktien');if(!host)return;
  const box=document.createElement('section');box.className='ndi-market';box.id='aktiekurs';
- if(!host.closest('#regnskab')){const h=document.createElement('h2');h.id='h-kurs';h.textContent='Aktiens kursudvikling';box.append(h);}
+ if(!host.closest('#regnskab')){const h=document.createElement('h2');h.id='h-kurs';h.textContent=identity[1].instrumentKind==='warrant'?'Warrantens kursudvikling':'Aktiens kursudvikling';box.append(h);}
  if(host.id==='kurs'){box.style.borderTop='0';box.style.marginTop='0';host.replaceWith(box);}else host.append(box);
  const el=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e};
  const number=(v,d=2)=>Number(v).toLocaleString('da-DK',{minimumFractionDigits:d,maximumFractionDigits:d});
