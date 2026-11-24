@@ -22,10 +22,19 @@ export function companiesForLayer(layer,positions,companies){
     .sort((a,b)=>b.andel-a.andel||a.slug.localeCompare(b.slug));
 }
 export const largestCompany=(...args)=>companiesForLayer(...args)[0]||null;
+export function currentJourneyData(){
+  const session=window.NDI_LIVE, d=window.DAGENS_TAL;
+  const data=session?.files?.['data.json'];
+  const fund=data?.funds?.find(f=>f.id==='pmindi');
+  if(!fund||!d)return {p:null,d:null};
+  const positioner=fund.positions.map(x=>({isin:x.isin,slug:session.identities[x.isin]?.slug,
+    navn:d.selskaber[session.identities[x.isin]?.slug]?.navn||x.name,andel:x.weight}));
+  return {p:{andelsdato:data.positionsAsOf,beholdning:{positioner}},d};
+}
 export function bindJourneyCompanies(host){
   const selected=new Map();
   function update(){
-    const p=window.NDI_DATALAG?.ndi('portefolje'),d=window.NDI_TAL;
+    const {p,d}=currentJourneyData();
     for(const card of host.querySelectorAll('.zc-card')){
       const layer=card.dataset.companyLayer;
       const list=companiesForLayer(layer,p?.beholdning?.positioner,d?.selskaber);
@@ -50,7 +59,8 @@ export function bindJourneyCompanies(host){
     const button=event.target.closest('[data-company-step]');
     if(!button)return;
     const layer=button.closest('.zc-card').dataset.companyLayer;
-    const list=companiesForLayer(layer,window.NDI_DATALAG?.ndi('portefolje')?.beholdning?.positioner,window.NDI_TAL?.selskaber);
+    const {p,d}=currentJourneyData();
+    const list=companiesForLayer(layer,p?.beholdning?.positioner,d?.selskaber);
     if(list.length<2)return;
     const index=Math.max(0,list.findIndex(c=>c.slug===selected.get(layer)));
     selected.set(layer,list[(index+Number(button.dataset.companyStep)+list.length)%list.length].slug);
@@ -61,4 +71,5 @@ export function bindJourneyCompanies(host){
   update();
   new MutationObserver(update).observe(host,{childList:true,subtree:true});
   document.addEventListener('ndi:tal',update);
+  document.addEventListener('ndi:live',update);
 }

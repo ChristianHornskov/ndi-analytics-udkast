@@ -1,6 +1,7 @@
 // Editorial role coverage for the six journey steps. Company pages hold the supporting sources.
 export const JOURNEY_ROLES={
   "ai-use": {
+    "anthropic": "Claude giver brugere adgang til AI til tekst, dokumenter og programmering.",
     "spacex": "Leverer software og tjenester, hvor kunder kan bruge AI.",
     "microsoft": "Leverer software og tjenester, hvor kunder kan bruge AI.",
     "amazon": "Leverer software og tjenester, hvor kunder kan bruge AI.",
