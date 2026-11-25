@@ -1,3 +1,45 @@
+/* Only the site's consent manager may enable optional services in this iframe. */
+(() => {
+  'use strict';
+  const parents = ['https://www.newdealinvest.dk', 'https://newdealinvest.dk'];
+  let state = Object.freeze({analytics:false, advertising:false});
+  const listeners = new Set();
+  window.NDI_CONSENT = {
+    allowed: category => state[category] === true,
+    subscribe: fn => { listeners.add(fn); fn(state); return () => listeners.delete(fn); },
+    open: () => parents.forEach(origin => {if (parent !== window) parent.postMessage({type:'ndi:consent-open'},origin);})
+  };
+  let received = false;
+  window.addEventListener('message', event => {
+    if(event.source !== parent || !parents.includes(event.origin) || event.data?.type !== 'ndi:consent-state') return;
+    received = true;
+    const next = Object.freeze({analytics:event.data.analytics === true, advertising:event.data.advertising === true});
+    if(next.analytics === state.analytics && next.advertising === state.advertising) return;
+    const revoked = state.advertising && !next.advertising;
+    state = next;
+    listeners.forEach(fn => fn(state));
+    // Destroy third-party browsing contexts immediately on withdrawal.
+    if(revoked){document.querySelectorAll('iframe[src*="youtube"],iframe[src*="instagram"],iframe[src*="twitter"]').forEach(f=>f.remove());location.reload();}
+  });
+  function ask(){if(parent!==window)parents.forEach(origin=>parent.postMessage({type:'ndi:consent-request'},origin));}
+  ask();
+  let attempts=0;
+  const timer=setInterval(()=>{if(received||++attempts>30){clearInterval(timer);return;}ask();},1000);
+  function placeholders(){
+    document.querySelectorAll('[data-consent-src]').forEach(img=>{if(state.advertising)img.src=img.dataset.consentSrc;});
+    document.querySelectorAll('.vid-ramme[data-yt],[data-youtube],[data-video],[data-instagram]').forEach(box=>{
+      if(box.dataset.consentPlaceholder)return;
+      box.dataset.consentPlaceholder='true';
+      const note=document.createElement('p');note.className='lille ndi-media-consent';
+      note.append('Videoer vises efter samtykke til markedsføring. ');
+      const button=document.createElement('button');button.type='button';button.className='knap';button.textContent='Vis cookieindstillinger';button.onclick=()=>window.NDI_CONSENT.open();note.append(button);box.after(note);
+    });
+    document.querySelectorAll('.ndi-media-consent').forEach(n=>n.hidden=state.advertising);
+  }
+  listeners.add(placeholders);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',placeholders,{once:true});else placeholders();
+})();
+
 /* One validated Azure release per page. No embedded snapshot is a live fallback. */
 (function () {
   'use strict';
@@ -343,7 +385,8 @@
       void script({dataset:{ndiSrc:ROOT+'assets/js/graph-analytics.js'},textContent:''}).catch(()=>{});
       // No extra click and no polling: install the existing scroll observers
       // after the core page is visible, retaining media-script order.
-      void loadMedia(queue.filter(n=>optionalMedia(n)&&!skip(n)));
+      let mediaStarted=false;
+      window.NDI_CONSENT.subscribe(consent=>{if(consent.advertising&&!mediaStarted){mediaStarted=true;void loadMedia(queue.filter(n=>optionalMedia(n)&&!skip(n)));}});
     }catch(error){
       window.removeEventListener('error',onRendererError);
       loading.remove();

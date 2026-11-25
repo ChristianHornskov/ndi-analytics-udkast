@@ -15,6 +15,8 @@
     });
     select('launch');
   }
+  let mediaStarted=false;
+  window.NDI_CONSENT.subscribe(consent=>{if(!consent.advertising||mediaStarted)return;mediaStarted=true;
   const videos=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)return;const button=e.target;videos.unobserve(button);
     const iframe=document.createElement('iframe');
     iframe.src='https://www.youtube-nocookie.com/embed/'+button.dataset.video+'?rel=0&start='+(Number(button.dataset.start)||0);
@@ -25,6 +27,7 @@
     button.replaceWith(iframe);
   }),{rootMargin:'100px'});
   document.querySelectorAll('[data-video]').forEach(button=>videos.observe(button));
+  });
 })();
 
 (() => {
