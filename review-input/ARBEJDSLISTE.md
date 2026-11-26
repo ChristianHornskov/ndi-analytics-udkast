@@ -74,4 +74,4 @@ Læs SAMLET-LEVERANCE.md før næste handling. Denne fil erstatter ikke tidliger
 - Reviewindgangen er åbnet på http://127.0.0.1:8880/widget/index.html. Det er lokal preview, ikke et nyt offentligt link. Wix/main/Azure er urørt.
 
 ## Upstart X-pilot 26.11.2026
-Christian autoriserer kun Upstart og Grokbot som redaktionel godkender. Separat linkkortmodul, ingen X-embeds, ingen åbning af andre selskaber. Under implementering og udgivelseskontrol.
+Christian autoriserer kun Upstart og Grokbot som redaktionel godkender. Separat linkkortmodul, ingen X-embeds, ingen åbning af andre selskaber. Live som b5b58370310cb662caa31242972e04d8b338d3be; 2330 filer genlæst, otte isolerede tests bestået, kandidat kontrolleret ved 390/1440 px og Wix-livevisning verificeret. Instruktion til Leo gemt i privat repo: codex-opgaver/til-leo/2026-11-26-upstart-x-pilot.md. Næste dags research leveres af Leo/Grok; import og frontend er klar.
