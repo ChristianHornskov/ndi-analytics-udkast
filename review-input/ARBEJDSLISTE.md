@@ -72,3 +72,6 @@ Læs SAMLET-LEVERANCE.md før næste handling. Denne fil erstatter ikke tidliger
 - Alle42 stabile U/S/F-rækker er afstemt med kode, test, browserbevis og brugerbeslutninger. De22 porteføljeforslag og Claude-underregistret er medtaget.
 - Udvidet PMINDI-test dækker alle tema-/selskabssider;20 tests bestået. Fuld kontroloversigt og begrænsninger: SLUTKONTROL-20261031.md.
 - Reviewindgangen er åbnet på http://127.0.0.1:8880/widget/index.html. Det er lokal preview, ikke et nyt offentligt link. Wix/main/Azure er urørt.
+
+## Upstart X-pilot 26.11.2026
+Christian autoriserer kun Upstart og Grokbot som redaktionel godkender. Separat linkkortmodul, ingen X-embeds, ingen åbning af andre selskaber. Under implementering og udgivelseskontrol.
